@@ -1,0 +1,132 @@
+{
+ "class": "proposal",
+ "subject": "Parallel MCP server",
+ "title": "Ship the MCP server *before the CLI.*",
+ "standfirst": "Proposes a six-week, read-only MCP server for Parallel's positions, rates and governance, for a start on 28 September.",
+ "kicker": "Proposal · Parallel MCP server · Parallel team, 14 September 2026",
+ "version": "v0.1",
+ "classification": "Confidential",
+ "status": "Draft",
+ "date": "2026-09-14",
+ "owner": "Jean, Cooper Labs",
+ "render": "01",
+ "slides": [
+  {
+   "tag": "Summary",
+   "heading": {
+    "text": "One server, *every agent.*",
+    "suffix": "(six weeks)"
+   },
+   "body": "Agents already answer questions about Parallel from stale documentation. An MCP server gives every assistant the same read-only view of the protocol, straight from the chain and the indexer. It holds no keys, signs nothing, and the CLI the team asked for is a thin client of it.",
+   "figures": [
+    [
+     "6",
+     "Weeks, brief to release"
+    ],
+    [
+     "7",
+     "Tools, read-only"
+    ],
+    [
+     "3",
+     "Chains covered"
+    ],
+    [
+     "0",
+     "Keys held"
+    ]
+   ]
+  },
+  {
+   "kind": "divider",
+   "n": "02",
+   "kicker": "Part two · Options",
+   "title": "Four ways *to open the door.*"
+  },
+  {
+   "tag": "Options",
+   "source": "Estimates in Cooper weeks, 12 Sep 2026.",
+   "heading": "Server first, *CLI from it*",
+   "table": {
+    "cols": [
+     [
+      "Option",
+      300
+     ],
+     [
+      "Weeks",
+      120
+     ],
+     [
+      "Reach",
+      180
+     ],
+     [
+      "Verdict",
+      null
+     ]
+    ],
+    "mono": [
+     1
+    ],
+    "strong": [
+     0
+    ],
+    "highlight": 1,
+    "rows": [
+     [
+      "A · CLI first",
+      "5",
+      "Developers",
+      "Serves the terminal, not the assistants"
+     ],
+     [
+      "B · MCP server first",
+      "6",
+      "Every agent",
+      "Recommended; the CLI comes free"
+     ],
+     [
+      "C · Both in parallel",
+      "9",
+      "Both",
+      "Two codebases for one set of data"
+     ],
+     [
+      "D · Wait for the public API",
+      "n/a",
+      "Unknown",
+      "No date; the questions keep coming"
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "statement",
+   "text": "An MCP server holds no keys and signs nothing; the worst it can do is give a stale answer, *and the answer says so.*",
+   "who": "Summary · Proposal · Parallel MCP server"
+  },
+  {
+   "tag": "Decision",
+   "heading": "What Parallel is *asked to decide*",
+   "bullets": [
+    [
+     "The scope",
+     "Seven tools, read-only; the CLI in week five."
+    ],
+    [
+     "The chains",
+     "Base, Arbitrum and Ethereum at launch."
+    ],
+    [
+     "The owner",
+     "One person who takes the Friday demo and answers within the day."
+    ]
+   ],
+   "reco": [
+    "Confirm by 21 September; the build starts on the 28th.",
+    "Two phases at a fixed price; the second on the demo of week three, the beta on 6 November."
+   ]
+  }
+ ]
+}

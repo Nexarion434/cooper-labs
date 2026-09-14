@@ -1,0 +1,135 @@
+{
+ "subject": "Cooper Labs",
+ "title": "We turn Web3 ideas *into products people use.*",
+ "standfirst": "Cooper Labs is a product studio for Web3 teams: design and engineering in one team, from the brief to the stores, with a demo of working software every Friday.",
+ "date": "2026-09-01",
+ "version": "v1.0",
+ "classification": "Public",
+ "kicker": "Fact sheet · Cooper Labs · September 2026",
+ "figures": [
+  [
+   "6",
+   "Weeks, brief to first release"
+  ],
+  [
+   "Weekly",
+   "Demo, every Friday"
+  ],
+  [
+   "2",
+   "Disciplines, one team"
+  ],
+  [
+   "Fixed",
+   "Price per phase"
+  ]
+ ],
+ "columns": [
+  {
+   "heading": "How we *work*",
+   "bullets": [
+    [
+     "One team, both crafts",
+     "A designer and an engineer on every project from day one; the design system lives in Figma and in code."
+    ],
+    [
+     "Working software on Friday",
+     "Thirty minutes, the client in the room, the decisions written the same day."
+    ],
+    [
+     "Phases with a gate",
+     "Two or three fixed-price phases; the next one starts on a demo, not on a plan."
+    ]
+   ]
+  },
+  {
+   "heading": "What we *don't do*",
+   "bullets": [
+    [
+     "No custody, no keys",
+     "We build the product; the user signs. Nothing we ship holds funds."
+    ],
+    [
+     "No slides for software",
+     "A proposal names its demos; a demo shows the thing running."
+    ],
+    [
+     "No open-ended retainers",
+     "Scope, price and dates per phase, written before the first week."
+    ]
+   ]
+  }
+ ],
+ "table": {
+  "heading": "Engagements, *by phase*",
+  "cols": [
+   [
+    "Phase",
+    150
+   ],
+   [
+    "Weeks",
+    70
+   ],
+   [
+    "Team",
+    120
+   ],
+   [
+    "Delivered",
+    null
+   ]
+  ],
+  "mono": [
+   1
+  ],
+  "strong": [
+   0
+  ],
+  "rows": [
+   [
+    "Product",
+    "2 to 3",
+    "Design",
+    "Interviews, one flow, the cut list"
+   ],
+   [
+    "Build",
+    "4 to 8",
+    "Design + engineering",
+    "The product, its design system, its tests"
+   ],
+   [
+    "Release",
+    "2",
+    "Both",
+    "Stores, docs, launch day, hand-over"
+   ],
+   [
+    "Care",
+    "monthly",
+    "On call",
+    "Fixes, upgrades, the next phase"
+   ]
+  ]
+ },
+ "contact": [
+  [
+   "Website",
+   "cooperlabs.xyz"
+  ],
+  [
+   "X",
+   "@cooperlabs"
+  ],
+  [
+   "Telegram",
+   "@jeanbrasse"
+  ],
+  [
+   "Email",
+   "contact@cooperlabs.xyz"
+  ]
+ ],
+ "footer": "Cooper Labs · Public · cooperlabs.xyz · September 2026"
+}

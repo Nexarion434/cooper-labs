@@ -1,0 +1,1110 @@
+{
+ "class": "guide",
+ "subject": "Page styles",
+ "title": "Sixteen ways to *fill a page* inside the same grid.",
+ "standfirst": "The page compositions of the internal-document template beyond the block stack: each one on its own page, with what it is for and which rule of the kit it bends.",
+ "kicker": "Guide · Page styles · Internal document",
+ "version": "v0.1",
+ "classification": "Internal",
+ "status": "Draft",
+ "date": "2026-09-14",
+ "owner": "Nicolas, Design",
+ "cover": "02",
+ "contents": true,
+ "contents_intro": "Every page keeps the running head, the footer, the 682 measure and the type scale. Five of the sixteen bend a rule of the kit (a dark ground inside, no margin column, a tinted cell, a render inside): keep those for the opening page of a part or a single appendix, never in the flow of an argument.",
+ "versions": [
+  [
+   "v0.1",
+   "2026-09-14",
+   "Built from the description; every style a block or a page of build_doc.py"
+  ]
+ ],
+ "pages": [
+  {
+   "name": "A · Divider",
+   "toc": "A · Section divider, paper",
+   "style": "divider",
+   "n": "02",
+   "kicker": "Part two · Options",
+   "title": "Four ways *to open the door.*",
+   "standfirst": "Four options, one estimate each, and the two figures the Parallel team will be asked to remember.",
+   "list": [
+    [
+     "Sections",
+     "Options · Why B · Estimate"
+    ],
+    [
+     "Pages",
+     "06 to 11"
+    ],
+    [
+     "Source",
+     "Estimates of 12 Sep 2026"
+    ],
+    [
+     "Reading time",
+     "Six minutes"
+    ]
+   ]
+  },
+  {
+   "name": "B · Divider, dark",
+   "toc": "B · Section divider, dark",
+   "style": "divider",
+   "dark": true,
+   "n": "03",
+   "kicker": "Part three · Decision",
+   "title": "What Parallel *is asked to decide.*",
+   "standfirst": "The decision in one paragraph, the three things to confirm, and the log of how each open question was closed.",
+   "list": [
+    [
+     "Sections",
+     "Decision · Log · Appendix"
+    ],
+    [
+     "Pages",
+     "12 to 15"
+    ],
+    [
+     "Deadline",
+     "21 September"
+    ],
+    [
+     "Owner",
+     "Jean, Cooper Labs"
+    ]
+   ]
+  },
+  {
+   "name": "C · Statement",
+   "toc": "C · Statement",
+   "style": "statement",
+   "text": "An MCP server holds no keys and signs nothing; the worst it can do is give a stale answer, *and the answer says so.*",
+   "who": "Summary · Proposal · Parallel MCP server"
+  },
+  {
+   "name": "D · Hero figure",
+   "toc": "D · Hero figure",
+   "style": "hero",
+   "n": "6",
+   "unit": "weeks",
+   "kicker": "From the brief to the public beta",
+   "body": "Six weeks, six Friday demos. The server answers on Base at the end of week one and on three chains at the end of week two; the CLI is derived from it in week five and the public beta ships with the Seventeenth Parallel Report on 6 November.",
+   "figures": [
+    [
+     "6",
+     "Demos"
+    ],
+    [
+     "3",
+     "Chains"
+    ],
+    [
+     "2",
+     "Phases"
+    ]
+   ]
+  },
+  {
+   "name": "E · Two columns",
+   "blocks": [
+    {
+     "tag": "Options",
+     "toc": "E · Two columns, side by side",
+     "source": "Estimates in Cooper weeks, 12 Sep 2026.",
+     "heading": "MCP server *or CLI first*"
+    },
+    {
+     "cols": {
+      "columns": [
+       {
+        "head": "B · MCP server first",
+        "bullets": [
+         [
+          "Every agent, day one",
+          "Claude, Cursor and the community's own assistants call the same tools."
+         ],
+         [
+          "Read-only by construction",
+          "No key enters the process."
+         ],
+         [
+          "The CLI comes free",
+          "A formatter over the tools, one week in week five."
+         ],
+         [
+          "Six weeks",
+          "Two phases, a gate on the demo of week three."
+         ]
+        ],
+        "verdict": "Recommended."
+       },
+       {
+        "head": "A · CLI first",
+        "bullets": [
+         [
+          "Developers at a terminal",
+          "The audience the team knows best, and the smallest."
+         ],
+         [
+          "Five weeks",
+          "Then the server is another five."
+         ],
+         [
+          "Two codebases",
+          "Formatting and data fetching mixed in one tool."
+         ],
+         [
+          "No door for agents",
+          "The support questions keep coming."
+         ]
+        ],
+        "verdict": "Not first."
+       }
+      ]
+     }
+    },
+    {
+     "tag": "Recommendation",
+     "toc": false,
+     "reco": [
+      "Option B. The server serves everyone, and the CLI is a week rather than five.",
+      "If the beta shows the terminal is where the users are, the CLI gets its own phase."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "F · Timeline",
+   "blocks": [
+    {
+     "tag": "Timeline",
+     "toc": "F · Horizontal timeline",
+     "source": "Dates agreed with Noah on 12 Sep 2026.",
+     "heading": {
+      "text": "From the brief *to the beta*",
+      "suffix": "(six weeks)"
+     }
+    },
+    {
+     "timeline": {
+      "steps": [
+       {
+        "date": "14 Sep",
+        "title": "Proposal sent",
+        "text": "This document, v0.1, to the Parallel team.",
+        "past": true
+       },
+       {
+        "date": "21 Sep",
+        "title": "Scope confirmed",
+        "text": "Tools, chains and the owner at Parallel.",
+        "past": true
+       },
+       {
+        "date": "28 Sep",
+        "title": "Build starts",
+        "text": "Week one: schemas, rates and backing on Base."
+       },
+       {
+        "date": "16 Oct",
+        "title": "Phase gate",
+        "text": "Demo of week three; phase two on approval."
+       },
+       {
+        "date": "6 Nov",
+        "title": "Public beta",
+        "text": "Announced with the Seventeenth Parallel Report."
+       }
+      ],
+      "phases": [
+       "Proposal",
+       "Scope",
+       "Phase one",
+       "Gate",
+       "Phase two"
+      ]
+     }
+    },
+    {
+     "tag": "Owners",
+     "toc": false,
+     "table": {
+      "cols": [
+       [
+        "Phase",
+        110
+       ],
+       [
+        "Owner",
+        150
+       ],
+       [
+        "Deliverable",
+        null
+       ]
+      ],
+      "strong": [
+       0
+      ],
+      "rows": [
+       [
+        "Proposal",
+        "Jean",
+        "This document, v0.1 to v1.0"
+       ],
+       [
+        "Scope",
+        "Noah",
+        "Tool list, chains, owner"
+       ],
+       [
+        "Phase one",
+        "Cooper Labs",
+        "Weeks one to three, three demos"
+       ],
+       [
+        "Phase two",
+        "Cooper Labs",
+        "Weeks four to six, the CLI, the beta"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "G · Data page",
+   "toc": "G · Full-measure data page",
+   "style": "wide",
+   "heading": "The build, *every line*",
+   "suffix": "(estimate of 12 Sep 2026)",
+   "table": {
+    "cols": [
+     [
+      "Item",
+      null
+     ],
+     [
+      "Days",
+      60
+     ],
+     [
+      "Week",
+      60
+     ],
+     [
+      "Role",
+      90
+     ],
+     [
+      "Demo",
+      80
+     ],
+     [
+      "Phase",
+      70
+     ]
+    ],
+    "strong": [
+     0
+    ],
+    "mono": [
+     1,
+     2
+    ],
+    "highlight": 9,
+    "rows": [
+     [
+      "Tool schemas and error copy",
+      "3",
+      "1",
+      "Design",
+      "2 Oct",
+      "One"
+     ],
+     [
+      "get_rates, get_backing on Base",
+      "2",
+      "1",
+      "Engineering",
+      "2 Oct",
+      "One"
+     ],
+     [
+      "Indexer client, three chains",
+      "3",
+      "2",
+      "Engineering",
+      "9 Oct",
+      "One"
+     ],
+     [
+      "get_positions, simulate_borrow",
+      "2",
+      "2",
+      "Engineering",
+      "9 Oct",
+      "One"
+     ],
+     [
+      "Governance tools",
+      "2",
+      "3",
+      "Engineering",
+      "16 Oct",
+      "One"
+     ],
+     [
+      "Docs as a resource",
+      "1",
+      "3",
+      "Engineering",
+      "16 Oct",
+      "One"
+     ],
+     [
+      "Staleness rule and copy",
+      "2",
+      "3",
+      "Design",
+      "16 Oct",
+      "One"
+     ],
+     [
+      "build_tx and its tests",
+      "3",
+      "4",
+      "Engineering",
+      "23 Oct",
+      "Two"
+     ],
+     [
+      "Test suite, three chains",
+      "2",
+      "4",
+      "Engineering",
+      "23 Oct",
+      "Two"
+     ],
+     [
+      "Phase gate review",
+      "1",
+      "3",
+      "Both",
+      "16 Oct",
+      "Gate"
+     ],
+     [
+      "CLI over the server",
+      "4",
+      "5",
+      "Engineering",
+      "30 Oct",
+      "Two"
+     ],
+     [
+      "Install docs and README",
+      "1",
+      "5",
+      "Design",
+      "30 Oct",
+      "Two"
+     ],
+     [
+      "Beta packaging, announcement",
+      "3",
+      "6",
+      "Both",
+      "6 Nov",
+      "Two"
+     ],
+     [
+      "Hand-over session",
+      "1",
+      "6",
+      "Both",
+      "6 Nov",
+      "Two"
+     ],
+     [
+      "Contingency",
+      "3",
+      "6",
+      "Both",
+      "n/a",
+      "Two"
+     ]
+    ]
+   },
+   "foot": [
+    "Source: Cooper Labs estimate of 12 Sep 2026, one designer and one engineer.",
+    "Days are working days; the highlighted line is the phase gate."
+   ]
+  },
+  {
+   "name": "H · Chart",
+   "blocks": [
+    {
+     "tag": "Data",
+     "toc": "H · Chart",
+     "source": "Source: the support channel, weekly counts, weeks 24 to 35 of 2026.",
+     "heading": {
+      "text": "Questions from agents *are rising,* answers are not",
+      "suffix": "(12 weeks)"
+     },
+     "chart": {
+      "type": "bar",
+      "labels": [
+       24,
+       25,
+       26,
+       27,
+       28,
+       29,
+       30,
+       31,
+       32,
+       33,
+       34,
+       35
+      ],
+      "max": 100,
+      "unit": "",
+      "series": [
+       {
+        "name": "Questions from people",
+        "values": [
+         41,
+         39,
+         40,
+         37,
+         36,
+         35,
+         33,
+         34,
+         31,
+         30,
+         29,
+         28
+        ],
+        "soft": true
+       },
+       {
+        "name": "Questions from agents",
+        "values": [
+         12,
+         15,
+         19,
+         22,
+         27,
+         31,
+         38,
+         44,
+         51,
+         57,
+         66,
+         74
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "tag": "Accuracy",
+     "toc": false,
+     "heading": "Answers checked correct, share",
+     "chart": {
+      "type": "line",
+      "labels": [
+       24,
+       25,
+       26,
+       27,
+       28,
+       29,
+       30,
+       31,
+       32,
+       33,
+       34,
+       35
+      ],
+      "values": [
+       71,
+       70,
+       68,
+       66,
+       63,
+       61,
+       58,
+       55,
+       52,
+       50,
+       47,
+       44
+      ],
+      "max": 100,
+      "unit": "%",
+      "last": "44%"
+     }
+    },
+    {
+     "figures": [
+      [
+       "74",
+       "Agent questions, week 35"
+      ],
+      [
+       "×6",
+       "Since week 24"
+      ],
+      [
+       "44%",
+       "Answered correctly"
+      ],
+      [
+       "-27 pts",
+       "Accuracy since week 24"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "I · Matrix",
+   "blocks": [
+    {
+     "tag": "Risks",
+     "toc": "I · Matrix",
+     "source": "Assessed by Cooper Labs on 12 Sep 2026; revisited at each phase gate.",
+     "heading": "Likelihood *against impact*"
+    },
+    {
+     "matrix": {
+      "cols": [
+       "Low impact",
+       "Medium impact",
+       "High impact"
+      ],
+      "rows": [
+       {
+        "key": "Likely",
+        "cells": [
+         {
+          "title": "Schema churn",
+          "text": "Tools renamed in week one; contained by the demo."
+         },
+         {
+          "title": "Indexer lag",
+          "text": "Every answer carries its block; past 300 s the tool says so."
+         },
+         {
+          "title": "Answer read as advice",
+          "text": "Read-only tools and a fixed disclaimer; the wording is not yet approved.",
+          "hot": true
+         }
+        ]
+       },
+       {
+        "key": "Possible",
+        "cells": [
+         {
+          "title": "Chain config drift",
+          "text": "One file per chain, tested weekly."
+         },
+         {
+          "title": "Owner unavailable",
+          "text": "A named backup at Parallel, asked for in the decision."
+         },
+         {
+          "title": "Rate limits on the indexer",
+          "text": "A cache with the block number as its key."
+         }
+        ]
+       },
+       {
+        "key": "Unlikely",
+        "cells": [
+         {
+          "title": "Protocol upgrade mid-build",
+          "text": "Schemas versioned; one file per module."
+         },
+         {
+          "title": "Store or registry outage",
+          "text": "The package installs from the repository."
+         },
+         {
+          "title": "A key in the process",
+          "text": "Outside the design; there is no code path that holds one."
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "tag": "Reading",
+     "toc": false,
+     "body": "One cell is tinted: the risk that is both likely and high impact, and the only one still open. Its closure, the approved disclaimer, is one of the three things asked of Parallel."
+    }
+   ]
+  },
+  {
+   "name": "J · Plate",
+   "toc": "J · Render inside",
+   "style": "plate",
+   "render": "03",
+   "caption": "Render 03 · The block, as used on the launch post",
+   "blocks": [
+    {
+     "tag": "Context",
+     "toc": false,
+     "heading": "Why the block *is the picture*",
+     "body": [
+      "When a document is about one product, the render that carries that product on social can open the section. It ties the internal document to what the community saw, and it gives a long document one place to breathe.",
+      "The kit reserves imagery for the cover. This page is the case for one exception: a single plate, full width, on the opening page of a part, never in the flow of an argument."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "K · Prose",
+   "toc": "K · Lede and prose",
+   "style": "prose",
+   "lede": "Twice this summer a Parallel user asked an assistant for their health factor and got a number that was two releases old. *That is the wrong kind of confidence,* and it is the whole reason for this proposal.",
+   "body": [
+    "The first case came in June. A holder asked which vault paid the best savings rate; the assistant quoted the documentation, which had not been updated since the March rate change, and the holder moved funds to the wrong vault. Nothing was wrong with the protocol; the only door to its numbers was a page written by hand.",
+    "The second came in August, during the Atlas launch week, when the support channel was busiest. An agent computed a health factor from a pasted screenshot and told a user their position was safe; it had been liquidated an hour before. Again the data existed on-chain and in the indexer, and again nobody had given the assistant a way to read it.",
+    "What both cases share is a gap that a server closes. An assistant with a tool asks the tool; the tool asks the indexer; the indexer answers with a block number. The number can be stale, and then it says so; it cannot be invented. The habit of pasting numbers into a prompt disappears the day the tool exists.",
+    "Other protocols shipped read-only servers this year and reported the same thing: the questions in the support channel did not go away, they became answerable. None reported an incident from a read-only tool. The mechanism is understood; the question in front of Parallel is only whether to build the door before or after the CLI."
+   ],
+   "signature": [
+    "Jean, Cooper Labs",
+    "14 September 2026"
+   ]
+  },
+  {
+   "name": "L · Steps",
+   "blocks": [
+    {
+     "tag": "Procedure",
+     "toc": "L · Numbered steps",
+     "source": "Release checklist R-02, as revised after the post-mortem of 26 Aug 2026.",
+     "heading": "Releasing a build *in four steps*"
+    },
+    {
+     "step": "01",
+     "toc": false,
+     "heading": "Bake the environment",
+     "body": "Build once per target from its own configuration file. The build log prints the network name and the RPC host; the engineer pastes both lines in the release thread.",
+     "meta": "Owner Engineering · release day, 09:00 · ATL-140"
+    },
+    {
+     "step": "02",
+     "toc": false,
+     "heading": "Read a balance from the release build",
+     "body": "Install the release build on a clean device and read one mainnet balance from a known wallet. A zero is a stop.",
+     "meta": "Owner Jean · release day, 09:30 · ATL-141"
+    },
+    {
+     "step": "03",
+     "toc": false,
+     "heading": "Submit, then watch",
+     "body": "Submit to both stores; one named person in each console until the build is live, with the hotfix branch open.",
+     "meta": "Owner Jean · release day · ATL-142"
+    },
+    {
+     "step": "04",
+     "toc": false,
+     "heading": "Close the release",
+     "body": "Post the version, the block number of the first read and the store links in the project channel, and tag the client.",
+     "meta": "Owner Engineering · release day, close"
+    }
+   ]
+  },
+  {
+   "name": "M · Glossary",
+   "blocks": [
+    {
+     "tag": "Glossary",
+     "toc": "M · Glossary, two columns",
+     "heading": "Terms used *across the set*"
+    },
+    {
+     "defs": [
+      [
+       "Agent",
+       "An assistant that calls tools on a user's behalf; here, any MCP client."
+      ],
+      [
+       "Block number",
+       "The chain height a figure was read at; every answer carries one."
+      ],
+      [
+       "CLI",
+       "A command-line client; here, a formatter over the server's tools."
+      ],
+      [
+       "Demo",
+       "Thirty minutes of running software, every Friday, with the client in the room."
+      ],
+      [
+       "Health factor",
+       "Collateral value over debt, adjusted; below 1 a position can be liquidated."
+      ],
+      [
+       "Indexer",
+       "The service that reads the chain and serves positions and rates over REST."
+      ],
+      [
+       "MCP",
+       "Model Context Protocol: how an assistant calls tools and reads resources."
+      ],
+      [
+       "Phase gate",
+       "The demo on which the second phase of a proposal is approved."
+      ],
+      [
+       "Resource",
+       "A document the server serves by URI; here, the documentation."
+      ],
+      [
+       "RPC",
+       "The endpoint an app or a server reads the chain from; one per network."
+      ],
+      [
+       "Schema",
+       "The typed description of a tool: its arguments, its result, its disclaimer."
+      ],
+      [
+       "Staleness",
+       "The age of a figure relative to the newest block the indexer has seen."
+      ],
+      [
+       "Tool",
+       "One typed function the server exposes; the assistant calls it and receives JSON."
+      ],
+      [
+       "Unsigned transaction",
+       "Calldata the user's own wallet signs; the server never holds a key."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "N · Flow",
+   "blocks": [
+    {
+     "tag": "Mechanism",
+     "toc": "N · Flow diagram",
+     "heading": "How a question *becomes an answer*"
+    },
+    {
+     "flow": {
+      "height": 400,
+      "boxes": [
+       {
+        "x": 0,
+        "y": 0,
+        "w": 150,
+        "h": 52,
+        "title": "Question",
+        "sub": "User, any assistant"
+       },
+       {
+        "x": 0,
+        "y": 90,
+        "w": 150,
+        "h": 52,
+        "title": "Tool call",
+        "sub": "MCP client"
+       },
+       {
+        "x": 200,
+        "y": 90,
+        "w": 150,
+        "h": 52,
+        "title": "Cache fresh?",
+        "sub": "Keyed by block"
+       },
+       {
+        "x": 400,
+        "y": 90,
+        "w": 130,
+        "h": 52,
+        "title": "Answer",
+        "sub": "With block number"
+       },
+       {
+        "x": 200,
+        "y": 180,
+        "w": 150,
+        "h": 52,
+        "title": "Read the indexer",
+        "sub": "Three chains"
+       },
+       {
+        "x": 200,
+        "y": 270,
+        "w": 150,
+        "h": 52,
+        "title": "Stale past 300 s?",
+        "sub": "Flag in the result"
+       },
+       {
+        "x": 400,
+        "y": 270,
+        "w": 130,
+        "h": 52,
+        "title": "Answer, flagged",
+        "sub": "\"Figures as of...\""
+       },
+       {
+        "x": 0,
+        "y": 270,
+        "w": 150,
+        "h": 52,
+        "title": "build_tx",
+        "sub": "Unsigned, user signs",
+        "soft": true
+       }
+      ],
+      "arrows": [
+       {
+        "from": [
+         75,
+         52
+        ],
+        "to": [
+         75,
+         90
+        ]
+       },
+       {
+        "from": [
+         150,
+         116
+        ],
+        "to": [
+         200,
+         116
+        ]
+       },
+       {
+        "from": [
+         275,
+         142
+        ],
+        "to": [
+         275,
+         180
+        ],
+        "label": "no"
+       },
+       {
+        "from": [
+         350,
+         116
+        ],
+        "to": [
+         400,
+         116
+        ],
+        "label": "yes"
+       },
+       {
+        "from": [
+         275,
+         232
+        ],
+        "to": [
+         275,
+         270
+        ]
+       },
+       {
+        "from": [
+         350,
+         296
+        ],
+        "to": [
+         400,
+         296
+        ]
+       },
+       {
+        "from": [
+         465,
+         142
+        ],
+        "to": [
+         465,
+         270
+        ]
+       },
+       {
+        "from": [
+         150,
+         296
+        ],
+        "to": [
+         200,
+         296
+        ],
+        "label": "write"
+       }
+      ],
+      "caption": "One server, *four states.*"
+     }
+    },
+    {
+     "tag": "Reading",
+     "toc": false,
+     "body": "Hairline boxes, radius zero, one orange dot at the head of every arrow. The build_tx box is drawn in the lighter hairline because it sits outside the read path."
+    }
+   ]
+  },
+  {
+   "name": "O · Checklist",
+   "blocks": [
+    {
+     "tag": "Before the beta",
+     "toc": "O · Checklist and sign-off",
+     "source": "Checked by the owner; ticked items dated in the decision log.",
+     "heading": "Ready *for 6 November*",
+     "checklist": [
+      {
+       "text": "Seven tools pass the test suite on three chains",
+       "who": "Engineering · 23 Oct",
+       "done": true
+      },
+      {
+       "text": "Disclaimer wording approved by Parallel",
+       "who": "Noah · 16 Oct",
+       "done": true
+      },
+      {
+       "text": "Staleness copy reviewed on a stale indexer, on purpose",
+       "who": "Design · 30 Oct"
+      },
+      {
+       "text": "CLI installs from the repository on a clean machine",
+       "who": "Engineering · 30 Oct"
+      },
+      {
+       "text": "README and install docs read by someone outside the project",
+       "who": "Design · 3 Nov"
+      },
+      {
+       "text": "Announcement post scheduled with the Seventeenth Report",
+       "who": "Parallel · 6 Nov"
+      }
+     ]
+    },
+    {
+     "tag": "Sign-off",
+     "toc": false,
+     "signoff": [
+      [
+       "Owner",
+       "Jean, Cooper Labs"
+      ],
+      [
+       "Design",
+       "Nicolas"
+      ],
+      [
+       "Parallel",
+       "Noah"
+      ],
+      [
+       "Date",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "P · Code",
+   "blocks": [
+    {
+     "tag": "Appendix D · Schema",
+     "toc": "P · Code and configuration",
+     "source": "As proposed; the deployed schema is read from the server.",
+     "main": [
+      {
+       "heading": "One tool *in sixteen lines*"
+      },
+      {
+       "space": 14
+      },
+      {
+       "code": {
+        "text": "// tools/get_rates.ts · one tool, one schema, one disclaimer\nexport const getRates = tool({\n  name: \"get_rates\",\n  description: \"Borrow and savings rates per asset and chain. Figures as of a block; not advice.\",\n  input: z.object({\n    chain: z.enum([\"base\", \"arbitrum\", \"ethereum\"]),\n    asset: z.string().optional(),            // every asset when omitted\n  }),\n  async run({ chain, asset }) {\n    const { block, rates, age } = await indexer(chain).rates(asset);\n    return {\n      block, rates,\n      stale: age > 300,                       // seconds since the newest block\n      note: age > 300 ? `Figures as of block ${block}, ${age} s old.` : undefined,\n    };\n  },\n});",
+        "keywords": [
+         "export",
+         "const",
+         "async",
+         "await",
+         "return",
+         "tool",
+         "z"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "tag": "Worked values",
+     "toc": false,
+     "table": {
+      "cols": [
+       [
+        "Age",
+        90
+       ],
+       [
+        "stale",
+        90
+       ],
+       [
+        "Answer",
+        null
+       ]
+      ],
+      "mono": [
+       0,
+       1
+      ],
+      "highlight": 3,
+      "rows": [
+       [
+        "4 s",
+        "false",
+        "Rates, block 31 240 118"
+       ],
+       [
+        "90 s",
+        "false",
+        "Rates, block 31 240 075"
+       ],
+       [
+        "240 s",
+        "false",
+        "Rates, block 31 240 000"
+       ],
+       [
+        "600 s",
+        "true",
+        "Rates, flagged: figures as of block 31 239 820, 600 s old"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "class": "spec",
+ "subject": "Connect flow",
+ "title": "*One tap* to connect, whatever the wallet.",
+ "standfirst": "Defines the wallet connection flow of the Parallel app for every supported wallet, mobile and desktop, for build starting 21 September 2026.",
+ "version": "v0.2",
+ "classification": "Internal",
+ "status": "Draft",
+ "date": "2026-09-14",
+ "owner": "Nicolas, Design",
+ "cover": "04",
+ "pages": [
+  {
+   "name": "Spec",
+   "blocks": [
+    {
+     "tag": "Summary",
+     "heading": "One tap to connect, *whatever the wallet*",
+     "body": "The connect button opens one sheet: the wallets found on the device first, then the rest. A returning user is reconnected silently. Every error names the wallet and the next action. The sheet is one component, used on every screen that needs a wallet; no screen may build its own."
+    },
+    {
+     "tag": "Requirements",
+     "source": "Priorities agreed at the design review of 11 Sep 2026.",
+     "table": {
+      "cols": [
+       [
+        "ID",
+        56
+       ],
+       [
+        "Requirement",
+        null
+       ],
+       [
+        "Priority",
+        90
+       ]
+      ],
+      "mono": [
+       0,
+       2
+      ],
+      "rows": [
+       [
+        "R1",
+        "Installed and injected wallets are listed first, detected at open",
+        "Must"
+       ],
+       [
+        "R2",
+        "A returning user is reconnected without a sheet",
+        "Must"
+       ],
+       [
+        "R3",
+        "Every error names the wallet and offers one next action",
+        "Must"
+       ],
+       [
+        "R4",
+        "Wrong chain is handled inside the sheet, with a switch button",
+        "Should"
+       ],
+       [
+        "R5",
+        "The sheet remembers the last wallet used, per device",
+        "Could"
+       ]
+      ]
+     }
+    },
+    {
+     "tag": "Interface",
+     "bullets": [
+      [
+       "Button",
+       "Label \"Connect\"; once connected, the address shortened to six and four characters, the chain as a dot."
+      ],
+      [
+       "Sheet",
+       "Wallet name and icon on one row each, 56 high; a section label above the second group; no search."
+      ],
+      [
+       "Error",
+       "Two lines under the row: what happened, then one action. Never a modal, never red on its own."
+      ]
+     ]
+    },
+    {
+     "tag": null,
+     "figures": [
+      [
+       "1",
+       "Tap to connect"
+      ],
+      [
+       "6+4",
+       "Address shortening"
+      ],
+      [
+       "400 ms",
+       "Sheet open, at most"
+      ]
+     ]
+    },
+    {
+     "tag": "Open questions",
+     "source": "Decide before build starts on 21 Sep.",
+     "table": {
+      "cols": [
+       [
+        "#",
+        48
+       ],
+       [
+        "Question",
+        null
+       ],
+       [
+        "Owner",
+        110
+       ]
+      ],
+      "mono": [
+       0
+      ],
+      "rows": [
+       [
+        "01",
+        "Do we list wallets we cannot detect, or hide them behind \"Other\"?",
+        "Nicolas"
+       ],
+       [
+        "02",
+        "Silent reconnect after how many days?",
+        "Jean"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

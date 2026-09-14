@@ -1,0 +1,13 @@
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# This repository is PRIVATE and carries the licensed PP Eiko file in
+# plugins/cooper-brand/assets/fonts/private/. For a PUBLIC copy, uncomment the
+# three lines below before the first commit (see that folder's README.md).
+# **/assets/fonts/private/*.woff2
+# **/assets/fonts/private/*.otf
+# **/assets/fonts/private/*.ttf
+
+# transfer zips from the cloud session
+_transfer/

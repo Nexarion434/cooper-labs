@@ -1,0 +1,122 @@
+{
+ "class": "case-study",
+ "subject": "Atlas Wallet",
+ "title": "From a whitepaper to a wallet *in twelve weeks.*",
+ "standfirst": "Records how Cooper Labs took Atlas from a twenty-page whitepaper to a shipped mobile wallet, what it cost, and what the numbers said three months after launch.",
+ "version": "v1.0",
+ "classification": "Internal",
+ "status": "Final",
+ "date": "2026-09-12",
+ "owner": "Nicolas, Design",
+ "cover": "03",
+ "pages": [
+  {
+   "name": "Case study",
+   "blocks": [
+    {
+     "tag": "Client",
+     "heading": {
+      "text": "Atlas, *a wallet for people who hold one token*",
+      "suffix": "(fictional client)"
+     },
+     "body": "Atlas came with a whitepaper, a token and a deadline: a wallet in the stores before the token listing. No screens, no team, no name for the app. The brief was to make the wallet simple enough that a first-time holder could receive, hold and stake in one session, and to ship it in twelve weeks."
+    },
+    {
+     "tag": null,
+     "figures": [
+      [
+       "12",
+       "Weeks, brief to the stores"
+      ],
+      [
+       "11",
+       "Friday demos"
+      ],
+      [
+       "2",
+       "People, full time"
+      ],
+      [
+       "4.7",
+       "Store rating, month three"
+      ]
+     ]
+    },
+    {
+     "tag": "What we did",
+     "bullets": [
+      [
+       "Weeks 1 to 3 · Product",
+       "Interviews with twelve holders, one flow on paper, the onboarding cut from nine screens to four."
+      ],
+      [
+       "Weeks 4 to 9 · Build",
+       "React Native, one design system in Figma and in code, the staking flow tested with the protocol's testnet from week five."
+      ],
+      [
+       "Weeks 10 to 12 · Release",
+       "Store listings, the audit fixes, a beta with two hundred holders, and the launch on listing day."
+      ]
+     ]
+    },
+    {
+     "tag": "Outcome",
+     "source": "Client analytics, 90 days after launch; figures rounded.",
+     "heading": "What the numbers *said*",
+     "table": {
+      "cols": [
+       [
+        "Metric",
+        null
+       ],
+       [
+        "Target",
+        90
+       ],
+       [
+        "Day 90",
+        90
+       ]
+      ],
+      "mono": [
+       1,
+       2
+      ],
+      "strong": [
+       0
+      ],
+      "rows": [
+       [
+        "Onboarding completed",
+        "60%",
+        "74%"
+       ],
+       [
+        "First stake within a session",
+        "25%",
+        "31%"
+       ],
+       [
+        "Support tickets per 100 users",
+        "< 5",
+        "2.1"
+       ],
+       [
+        "Crash-free sessions",
+        "99%",
+        "99.6%"
+       ]
+      ]
+     }
+    },
+    {
+     "tag": "What we would change",
+     "reco": [
+      "Start the store review in week eight, not ten; the two rounds of review cost a week we had not planned.",
+      "Keep the weekly demo. Every cut that made the product simpler was decided on a Friday, in front of the client."
+     ]
+    }
+   ]
+  }
+ ]
+}

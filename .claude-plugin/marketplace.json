@@ -1,0 +1,34 @@
+{
+  "name": "cooper-labs",
+  "owner": {
+    "name": "Cooper Labs"
+  },
+  "description": "Cooper Labs' Claude plugins: the brand kit, the document templates and the social cards.",
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "cooper-brand",
+      "source": "./plugins/cooper-brand",
+      "description": "Cooper Labs' brand kit for documents and social: the A4 internal-document template with sixteen page styles (proposal, case study, spec, post-mortem, memo, guide), the 16:9 deck, the A4 fact sheet, the social cards from the Figma file (post, partner, X cover, social preview) in eleven sizes, banners, threads, the animated MP4 and the six brand renders by number. Built from a JSON description, rendered with Chromium, checked before it goes out.",
+      "author": {
+        "name": "Cooper Labs"
+      },
+      "category": "brand",
+      "tags": [
+        "brand",
+        "documents",
+        "deck",
+        "fact sheet",
+        "cooper labs",
+        "internal document",
+        "proposal",
+        "case study",
+        "social",
+        "renders"
+      ],
+      "version": "0.1.0"
+    }
+  ]
+}

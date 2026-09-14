@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cooper Labs · Post-mortem · Launch day, 26 Aug</title>
+<link rel="stylesheet" href="../css/cooper.css">
+</head>
+<body>
+
+<!-- ========================= COVER ========================= -->
+<section class="cover cover--dark">
+
+  <div class="cover__top">
+    <img class="cover__logo" src="../logo/cooper_horizontal_w.svg" alt="Cooper Labs">
+    <div class="cover__conf">Internal · v1.0</div>
+  </div>
+  <div class="cover__bottom">
+    <div class="cover__kicker">Post-mortem · 26 August 2026</div>
+    <div class="cover__title"><em>Fifty-Two Minutes</em> on the Wrong RPC.</div>
+    <div class="cover__stand">Records what happened on the morning of the Atlas launch, why the release pointed at the testnet, and the three actions that close the gap.</div>
+    <div class="cover__rule"></div>
+    <div class="cover__meta"><div><div class="k">Date</div><div class="v">28 August 2026</div></div><div><div class="k">Classification</div><div class="v">Internal</div></div><div><div class="k">Status</div><div class="v">Final</div></div><div><div class="k">Owner</div><div class="v">Jean, Cooper Labs</div></div></div>
+    <div class="cover__notice">Internal document · Not for distribution outside Cooper Labs</div>
+  </div>
+</section>
+<!-- ===================== PAGE · POST-MORTEM ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Post-mortem · Launch day, 26 Aug · Internal · v1.0</div><div class="pagehead__num">02</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Incident</div></div>
+      <div class="block__main">
+        <div class="heading">What Happened<span class="heading__suffix">(52 minutes)</span></div>
+        <div class="body">At 09:00 UTC the release build went live in both stores with the testnet RPC in its configuration. Balances showed as zero for every user who updated. No funds were at risk; 52 minutes of a wallet that looked empty, one hotfix, and a store review that was faster than we deserved.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Timeline</div><div class="source">Times in UTC, from the launch channel log.</div></div>
+      <div class="block__main">
+        <table class="table">
+          <tr><th style="width:70px">Time</th><th>Event</th><th style="width:120px">Actor</th></tr>
+          <tr><td class="mono">09:00</td><td>Release live; first reports of zero balances</td><td>Support</td></tr>
+          <tr><td class="mono">09:07</td><td>Config diff read; testnet RPC confirmed</td><td>Jean</td></tr>
+          <tr><td class="mono">09:15</td><td>Hotfix built from the release branch, config only</td><td>Engineering</td></tr>
+          <tr><td class="mono">09:31</td><td>Expedited review requested in both stores</td><td>Jean</td></tr>
+          <tr><td class="mono">09:52</td><td>Hotfix live; balances correct; incident closed</td><td>Engineering</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Root cause</div></div>
+      <div class="block__main">
+        <div class="bullets">
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">One configuration file for two environments</div><div class="bullet__text">The testnet value had been committed for the beta and never reverted; the build did not know which environment it was for.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">No check on the release build</div><div class="bullet__text">The release checklist verified the version and the signing, not the network the app would talk to.</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Actions</div><div class="source">Tracked in Linear, ATL-140 to ATL-142.</div></div>
+      <div class="block__main">
+        <table class="table">
+          <tr><th>Action</th><th style="width:110px">Owner</th><th style="width:80px">Due</th></tr>
+          <tr><td>Environment baked at build time, one file per target</td><td>Engineering</td><td class="mono">4 Sep</td></tr>
+          <tr><td>Release checklist: a mainnet balance read from the release build</td><td>Jean</td><td class="mono">4 Sep</td></tr>
+          <tr><td>Launch-day rota with a named person in each store console</td><td>Jean</td><td class="mono">11 Sep</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">02 / 03</div></div>
+</section>
+<!-- ======================= BACK COVER ======================= -->
+<section class="cover cover--dark back">
+  <div class="back__glow"></div>
+  <div class="cover__top">
+    <img class="cover__logo" src="../logo/cooper_horizontal_w.svg" alt="Cooper Labs">
+    <div class="cover__conf">Internal · v1.0</div>
+  </div>
+  <div class="cover__bottom">
+    <div class="back__tagline">We turn Web3 ideas <em>into products people use.</em></div>
+    <div class="cover__rule"></div>
+    <div class="cover__meta"><div><div class="k">Website</div><div class="v">cooperlabs.xyz</div></div><div><div class="k">X</div><div class="v">@cooperlabs</div></div><div><div class="k">Telegram</div><div class="v">@jeanbrasse</div></div><div><div class="k">This document</div><div class="v">Post-mortem<br>v1.0 · 28 Aug 2026</div></div></div>
+    <div class="cover__notice">Internal document · Not for distribution outside Cooper Labs · © 2026 Cooper Labs</div>
+  </div>
+</section>
+
+</body>
+</html>

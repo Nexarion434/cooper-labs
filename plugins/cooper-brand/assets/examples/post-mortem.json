@@ -1,0 +1,131 @@
+{
+ "class": "post-mortem",
+ "subject": "Launch day, 26 Aug",
+ "kicker": "Post-mortem · 26 August 2026",
+ "title": "*Fifty-two minutes* on the wrong RPC.",
+ "standfirst": "Records what happened on the morning of the Atlas launch, why the release pointed at the testnet, and the three actions that close the gap.",
+ "version": "v1.0",
+ "classification": "Internal",
+ "status": "Final",
+ "date": "2026-08-28",
+ "owner": "Jean, Cooper Labs",
+ "cover": "dark",
+ "pages": [
+  {
+   "name": "Post-mortem",
+   "blocks": [
+    {
+     "tag": "Incident",
+     "heading": {
+      "text": "What happened",
+      "suffix": "(52 minutes)"
+     },
+     "body": "At 09:00 UTC the release build went live in both stores with the testnet RPC in its configuration. Balances showed as zero for every user who updated. No funds were at risk; 52 minutes of a wallet that looked empty, one hotfix, and a store review that was faster than we deserved."
+    },
+    {
+     "tag": "Timeline",
+     "source": "Times in UTC, from the launch channel log.",
+     "table": {
+      "cols": [
+       [
+        "Time",
+        70
+       ],
+       [
+        "Event",
+        null
+       ],
+       [
+        "Actor",
+        120
+       ]
+      ],
+      "mono": [
+       0
+      ],
+      "rows": [
+       [
+        "09:00",
+        "Release live; first reports of zero balances",
+        "Support"
+       ],
+       [
+        "09:07",
+        "Config diff read; testnet RPC confirmed",
+        "Jean"
+       ],
+       [
+        "09:15",
+        "Hotfix built from the release branch, config only",
+        "Engineering"
+       ],
+       [
+        "09:31",
+        "Expedited review requested in both stores",
+        "Jean"
+       ],
+       [
+        "09:52",
+        "Hotfix live; balances correct; incident closed",
+        "Engineering"
+       ]
+      ]
+     }
+    },
+    {
+     "tag": "Root cause",
+     "bullets": [
+      [
+       "One configuration file for two environments",
+       "The testnet value had been committed for the beta and never reverted; the build did not know which environment it was for."
+      ],
+      [
+       "No check on the release build",
+       "The release checklist verified the version and the signing, not the network the app would talk to."
+      ]
+     ]
+    },
+    {
+     "tag": "Actions",
+     "source": "Tracked in Linear, ATL-140 to ATL-142.",
+     "table": {
+      "cols": [
+       [
+        "Action",
+        null
+       ],
+       [
+        "Owner",
+        110
+       ],
+       [
+        "Due",
+        80
+       ]
+      ],
+      "mono": [
+       2
+      ],
+      "rows": [
+       [
+        "Environment baked at build time, one file per target",
+        "Engineering",
+        "4 Sep"
+       ],
+       [
+        "Release checklist: a mainnet balance read from the release build",
+        "Jean",
+        "4 Sep"
+       ],
+       [
+        "Launch-day rota with a named person in each store console",
+        "Jean",
+        "11 Sep"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

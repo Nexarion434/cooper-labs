@@ -1,0 +1,102 @@
+{
+ "class": "memo",
+ "subject": "Friday demos",
+ "title": "Every project demos *on Friday.*",
+ "standfirst": "Sets the one rule that applies to every Cooper Labs engagement from October: a demo of working software every Friday, with the client in the room.",
+ "version": "v1.0",
+ "classification": "Internal",
+ "status": "Final",
+ "date": "2026-09-14",
+ "owner": "Jean, Cooper Labs",
+ "cover": "05",
+ "pages": [
+  {
+   "name": "Memo",
+   "blocks": [
+    {
+     "tag": "Rule",
+     "heading": "The rule *in one paragraph*",
+     "body": "Every project demos on Friday, from the first week to the last. The demo shows software that runs, not slides; it lasts thirty minutes; the client is there; what is decided is written in the project channel before the end of the day. A week without a demo is a week we do not invoice."
+    },
+    {
+     "tag": null,
+     "figures": [
+      [
+       "30",
+       "Minutes per demo"
+      ],
+      [
+       "Weekly",
+       "From week one"
+      ],
+      [
+       "1",
+       "Decision log, per project"
+      ],
+      [
+       "Oct",
+       "In force"
+      ]
+     ]
+    },
+    {
+     "tag": "Impact",
+     "bullets": [
+      [
+       "Clients",
+       "See the product grow every week and decide on what they see, not on a plan."
+      ],
+      [
+       "The team",
+       "A fixed rhythm; scope cut on Friday rather than discovered in the last week."
+      ],
+      [
+       "Proposals",
+       "Every proposal names the six or twelve demos it promises, and the phase gate sits on one of them."
+      ]
+     ]
+    },
+    {
+     "tag": "Next steps",
+     "source": "Owners confirmed at the studio meeting of 11 Sep 2026.",
+     "table": {
+      "cols": [
+       [
+        "Step",
+        null
+       ],
+       [
+        "Owner",
+        140
+       ],
+       [
+        "Due",
+        90
+       ]
+      ],
+      "mono": [
+       2
+      ],
+      "rows": [
+       [
+        "Add the demo line to the proposal template",
+        "Nicolas",
+        "18 Sep"
+       ],
+       [
+        "Write the demo format, one page",
+        "Jean",
+        "25 Sep"
+       ],
+       [
+        "First Friday with every project on the rule",
+        "All",
+        "2 Oct"
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

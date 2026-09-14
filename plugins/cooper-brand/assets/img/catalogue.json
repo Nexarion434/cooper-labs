@@ -1,0 +1,590 @@
+{
+ "note": "The six brand renders, from the Figma file Brand Identity (page Twitter): 1841 x 1151 masters (16:10) in renders/NN.jpg. `ground` says whether type on top is ink (light) or white (dark). `frames` gives, per canvas size, the <img> geometry inside .canvas__bg in percent of the canvas (w, h, left, top), computed from `focus` (the point of the image placed at the centre, in percent) and `zoom`; scripts/frame.py prints or recomputes them. `subject` boxes the block that must not sit under text (null when the picture is abstract). `busy` says where the picture is loaded.",
+ "axes": {
+  "ground": [
+   "light (ink type on top)",
+   "dark (white type on top; none of the six, the dark cover is plain #1E1E1E)"
+  ],
+  "busy": [
+   "centre",
+   "left",
+   "top",
+   "all"
+  ]
+ },
+ "images": [
+  {
+   "id": "01",
+   "file": "renders/01.jpg",
+   "name": "space-between",
+   "ground": "light",
+   "desc": "Soft white volumes and a curved edge, out of focus: the render behind the posts, the X cover, the social preview and the wallpaper",
+   "busy": "all",
+   "subject": null,
+   "focus": [
+    50,
+    50
+   ],
+   "zoom": 1.0,
+   "used_by": [
+    "post",
+    "x-cover",
+    "social-preview",
+    "wallpaper",
+    "cover proposal"
+   ],
+   "frames": {
+    "1200x675": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    },
+    "1200x630": {
+     "w": 100.0,
+     "h": 119.1,
+     "left": -0.0,
+     "top": -9.5
+    },
+    "1500x500": {
+     "w": 100.0,
+     "h": 187.6,
+     "left": -0.0,
+     "top": -43.8
+    },
+    "2000x800": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2400x1200": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1200x627": {
+     "w": 100.0,
+     "h": 119.7,
+     "left": -0.0,
+     "top": -9.8
+    },
+    "1080x1080": {
+     "w": 159.9,
+     "h": 100.0,
+     "left": -30.0,
+     "top": -0.0
+    },
+    "1080x1920": {
+     "w": 284.4,
+     "h": 100.0,
+     "left": -92.2,
+     "top": -0.0
+    },
+    "1600x400": {
+     "w": 100.0,
+     "h": 250.1,
+     "left": -0.0,
+     "top": -75.0
+    },
+    "600x300": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1500x600": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2560x1440": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    }
+   }
+  },
+  {
+   "id": "02",
+   "file": "renders/02.jpg",
+   "name": "halftone",
+   "ground": "light",
+   "desc": "The block drawn as a rain of dots on white; the posts lay it at 60% over white, the wallpaper 'The Space Between' uses it as it is",
+   "busy": "top",
+   "subject": null,
+   "focus": [
+    50,
+    50
+   ],
+   "zoom": 1.0,
+   "used_by": [
+    "post-texture",
+    "wallpaper"
+   ],
+   "frames": {
+    "1200x675": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    },
+    "1200x630": {
+     "w": 100.0,
+     "h": 119.1,
+     "left": -0.0,
+     "top": -9.5
+    },
+    "1500x500": {
+     "w": 100.0,
+     "h": 187.6,
+     "left": -0.0,
+     "top": -43.8
+    },
+    "2000x800": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2400x1200": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1200x627": {
+     "w": 100.0,
+     "h": 119.7,
+     "left": -0.0,
+     "top": -9.8
+    },
+    "1080x1080": {
+     "w": 159.9,
+     "h": 100.0,
+     "left": -30.0,
+     "top": -0.0
+    },
+    "1080x1920": {
+     "w": 284.4,
+     "h": 100.0,
+     "left": -92.2,
+     "top": -0.0
+    },
+    "1600x400": {
+     "w": 100.0,
+     "h": 250.1,
+     "left": -0.0,
+     "top": -75.0
+    },
+    "600x300": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1500x600": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2560x1440": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    }
+   }
+  },
+  {
+   "id": "03",
+   "file": "renders/03.jpg",
+   "name": "block-grey",
+   "ground": "light",
+   "desc": "The block, pixel-rendered in grey, large, left of centre on a mid-grey dotted ground (ink type still reads on it)",
+   "busy": "left",
+   "subject": {
+    "x": 30,
+    "y": 22,
+    "w": 39,
+    "h": 54,
+    "what": "the block"
+   },
+   "focus": [
+    50,
+    50
+   ],
+   "zoom": 1.0,
+   "used_by": [
+    "cover memo"
+   ],
+   "frames": {
+    "1200x675": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    },
+    "1200x630": {
+     "w": 100.0,
+     "h": 119.1,
+     "left": -0.0,
+     "top": -9.5
+    },
+    "1500x500": {
+     "w": 100.0,
+     "h": 187.6,
+     "left": -0.0,
+     "top": -43.8
+    },
+    "2000x800": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2400x1200": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1200x627": {
+     "w": 100.0,
+     "h": 119.7,
+     "left": -0.0,
+     "top": -9.8
+    },
+    "1080x1080": {
+     "w": 159.9,
+     "h": 100.0,
+     "left": -30.0,
+     "top": -0.0
+    },
+    "1080x1920": {
+     "w": 284.4,
+     "h": 100.0,
+     "left": -92.2,
+     "top": -0.0
+    },
+    "1600x400": {
+     "w": 100.0,
+     "h": 250.1,
+     "left": -0.0,
+     "top": -75.0
+    },
+    "600x300": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1500x600": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2560x1440": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    }
+   }
+  },
+  {
+   "id": "04",
+   "file": "renders/04.jpg",
+   "name": "block-orange-dots",
+   "ground": "light",
+   "desc": "The block in orange, small, centred on a light dotted ground",
+   "busy": "centre",
+   "subject": {
+    "x": 42,
+    "y": 39,
+    "w": 16,
+    "h": 22,
+    "what": "the orange block"
+   },
+   "focus": [
+    50,
+    50
+   ],
+   "zoom": 1.0,
+   "used_by": [
+    "x-cover 'We Are Cooper'"
+   ],
+   "frames": {
+    "1200x675": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    },
+    "1200x630": {
+     "w": 100.0,
+     "h": 119.1,
+     "left": -0.0,
+     "top": -9.5
+    },
+    "1500x500": {
+     "w": 100.0,
+     "h": 187.6,
+     "left": -0.0,
+     "top": -43.8
+    },
+    "2000x800": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2400x1200": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1200x627": {
+     "w": 100.0,
+     "h": 119.7,
+     "left": -0.0,
+     "top": -9.8
+    },
+    "1080x1080": {
+     "w": 159.9,
+     "h": 100.0,
+     "left": -30.0,
+     "top": -0.0
+    },
+    "1080x1920": {
+     "w": 284.4,
+     "h": 100.0,
+     "left": -92.2,
+     "top": -0.0
+    },
+    "1600x400": {
+     "w": 100.0,
+     "h": 250.1,
+     "left": -0.0,
+     "top": -75.0
+    },
+    "600x300": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1500x600": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2560x1440": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    }
+   }
+  },
+  {
+   "id": "05",
+   "file": "renders/05.jpg",
+   "name": "block-orange-noise",
+   "ground": "light",
+   "desc": "The block in orange, small, centred on a light noisy ground",
+   "busy": "centre",
+   "subject": {
+    "x": 41,
+    "y": 39,
+    "w": 17,
+    "h": 22,
+    "what": "the orange block"
+   },
+   "focus": [
+    50,
+    50
+   ],
+   "zoom": 1.0,
+   "used_by": [],
+   "frames": {
+    "1200x675": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    },
+    "1200x630": {
+     "w": 100.0,
+     "h": 119.1,
+     "left": -0.0,
+     "top": -9.5
+    },
+    "1500x500": {
+     "w": 100.0,
+     "h": 187.6,
+     "left": -0.0,
+     "top": -43.8
+    },
+    "2000x800": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2400x1200": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1200x627": {
+     "w": 100.0,
+     "h": 119.7,
+     "left": -0.0,
+     "top": -9.8
+    },
+    "1080x1080": {
+     "w": 159.9,
+     "h": 100.0,
+     "left": -30.0,
+     "top": -0.0
+    },
+    "1080x1920": {
+     "w": 284.4,
+     "h": 100.0,
+     "left": -92.2,
+     "top": -0.0
+    },
+    "1600x400": {
+     "w": 100.0,
+     "h": 250.1,
+     "left": -0.0,
+     "top": -75.0
+    },
+    "600x300": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1500x600": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2560x1440": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    }
+   }
+  },
+  {
+   "id": "06",
+   "file": "renders/06.jpg",
+   "name": "block-orange-grey",
+   "ground": "light",
+   "desc": "The block in orange, small, centred on a grey dotted ground",
+   "busy": "centre",
+   "subject": {
+    "x": 42,
+    "y": 39,
+    "w": 16,
+    "h": 23,
+    "what": "the orange block"
+   },
+   "focus": [
+    50,
+    50
+   ],
+   "zoom": 1.0,
+   "used_by": [
+    "x-cover 'We Are Cooper' (layered)"
+   ],
+   "frames": {
+    "1200x675": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    },
+    "1200x630": {
+     "w": 100.0,
+     "h": 119.1,
+     "left": -0.0,
+     "top": -9.5
+    },
+    "1500x500": {
+     "w": 100.0,
+     "h": 187.6,
+     "left": -0.0,
+     "top": -43.8
+    },
+    "2000x800": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2400x1200": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1200x627": {
+     "w": 100.0,
+     "h": 119.7,
+     "left": -0.0,
+     "top": -9.8
+    },
+    "1080x1080": {
+     "w": 159.9,
+     "h": 100.0,
+     "left": -30.0,
+     "top": -0.0
+    },
+    "1080x1920": {
+     "w": 284.4,
+     "h": 100.0,
+     "left": -92.2,
+     "top": -0.0
+    },
+    "1600x400": {
+     "w": 100.0,
+     "h": 250.1,
+     "left": -0.0,
+     "top": -75.0
+    },
+    "600x300": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1500x600": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2560x1440": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    }
+   }
+  }
+ ]
+}

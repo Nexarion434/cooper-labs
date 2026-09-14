@@ -1,0 +1,520 @@
+{
+ "class": "proposal",
+ "subject": "Parallel MCP server",
+ "title": "Ship the MCP server *before the CLI.*",
+ "standfirst": "Proposes a six-week build of an MCP server that exposes Parallel's positions, rates and governance to AI agents, read-only, for a start on 28 September 2026.",
+ "version": "v0.1",
+ "classification": "Confidential",
+ "status": "Draft",
+ "date": "2026-09-14",
+ "owner": "Jean, Cooper Labs",
+ "cover": "01",
+ "contents": "auto",
+ "contents_intro": "Read the summary and the recommendation first; they stand alone. Context, options and the appendices are the evidence, kept for whoever needs to check a figure or a date. Every table names its source in the margin.",
+ "versions": [
+  [
+   "v0.1",
+   "2026-09-14",
+   "First draft for the Parallel team"
+  ],
+  [
+   "v0.2",
+   "TBD",
+   "Scope and dates confirmed with Noah"
+  ],
+  [
+   "v1.0",
+   "TBD",
+   "Signed statement of work"
+  ]
+ ],
+ "pages": [
+  {
+   "name": "Summary",
+   "blocks": [
+    {
+     "tag": "Summary",
+     "heading": {
+      "text": "One server, *every agent.*",
+      "suffix": "(six weeks)"
+     },
+     "body": "Agents already answer questions about Parallel from stale documentation and guessed numbers. An MCP server gives every assistant the same read-only view of the protocol: positions, rates, backing and governance, straight from the chain and the indexer. It holds no keys, signs nothing, and ships in six weeks. The CLI the team asked for is a thin client of the same server, and comes after.",
+     "toc": "Summary and headline figures"
+    },
+    {
+     "tag": null,
+     "figures": [
+      [
+       "6",
+       "Weeks, brief to release"
+      ],
+      [
+       "7",
+       "Tools, read-only"
+      ],
+      [
+       "3",
+       "Chains covered"
+      ],
+      [
+       "0",
+       "Keys held"
+      ]
+     ]
+    },
+    {
+     "tag": "Assessment",
+     "source": "Reviewed with the Parallel protocol team on 10 Sep 2026.",
+     "heading": "What exists, *what is missing*",
+     "table": {
+      "cols": [
+       [
+        "Area",
+        150
+       ],
+       [
+        "Today",
+        null
+       ],
+       [
+        "Gap",
+        190
+       ]
+      ],
+      "strong": [
+       0
+      ],
+      "rows": [
+       [
+        "Protocol data",
+        "Subgraph and a REST indexer, per chain",
+        "No single entry point"
+       ],
+       [
+        "Documentation",
+        "Public docs site, versioned",
+        "Not machine-readable"
+       ],
+       [
+        "Governance",
+        "Snapshot and the forum",
+        "Tallies only via the UI"
+       ],
+       [
+        "Agents",
+        "Ad-hoc prompts with pasted numbers",
+        "No source of truth"
+       ]
+      ]
+     }
+    },
+    {
+     "tag": "Risks & mitigants",
+     "bullets": [
+      [
+       "Stale data",
+       "Every answer carries the block number and the age of the indexer; past 300 s the tool says so."
+      ],
+      [
+       "Misuse as advice",
+       "Read-only tools, a fixed disclaimer in every schema, no rates projected forward."
+      ],
+      [
+       "Maintenance",
+       "The server is generated from the tool schemas; a new protocol module is one file."
+      ]
+     ]
+    },
+    {
+     "tag": "Recommendation",
+     "reco": [
+      "Build the server first, read-only, and derive the CLI from it in week five.",
+      "Start on 28 September; a public beta on 6 November, announced with the Seventeenth Parallel Report."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Context & scope",
+   "blocks": [
+    {
+     "tag": "Context",
+     "heading": "Why now",
+     "body": "Since June the support channel receives more questions from agents than from people: the same three questions about rates, backing and a wallet's health factor, answered from documentation that is two releases behind. The protocol has the data; it does not have a door for it. The team asked for a CLI. A CLI serves developers at a terminal; an MCP server serves every assistant the community already uses, and a CLI besides."
+    },
+    {
+     "tag": "Scope",
+     "heading": "What is *in, what is out*",
+     "bullets": [
+      [
+       "In",
+       "Seven read tools over the indexer and the chain, an unsigned transaction builder, the documentation as a resource, one package per chain configuration."
+      ],
+      [
+       "Out",
+       "Signing, key custody, write access of any kind, a hosted gateway. The server runs where the user runs it."
+      ],
+      [
+       "Later",
+       "The CLI (week five), a hosted read-only endpoint (after the beta), governance vote drafting (a separate proposal)."
+      ]
+     ]
+    },
+    {
+     "tag": "Timeline",
+     "source": "Dates agreed with Noah on 12 Sep 2026; each week ends with a Friday demo.",
+     "heading": "Six weeks, *six demos*",
+     "table": {
+      "cols": [
+       [
+        "Week",
+        60
+       ],
+       [
+        "Ends",
+        80
+       ],
+       [
+        "Delivered",
+        null
+       ]
+      ],
+      "mono": [
+       0,
+       1
+      ],
+      "rows": [
+       [
+        "1",
+        "2 Oct",
+        "Tool schemas agreed; get_rates and get_backing on Base"
+       ],
+       [
+        "2",
+        "9 Oct",
+        "Positions and simulate_borrow, three chains"
+       ],
+       [
+        "3",
+        "16 Oct",
+        "Governance and docs resources; staleness rule"
+       ],
+       [
+        "4",
+        "23 Oct",
+        "build_tx, test suite, error copy"
+       ],
+       [
+        "5",
+        "30 Oct",
+        "CLI over the server; install docs"
+       ],
+       [
+        "6",
+        "6 Nov",
+        "Public beta, announcement, hand-over"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "name": "Options",
+   "blocks": [
+    {
+     "tag": "Options",
+     "source": "Estimates in Cooper weeks, one designer and one engineer.",
+     "heading": "Four ways *to open the door*",
+     "table": {
+      "cols": [
+       [
+        "Option",
+        190
+       ],
+       [
+        "Weeks",
+        60
+       ],
+       [
+        "Reach",
+        110
+       ],
+       [
+        "Verdict",
+        null
+       ]
+      ],
+      "mono": [
+       1
+      ],
+      "strong": [
+       0
+      ],
+      "highlight": 1,
+      "rows": [
+       [
+        "A · CLI first",
+        "5",
+        "Developers",
+        "Serves the terminal, not the assistants"
+       ],
+       [
+        "B · MCP server first",
+        "6",
+        "Every agent",
+        "Recommended; the CLI comes free"
+       ],
+       [
+        "C · Both in parallel",
+        "9",
+        "Both",
+        "Two codebases for one set of data"
+       ],
+       [
+        "D · Wait for the public API",
+        "n/a",
+        "Unknown",
+        "No date; the questions keep coming"
+       ]
+      ]
+     }
+    },
+    {
+     "tag": "Why option B",
+     "bullets": [
+      [
+       "One source of truth",
+       "Tools, CLI and documentation read the same schemas; a number cannot disagree with itself."
+      ],
+      [
+       "Read-only by construction",
+       "No key ever enters the process; the worst failure is a stale answer, and the answer says so."
+      ],
+      [
+       "Six weeks, then a thin CLI",
+       "The CLI is a formatter over the server's tools, a week of work rather than five."
+      ]
+     ]
+    },
+    {
+     "tag": null,
+     "figures": [
+      [
+       "6",
+       "Weeks, option B"
+      ],
+      [
+       "1",
+       "Week for the CLI"
+      ],
+      [
+       "3",
+       "Weeks saved on C"
+      ]
+     ]
+    },
+    {
+     "tag": "Recommendation",
+     "reco": [
+      "Option B. The server first, the CLI from it.",
+      "A fixed price per phase, two phases, the second only on the demo of week three."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Decision & appendix",
+   "blocks": [
+    {
+     "tag": "Decision",
+     "heading": "What Parallel is *asked to decide*",
+     "body": "Three things, by 21 September, so that the build starts on the 28th.",
+     "bullets": [
+      [
+       "The scope",
+       "Seven tools, read-only, as listed in Appendix B; the CLI in week five."
+      ],
+      [
+       "The chains",
+       "Base, Arbitrum and Ethereum at launch; a fourth is one configuration file."
+      ],
+      [
+       "The owner",
+       "One person at Parallel who takes the Friday demo and answers within the day."
+      ]
+     ]
+    },
+    {
+     "tag": "Appendix A · Decision log",
+     "source": "Kept by Cooper Labs; one line per closed question.",
+     "table": {
+      "cols": [
+       [
+        "Date",
+        70
+       ],
+       [
+        "Question",
+        null
+       ],
+       [
+        "Closed as",
+        190
+       ]
+      ],
+      "mono": [
+       0
+      ],
+      "rows": [
+       [
+        "10 Sep",
+        "CLI or MCP server first?",
+        "Server first, this proposal"
+       ],
+       [
+        "12 Sep",
+        "Hosted or local?",
+        "Local; hosted after the beta"
+       ],
+       [
+        "12 Sep",
+        "Which chains at launch?",
+        "Three, Base first"
+       ],
+       [
+        "TBD",
+        "Who owns the demo at Parallel?",
+        "Open"
+       ]
+      ]
+     }
+    },
+    {
+     "tag": "Appendix B · Tools",
+     "main": [
+      {
+       "heading": "Seven tools, *one schema each*"
+      },
+      {
+       "table": {
+        "cols": [
+         [
+          "Tool",
+          150
+         ],
+         [
+          "Returns",
+          null
+         ],
+         [
+          "Kind",
+          60
+         ]
+        ],
+        "mono": [
+         0
+        ],
+        "rows": [
+         [
+          "get_positions",
+          "A wallet's vaults, collateral, debt and health factor",
+          "Read"
+         ],
+         [
+          "get_rates",
+          "Borrow and savings rates per asset and chain",
+          "Read"
+         ],
+         [
+          "get_backing",
+          "Backing ratio, sleeves and the insurance buffer",
+          "Read"
+         ],
+         [
+          "get_proposals",
+          "Open and closed governance proposals, with tallies",
+          "Read"
+         ],
+         [
+          "get_docs",
+          "A section of the documentation by slug",
+          "Read"
+         ],
+         [
+          "simulate_borrow",
+          "Health factor after a hypothetical borrow",
+          "Read"
+         ],
+         [
+          "build_tx",
+          "An unsigned transaction for the user's own wallet",
+          "Build"
+         ]
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Glossary",
+   "blocks": [
+    {
+     "tag": "Appendix C · Glossary",
+     "heading": "Terms *used here*",
+     "table": {
+      "cols": [
+       [
+        "Term",
+        130
+       ],
+       [
+        "Meaning",
+        null
+       ]
+      ],
+      "strong": [
+       0
+      ],
+      "rows": [
+       [
+        "MCP",
+        "Model Context Protocol: the open standard by which an assistant calls tools and reads resources."
+       ],
+       [
+        "Tool",
+        "One typed function the server exposes; the assistant calls it with arguments and receives JSON."
+       ],
+       [
+        "Resource",
+        "A document the server serves by URI; here, the documentation."
+       ],
+       [
+        "Indexer",
+        "Parallel's service that reads the chain and serves positions and rates over REST."
+       ],
+       [
+        "Health factor",
+        "Collateral value over debt, adjusted; below 1 a position can be liquidated."
+       ],
+       [
+        "Staleness",
+        "The age of a figure relative to the newest block the indexer has seen."
+       ],
+       [
+        "Unsigned transaction",
+        "Calldata the user's own wallet signs; the server never holds a key."
+       ]
+      ]
+     }
+    },
+    {
+     "tag": "Contact",
+     "body": "Jean, Cooper Labs · contact@cooperlabs.xyz · Telegram @jeanbrasse. Questions on the schemas to the engineering channel; questions on the scope to Jean."
+    }
+   ]
+  }
+ ]
+}
