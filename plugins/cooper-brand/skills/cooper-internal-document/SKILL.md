@@ -7,16 +7,17 @@ description: >
   when turning a brief, a project or a decision into the branded A4 PDF.
   Covers the HTML to PDF build.
 metadata:
-  version: "0.1.1"
-  source: "cooper-brand 0.1.1 — the parallel-brand engine with the Cooper Labs identity"
+  version: "0.2.0"
+  source: "cooper-brand 0.2.0 — the parallel-brand engine with the Cooper Labs identity"
 ---
 
 # Cooper Labs — internal document
 
 One skeleton for every long document: a cover, as many section pages as the
-argument needs, a back cover. A4 at 96 dpi (794 × 1123), a margin column
-that carries the section labels and the sources, a reading column that
-carries the argument. **English throughout**, whatever language the request
+argument needs, a back cover. A4 at 96 dpi (794 × 1123), the language of
+cooperlabs.xyz: a light grey page, prose straight on it, and white cards
+for everything structured; each section opens on the orange dash and its
+label, with the source at the right. **English throughout**, whatever language the request
 is in. Load `cooper-brand-kit` first if the tokens are not already in
 context.
 
@@ -90,38 +91,40 @@ on any inconsistency listed under *Before delivering*.
 
 ## Structure
 
-**Cover.** The render full-bleed under a fade to `paper`, ink type (or
-`cover: "dark"`: plain ink, white type, no picture). Wordmark top left,
-`CONFIDENTIAL · vX.X` (or `INTERNAL · vX.X`) top right. Masthead at the
-bottom: kicker (the class and the subject), title in PP Eiko 60 with one
-phrase in orange (the brand signature: the verb or the qualifier, two or
-three words), a one-line standfirst that says **what the document decides
-and for whom**, hairline, meta strip (DATE · CLASSIFICATION · STATUS ·
-OWNER), notice.
+**Cover.** The render in the top 72% under a fade to `paper`, ink type
+(`cover: "02"`: the halftone at 60%, as on the posts; `cover: "dark"`:
+plain ink, white type, no picture). Wordmark top left, `CONFIDENTIAL ·
+vX.X` (or `INTERNAL · vX.X`) top right. Masthead at the bottom: the dash
+and the kicker (the class and the subject), title in PP Eiko 72 at
+line-height 0.92 with one phrase in orange (the brand signature: the verb
+or the qualifier, two or three words), a one-line standfirst that says
+**what the document decides and for whom**, the meta strip as a white card
+(DATE · CLASSIFICATION · STATUS · OWNER), notice.
 
-**Section pages.** Running head `CLASS · SUBJECT · CLASSIFICATION · vX.X`
-left, page number right. Content is a stack of blocks with a 34 gap; each
-block is a row of margin column + reading column:
+**Section pages.** Running head: the mark and `CLASS · SUBJECT ·
+CLASSIFICATION · vX.X` left, page number right, no rule. Content is a stack
+of blocks with a 30 gap; each block is a label row, then the content:
 
-| Block | Margin column | Reading column | CSS |
+| Block | Label row | Content | CSS |
 |---|---|---|---|
-| Section label | the label, with its orange mark | | `.tag` |
-| Source line | under the label of the block that holds the table or figures | | `.source` |
-| Sub-heading | | PP Eiko 26, one orange phrase when the heading makes a claim, optional muted suffix | `.heading` |
-| Body | | Roboto Condensed 10.5 | `.body` |
-| Bullets | | bold lead-in then explanation, orange dot | `.bullets` |
-| Table | | hairlines only; tabular cells for figures; one `tint` row allowed | `.table` |
-| Headline figures | | four PP Eiko numbers with label keys, hairlines above and below | `.figures` |
-| Recommendation | | orange left rule, PP Eiko title, one or two paragraphs | `.reco` |
+| Section label | the dash, then the label | | `.tag` |
+| Source line | at the right of the label row, muted | | `.source` |
+| Sub-heading | | PP Eiko 28 at 0.98, one orange phrase when the heading makes a claim, optional muted suffix | `.heading` |
+| Body | | Roboto Condensed 10.5, on the page, max 560 | `.body` |
+| Bullets | | a row of white cards: the dash, the term in PP Eiko 14, the text | `.bullets` |
+| Table | | a white card: label head, hairlines between rows; tabular cells for figures; one `tint` row allowed | `.table` |
+| Headline figures | | one white card, the numbers in PP Eiko 44 on hairlines | `.figures` |
+| Recommendation | | the dark card: the dash, the title in white PP Eiko 22, one or two paragraphs | `.reco` |
 
-A block with figures alone leaves the margin column empty; that silence is
-part of the rhythm. Sections are marked by the label in the margin, not by
-numbered headings; inside a section the sub-heading marks the sub-part.
+Prose sits on the page and the structure sits in cards; that contrast is
+the rhythm. A block with figures alone has no label row. Sections are
+marked by the dash and the label, not by numbered headings; inside a
+section the sub-heading marks the sub-part.
 
-**Back cover.** Ink ground, the tagline with its orange phrase, colophon
-with the studio links and, in the "This document" column, the class on its
-own line then `vX.Y · D Mon YYYY`. Keep it; it is what makes a printed copy
-read as finished.
+**Back cover.** Ink ground, the orange mark at the top right, the tagline
+with its orange phrase, the colophon card with the studio links and, in the
+"This document" cell, the class on its own line then `vX.Y · D Mon YYYY`.
+Keep it; it is what makes a printed copy read as finished.
 
 ## Page styles
 
@@ -133,22 +136,22 @@ one sentence on a statement page, its one number on a hero page.
 
 | Style | What it is for | In the description | Bends a rule |
 |---|---|---|---|
-| A · Divider | opens a part: number 160 in orange, kicker, title, standfirst, a four-item list | page `style: divider` (`n`, `kicker`, `title`, `standfirst`, `list`) | |
+| A · Divider | opens a part: number 180 in orange, the dash and the kicker, title, standfirst, a four-cell card | page `style: divider` (`n`, `kicker`, `title`, `standfirst`, `list`) | |
 | B · Divider, dark | the same on the ink ground, for the decision part | `style: divider`, `dark: true` | dark ground inside |
 | C · Statement | the one sentence to remember, 44, one orange phrase | `style: statement` (`text`, `who`) | |
-| D · Hero figure | one number at 120, its unit in orange, a body and three figures under a rule | `style: hero` (`n`, `unit`, `kicker`, `body`, `figures`) | |
-| E · Two columns | two options side by side, a label head, bullets, a verdict | block `cols` (`columns`: `head`, `bullets` or `body`, `verdict`) | |
-| F · Timeline | steps on a rule, past steps in the light hairline, phases under | block `timeline` (`steps`, `phases`) | |
-| G · Data page | a table across the whole measure, a foot line | page `style: wide` (`heading`, `table`, `foot`) | no margin column |
-| H · Chart | bar (two series, one soft) or line, inline SVG, a legend | block `chart` (`type`, `labels`, `series` or `values`, `max`, `unit`) | |
-| I · Matrix | likelihood against impact, one tinted cell | block `matrix` (`cols`, `rows` with `key` and `cells`, `hot`) | a tinted cell, not a row |
-| J · Plate | one render full width on the opening page of a part | page `style: plate` (`render`, `caption`, then `blocks`) | imagery inside |
+| D · Hero figure | one number at 130, its unit in orange, a body and a figures card | `style: hero` (`n`, `unit`, `kicker`, `body`, `figures`) | |
+| E · Two columns | two white cards side by side, a dash head, bullets as a list, a verdict at the bottom | block `cols` (`columns`: `head`, `bullets` or `body`, `verdict`) | |
+| F · Timeline | a card: steps on a rule with orange dashes, past steps in the light hairline, phases under | block `timeline` (`steps`, `phases`) | |
+| G · Data page | the table card across the whole measure, a foot line | page `style: wide` (`heading`, `table`, `foot`) | no margin column |
+| H · Chart | bar (two series, one soft) or line, inline SVG in a card, a legend | block `chart` (`type`, `labels`, `series` or `values`, `max`, `unit`) | |
+| I · Matrix | likelihood against impact as a grid of cards, the hot cell in orange | block `matrix` (`cols`, `rows` with `key` and `cells`, `hot`) | a tinted cell, not a row |
+| J · Plate | one render across the measure, rounded, on the opening page of a part | page `style: plate` (`render`, `caption`, then `blocks`) | imagery inside |
 | K · Prose | a lede at 18, two columns of running text, a signature | page `style: prose` (`lede`, `body`, `signature`) | no margin column |
-| L · Steps | numbered steps, the number 40 in the margin, a meta line | blocks with `step`, `heading`, `body`, `meta` | |
-| M · Glossary | terms in two columns, PP Eiko 16 | block `defs` | |
-| N · Flow | hairline boxes, an orange dot at every arrow head, a caption | block `flow` (`boxes`, `arrows`, `caption`, `height`) | |
-| O · Checklist | boxes, ticked ones in orange, owner and date, a sign-off row | blocks `checklist`, `signoff` | |
-| P · Code | Roboto Condensed 9, comments muted, keywords in orange | block `code` (`text`, `keywords`) | |
+| L · Steps | numbered steps, the number 40 in orange at the left, a meta line | blocks with `step`, `heading`, `body`, `meta` | |
+| M · Glossary | terms in two columns in a card, PP Eiko 15 | block `defs` | |
+| N · Flow | rounded white boxes, an orange dot at every arrow head, a caption | block `flow` (`boxes`, `arrows`, `caption`, `height`) | |
+| O · Checklist | rows in a card, ticked boxes in orange, owner and date, a sign-off card | blocks `checklist`, `signoff` | |
+| P · Code | the dark card, Roboto Condensed 9, comments muted, keywords in orange | block `code` (`text`, `keywords`) | |
 
 The five that bend a rule (B, G, I, J, K) are for the opening page of a part
 or a single appendix, never in the flow of an argument; say in the reply
@@ -172,8 +175,8 @@ when one was used. The Contents page lists a style page by its `toc`.
 - **Figures.** Numbers alone in a headline-figure cell (`6`, not `6 weeks`:
   the word goes in the key); figures inside tables are tabular. Never bold a
   figure.
-- **Sources in the margin.** The source line sits under the section label of
-  the block that owns the table, not under the table.
+- **Sources on the label row.** The source line sits at the right of the
+  section label of the block that owns the table, not under the table.
 - **No em dashes**, no lorem, no unfilled `vX.X` or `TBD` left in a final.
   `check_pdf.py` greps the text layer for all four.
 - **Numbering: every sheet counts.** The cover is sheet 01 and carries no
@@ -192,7 +195,7 @@ when one was used. The Contents page lists a style page by its `toc`.
 ## Variable length
 
 Keep each page's content under 939 px, measured as the sum of the block
-heights plus 34 per gap. When a section overflows, **start a new page rather
+heights plus 30 per gap. When a section overflows, **start a new page rather
 than shrinking type**. A section may span pages; repeat the label only if
 the reader would otherwise lose the thread. `render_pdf.py` reports any page
 whose content reaches the footer.

@@ -4,66 +4,73 @@ Pixel values; the CSS class in the last column is the one in
 `assets/css/cooper.css`. The social section is transcribed from the Figma
 file *Brand Identity* (page *Twitter*); the documents, the deck and the fact
 sheet are the design of the plugin on the same tokens. "Label" means Roboto
-Condensed 500 UPPERCASE with 0.12 em letter-spacing (the role JetBrains Mono
+Condensed 500 UPPERCASE with 0.1 em letter-spacing (the role JetBrains Mono
 holds in the Parallel kit; there is no mono here).
 
 ## Page
 
+The language of cooperlabs.xyz on A4: a light grey page, white cards with a
+12 radius and a soft shadow (`0 1px 8px rgba(0,0,0,.06)`), the orange dash
+(19 × 5, radius 39) as the mark, PP Eiko at line-height 0.9 to 1.0 with
+−0.04 em tracking. No margin column, no ink rules: prose sits on the page,
+the structured blocks (figures, tables, bullets, recommendation) are cards.
+
 | Item | Value | CSS |
 |---|---|---|
 | Sheet | 794 × 1123, `paper`, clip | `.page` |
-| Padding | 40 / 56 / 36 / 56 | `.page` |
-| Running head | label 8, `muted`; 12 below, hairline `line` | `.pagehead` |
+| Padding | 40 / 56 / 36 / 56; measure 682 | `.page` |
+| Running head | the mark 16 wide + label 8 `muted` left, the page number label 11 `ink` right; no rule | `.pagehead`, `.pagehead__meta`, `.pagehead__num` |
 | Footer | hairline `line`, 12 above, label 8 `muted`; left `COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION`, right `NN / NN`: every sheet counts, the cover is 01 (unnumbered), the interior runs from 02, the total includes the back cover | `.pagefoot` |
-| Content | vertical stack, gap 34, starts 34 under the head, max 939 high | `.content` |
-| Block | row: margin 128 + gap 24 + main fill | `.block`, `.block__margin`, `.block__main` |
+| Content | vertical stack, gap 30, starts 36 under the head, max 939 high | `.content` |
+| Block | column: the section head row (dash + label, source at the right), then the main | `.block`, `.block__margin`, `.block__main` |
 
 ## Cover
 
-Light by default: the render full-bleed under a fade to `paper`, ink type.
-`cover: "dark"` is the typographic cover: plain `ink`, white type, no
-picture (`.cover--dark`).
+Light: the render in the top 72% under a fade to `paper`, the masthead at
+the bottom with the meta strip as a card. `cover: "02"` lays the halftone
+at 60% (`.cover--texture`, as on the posts). `cover: "dark"`: plain `ink`,
+white type, no picture.
 
 | Item | Value | CSS |
 |---|---|---|
 | Ground | `paper` (dark: `ink`) | `.cover`, `.cover--dark` |
-| Image | full-bleed, cover-fit, centred; one of the six renders | `.cover__img` |
-| Fade | linear 180°: transparent to 35%, `paper` 85% at 72%, `paper` at 100% (dark: the same to `ink`) | `.cover__fade` |
-| Top row | y 44, wordmark 22 high left (`cooper_horizontal_b.svg`; `_w` on dark), `CONFIDENTIAL · vX.X` label 9 `muted` right | `.cover__top`, `.cover__logo`, `.cover__conf` |
+| Image | top 72% (texture: 64%), cover-fit, centred; one of the six renders | `.cover__img` |
+| Fade | linear 180° over the same height: transparent to 40%, `paper` 90% at 82%, `paper` at 100% (dark: the same to `ink`) | `.cover__fade` |
+| Top row | y 44, wordmark 22 high left, `CONFIDENTIAL · vX.X` label 9 `ink-soft` right | `.cover__top`, `.cover__logo`, `.cover__conf` |
 | Masthead | bottom 44, left 56, width 682 | `.cover__bottom` |
-| Kicker | label 9, ls 0.14 em, `accent-deep` (dark: `accent-soft`) | `.cover__kicker` |
-| Title | PP Eiko 500, 60 / 1.02, ls −0.05 em, `ink` (dark: `white`), 14 under kicker; Title Case; one phrase in `accent` (`<em>`) | `.cover__title`, `.cover__title em` |
-| Standfirst | Roboto Condensed 13 / 1.5, `ink-soft` (dark: white at 72%), max 520, 18 under title | `.cover__stand` |
-| Hairline | `line` (dark: `line-inv`), 26 under standfirst | `.cover__rule` |
-| Meta strip | 4 columns gap 24, 16 under hairline; key label 8 `muted`, value Roboto Condensed 11 `ink` 8 below | `.cover__meta` |
-| Notice | label 8 ls 0.10 em `muted`, 22 under meta | `.cover__notice` |
+| Kicker | the dash, then label 9 `ink-soft` (dark: `grey-6`) | `.cover__kicker` |
+| Title | PP Eiko 500, 72 / .92, ls −0.045 em, `ink` (dark: `white`), 18 under kicker, max 640; Title Case; one phrase in `accent` (`<em>`) | `.cover__title`, `.cover__title em` |
+| Standfirst | Roboto Condensed 13 / 1.5, ls −0.01 em, `ink-soft` (dark: white at 72%), max 480, 20 under title | `.cover__stand` |
+| Meta card | 28 under; white card radius 12, 4 cells on `hair` rules, padding 14 18; key label 8 `muted`, value 11 `ink` (dark: white at 6% ground) | `.cover__meta` |
+| Notice | label 8 ls 0.08 em `muted`, 20 under | `.cover__notice` |
 
-Back cover: `ink` ground, the white wordmark, a radial orange glow at 16%
-bottom-left, tagline PP Eiko 500, 34 / 1.15, ls −0.04 em, `white`, the
+Back cover: `ink` ground, the white wordmark, the orange mark 236 wide at
+the top right, tagline PP Eiko 500, 40 / .95, ls −0.045 em, `white`, the
 closing phrase in `accent` ("We turn Web3 ideas *into products people
-use.*"), then hairline, a four-column colophon (WEBSITE · X · TELEGRAM ·
-THIS DOCUMENT) and the notice. THIS DOCUMENT reads on two lines: the class,
-then `vX.Y · D Mon YYYY`. `.back`, `.back__glow`, `.back__tagline`.
+use.*"), then the colophon card (WEBSITE · X · TELEGRAM · THIS DOCUMENT) and
+the notice. THIS DOCUMENT reads on two lines: the class, then `vX.Y · D Mon
+YYYY`. `.back`, `.back__glow` (the mark), `.back__tagline`.
 
 ## Blocks
 
 | # | Block | Spec | CSS |
 |---|---|---|---|
-| 01 | Section label | margin column. 20 × 2 `accent` mark, 10 gap, label 9 / 1.3, `accent-deep` | `.tag` |
-| 02 | Sub-heading | PP Eiko 500, 26 / 1.15, ls −0.03 em, `ink`, Title Case; optional accent phrase (`<em>`, `accent`); optional suffix `muted`, same size, one space | `.heading`, `.heading em`, `.heading__suffix` |
-| 03 | Body | Roboto Condensed 10.5 / 1.6, `ink`, 10 under a heading, 8 between paragraphs | `.body` |
-| 04 | Bullet | 6 px `accent` dot at y 6, gap 12; term Roboto Condensed 500 10.5 / 1.5 `ink`; text 10.5 / 1.55 `ink-soft`; bullets 10 apart | `.bullets`, `.bullet`, `.bullet__dot`, `.bullet__term`, `.bullet__text` |
-| 05 | Table | head: label 8 ls 0.10 em `muted`, 9 below, 1 px `ink` rule; rows: 9 / 10 / 9 / 0 padding, 1 px `line` rule; text Roboto Condensed 10 / 1.4 `ink`; figure cells Roboto Condensed 10 tabular `ink-soft` (`td.mono`, the name kept from the engine); strong 500; one `tint` row allowed | `.table`, `td.mono`, `td.strong`, `tr.highlight`, `.table--plain` |
-| 06 | Headline figures | row with `line` rule top and bottom; cells fill, 14 / 0 / 14 / 14 padding, `line` left rule except the first; number PP Eiko 500 40 / 1 ls −0.04 em `ink`, key label 8 `muted` 10 below. Numbers only in the number cell (`6`, `74%`, `T+1`): a word wraps | `.figures`, `.figure`, `.figure__n`, `.figure__k` |
-| 07 | Recommendation | 2 px `accent` left rule, 18 padding; title PP Eiko 500 21 / 1.25 ls −0.02 em `ink`; body 10.5 / 1.6 `ink-soft` 10 below | `.reco`, `.reco__title`, `.reco__body` |
-| 08 | Source line | margin column, under the label, gap 10; label-face 8 / 1.5 `muted`, not uppercase | `.source` |
-| — | Meta item | key label 8 `muted`; value Roboto Condensed 11 / 1.3, 8 below | `.cover__meta .k`, `.v` |
-| — | Logo | the horizontal wordmark, 22 high on the cover, 18 in a fact-sheet running head, 30 on a deck title slide; `_b` on paper, `_w` on dark. Never redrawn | `.cover__logo`, `.pagehead__logo` |
+| 01 | Section label | the dash 19 × 5 `accent`, gap 10, label 9 `ink` | `.tag` |
+| 08 | Source line | at the right of the label row, label-face 8.5 / 1.4 `muted`, not uppercase, right-aligned, max 300 | `.source` |
+| 02 | Sub-heading | PP Eiko 500, 28 / .98, ls −0.04 em, `ink`, max 600, Title Case; optional accent phrase (`<em>`); optional suffix `muted` | `.heading`, `.heading em`, `.heading__suffix` |
+| 03 | Body | Roboto Condensed 10.5 / 1.55, ls −0.005 em, `ink`, max 560; 12 under a heading, 8 between paragraphs | `.body` |
+| 04 | Bullets | a grid of white cards (radius 12, padding 16, `auto-fit` from 150 wide, gap 10): the dash, then the term PP Eiko 14 / 1.05 ls −0.025 em, then the text 9.5 / 1.5 `ink-soft` | `.bullets`, `.bullet`, `.bullet__dot`, `.bullet__term`, `.bullet__text` |
+| 05 | Table | a white card radius 12; head label 8 `muted` on a `hair` rule, padding 14 / 10 / 10; rows 9 / 10 / 9 on `hair` rules, none under the last; first cell 16 in, last 16 out; text 10 / 1.4 `ink`; figure cells tabular 10 `ink-soft` (`td.mono`); strong 500; one `tint` row | `.table`, `td.mono`, `td.strong`, `tr.highlight`, `.table--plain` |
+| 06 | Headline figures | one white card; cells fill, padding 18 18 16, `hair` left rule except the first; number PP Eiko 500 44 / .9 ls −0.045 em `ink`, key label 8 `muted` 12 below. Numbers only in the number cell (`6`, `74%`, `T+1`) | `.figures`, `.figure`, `.figure__n`, `.figure__k` |
+| 07 | Recommendation | the dark card: `ink` radius 12, padding 20 22 22, the dash; title PP Eiko 500 22 / 1.05 ls −0.03 em `white` max 520; body 10.5 / 1.55 white at 72% 12 below | `.reco`, `.reco__title`, `.reco__body` |
+| — | Logo | the horizontal wordmark, 22 high on the cover, 18 in a fact-sheet running head, 30 on a deck title slide; the mark 16 wide in a running head; `_b` on paper, `_w` on dark. Never redrawn | `.cover__logo`, `.pagehead__logo`, `.pagehead__meta::before` |
 
-Shipped table shapes: 4 columns 190 / 60 / 110 / fill (options), 3 columns
-70 / fill / 190 (decision log), 3 columns 60 / 80 / fill (timeline), 2
-columns 130 / fill (glossary), 3 columns 48 / fill / 60 without a head row
-(contents). Any other shape is built from the same cells with one fill column.
+Spacing inside a block: 12 between the label row and the main, 12 under a
+heading before body, 16 before a card. Shipped table shapes: 4 columns
+190 / 60 / 110 / fill (options), 3 columns 70 / fill / 190 (decision log),
+3 columns 60 / 80 / fill (timeline), 2 columns 130 / fill (glossary), 3
+columns 48 / fill / 60 without a head row (contents, rows 6.5 / 6.5). Any
+other shape is built from the same cells with one fill column.
 
 ## Social
 
@@ -128,57 +135,57 @@ measured from the cap height and the baseline.
 
 ## Deck
 
-The A4 page scaled ×1.6 on 1280 × 720, one block per slide.
+The page scaled ×1.6 on 1280 × 720, one block per slide, the same cards.
 
 | Item | Value | CSS |
 |---|---|---|
 | Slide | 1280 × 720 `paper`, padding 56 / 72 | `.canvas--deck`, `.deck` |
-| Running head | label 11 `muted`, 16 above a `line` rule; number right | `.deck__head` |
+| Running head | the mark 22 wide + label 11 `muted` left, the number label 14 `ink` right; no rule | `.deck__head` |
 | Footer | rule, 14, label 11: `COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION` and `NN / NN`; 44 from the bottom | `.deck__foot` |
-| Grid | margin 180 + gap 40 + reading column, 44 under the head | `.deck__grid`, `.deck__margin`, `.deck__main` |
-| Blocks | tag 12 (mark 28 × 3), source 11, heading 44 / 1.1, body 17 / 1.55 max 760, bullets 17 (dot 9), table 15 (figures 14, head 11), figures 72 (key 11), recommendation title 32 body 16 (rule 3) | `.deck .tag` … |
-| Title slide | the render full-bleed under the light fade (or `render: "dark"`, plain ink); wordmark 30 high; conf 12; kicker 12; title 76 max 900 ls −0.05 em; standfirst 18 max 640; meta k 11 v 15 | `.deck--title` |
-| Divider | number 200 `accent`, kicker label 12 `accent-deep`, title 72 / 1.02 max 900; bottom-aligned, padding 56 / 72 / 120 | `.deck--divider` |
-| Statement | padding 0 160, centred; mark 28 × 3 `accent`; text 60 / 1.15; source label 12 | `.deck--statement` |
-| Closing | `ink`, glow, tagline 44 max 700, the links, THIS DECK | `.deck--back` |
+| Stack | the label row, then the main, 48 under the head, gap 22 | `.deck__grid`, `.deck__margin`, `.deck__main` |
+| Blocks | tag 12 (dash 28 × 7), source 12, heading 48 / .95 max 980, body 17 / 1.5 max 860, bullet cards radius 16 padding 24 (term 22, text 15, from 260 wide), table card radius 16 (15, head 11, figures 14), figures card (72, key 11), recommendation card radius 16 (title 34, body 16) | `.deck .tag` … |
+| Title slide | the render in the top 78% under the light fade (`render: "02"` at 60%; `"dark"` plain ink); wordmark 30 high; conf 12; kicker 12 with the dash 28 × 7; title 84 / .92 max 900; standfirst 18 max 640; meta card radius 16 max 900, k 11 v 15 | `.deck--title` |
+| Divider | number 220 / .85 `accent` ls −0.05 em, kicker with the dash, title 76 / .92 max 960; bottom-aligned, padding 56 / 72 / 120 | `.deck--divider` |
+| Statement | padding 0 140, centred; the dash 28 × 7; text 64 / 1.02 ls −0.04 em; source label 12 | `.deck--statement` |
+| Closing | `ink`, the orange mark 300 wide top right, tagline 52 max 760, the colophon card | `.deck--back` |
 
 ## Fact sheet
 
-One A4 page, the document blocks at smaller sizes.
+One A4 page, the document blocks at smaller sizes, in cards.
 
 | Item | Value | CSS |
 |---|---|---|
-| Running head | wordmark `ink` 18 high left, meta right, items centred | `.page--fact .pagehead`, `.pagehead__logo` |
-| Stack | column, gap 28, 28 under the head | `.fact` |
-| Title | PP Eiko 500 44 / 1.05 ls −0.04 em max 600, 14 under the tag; one `accent` phrase | `.fact__title` |
-| Standfirst | Roboto Condensed 12 / 1.5 `ink-soft` max 520, 12 under the title | `.fact__stand` |
-| Columns | two, gap 24; heading 18; body and bullets 10 | `.fact__cols` |
-| Figures | the figures row, numbers 34 | `.fact .figure__n` |
-| Contact | four columns on a 1 px `ink` rule, 12 above; key label 8, value 10.5 | `.fact__contact` |
+| Running head | wordmark `ink` 18 high left, meta right; no rule | `.page--fact .pagehead`, `.pagehead__logo` |
+| Stack | column, gap 22, 30 under the head | `.fact` |
+| Title | PP Eiko 500 46 / .95 ls −0.045 em max 600, 14 under the tag; one `accent` phrase | `.fact__title` |
+| Standfirst | Roboto Condensed 12 / 1.5 ls −0.01 em `ink-soft` max 520, 14 under the title | `.fact__stand` |
+| Columns | two white cards, gap 12, padding 16 18 18; heading 19; bullets as a list on `hair` rules (dash 12 × 4, term 10 500, text 9.5) | `.fact__cols` |
+| Figures | the figures card, numbers 34, cells 14 16 12 | `.fact .figure__n` |
+| Contact | a white card of four cells on `hair` rules: key label 8, value 10.5 | `.fact__contact` |
 
 ## Page styles
 
-Sixteen compositions inside the document grid; the table in
+Sixteen compositions on the same page; the table in
 `cooper-internal-document/SKILL.md` says what each is for. Sizes beyond the
-scale: 18 (lede), 44 (statement), 120 (hero figure), 160 (divider number).
+scale: 20 (lede), 46 (statement), 130 (hero figure), 180 (divider number).
 
 | Style | Values | CSS |
 |---|---|---|
-| A / B · Divider | fills the page, bottom-aligned; number PP Eiko 500 160 ls −0.02 em `accent` (dark: `accent-soft`); kicker label 9 `accent-deep` 28 under; title 60 / 1.02 max 560, 14 under; standfirst 13 / 1.5 `ink-soft` max 440; rule; list of four k/v | `.divider`, `.page--dark` |
-| C · Statement | centred, padding 0 64; mark 20 × 2 `accent`; text 44 / 1.15, one `accent` phrase; source label 9 `muted` 28 under | `.statement` |
-| D · Hero figure | centred; number 120 ls −0.02 em, unit in `accent`; kicker label 9 `accent-deep` 16 under; rule 34; row of body + figures (no outer rule) | `.hero` |
-| E · Two columns | gap 24; head label 9 `accent-deep` on a 1 px `ink` rule; heading 21; verdict PP Eiko 16 `accent-deep` on a `line` rule | `.cols`, `.cols__head`, `.verdict` |
-| F · Timeline | 1 px `ink` rule, dots 6 `accent` (`line` when past); date label 9, title 500 10.5, text 10 / 1.5; phases row label 8 on a `line` rule | `.tl`, `.tl__step`, `.tl__phase` |
-| G · Data page | the table across 682, 9.5, cells 7 / 10; foot label-face 8 `muted` | `.wide`, `.wide__foot` |
-| H · Chart | SVG on the reading column; axes `line`, base `ink`, bars `accent` / `line`, line 1.5 `accent`; labels 8; legend 8 with 12 × 2 swatches | `.chart`, `.legend` |
-| I · Matrix | grid 110 + 3 columns on a 1 px `ink` rule; heads label 8; keys label 9 `accent-deep`; cells 10 / 1.5 `ink-soft`, title 500 `ink`; one `tint` cell | `.matrix` |
-| J · Plate | 420 high, full bleed (margin −56), 34 under the head; caption label 8 bottom left | `.plate`, `.plate__cap` |
-| K · Prose | padding 0 64; lede PP Eiko 500 18 / 1.4 with an `accent` phrase; body in two columns gap 24; signature row label 8 on a `line` rule | `.prose`, `.prose__lede`, `.prose__sig` |
-| L · Steps | number PP Eiko 500 40 `accent` in the margin; heading 21; meta label-face 8 `muted` 10 under | `.step__n`, `.step`, `.step__meta` |
-| M · Glossary | two columns gap 24; term PP Eiko 500 16, definition 10 / 1.5 `ink-soft`, `line` rule under each | `.defs`, `.def` |
-| N · Flow | SVG 530 wide; boxes 1 px `ink` (soft: `line`), radius 0; arrows `muted` with an `accent` dot 2.5; text 10, label 8, caption PP Eiko 14 with an `accent` span | `.flow` |
-| O · Checklist | rows 9 / 0 on `line` rules; box 9 × 9 1 px `ink`, ticked `accent`; text 10.5; owner label 9 110 wide; sign-off columns on a 1 px `ink` rule, 44 padding | `.check`, `.sign` |
-| P · Code | Roboto Condensed 9 / 1.6, padding 14, `ink` rule above, `line` rule under; comments `muted`, keywords `accent-deep` | `.code` |
+| A / B · Divider | fills the page, bottom-aligned; number PP Eiko 500 180 / .85 ls −0.05 em `accent`; kicker with the dash, label 9 `ink-soft` 30 under; title 60 / .92 ls −0.045 em max 560, 16 under; standfirst 13 / 1.5 `ink-soft` max 440; the list as a card of four cells, 28 under (dark: white at 6%) | `.divider`, `.page--dark` |
+| C · Statement | centred, padding 0 48; the dash; text 46 / 1 ls −0.04 em, one `accent` phrase, 28 under; source label 9 `muted` 28 under | `.statement` |
+| D · Hero figure | centred; number 130 / .85 ls −0.05 em, unit in `accent`; kicker with the dash 22 under; row of body + figures card, 36 under | `.hero` |
+| E · Two columns | two white cards, gap 12, padding 18 20 20; head: the dash + label 9 `ink-soft`; heading 22; bullets as a list on `hair` rules; verdict PP Eiko 16 `accent-deep` on a `hair` rule, pushed to the bottom | `.cols`, `.cols__head`, `.verdict` |
+| F · Timeline | a white card padding 22 20 20; 1 px `ink` rule, dashes 12 × 4 `accent` (`line` when past); date label 9, title 500 10.5, text 10 / 1.5; phases row label 8 on a `hair` rule | `.tl`, `.tl__step`, `.tl__phase` |
+| G · Data page | the table card across 682, 9.5, cells 7 / 10; foot label-face 8.5 `muted` | `.wide`, `.wide__foot` |
+| H · Chart | SVG in a white card padding 16; axes `hair`, base `ink`, bars `accent` / `grey-8`, line 1.5 `accent`; labels 8; legend 8 with 12 × 4 dashes | `.chart`, `.legend` |
+| I · Matrix | grid 96 + 3 columns, gap 8; cells are white cards radius 10 padding 12; heads and keys sit on the page (label 8 / 9); cell title PP Eiko 12, text 9.5 `ink-soft`; the hot cell is `accent` with `ink` type | `.matrix` |
+| J · Plate | 420 high, across the measure, radius 16, 36 under the head; caption as a white pill bottom left (label 8) | `.plate`, `.plate__cap` |
+| K · Prose | padding 0 24; lede PP Eiko 500 20 / 1.25 ls −0.03 em with an `accent` phrase; body in two columns gap 24, 22 under; signature row label 8 on a `line` rule | `.prose`, `.prose__lede`, `.prose__sig` |
+| L · Steps | the block turns into a row: the number PP Eiko 500 40 / .85 `accent` in a 64 column, then the step (heading 22, body, meta label 8 `muted`) | `.step__n`, `.step`, `.step__meta` |
+| M · Glossary | a white card padding 4 20 6, two columns gap 24; term PP Eiko 15 / 1.1, definition 9.5 / 1.5 `ink-soft`, `hair` rule under each | `.defs`, `.def` |
+| N · Flow | SVG 530 wide; boxes white with a `grey-7` stroke, radius 6 (soft: `line`, dashed); arrows `muted` with an `accent` dot 2.5; text 10 500, label 8, caption PP Eiko 14 with an `accent` span | `.flow` |
+| O · Checklist | rows 10 / 16 on `hair` rules inside a white card (radius on the first and last); box 10 × 10 radius 3 `grey-6`, ticked `accent`; text 10.5; owner label 9 110 wide; sign-off as a card of cells, min 88 high | `.check`, `.sign` |
+| P · Code | the dark card: Roboto Condensed 9 / 1.6 `white`, padding 18 20, radius 12; comments `grey-5`, keywords `accent` | `.code` |
 
 ## Fonts
 

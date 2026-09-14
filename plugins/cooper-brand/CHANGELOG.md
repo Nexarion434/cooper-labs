@@ -1,5 +1,54 @@
 # Changelog
 
+## 0.2.0 · 14 Sep 2026
+
+The documents redesigned on the language of cooperlabs.xyz, so that a
+Cooper Labs page no longer reads as a recoloured Parallel page. Same
+engine, same descriptions, same checks; `assets/css/cooper.css` is now
+written by hand (`tools/doc.css` + `tools/social.css`, assembled by
+`tools/make_css.py` at the repository root; `tools/make_examples.py`
+writes the descriptions), not derived from `parallel.css`.
+
+### The page
+- **Cards.** A light grey page (`paper`); everything structured is a white
+  card with a 12 radius and the site's soft shadow: the figures row, every
+  table, the bullets (one card each, in a row), the two columns, the
+  timeline, the matrix cells, the chart, the glossary, the checklist and
+  sign-off, the contact strip, the meta strips of the cover, the dividers
+  and the back cover. The recommendation and the code are the **dark card**
+  (`ink`). Prose sits straight on the page.
+- **No margin column, no ink rules.** A section is a row with the **orange
+  dash** (the site's 19 × 5, radius 39 mark) and its label, the source at
+  the right, then the content. The running head carries the mark and no
+  rule; the footer keeps its hairline and `NN / NN`.
+- **Type set like the site.** PP Eiko at line-height 0.9 to 1.0 and
+  −0.04 / −0.05 em: cover 72, headings 28, figures 44, hero 130, dividers
+  180, deck dividers 220. Labels at 0.1 em.
+- **Cover.** The render in the top 72% under the fade, the masthead below
+  with the meta card; `cover: "02"` lays the halftone at 60% as on the
+  posts (`.cover--texture`, also on the deck title with `render: "02"`).
+  The back cover and the closing slide carry the orange mark.
+- The page styles, the deck and the fact sheet follow (rounded plate with a
+  pill caption, white-filled rounded flow boxes, the hot matrix cell in
+  orange, checklist rows in a card, bullet cards on slides).
+- Docs: `tokens.md` rewritten for the page, the cover, the blocks, the
+  deck, the fact sheet and the sixteen styles; the four document skills
+  updated.
+
+### Design decisions (0.2.0)
+9. **Cards, not columns.** The site's white-card-on-grey is the structure
+   of the page; the Parallel margin grid is gone. Tables, figures, bullets,
+   two columns, timeline, matrix, glossary, checklist are cards; prose is
+   not.
+10. **The dash is the mark.** Every section label, kicker and bullet
+    carries the site's 19 × 5 orange dash instead of a 20 × 2 rule or a
+    dot.
+11. **Dark cards for the verdict.** The recommendation and the code sit on
+    `ink`, the one place the page goes dark inside.
+12. **Box shadows in the PDF.** Chromium rasterises the cards' shadows
+    (`check_pdf.py` counts them as JPEG images); at 0.06 alpha they print
+    clean. Set `--shadow: none` in the tokens for a flat print.
+
 ## 0.1.1 · 14 Sep 2026
 
 - The proposal template (`assets/templates/internal-doc.json`) is the long

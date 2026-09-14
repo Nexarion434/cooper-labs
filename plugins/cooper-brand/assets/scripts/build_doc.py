@@ -18,7 +18,7 @@ The description (JSON, or a Python dict passed to `build()`):
     title          "Ship the MCP server *before the CLI.*"   (*...* is the accent, set in orange)
     standfirst     one sentence; kicker (optional, default "<Class> · <subject>")
     version        "v0.1"; classification Confidential | Internal; status Draft | Final
-    date           "2026-09-09"; owner "Noah, Cooper Labs"; cover "01" (one of the renders, full-bleed, ink type) | "dark" (plain ink ground, white type, no picture)
+    date           "2026-09-09"; owner "Noah, Cooper Labs"; cover "01" (one of the renders in the top 72% under a fade, ink type; "02" lays the halftone at 60%) | "dark" (plain ink ground, white type, no picture)
     contents       "auto" (default) | true | false; contents_intro (the "How to read" text, optional)
     versions       [["v0.1", "2026-09-09", "First draft"], ...]   -> the Versions table on the Contents page
     pages          [{"name": "Analysis", "blocks": [ ... ]}]
@@ -123,7 +123,7 @@ def cover(d, A):
   <div class="cover__fade"></div>
 '''
     return f'''<!-- ========================= COVER ========================= -->
-<section class="cover{" cover--dark" if dark else ""}">
+<section class="cover{" cover--dark" if dark else ""}{" cover--texture" if not plain_dark and int(d["cover"]) == 2 else ""}">
 {img}
   <div class="cover__top">
     <img class="cover__logo" src="{A}{logo}" alt="{brand.NAME}">

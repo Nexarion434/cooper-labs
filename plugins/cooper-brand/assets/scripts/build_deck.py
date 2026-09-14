@@ -50,7 +50,7 @@ def title_slide(d, A):
   <div class="cover__fade"></div>
 '''
     return f'''<!-- ========================= 01 · TITLE ========================= -->
-<section class="canvas canvas--deck deck--title{" cover--dark" if dark else ""}" data-name="{E(d['stem'])}-01-title">
+<section class="canvas canvas--deck deck--title{" cover--dark" if dark else ""}{" cover--texture" if n == "02" else ""}" data-name="{E(d['stem'])}-01-title">
 {img}
   <div class="cover__top">
     <img class="cover__logo" src="{A}{brand.LOGO_W if dark else brand.LOGO_B}" alt="{brand.NAME}">

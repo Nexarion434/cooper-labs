@@ -8,7 +8,7 @@ description: >
   brand. It is the foundation loaded by cooper-internal-document,
   cooper-deck, cooper-fact-sheet and cooper-social.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   source: "Figma file Brand Identity (S5Lg16aM47EGiGOYCDxl9a), page Twitter; cooperlabs.xyz"
 ---
 
@@ -18,9 +18,10 @@ Cooper Labs is a product studio for Web3 teams: design and engineering in one
 team, from the brief to the stores. Tagline: **"We turn Web3 ideas into
 products people use."** The identity is white, grey and orange: one display
 face with a single weight, a condensed sans for everything else, a black
-square-and-crescent mark ("the block"), and six renders of that block in
-white 3D, halftone, pixels and orange. Documents borrow a render for the
-cover and stay quiet inside.
+square-and-crescent mark ("the block"), the orange dash, white cards on a
+light grey ground, and six renders of that block in white 3D, halftone,
+pixels and orange. Documents borrow a render for the cover and the site's
+cards for their structure.
 
 Source of truth: the Figma file *Brand Identity* (page *Twitter*: the posts,
 the X covers, the social preview, the logos, the palette) and cooperlabs.xyz
@@ -92,18 +93,24 @@ is `<em>` (rendered upright and orange by the CSS); in a description it is
 `references/voice.md`). Social posts keep the capitalisation of the Figma
 file, with no accent unless asked.
 
-Display type is tracked tight: −0.05 em on the cover title, −0.03 em on
-headings, −0.04 em on figures, **−0.09 em on the social titles and kickers**
-(the Figma value). Labels are UPPERCASE Roboto Condensed 500 with 0.12 em
+Display type is tracked tight and set close, as on the site: line-height
+0.9 to 1.0 and −0.04 to −0.05 em on the cover title, the headings, the
+figures and the big numbers, **−0.09 em on the social titles and kickers**
+(the Figma value). Labels are UPPERCASE Roboto Condensed 500 with 0.1 em
 letter-spacing.
 
 ## Geometry
 
 A4 at 96 dpi, 794 × 1123. Margins 40 top, 56 sides, 36 bottom. Measure 682.
-Reading grid on every section page: **128 margin column + 24 gutter + 530
-reading column**. Blocks stack with a 34 gap. Radius 0 everywhere. No cards,
-no filled surfaces, no vertical rules: hierarchy comes from the margin
-column, the hairlines and the type.
+The page is the language of cooperlabs.xyz: a light grey ground, **white
+cards with a 12 radius and a soft shadow** for everything structured
+(figures, tables, bullets, the two columns, the timeline, the matrix cells,
+the checklist, the contact strip), the **dark card** (`ink`) for the
+recommendation and the code, and prose straight on the page. No margin
+column and no ink rules: a section is a row with the **orange dash** (19 ×
+5, radius 39) and its label, the source at the right, then the content.
+Blocks stack with a 30 gap. Radius 12 on cards, 16 on a deck card or a
+plate, 39 on the dash and the pills.
 
 ## The logo
 
@@ -129,11 +136,12 @@ a render **by its number**; `assets/img/catalogue.json` describes each one
 not sit under text) and carries a default framing per social size (`frames`,
 read and recomputed for any size by `assets/scripts/frame.py`).
 
-On a document a render appears **only on the cover**, full-bleed, under a
-fade that starts at 35% and reaches `paper` at the bottom so the masthead
-sits on a plain ground; `cover: "dark"` gives the typographic cover instead
-(plain `ink`, white type, no picture). Inside a document an image must carry
-information; the plate page style is the one exception.
+On a document a render appears **only on the cover**, in the top 72% under
+a fade to `paper` so the masthead and its meta card sit on a plain ground;
+`cover: "02"` lays the halftone at 60% as on the posts; `cover: "dark"`
+gives the typographic cover (plain `ink`, white type, no picture). Inside a
+document an image must carry information; the plate page style is the one
+exception.
 
 Nothing outside the six goes on Cooper Labs material: no stock, no generated
 image, no photograph. New renders come from the 3D file and enter the

@@ -1,0 +1,82 @@
+/* ================= SOCIAL · transcribed from the Figma file Brand Identity, page Twitter =================
+   Type on the cards is black (#000) as in the file; the ground is white with a render at cover fit. */
+.canvas{width:1200px;height:675px;position:relative;overflow:hidden;background:var(--card);color:var(--black)}
+.canvas--dark{background:var(--ink);color:var(--white)}
+.canvas__bg{position:absolute;inset:0;background-size:cover;background-position:center;overflow:hidden}
+.canvas__bg img{position:absolute;max-width:none;width:100%;height:100%;object-fit:cover;left:0;top:0}
+.canvas__bg--texture{opacity:.6}                  /* the halftone render (02) at 60% over white, Template02 and 04 */
+/* sizes */
+.canvas--preview{width:1200px;height:630px}       /* social preview, the OG image */
+.canvas--cover{width:1500px;height:500px}         /* X profile header */
+.canvas--x{width:2000px;height:800px}
+.canvas--para{width:2400px;height:1200px}
+.canvas--li{width:1200px;height:627px}
+.canvas--sq{width:1080px;height:1080px}
+.canvas--story{width:1080px;height:1920px}
+.canvas--mail{width:600px;height:300px}
+.canvas--forum{width:1600px;height:400px}
+.canvas--notion{width:1500px;height:600px}
+.canvas--wallpaper{width:2560px;height:1440px}
+
+/* Post · Template01 (render + the mark), Template02 and 04 (halftone + the wordmark): kicker and title centred, the logo at the bottom */
+.post{position:absolute;inset:0;padding:69px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.post__kicker{font:400 28px/1.1 var(--sans);letter-spacing:-.09em;text-transform:uppercase;width:684px;text-box:trim-both cap alphabetic}
+.post__title{margin-top:24px;font:500 83.48px/1.1 var(--display);letter-spacing:-.09em;width:684px;text-box:trim-both cap alphabetic}
+.post__logo{position:absolute;left:50%;transform:translateX(-50%);display:block;width:auto}
+.post__logo--mark{bottom:69px;height:37.633px}   /* Template01: the mark alone, 53.333 x 37.633 */
+.post__logo--word{bottom:42px;height:40.1px}     /* Template02: the wordmark, mark 40.933 x 28.884 + Cooper Labs 37.55 */
+.canvas--li .post__logo--word{bottom:36px}
+.canvas--sq .post__kicker{font-size:26px;width:900px}
+.canvas--sq .post__title{font-size:80px;width:900px}
+.canvas--sq .post__logo--word{bottom:60px}
+.canvas--story .post__kicker{font-size:30px;width:900px}
+.canvas--story .post__title{font-size:96px;width:900px}
+.canvas--story .post__logo--word{bottom:120px;height:50px}
+.canvas--mail .post{padding:30px}
+.canvas--mail .post__kicker{font-size:14px;width:540px}
+.canvas--mail .post__title{margin-top:12px;font-size:40px;width:540px}
+.canvas--mail .post__logo--word{bottom:20px;height:20px}
+.canvas--x .post__kicker{font-size:39px;width:1140px}
+.canvas--x .post__title{margin-top:32px;font-size:116px;width:1140px}
+.canvas--x .post__logo--word{bottom:60px;height:56px}
+.canvas--para .post__kicker{font-size:52px;width:1520px}
+.canvas--para .post__title{margin-top:44px;font-size:155px;width:1520px}
+.canvas--para .post__logo--word{bottom:100px;height:72px}
+.canvas--wallpaper .post__kicker{font-size:60px;width:1600px}
+.canvas--wallpaper .post__title{margin-top:48px;font-size:178px;width:1600px}
+.canvas--wallpaper .post__logo--word{bottom:100px;height:60px}
+
+/* Partner · Template03: the mark, a vertical line, the partner's symbol */
+.partner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:254px}
+.partner__mark{width:113.375px;height:80px;display:block}
+.partner__line{width:2px;height:482px;background:var(--black)}
+.partner__icon{width:80px;height:80px;display:block;object-fit:contain}
+
+/* X cover · 1500 x 500: one line centred in PP Eiko 66, the wordmark under it; `--right` puts the block at the right (We Are Cooper) */
+.xcover__line{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:500 66px/.9 var(--display);letter-spacing:-.09em;text-align:center;white-space:nowrap;text-box:trim-both cap alphabetic}
+.xcover__logo{position:absolute;left:50%;transform:translateX(-50%);top:380.3px;height:24.68px;width:auto;display:block}
+.xcover--right .xcover__block{position:absolute;left:977px;top:50%;transform:translateY(-50%);width:411px;display:flex;flex-direction:column;gap:15px;align-items:flex-start}
+.xcover--right .xcover__line{position:static;transform:none;width:100%;white-space:normal}
+.xcover--right .xcover__logo{position:static;transform:none;margin-left:7.11px}
+
+/* Social preview · 1200 x 630: the wordmark centred (mark 70.859 x 50, Cooper Labs 65) */
+.preview__logo{position:absolute;left:50%;top:285.14px;transform:translateX(-50%);height:69.42px;width:auto;display:block}
+
+/* Banners · forum header 1600 x 400, Notion cover 1500 x 600: the wordmark left, one line right */
+.banner{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 80px}
+.banner__logo{height:44px;width:auto;display:block}
+.banner__tag{font:500 44px/1.1 var(--display);letter-spacing:-.06em;text-box:trim-both cap alphabetic}
+.banner__tag em{font-style:normal;color:var(--accent)}
+.banner__k{font:500 16px/1 var(--sans);text-transform:uppercase;letter-spacing:.06em}
+.canvas--notion .banner{padding:0 100px 70px;align-items:flex-end}
+.canvas--notion .banner__tag{font-size:64px}
+
+/* Thread · a numbered series of 1200 x 675 cards: n/N top left, one sentence in PP Eiko, kicker and the mark at the bottom */
+.thread{position:absolute;inset:0;padding:70px 80px;display:flex;flex-direction:column;justify-content:space-between}
+.thread__n{font:500 61px/1 var(--display);letter-spacing:-.06em}
+.thread__n span{color:var(--accent)}
+.thread__body{font:500 58px/1.08 var(--display);letter-spacing:-.06em;max-width:1000px}
+.thread__body em{font-style:normal;color:var(--accent)}
+.thread__foot{display:flex;justify-content:space-between;align-items:center}
+.thread__k{font:500 18px/1 var(--sans);text-transform:uppercase;letter-spacing:.06em}
+.thread__icon{width:79px;height:56px;display:block}

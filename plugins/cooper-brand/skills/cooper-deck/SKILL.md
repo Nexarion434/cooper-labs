@@ -9,16 +9,16 @@ description: >
   the internal document, one block per slide, delivered as a PDF and as PNG
   per slide.
 metadata:
-  version: "0.1.0"
-  source: "cooper-brand 0.1.0 — the parallel-brand deck with the Cooper Labs identity"
+  version: "0.2.0"
+  source: "cooper-brand 0.2.0 — the parallel-brand deck with the Cooper Labs identity"
 ---
 
 # Cooper Labs — deck
 
 The internal document, on a screen. Every slide is the A4 page scaled ×1.6:
-a margin column of 180 with the section label and the source, a reading
-column with one block (heading, body, bullets, table, figures or
-recommendation), the running head above, the footer below. A title slide
+the label row (the dash, the section label, the source) over one block
+(heading, body, bullet cards, table card, figures card or the dark
+recommendation card), the running head above, the footer below. A title slide
 opens it on a full-bleed render (or the plain ink ground), a closing slide
 ends it on the ink ground with the tagline and the links. **English
 throughout.** Load `cooper-brand-kit` first if the tokens are not already in
@@ -54,7 +54,7 @@ python3 $S/build_deck.py deck.json deck.html --pdf --png out/   # HTML, CooperLa
 
 The description carries `class`, `subject`, `title` with its `*orange
 phrase*`, `standfirst`, `kicker`, `version`, `classification`, `status`,
-`date`, `owner`, `render` (`"01"` to `"06"`, or `"dark"`) and `slides`. A
+`date`, `owner`, `render` (`"01"` to `"06"`, `"02"` for the halftone at 60%, or `"dark"`) and `slides`. A
 slide is either a content slide (`tag`, `source`, then `heading`, `body`,
 `bullets`, `table`, `figures`, `reco`, the keys of `build_doc.py`, or
 `main` for another order), a `divider` (`n`, `kicker`, `title`) or a
@@ -71,11 +71,11 @@ accepts the `canvas--deck` size.
 
 | Slide | Use | Composition |
 |---|---|---|
-| Title | first | the render full-bleed under the light fade (or plain ink), wordmark and `CLASSIFICATION · vX.X` at the top, kicker, title (76, one orange phrase), standfirst, meta strip |
-| Content | the argument | margin: tag 12 with its mark, source 11; main: heading 44, body 17, bullets 17, table 15, figures 72, recommendation 32 |
-| Divider | a new part | number 200 in orange, kicker, title 72; footer only |
-| Statement | the one sentence to remember | orange mark, text 60 with its orange phrase, source line |
-| Closing | last | ink ground, the tagline, the studio links, THIS DECK (class, version, date) |
+| Title | first | the render in the top 78% under the light fade (or plain ink), wordmark and `CLASSIFICATION · vX.X` at the top, the dash and the kicker, title (84 at 0.92, one orange phrase), standfirst, the meta card |
+| Content | the argument | label row: tag 12 with the dash, source 12; then heading 48, body 17, bullet cards (22 / 15), table card 15, figures card 72, recommendation card 34 |
+| Divider | a new part | number 220 in orange, the dash and the kicker, title 76; footer only |
+| Statement | the one sentence to remember | the dash, text 64 with its orange phrase, source line |
+| Closing | last | ink ground, the orange mark, the tagline, the colophon card with the studio links and THIS DECK (class, version, date) |
 
 One block per content slide. When a block does not fit (a table longer than
 five rows, more than four bullets, a body over four lines), split it over
@@ -93,8 +93,8 @@ two slides rather than shrinking the type: the footer numbers follow.
   footer `COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION` and `NN / NN`;
   `Public` decks get `COOPER LABS · COOPERLABS.XYZ`.
 - The render appears **only on the title slide**; a content slide has no
-  picture, no logo, no colour ground. Dividers and statements sit on the
-  paper ground.
+  picture and no colour ground beyond its cards. Dividers and statements
+  sit on the paper ground.
 - Deliver the PDF; the PNGs are for a message or a preview, never for
   printing.
 
