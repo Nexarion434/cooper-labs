@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.1 · 14 Sep 2026
+
+- The proposal template (`assets/templates/internal-doc.json`) is the long
+  form: 24 sheets, three parts on dividers, every one of the sixteen page
+  styles in use on the Parallel MCP server proposal (statement, prose,
+  chart, two columns, timeline, hero figure, steps, flow, data page,
+  matrix, checklist and sign-off, plate, glossary, code). The Contents page
+  lists one line per page past twelve entries.
+- `cooper-internal-document` 0.1.1: the proposal class describes the long
+  form.
+
 ## 0.1.0 · 14 Sep 2026
 
 First release: the `parallel-brand` 0.5.0 engine with the Cooper Labs

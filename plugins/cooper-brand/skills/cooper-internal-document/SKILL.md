@@ -7,8 +7,8 @@ description: >
   when turning a brief, a project or a decision into the branded A4 PDF.
   Covers the HTML to PDF build.
 metadata:
-  version: "0.1.0"
-  source: "cooper-brand 0.1.0 — the parallel-brand engine with the Cooper Labs identity"
+  version: "0.1.1"
+  source: "cooper-brand 0.1.1 — the parallel-brand engine with the Cooper Labs identity"
 ---
 
 # Cooper Labs — internal document
@@ -24,7 +24,7 @@ context.
 
 | Class | Kicker | Default sections |
 |---|---|---|
-| Proposal | `PROPOSAL · <subject>` | Summary + figures → Assessment (table) → Risks & mitigants → Recommendation → Context & scope → Timeline → Options → Decision → Appendix A decision log → Appendix B → Glossary |
+| Proposal | `PROPOSAL · <subject>` | Summary + figures → statement → Part one (divider, context & scope, prose, chart) → Part two (divider, options, two columns, timeline, hero figure, steps, flow, data page) → Part three (dark divider, decision + decision log, matrix, checklist + sign-off) → appendices (plate, tools, glossary, code). The 24-sheet template; a short proposal keeps the summary, context, options and decision pages |
 | Case study | `CASE STUDY · <client>` | Client → figures → What we did → Outcome (table) → What we would change |
 | Spec | `SPEC · <feature>` | Summary → Requirements (ID / requirement / priority) → Interface → Open questions |
 | Post-mortem | `POST-MORTEM · <date>` | Incident → Timeline → Root cause → Actions |
@@ -32,7 +32,8 @@ context.
 | Guide | `GUIDE · <subject>` | whatever the guide needs; the page-styles example is one |
 
 The skeleton is not a checklist. Add, reorder or drop sections to fit the
-argument; the Contents page is only worth having from five pages up. A
+argument; the Contents page is only worth having from five pages up, and
+past twelve entries it lists one line per page, named after the page. A
 proposal to a client is `Confidential`; a case study or a memo is
 `Internal`; either can be `Public` when it goes out.
 
@@ -226,6 +227,6 @@ whose content reaches the footer.
 
 - `cooper-brand-kit/references/tokens.md` — tokens, block specs, CSS classes
 - `cooper-brand-kit/references/voice.md` — tone, naming, mechanics
-- `../../assets/templates/internal-doc.json` and `.html` — the full 8-sheet skeleton (a proposal), description and build
+- `../../assets/templates/internal-doc.json` and `.html` — the full 24-sheet skeleton (a proposal that uses every page style), description and build
 - `../../assets/examples/` — case-study, spec, post-mortem, memo, page-styles (`.json` + `.html`)
 - `../../assets/scripts/build_doc.py` — the builder; `check_pdf.py` — the checks

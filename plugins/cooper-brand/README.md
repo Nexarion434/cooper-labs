@@ -82,7 +82,7 @@ skills/cooper-deck/                 SKILL.md
 skills/cooper-fact-sheet/           SKILL.md
 skills/cooper-social/               SKILL.md
 assets/css/cooper.css               the stylesheet: the document engine with the Cooper Labs tokens, the social section transcribed from the Figma file
-assets/templates/internal-doc.json  the 8-sheet skeleton (a proposal), description and built .html
+assets/templates/internal-doc.json  the 24-sheet skeleton (a proposal on every page style), description and built .html
 assets/templates/social.json        every social canvas (17): post (3), partner, X cover (2), preview, the extra sizes (5), banners (2), thread (3), and the built .html
 assets/examples/*.json              case study, spec, post-mortem, memo, page-styles (19 sheets), deck (7 slides), fact sheet, and the built .html
 assets/scripts/                     build_doc.py · build_social.py · build_deck.py · build_fact_sheet.py · new_doc.py · render_pdf.py · render_png.py · render_anim.py · check_pdf.py · check_png.py · frame.py · fontcheck.py · brand.py

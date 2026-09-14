@@ -35,17 +35,33 @@
         <div class="heading">In This Document</div>
         <table class="table table--plain">
           <tr data-tag=""><td class="mono" style="width:48px">01</td><td>Summary</td><td class="mono" style="width:60px">03</td></tr>
-          <tr data-tag=""><td class="mono">02</td><td>Context &amp; scope</td><td class="mono">04</td></tr>
-          <tr data-tag=""><td class="mono">03</td><td>Options</td><td class="mono">05</td></tr>
-          <tr data-tag=""><td class="mono">04</td><td>Decision &amp; appendix</td><td class="mono">06</td></tr>
-          <tr data-tag=""><td class="mono">05</td><td>Glossary</td><td class="mono">07</td></tr>
+          <tr data-tag=""><td class="mono">02</td><td>The one sentence</td><td class="mono">04</td></tr>
+          <tr data-tag=""><td class="mono">03</td><td>Part one · Context</td><td class="mono">05</td></tr>
+          <tr data-tag=""><td class="mono">04</td><td>Context &amp; scope</td><td class="mono">06</td></tr>
+          <tr data-tag=""><td class="mono">05</td><td>Two cases, one gap</td><td class="mono">07</td></tr>
+          <tr data-tag=""><td class="mono">06</td><td>The numbers, twelve weeks</td><td class="mono">08</td></tr>
+          <tr data-tag=""><td class="mono">07</td><td>Part two · The build</td><td class="mono">09</td></tr>
+          <tr data-tag=""><td class="mono">08</td><td>Options</td><td class="mono">10</td></tr>
+          <tr data-tag=""><td class="mono">09</td><td>Server first, or CLI first</td><td class="mono">11</td></tr>
+          <tr data-tag=""><td class="mono">10</td><td>The plan by week</td><td class="mono">12</td></tr>
+          <tr data-tag=""><td class="mono">11</td><td>Six weeks, in one figure</td><td class="mono">13</td></tr>
+          <tr data-tag=""><td class="mono">12</td><td>How a week runs</td><td class="mono">14</td></tr>
+          <tr data-tag=""><td class="mono">13</td><td>How a question becomes an answer</td><td class="mono">15</td></tr>
+          <tr data-tag=""><td class="mono">14</td><td>The build, every line</td><td class="mono">16</td></tr>
+          <tr data-tag=""><td class="mono">15</td><td>Part three · Decision</td><td class="mono">17</td></tr>
+          <tr data-tag=""><td class="mono">16</td><td>Decision, and the log</td><td class="mono">18</td></tr>
+          <tr data-tag=""><td class="mono">17</td><td>Risks, likelihood against impact</td><td class="mono">19</td></tr>
+          <tr data-tag=""><td class="mono">18</td><td>Before the beta, sign-off</td><td class="mono">20</td></tr>
+          <tr data-tag=""><td class="mono">19</td><td>Appendices</td><td class="mono">21</td></tr>
+          <tr data-tag=""><td class="mono">20</td><td>Appendix B · Tools, C · Glossary</td><td class="mono">22</td></tr>
+          <tr data-tag=""><td class="mono">21</td><td>Appendix D · Schema of one tool</td><td class="mono">23</td></tr>
         </table>
       </div>
     </div>
     <div class="block">
       <div class="block__margin"><div class="tag">How to read</div></div>
       <div class="block__main">
-        <div class="body">Read the summary and the recommendation first; they stand alone. Context, options and the appendices are the evidence, kept for whoever needs to check a figure or a date. Every table names its source in the margin.</div>
+        <div class="body">Read the summary and the statement first; they stand alone. Part one is the context, part two the build and its plan, part three the decision and the risks; the appendices are for the engineering team. Every table names its source in the margin, and every part opens on a divider.</div>
       </div>
     </div>
     <div class="block">
@@ -54,13 +70,13 @@
         <table class="table">
           <tr><th style="width:80px">Version</th><th style="width:110px">Date</th><th>Change</th></tr>
           <tr><td class="mono">v0.1</td><td class="mono">14 Sep 2026</td><td>First draft for the Parallel team</td></tr>
-          <tr><td class="mono">v0.2</td><td class="mono">TBD</td><td>Scope and dates confirmed with Noah</td></tr>
+          <tr><td class="mono">v0.2</td><td class="mono">TBD</td><td>Scope, dates and the disclaimer wording confirmed with Noah</td></tr>
           <tr><td class="mono">v1.0</td><td class="mono">TBD</td><td>Signed statement of work</td></tr>
         </table>
       </div>
     </div>
   </div>
-  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">02 / 08</div></div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">02 / 24</div></div>
 </section>
 <!-- ===================== PAGE · SUMMARY ===================== -->
 <section class="page">
@@ -114,11 +130,34 @@
       </div>
     </div>
   </div>
-  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">03 / 08</div></div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">03 / 24</div></div>
+</section>
+<!-- ===================== PAGE · THE ONE SENTENCE ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">04</div></div>
+  <div class="statement">
+    <div class="statement__mark"></div>
+    <div class="statement__text">An MCP server holds no keys and signs nothing; the worst it can do is give a stale answer, <em>and the answer says so.</em></div>
+    <div class="statement__who">Summary · Proposal · Parallel MCP server</div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">04 / 24</div></div>
+</section>
+<!-- ===================== PAGE · PART ONE · CONTEXT ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">05</div></div>
+  <div class="divider">
+    <div class="divider__n">01</div>
+    <div class="divider__kicker">Part one · Context</div>
+    <div class="divider__title">Why Now, <em>and Why a Server.</em></div>
+    <div class="divider__stand">Where the questions come from, what answers them today, and the two cases that made the gap visible.</div>
+    <div class="divider__rule"></div>
+          <div class="divider__list"><div><div class="k">Sections</div><div class="v">Context · Two cases · The numbers</div></div><div><div class="k">Pages</div><div class="v">06 to 08</div></div><div><div class="k">Source</div><div class="v">Support channel, weeks 24 to 35</div></div><div><div class="k">Reading time</div><div class="v">Five minutes</div></div></div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">05 / 24</div></div>
 </section>
 <!-- ===================== PAGE · CONTEXT &amp; SCOPE ===================== -->
 <section class="page">
-  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">04</div></div>
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">06</div></div>
   <div class="content">
     <div class="block">
       <div class="block__margin"><div class="tag">Context</div></div>
@@ -138,27 +177,68 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">06 / 24</div></div>
+</section>
+<!-- ===================== PAGE · TWO CASES, ONE GAP ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">07</div></div>
+  <div class="prose">
+    <div class="prose__lede">Twice this summer a Parallel user asked an assistant for their health factor and got a number that was two releases old. <em>That is the wrong kind of confidence,</em> and it is the whole reason for this proposal.</div>
+    <div class="body">The first case came in June. A holder asked which vault paid the best savings rate; the assistant quoted the documentation, which had not been updated since the March rate change, and the holder moved funds to the wrong vault. Nothing was wrong with the protocol; the only door to its numbers was a page written by hand.<br><br>The second came in August, during the Atlas launch week, when the support channel was busiest. An agent computed a health factor from a pasted screenshot and told a user their position was safe; it had been liquidated an hour before. Again the data existed on-chain and in the indexer, and again nobody had given the assistant a way to read it.<br><br>What both cases share is a gap that a server closes. An assistant with a tool asks the tool; the tool asks the indexer; the indexer answers with a block number. The number can be stale, and then it says so; it cannot be invented. The habit of pasting numbers into a prompt disappears the day the tool exists.<br><br>Other protocols shipped read-only servers this year and reported the same thing: the questions in the support channel did not go away, they became answerable. None reported an incident from a read-only tool. The mechanism is understood; the question in front of Parallel is only whether to build the door before or after the CLI.</div>
+    <div class="prose__sig"><span>Jean, Cooper Labs</span><span>14 September 2026</span></div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">07 / 24</div></div>
+</section>
+<!-- ===================== PAGE · THE NUMBERS, TWELVE WEEKS ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">08</div></div>
+  <div class="content">
     <div class="block">
-      <div class="block__margin"><div class="tag">Timeline</div><div class="source">Dates agreed with Noah on 12 Sep 2026; each week ends with a Friday demo.</div></div>
+      <div class="block__margin"><div class="tag">Data</div><div class="source">Source: the support channel, weekly counts, weeks 24 to 35 of 2026.</div></div>
       <div class="block__main">
-        <div class="heading">Six Weeks, <em>Six Demos</em></div>
-        <table class="table">
-          <tr><th style="width:60px">Week</th><th style="width:80px">Ends</th><th>Delivered</th></tr>
-          <tr><td class="mono">1</td><td class="mono">2 Oct</td><td>Tool schemas agreed; get_rates and get_backing on Base</td></tr>
-          <tr><td class="mono">2</td><td class="mono">9 Oct</td><td>Positions and simulate_borrow, three chains</td></tr>
-          <tr><td class="mono">3</td><td class="mono">16 Oct</td><td>Governance and docs resources; staleness rule</td></tr>
-          <tr><td class="mono">4</td><td class="mono">23 Oct</td><td>build_tx, test suite, error copy</td></tr>
-          <tr><td class="mono">5</td><td class="mono">30 Oct</td><td>CLI over the server; install docs</td></tr>
-          <tr><td class="mono">6</td><td class="mono">6 Nov</td><td>Public beta, announcement, hand-over</td></tr>
-        </table>
+        <div class="heading">Questions from Agents <em>Are Rising,</em> Answers Are Not<span class="heading__suffix">(12 weeks)</span></div>
+        <svg class="chart" viewBox="0 0 530 220"><line class="axis" x1="30" y1="196.0" x2="520" y2="196.0"/><text x="0" y="199.0">0</text><line class="axis" x1="30" y1="149.5" x2="520" y2="149.5"/><text x="0" y="152.5">25</text><line class="axis" x1="30" y1="103.0" x2="520" y2="103.0"/><text x="0" y="106.0">50</text><line class="axis" x1="30" y1="56.5" x2="520" y2="56.5"/><text x="0" y="59.5">75</text><rect class="bar bar--soft" x="36.0" y="119.7" width="28.8" height="76.3"/><rect class="bar" x="36.0" y="173.7" width="14.4" height="22.3"/><text x="50.4" y="214" text-anchor="middle">24</text><rect class="bar bar--soft" x="76.8" y="123.5" width="28.8" height="72.5"/><rect class="bar" x="76.8" y="168.1" width="14.4" height="27.9"/><text x="91.3" y="214" text-anchor="middle">25</text><rect class="bar bar--soft" x="117.7" y="121.6" width="28.8" height="74.4"/><rect class="bar" x="117.7" y="160.7" width="14.4" height="35.3"/><text x="132.1" y="214" text-anchor="middle">26</text><rect class="bar bar--soft" x="158.5" y="127.2" width="28.8" height="68.8"/><rect class="bar" x="158.5" y="155.1" width="14.4" height="40.9"/><text x="172.9" y="214" text-anchor="middle">27</text><rect class="bar bar--soft" x="199.3" y="129.0" width="28.8" height="67.0"/><rect class="bar" x="199.3" y="145.8" width="14.4" height="50.2"/><text x="213.8" y="214" text-anchor="middle">28</text><rect class="bar bar--soft" x="240.2" y="130.9" width="28.8" height="65.1"/><rect class="bar" x="240.2" y="138.3" width="14.4" height="57.7"/><text x="254.6" y="214" text-anchor="middle">29</text><rect class="bar bar--soft" x="281.0" y="134.6" width="28.8" height="61.4"/><rect class="bar" x="281.0" y="125.3" width="14.4" height="70.7"/><text x="295.4" y="214" text-anchor="middle">30</text><rect class="bar bar--soft" x="321.8" y="132.8" width="28.8" height="63.2"/><rect class="bar" x="321.8" y="114.2" width="14.4" height="81.8"/><text x="336.3" y="214" text-anchor="middle">31</text><rect class="bar bar--soft" x="362.7" y="138.3" width="28.8" height="57.7"/><rect class="bar" x="362.7" y="101.1" width="14.4" height="94.9"/><text x="377.1" y="214" text-anchor="middle">32</text><rect class="bar bar--soft" x="403.5" y="140.2" width="28.8" height="55.8"/><rect class="bar" x="403.5" y="90.0" width="14.4" height="106.0"/><text x="417.9" y="214" text-anchor="middle">33</text><rect class="bar bar--soft" x="444.3" y="142.1" width="28.8" height="53.9"/><rect class="bar" x="444.3" y="73.2" width="14.4" height="122.8"/><text x="458.8" y="214" text-anchor="middle">34</text><rect class="bar bar--soft" x="485.2" y="143.9" width="28.8" height="52.1"/><rect class="bar" x="485.2" y="58.4" width="14.4" height="137.6"/><text x="499.6" y="214" text-anchor="middle">35</text><line class="base" x1="30" y1="196" x2="520" y2="196"/></svg>
+        <div class="legend"><span><i class="soft"></i>Questions from people</span><span><i></i>Questions from agents</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Accuracy</div></div>
+      <div class="block__main">
+        <div class="heading">Answers Checked Correct, Share</div>
+        <svg class="chart" viewBox="0 0 530 150"><line class="axis" x1="30" y1="120.0" x2="520" y2="120.0"/><text x="0" y="123.0">0%</text><line class="axis" x1="30" y1="65.0" x2="520" y2="65.0"/><text x="0" y="68.0">50%</text><line class="axis" x1="30" y1="10.0" x2="520" y2="10.0"/><text x="0" y="13.0">100%</text><polyline class="line" points="30.0,41.9 74.5,43.0 119.1,45.2 163.6,47.4 208.2,50.7 252.7,52.9 297.3,56.2 341.8,59.5 386.4,62.8 430.9,65.0 475.5,68.3 520.0,71.6"/><circle class="dot" cx="520.0" cy="71.6" r="3"/><text class="val" x="516.0" y="63.6" text-anchor="end">44%</text><text x="30.0" y="144" text-anchor="middle">24</text><text x="74.5" y="144" text-anchor="middle">25</text><text x="119.1" y="144" text-anchor="middle">26</text><text x="163.6" y="144" text-anchor="middle">27</text><text x="208.2" y="144" text-anchor="middle">28</text><text x="252.7" y="144" text-anchor="middle">29</text><text x="297.3" y="144" text-anchor="middle">30</text><text x="341.8" y="144" text-anchor="middle">31</text><text x="386.4" y="144" text-anchor="middle">32</text><text x="430.9" y="144" text-anchor="middle">33</text><text x="475.5" y="144" text-anchor="middle">34</text><text x="520.0" y="144" text-anchor="middle">35</text><line class="base" x1="30" y1="120" x2="520" y2="120"/></svg>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"></div>
+      <div class="block__main">
+        <div class="figures">
+          <div class="figure"><div class="figure__n">74</div><div class="figure__k">Agent questions, week 35</div></div>
+          <div class="figure"><div class="figure__n">×6</div><div class="figure__k">Since week 24</div></div>
+          <div class="figure"><div class="figure__n">44%</div><div class="figure__k">Answered correctly</div></div>
+          <div class="figure"><div class="figure__n">-27 pts</div><div class="figure__k">Accuracy since week 24</div></div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">04 / 08</div></div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">08 / 24</div></div>
+</section>
+<!-- ===================== PAGE · PART TWO · THE BUILD ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">09</div></div>
+  <div class="divider">
+    <div class="divider__n">02</div>
+    <div class="divider__kicker">Part two · The build</div>
+    <div class="divider__title">Six Weeks, <em>Six Demos.</em></div>
+    <div class="divider__stand">The four options, the one recommended, the plan by week, and how the work runs from Monday to Friday.</div>
+    <div class="divider__rule"></div>
+          <div class="divider__list"><div><div class="k">Sections</div><div class="v">Options · Plan · Method</div></div><div><div class="k">Pages</div><div class="v">10 to 16</div></div><div><div class="k">Estimate</div><div class="v">12 Sep 2026, one designer and one engineer</div></div><div><div class="k">Phase gate</div><div class="v">16 October</div></div></div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">09 / 24</div></div>
 </section>
 <!-- ===================== PAGE · OPTIONS ===================== -->
 <section class="page">
-  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">05</div></div>
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">10</div></div>
   <div class="content">
     <div class="block">
       <div class="block__margin"><div class="tag">Options</div><div class="source">Estimates in Cooper weeks, one designer and one engineer.</div></div>
@@ -200,11 +280,235 @@
       </div>
     </div>
   </div>
-  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">05 / 08</div></div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">10 / 24</div></div>
 </section>
-<!-- ===================== PAGE · DECISION &amp; APPENDIX ===================== -->
+<!-- ===================== PAGE · SERVER FIRST, OR CLI FIRST ===================== -->
 <section class="page">
-  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">06</div></div>
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">11</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Options</div><div class="source">Estimates in Cooper weeks, 12 Sep 2026.</div></div>
+      <div class="block__main">
+        <div class="heading">MCP Server <em>or CLI First</em></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"></div>
+      <div class="block__main">
+        <div class="cols">
+          <div>
+            <div class="cols__head">B · MCP server first</div>
+        <div class="bullets">
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Every agent, day one</div><div class="bullet__text">Claude, Cursor and the community&#x27;s own assistants call the same tools.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Read-only by construction</div><div class="bullet__text">No key enters the process.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">The CLI comes free</div><div class="bullet__text">A formatter over the tools, one week in week five.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Six weeks</div><div class="bullet__text">Two phases, a gate on the demo of week three.</div></div></div>
+        </div>
+            <div class="verdict">Recommended.</div>
+          </div>
+          <div>
+            <div class="cols__head">A · CLI first</div>
+        <div class="bullets">
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Developers at a terminal</div><div class="bullet__text">The audience the team knows best, and the smallest.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Five weeks</div><div class="bullet__text">Then the server is another five.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Two codebases</div><div class="bullet__text">Formatting and data fetching mixed in one tool.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">No door for agents</div><div class="bullet__text">The support questions keep coming.</div></div></div>
+        </div>
+            <div class="verdict">Not first.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Recommendation</div></div>
+      <div class="block__main">
+        <div class="reco"><div class="reco__title">Option B. The server serves everyone, and the CLI is a week rather than five.</div><div class="reco__body">If the beta shows the terminal is where the users are, the CLI gets its own phase.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">11 / 24</div></div>
+</section>
+<!-- ===================== PAGE · THE PLAN BY WEEK ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">12</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Timeline</div><div class="source">Dates agreed with Noah on 12 Sep 2026; each week ends with a Friday demo.</div></div>
+      <div class="block__main">
+        <div class="heading">From the Brief <em>to the Beta</em><span class="heading__suffix">(six weeks)</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"></div>
+      <div class="block__main">
+        <div class="tl">
+          <div class="tl__row">
+            <div class="tl__step tl__step--past"><div class="tl__date">14 Sep</div><div class="tl__title">Proposal sent</div><div class="tl__text">This document, v0.1, to the Parallel team.</div></div>
+            <div class="tl__step tl__step--past"><div class="tl__date">21 Sep</div><div class="tl__title">Scope confirmed</div><div class="tl__text">Tools, chains and the owner at Parallel.</div></div>
+            <div class="tl__step"><div class="tl__date">28 Sep</div><div class="tl__title">Build starts</div><div class="tl__text">Week one: schemas, rates and backing on Base.</div></div>
+            <div class="tl__step"><div class="tl__date">16 Oct</div><div class="tl__title">Phase gate</div><div class="tl__text">Demo of week three; phase two on approval.</div></div>
+            <div class="tl__step"><div class="tl__date">6 Nov</div><div class="tl__title">Public beta</div><div class="tl__text">Announced with the Seventeenth Parallel Report.</div></div>
+          </div>
+          <div class="tl__phase"><div>Proposal</div><div>Scope</div><div>Phase one</div><div>Gate</div><div>Phase two</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Owners</div></div>
+      <div class="block__main">
+        <table class="table">
+          <tr><th style="width:110px">Phase</th><th style="width:150px">Owner</th><th>Deliverable</th></tr>
+          <tr><td class="strong">Proposal</td><td>Jean</td><td>This document, v0.1 to v1.0</td></tr>
+          <tr><td class="strong">Scope</td><td>Noah</td><td>Tool list, chains, owner</td></tr>
+          <tr><td class="strong">Phase one</td><td>Cooper Labs</td><td>Weeks one to three, three demos</td></tr>
+          <tr><td class="strong">Phase two</td><td>Cooper Labs</td><td>Weeks four to six, the CLI, the beta</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">12 / 24</div></div>
+</section>
+<!-- ===================== PAGE · SIX WEEKS, IN ONE FIGURE ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">13</div></div>
+  <div class="hero">
+    <div class="hero__n">6<em>weeks</em></div>
+    <div class="hero__k">From the brief to the public beta</div>
+    <div class="hero__rule"></div>
+    <div class="hero__row">
+      <div class="body">Six weeks, six Friday demos. The server answers on Base at the end of week one and on three chains at the end of week two; the CLI is derived from it in week five and the public beta ships with the Seventeenth Parallel Report on 6 November.</div>
+      <div class="figures">
+          <div class="figure"><div class="figure__n">6</div><div class="figure__k">Demos</div></div>
+          <div class="figure"><div class="figure__n">3</div><div class="figure__k">Chains</div></div>
+          <div class="figure"><div class="figure__n">2</div><div class="figure__k">Phases</div></div>
+        </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">13 / 24</div></div>
+</section>
+<!-- ===================== PAGE · HOW A WEEK RUNS ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">14</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Method</div><div class="source">The studio&#x27;s week, as run on every engagement since October.</div></div>
+      <div class="block__main">
+        <div class="heading">From Monday <em>to the Friday Demo</em></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="step__n">01</div></div>
+      <div class="block__main">
+        <div class="step">
+        <div class="heading">Monday · Scope the Week</div>
+        <div class="body">Thirty minutes with the owner at Parallel: what Friday&#x27;s demo shows, written in the channel before noon.</div>
+        <div class="step__meta">Owner Jean · Monday 10:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="step__n">02</div></div>
+      <div class="block__main">
+        <div class="step">
+        <div class="heading">Tuesday to Thursday · Build</div>
+        <div class="body">One designer and one engineer on the same branch; the schemas first, the tests with them, the copy as the tools take shape.</div>
+        <div class="step__meta">Owner Cooper Labs · daily</div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="step__n">03</div></div>
+      <div class="block__main">
+        <div class="step">
+        <div class="heading">Thursday · Review</div>
+        <div class="body">The week&#x27;s work run end to end on a clean machine, against the three chains; what does not pass is cut from the demo, not hidden in it.</div>
+        <div class="step__meta">Owner Engineering · Thursday 16:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="step__n">04</div></div>
+      <div class="block__main">
+        <div class="step">
+        <div class="heading">Friday · Demo</div>
+        <div class="body">Thirty minutes, working software, the owner in the room; the decisions written in the channel before the end of the day.</div>
+        <div class="step__meta">Owner Jean · Friday 15:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">14 / 24</div></div>
+</section>
+<!-- ===================== PAGE · HOW A QUESTION BECOMES AN ANSWER ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">15</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Mechanism</div></div>
+      <div class="block__main">
+        <div class="heading">How a Question <em>Becomes an Answer</em></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"></div>
+      <div class="block__main">
+        <svg class="flow" viewBox="0 0 530 400"><rect class="" x="0" y="0" width="150" height="52"/><text x="12" y="22">Question</text><text class="m" x="12" y="38">User, any assistant</text><rect class="" x="0" y="90" width="150" height="52"/><text x="12" y="112">Tool call</text><text class="m" x="12" y="128">MCP client</text><rect class="" x="200" y="90" width="150" height="52"/><text x="212" y="112">Cache fresh?</text><text class="m" x="212" y="128">Keyed by block</text><rect class="" x="400" y="90" width="130" height="52"/><text x="412" y="112">Answer</text><text class="m" x="412" y="128">With block number</text><rect class="" x="200" y="180" width="150" height="52"/><text x="212" y="202">Read the indexer</text><text class="m" x="212" y="218">Three chains</text><rect class="" x="200" y="270" width="150" height="52"/><text x="212" y="292">Stale past 300 s?</text><text class="m" x="212" y="308">Flag in the result</text><rect class="" x="400" y="270" width="130" height="52"/><text x="412" y="292">Answer, flagged</text><text class="m" x="412" y="308">&quot;Figures as of...&quot;</text><rect class="soft" x="0" y="270" width="150" height="52"/><text x="12" y="292">build_tx</text><text class="m" x="12" y="308">Unsigned, user signs</text><path d="M75,52 L75,90"/><circle class="dot" cx="75" cy="90" r="2.5"/><path d="M150,116 L200,116"/><circle class="dot" cx="200" cy="116" r="2.5"/><path d="M275,142 L275,180"/><circle class="dot" cx="275" cy="180" r="2.5"/><text class="m" x="283" y="164.0">no</text><path d="M350,116 L400,116"/><circle class="dot" cx="400" cy="116" r="2.5"/><text class="m" x="375.0" y="110" text-anchor="middle">yes</text><path d="M275,232 L275,270"/><circle class="dot" cx="275" cy="270" r="2.5"/><path d="M350,296 L400,296"/><circle class="dot" cx="400" cy="296" r="2.5"/><path d="M465,142 L465,270"/><circle class="dot" cx="465" cy="270" r="2.5"/><path d="M150,296 L200,296"/><circle class="dot" cx="200" cy="296" r="2.5"/><text class="m" x="175.0" y="290" text-anchor="middle">write</text><text class="em" x="0" y="380">One server, <tspan>four states.</tspan></text></svg>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Reading</div></div>
+      <div class="block__main">
+        <div class="body">Hairline boxes, radius zero, one orange dot at the head of every arrow. The build_tx box is drawn in the lighter hairline because it sits outside the read path.</div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">15 / 24</div></div>
+</section>
+<!-- ===================== PAGE · THE BUILD, EVERY LINE ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">16</div></div>
+  <div class="wide">
+    <div class="heading">The Build, <em>Every Line</em><span class="heading__suffix">(estimate of 12 Sep 2026)</span></div>
+    <div style="height:14px"></div>
+    <table class="table">
+      <tr><th>Item</th><th style="width:60px">Days</th><th style="width:60px">Week</th><th style="width:90px">Role</th><th style="width:80px">Demo</th><th style="width:70px">Phase</th></tr>
+      <tr><td class="strong">Tool schemas and error copy</td><td class="mono">3</td><td class="mono">1</td><td>Design</td><td>2 Oct</td><td>One</td></tr>
+      <tr><td class="strong">get_rates, get_backing on Base</td><td class="mono">2</td><td class="mono">1</td><td>Engineering</td><td>2 Oct</td><td>One</td></tr>
+      <tr><td class="strong">Indexer client, three chains</td><td class="mono">3</td><td class="mono">2</td><td>Engineering</td><td>9 Oct</td><td>One</td></tr>
+      <tr><td class="strong">get_positions, simulate_borrow</td><td class="mono">2</td><td class="mono">2</td><td>Engineering</td><td>9 Oct</td><td>One</td></tr>
+      <tr><td class="strong">Governance tools</td><td class="mono">2</td><td class="mono">3</td><td>Engineering</td><td>16 Oct</td><td>One</td></tr>
+      <tr><td class="strong">Docs as a resource</td><td class="mono">1</td><td class="mono">3</td><td>Engineering</td><td>16 Oct</td><td>One</td></tr>
+      <tr><td class="strong">Staleness rule and copy</td><td class="mono">2</td><td class="mono">3</td><td>Design</td><td>16 Oct</td><td>One</td></tr>
+      <tr><td class="strong">build_tx and its tests</td><td class="mono">3</td><td class="mono">4</td><td>Engineering</td><td>23 Oct</td><td>Two</td></tr>
+      <tr><td class="strong">Test suite, three chains</td><td class="mono">2</td><td class="mono">4</td><td>Engineering</td><td>23 Oct</td><td>Two</td></tr>
+      <tr class="highlight"><td class="strong">Phase gate review</td><td class="mono">1</td><td class="mono">3</td><td>Both</td><td>16 Oct</td><td>Gate</td></tr>
+      <tr><td class="strong">CLI over the server</td><td class="mono">4</td><td class="mono">5</td><td>Engineering</td><td>30 Oct</td><td>Two</td></tr>
+      <tr><td class="strong">Install docs and README</td><td class="mono">1</td><td class="mono">5</td><td>Design</td><td>30 Oct</td><td>Two</td></tr>
+      <tr><td class="strong">Beta packaging, announcement</td><td class="mono">3</td><td class="mono">6</td><td>Both</td><td>6 Nov</td><td>Two</td></tr>
+      <tr><td class="strong">Hand-over session</td><td class="mono">1</td><td class="mono">6</td><td>Both</td><td>6 Nov</td><td>Two</td></tr>
+      <tr><td class="strong">Contingency</td><td class="mono">3</td><td class="mono">6</td><td>Both</td><td>n/a</td><td>Two</td></tr>
+    </table>
+    <div class="wide__foot"><span>Source: Cooper Labs estimate of 12 Sep 2026, one designer and one engineer.</span><span>Days are working days; the highlighted line is the phase gate.</span></div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">16 / 24</div></div>
+</section>
+<!-- ===================== PAGE · PART THREE · DECISION ===================== -->
+<section class="page page--dark">
+  <div class="back__glow"></div>
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">17</div></div>
+  <div class="divider">
+    <div class="divider__n">03</div>
+    <div class="divider__kicker">Part three · Decision</div>
+    <div class="divider__title">What Parallel <em>Is Asked to Decide.</em></div>
+    <div class="divider__stand">The three things to confirm by 21 September, the risks that remain, and what has to be true before the beta ships.</div>
+    <div class="divider__rule"></div>
+          <div class="divider__list"><div><div class="k">Sections</div><div class="v">Decision · Risks · Readiness</div></div><div><div class="k">Pages</div><div class="v">18 to 20</div></div><div><div class="k">Deadline</div><div class="v">21 September</div></div><div><div class="k">Owner</div><div class="v">Jean, Cooper Labs</div></div></div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">17 / 24</div></div>
+</section>
+<!-- ===================== PAGE · DECISION, AND THE LOG ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">18</div></div>
   <div class="content">
     <div class="block">
       <div class="block__margin"><div class="tag">Decision</div></div>
@@ -230,6 +534,84 @@
         </table>
       </div>
     </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">18 / 24</div></div>
+</section>
+<!-- ===================== PAGE · RISKS, LIKELIHOOD AGAINST IMPACT ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">19</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Risks</div><div class="source">Assessed by Cooper Labs on 12 Sep 2026; revisited at each phase gate.</div></div>
+      <div class="block__main">
+        <div class="heading">Likelihood <em>Against Impact</em></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"></div>
+      <div class="block__main">
+        <div class="matrix">
+          <div class="matrix__h"></div><div class="matrix__h">Low impact</div><div class="matrix__h">Medium impact</div><div class="matrix__h">High impact</div>
+          <div class="matrix__k">Likely</div><div class="matrix__cell"><b>Schema churn</b>Tools renamed in week one; contained by the demo.</div><div class="matrix__cell"><b>Indexer lag</b>Every answer carries its block; past 300 s the tool says so.</div><div class="matrix__cell hot"><b>Answer read as advice</b>Read-only tools and a fixed disclaimer; the wording is not yet approved.</div>
+          <div class="matrix__k">Possible</div><div class="matrix__cell"><b>Chain config drift</b>One file per chain, tested weekly.</div><div class="matrix__cell"><b>Owner unavailable</b>A named backup at Parallel, asked for in the decision.</div><div class="matrix__cell"><b>Rate limits on the indexer</b>A cache with the block number as its key.</div>
+          <div class="matrix__k">Unlikely</div><div class="matrix__cell"><b>Protocol upgrade mid-build</b>Schemas versioned; one file per module.</div><div class="matrix__cell"><b>Store or registry outage</b>The package installs from the repository.</div><div class="matrix__cell"><b>A key in the process</b>Outside the design; there is no code path that holds one.</div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Reading</div></div>
+      <div class="block__main">
+        <div class="body">One cell is tinted: the risk that is both likely and high impact, and the only one still open. Its closure, the approved disclaimer, is one of the three things asked of Parallel.</div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">19 / 24</div></div>
+</section>
+<!-- ===================== PAGE · BEFORE THE BETA, SIGN-OFF ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">20</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Before the beta</div><div class="source">Checked by the owner; ticked items dated in the decision log.</div></div>
+      <div class="block__main">
+        <div class="heading">Ready <em>for 6 November</em></div>
+        <div class="check"><div class="check__box on"></div><div class="check__t">Seven tools pass the test suite on three chains</div><div class="check__who">Engineering · 23 Oct</div></div>
+        <div class="check"><div class="check__box on"></div><div class="check__t">Disclaimer wording approved by Parallel</div><div class="check__who">Noah · 16 Oct</div></div>
+        <div class="check"><div class="check__box"></div><div class="check__t">Staleness copy reviewed on a stale indexer, on purpose</div><div class="check__who">Design · 30 Oct</div></div>
+        <div class="check"><div class="check__box"></div><div class="check__t">CLI installs from the repository on a clean machine</div><div class="check__who">Engineering · 30 Oct</div></div>
+        <div class="check"><div class="check__box"></div><div class="check__t">README and install docs read by someone outside the project</div><div class="check__who">Design · 3 Nov</div></div>
+        <div class="check"><div class="check__box"></div><div class="check__t">Announcement post scheduled with the Seventeenth Report</div><div class="check__who">Parallel · 6 Nov</div></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Sign-off</div></div>
+      <div class="block__main">
+        <div class="sign"><div><div class="k">Owner</div><div class="v">Jean, Cooper Labs</div></div><div><div class="k">Design</div><div class="v">Nicolas</div></div><div><div class="k">Parallel</div><div class="v">Noah</div></div><div><div class="k">Date</div><div class="v">&nbsp;</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">20 / 24</div></div>
+</section>
+<!-- ===================== PAGE · APPENDICES ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">21</div></div>
+  <div class="plate"><img src="../img/renders/03.jpg" alt=""><div class="plate__cap">Render 03 · The block, as on the launch post</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Appendix</div></div>
+      <div class="block__main">
+        <div class="heading">The Material <em>Behind the Argument</em></div>
+        <div class="body">The seven tools with what each returns, the terms used across the proposal, and the schema of one tool as it will be written. Nothing here changes the decision; it is what the engineering team will check.</div>
+        <div class="body">The picture is the block from the launch post, the one exception to the kit&#x27;s rule that imagery stays on the cover: a single plate on the opening page of a part.</div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">21 / 24</div></div>
+</section>
+<!-- ===================== PAGE · APPENDIX B · TOOLS, C · GLOSSARY ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">22</div></div>
+  <div class="content">
     <div class="block">
       <div class="block__margin"><div class="tag">Appendix B · Tools</div></div>
       <div class="block__main">
@@ -246,37 +628,65 @@
         </table>
       </div>
     </div>
-  </div>
-  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">06 / 08</div></div>
-</section>
-<!-- ===================== PAGE · GLOSSARY ===================== -->
-<section class="page">
-  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">07</div></div>
-  <div class="content">
     <div class="block">
       <div class="block__margin"><div class="tag">Appendix C · Glossary</div></div>
       <div class="block__main">
-        <div class="heading">Terms <em>Used Here</em></div>
-        <table class="table">
-          <tr><th style="width:130px">Term</th><th>Meaning</th></tr>
-          <tr><td class="strong">MCP</td><td>Model Context Protocol: the open standard by which an assistant calls tools and reads resources.</td></tr>
-          <tr><td class="strong">Tool</td><td>One typed function the server exposes; the assistant calls it with arguments and receives JSON.</td></tr>
-          <tr><td class="strong">Resource</td><td>A document the server serves by URI; here, the documentation.</td></tr>
-          <tr><td class="strong">Indexer</td><td>Parallel&#x27;s service that reads the chain and serves positions and rates over REST.</td></tr>
-          <tr><td class="strong">Health factor</td><td>Collateral value over debt, adjusted; below 1 a position can be liquidated.</td></tr>
-          <tr><td class="strong">Staleness</td><td>The age of a figure relative to the newest block the indexer has seen.</td></tr>
-          <tr><td class="strong">Unsigned transaction</td><td>Calldata the user&#x27;s own wallet signs; the server never holds a key.</td></tr>
-        </table>
-      </div>
-    </div>
-    <div class="block">
-      <div class="block__margin"><div class="tag">Contact</div></div>
-      <div class="block__main">
-        <div class="body">Jean, Cooper Labs · contact@cooperlabs.xyz · Telegram @jeanbrasse. Questions on the schemas to the engineering channel; questions on the scope to Jean.</div>
+        <div class="defs">
+          <div class="def"><div class="def__t">MCP</div><div class="def__d">Model Context Protocol: the open standard by which an assistant calls tools and reads resources.</div></div>
+          <div class="def"><div class="def__t">Tool</div><div class="def__d">One typed function the server exposes; the assistant calls it with arguments and receives JSON.</div></div>
+          <div class="def"><div class="def__t">Resource</div><div class="def__d">A document the server serves by URI; here, the documentation.</div></div>
+          <div class="def"><div class="def__t">Indexer</div><div class="def__d">Parallel&#x27;s service that reads the chain and serves positions and rates over REST.</div></div>
+          <div class="def"><div class="def__t">Health factor</div><div class="def__d">Collateral value over debt, adjusted; below 1 a position can be liquidated.</div></div>
+          <div class="def"><div class="def__t">Staleness</div><div class="def__d">The age of a figure relative to the newest block the indexer has seen.</div></div>
+          <div class="def"><div class="def__t">Unsigned transaction</div><div class="def__d">Calldata the user&#x27;s own wallet signs; the server never holds a key.</div></div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">07 / 08</div></div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">22 / 24</div></div>
+</section>
+<!-- ===================== PAGE · APPENDIX D · SCHEMA OF ONE TOOL ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Proposal · Parallel MCP server · Confidential · v0.1</div><div class="pagehead__num">23</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Appendix D · Schema</div><div class="source">As proposed; the deployed schema is read from the server.</div></div>
+      <div class="block__main">
+        <div class="heading">One Tool <em>in Sixteen Lines</em></div>
+        <div style="height:14px"></div>
+        <div class="code"><span class="c">// tools/get_rates.ts · one tool, one schema, one disclaimer</span>
+<span class="k">export</span> <span class="k">const</span> getRates = <span class="k">tool</span>({
+  name: &quot;get_rates&quot;,
+  description: &quot;Borrow and savings rates per asset and chain. Figures as of a block; not advice.&quot;,
+  input: <span class="k">z</span>.object({
+    chain: <span class="k">z</span>.enum([&quot;base&quot;, &quot;arbitrum&quot;, &quot;ethereum&quot;]),
+    asset: <span class="k">z</span>.string().optional(),            <span class="c">// every asset when omitted</span>
+  }),
+  <span class="k">async</span> run({ chain, asset }) {
+    <span class="k">const</span> { block, rates, age } = <span class="k">await</span> indexer(chain).rates(asset);
+    <span class="k">return</span> {
+      block, rates,
+      stale: age &gt; 300,                       <span class="c">// seconds since the newest block</span>
+      note: age &gt; 300 ? `Figures as of block ${block}, ${age} s old.` : undefined,
+    };
+  },
+});</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Worked values</div></div>
+      <div class="block__main">
+        <table class="table">
+          <tr><th style="width:90px">Age</th><th style="width:90px">stale</th><th>Answer</th></tr>
+          <tr><td class="mono">4 s</td><td class="mono">false</td><td>Rates, block 31 240 118</td></tr>
+          <tr><td class="mono">90 s</td><td class="mono">false</td><td>Rates, block 31 240 075</td></tr>
+          <tr><td class="mono">240 s</td><td class="mono">false</td><td>Rates, block 31 240 000</td></tr>
+          <tr class="highlight"><td class="mono">600 s</td><td class="mono">true</td><td>Rates, flagged: figures as of block 31 239 820, 600 s old</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">23 / 24</div></div>
 </section>
 <!-- ======================= BACK COVER ======================= -->
 <section class="cover cover--dark back">

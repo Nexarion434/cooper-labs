@@ -25,8 +25,8 @@ build_deck.py or build_fact_sheet.py, so the whole pipeline runs from one comman
 Edit the JSON afterwards and rebuild; the builders apply the rules (page
 numbers, Contents, version in four places, alternating italic, framing).
 
-`internal-doc` is the full skeleton (cover, contents, five section pages,
-glossary, back cover), a proposal. The four others are one-page examples of
+`internal-doc` is the full skeleton (cover, contents, three parts on dividers,
+every page style, appendices, back cover: 24 sheets), a proposal. The four others are one-page examples of
 the other document classes; they share the same blocks and stylesheet.
 
 The copy's `../css/`, `../img/` and `../logo/` references are rewritten to
