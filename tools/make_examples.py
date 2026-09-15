@@ -396,6 +396,88 @@ FACT_SHEET = {
     "footer": "Cooper Labs · Public · cooperlabs.xyz · September 2026"}
 
 
+# =============================================================== the report (a class of the internal document), the note, the quote
+REPORT = {
+    "class": "report", "subject": "Parallel · September 2026", "title": "September: the Server Answers *on Three Chains.*",
+    "standfirst": "The monthly report for the Parallel team: what shipped, the numbers of the month, what is planned for October and the two decisions we need.",
+    "version": "v1.0", "classification": "Confidential", "status": "Final", "date": "2026-10-02", "owner": "Jean, Cooper Labs", "cover": "03",
+    "kicker": "Report · Parallel · September 2026",
+    "contents": "auto",
+    "contents_intro": "The summary and the decisions are the pages to read; the rest is the evidence, kept for the record. Figures are as of 30 September.",
+    "versions": [["v1.0", "2026-10-02", "Sent to the Parallel team"]],
+    "pages": [
+        {"name": "Summary", "blocks": [
+            {"tag": "Summary", "specimen": "03", "caption": "Fig. 1 · The block, rendered. From the Brand Identity file.",
+             "heading": {"text": "Three chains, *one answer.*", "suffix": "(month one)"},
+             "body": "Week one put the server on Base, week two on Arbitrum and Ethereum. Agents now answer from the same read-only view of the protocol: positions, rates, backing, governance. The public beta stays on 6 November; the CLI moves one week, to week six, because the Parallel team asked for a dry run of the docs first.",
+             "toc": "Summary and the numbers"},
+            {"tag": None, "figures": [["3", "Chains live"], ["7", "Tools, read-only"], ["412", "Questions answered, week 39"], ["0", "Incidents"]]},
+            {"tag": "Highlights", "bullets": [["Server live on three chains", "Base on 5 September, Arbitrum and Ethereum on 12 September; one file per chain."],
+                                              ["Answers carry their block", "Every answer states the block number and the age of the indexer; past 300 s it says so."],
+                                              ["The docs dry run", "The Parallel team read the tool schemas cold and asked for two renames; both done."]]},
+            {"tag": "Recommendation", "reco": ["Keep the beta date; move the CLI to week six.", "One week of slack on the CLI buys the docs dry run and changes nothing for the agents."]}]},
+        {"name": "Delivered", "blocks": [
+            {"tag": "Delivered", "source": "From the demo notes of 5, 12, 19 and 26 September.", "heading": "Four Fridays, *four demos*",
+             "table": {"cols": [["Week", 60], ["Demo", None], ["Chains", 70], ["Status", 90]], "mono": [0, 2], "strong": [1],
+                       "rows": [["36", "get_positions and get_rates on Base", "1", "Shipped"], ["37", "Three chains, one schema; get_backing", "3", "Shipped"],
+                                ["38", "Governance tools: get_proposals, get_votes", "3", "Shipped"], ["39", "Staleness rule and the disclaimer in every schema", "3", "Shipped"]]}},
+            {"tag": "Not delivered", "bullets": [["simulate_borrow", "Moved to October: the Parallel team wants the rate model reviewed first."],
+                                                 ["build_tx", "Out of scope until the read-only beta has run a month."]]}]},
+        {"name": "The numbers", "blocks": [
+            {"tag": "Questions", "source": "The support channel and the server log, weeks 36 to 39.", "heading": "Questions to the Server, *by Week*",
+             "chart": {"type": "bar", "labels": ["36", "37", "38", "39"], "series": [{"name": "Questions from agents", "values": [61, 188, 297, 412]}, {"name": "Questions from people", "values": [40, 34, 31, 29], "soft": True}], "max": 450, "unit": ""}},
+            {"tag": "Accuracy", "heading": "Answers Checked Correct, *Share*",
+             "chart": {"type": "line", "labels": ["36", "37", "38", "39"], "values": [92, 95, 97, 98], "max": 100, "unit": "%", "last": "98%"}},
+            {"tag": None, "figures": [["412", "Questions, week 39"], ["98%", "Checked correct"], ["1.4 s", "Median answer"], ["3", "Renames asked"]]}]},
+        {"name": "October", "blocks": [
+            {"tag": "Plan", "source": "Dates agreed with Noah on 30 September.", "heading": "October, *Week by Week*",
+             "timeline": {"steps": [{"date": "3 Oct", "title": "Rate model review", "text": "With the Parallel risk team; simulate_borrow follows."},
+                                    {"date": "10 Oct", "title": "simulate_borrow", "text": "Read-only simulation, no transaction."},
+                                    {"date": "17 Oct", "title": "The CLI", "text": "Derived from the server; one week."},
+                                    {"date": "24 Oct", "title": "Docs and README", "text": "Read cold by someone outside the project."},
+                                    {"date": "6 Nov", "title": "Public beta", "text": "With the Seventeenth Parallel Report."}],
+                          "phases": ["Rate model", "CLI", "Beta"]}},
+            {"tag": "Risks", "bullets": [["Rate model review slips", "simulate_borrow moves with it; the beta does not."],
+                                         ["Indexer lag on Ethereum", "Answers say their age; a cache with the block number as its key is ready."]]}]},
+        {"name": "Decisions needed", "blocks": [
+            {"tag": "Decisions", "source": "To confirm by 9 October.", "heading": "Two Things *to Confirm*",
+             "checklist": [{"text": "The CLI in week six, not week five", "who": "Noah · 9 Oct", "done": False},
+                           {"text": "The disclaimer wording in every schema", "who": "Legal · 9 Oct", "done": False},
+                           {"text": "The three chains at the beta", "who": "Noah · 30 Sep", "done": True}]},
+            {"tag": "Sign-off", "signoff": [["Prepared by", "Jean, Cooper Labs"], ["Reviewed by", "Nicolas, Design"], ["For Parallel", ""], ["Date", "2 October 2026"]]}]}]}
+
+NOTE = {
+    "subject": "Parallel weekly", "title": "Week 37: the server answers *on three chains*",
+    "date": "2026-09-12", "where": "Google Meet", "attendees": ["Jean, Cooper Labs", "Nicolas, Design", "Noah, Parallel", "Léa, Parallel"], "owner": "Jean, Cooper Labs",
+    "classification": "Internal",
+    "context": "Second weekly of the build. The Friday demo showed the server answering on Base, Arbitrum and Ethereum with one schema per tool; the Parallel team had read the schemas cold the day before.",
+    "decisions": [["Server first, CLI in week six", "The CLI is derived from the server one week later than planned; the docs dry run takes the week. The beta date does not move."],
+                  ["Two renames", "get_rate becomes get_rates, get_backing_ratio becomes get_backing. Done before the next demo."],
+                  ["Staleness rule", "Past 300 seconds an answer says its age in the first line, not in a footnote."]],
+    "actions": [["Rename the two tools and regenerate the docs", "Jean", "16 Sep"], ["Confirm the disclaimer wording with legal", "Noah", "19 Sep"],
+                ["Send the three-chain demo recording to the DAO channel", "Léa", "13 Sep"], ["Draft the October plan for the report", "Jean", "26 Sep"]],
+    "next": "Week 38 adds the governance tools; the demo runs the same three questions on the three chains.",
+    "next_meeting": "19 September 2026, 10:00, Google Meet"}
+
+QUOTE = {
+    "subject": "Parallel MCP server", "number": "Q-2026-014", "date": "2026-09-14", "valid_until": "2026-10-14", "currency": "EUR",
+    "vat": "VAT not applicable, art. 293 B CGI", "classification": "Confidential",
+    "client": {"name": "Parallel Protocol", "lines": ["Noah Levy, Protocol lead", "noah@parallel.fi"]},
+    "title": "Parallel MCP server, *six weeks*",
+    "intro": ["An MCP server that exposes Parallel's positions, rates, backing and governance to AI agents, read-only, on three chains, with the CLI derived from it. Six weeks from 28 September, a demo every Friday, the public beta on 6 November.",
+              "Two phases at a fixed price; the second starts on the demo of week three, not on a plan."],
+    "phases": [{"name": "Phase one · The server", "what": "Seven read-only tools on Base, Arbitrum and Ethereum; the staleness rule; the schemas and their docs.", "weeks": "3", "price": "24 000"},
+               {"name": "Phase two · Governance, CLI, beta", "what": "The governance tools, the CLI derived from the server, the README, the public beta with the Seventeenth Parallel Report.", "weeks": "3", "price": "18 000"}],
+    "total": "42 000",
+    "schedule": [["On signature", "By 21 September", "30%", "12 600"], ["Demo of week three", "16 October", "40%", "16 800"], ["Public beta", "6 November", "30%", "12 600"]],
+    "terms": ["Fixed price per phase; the next phase starts on a demo, not on a plan.",
+              "The server holds no keys and signs nothing; anything that signs is a new quote.",
+              "Cooper Labs keeps the right to show the work once the beta is public; the code is Parallel's from the first payment.",
+              "Payment at 30 days; a milestone unpaid at 45 days pauses the next one.",
+              "Anything outside this scope is estimated in writing before it is started."],
+    "signatories": [["For Cooper Labs", "Jean Brasse, Founder"], ["For Parallel Protocol", "Noah Levy, Protocol lead"]]}
+
+
 def dump(path, d):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(d, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -411,3 +493,6 @@ if __name__ == "__main__":
     dump(X / "page-styles.json", PAGE_STYLES)
     dump(X / "deck-parallel-mcp.json", DECK)
     dump(X / "fact-sheet-cooper-labs.json", FACT_SHEET)
+    dump(T / "report.json", REPORT)
+    dump(X / "note-parallel-weekly.json", NOTE)
+    dump(X / "quote-parallel-mcp.json", QUOTE)

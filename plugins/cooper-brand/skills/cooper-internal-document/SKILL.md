@@ -3,12 +3,13 @@ name: cooper-internal-document
 description: >
   This skill should be used for any long-form Cooper Labs document:
   "proposal", "statement of work", "case study", "spec", "post-mortem",
-  "incident report", "memo", "guide", "write this up as a Cooper doc", or
+  "incident report", "memo", "guide", "monthly report", "quarterly report",
+  "the report for September", "write this up as a Cooper doc", or
   when turning a brief, a project or a decision into the branded A4 PDF.
   Covers the HTML to PDF build.
 metadata:
-  version: "0.4.1"
-  source: "cooper-brand 0.4.1 — the parallel-brand engine with the Cooper Labs identity"
+  version: "0.5.0"
+  source: "cooper-brand 0.5.0 — the parallel-brand engine with the Cooper Labs identity"
 ---
 
 # Cooper Labs — internal document
@@ -32,6 +33,7 @@ context.
 | Post-mortem | `POST-MORTEM · <date>` | Incident → Timeline → Root cause → Actions |
 | Memo | `MEMO · <subject>` | Rule or proposal → figures → Impact → Next steps |
 | Guide | `GUIDE · <subject>` | whatever the guide needs; the page-styles example is one |
+| Report | `REPORT · <client> · <month or quarter>` | Summary + figures + highlights + recommendation → Delivered (table) and not delivered → The numbers (charts, figures) → Next period (timeline, risks) → Decisions needed (checklist, sign-off). The `report.json` template, eight sheets; the subject is `<client> · <period>` |
 
 The skeleton is not a checklist. Add, reorder or drop sections to fit the
 argument; the Contents page is only worth having from five pages up, and
@@ -45,7 +47,7 @@ One round, `AskUserQuestion`, defaults pre-selected:
 
 | Question | Options |
 |---|---|
-| Which class? | proposal · case study · spec · post-mortem · memo · guide |
+| Which class? | proposal · case study · spec · post-mortem · memo · guide · report |
 | What does it decide or record, and for whom? | one line, free text. If it cannot be answered the document is not ready |
 | Classification and status? | Confidential · Draft (default) · Internal · Public · Final |
 | Cover? | three of the six renders (`assets/img/renders/`, 01 to 06), named by number and scene from `assets/img/catalogue.json`, the plain dark cover, plus "pick for me" |
@@ -236,5 +238,6 @@ whose content reaches the footer.
 - `cooper-brand-kit/references/tokens.md` — tokens, block specs, CSS classes
 - `cooper-brand-kit/references/voice.md` — tone, naming, mechanics
 - `../../assets/templates/internal-doc.json` and `.html` — the full 24-sheet skeleton (a proposal that uses every page style), description and build
+- `../../assets/templates/report.json` and `.html` — the monthly report, eight sheets
 - `../../assets/examples/` — case-study, spec, post-mortem, memo, page-styles (`.json` + `.html`)
 - `../../assets/scripts/build_doc.py` — the builder; `check_pdf.py` — the checks

@@ -8,7 +8,7 @@ description: >
   brand. It is the foundation loaded by cooper-internal-document,
   cooper-deck, cooper-fact-sheet and cooper-social.
 metadata:
-  version: "0.4.1"
+  version: "0.5.0"
   source: "Figma file Brand Identity (S5Lg16aM47EGiGOYCDxl9a), page Twitter; cooperlabs.xyz"
 ---
 
@@ -158,9 +158,20 @@ plate; `specimen` on a block puts a 140 × 140 crop in the margin. The
 white 3D (01) and the halftone (02) read as texture; 03 to 06 show the
 block itself. Never more than one render per page.
 
-Nothing outside the six goes on Cooper Labs material: no stock, no generated
-image, no photograph. New renders come from the 3D file and enter the
-catalogue by number.
+Nothing outside the catalogue goes on Cooper Labs material: no stock, no
+generated image, no photograph. **New renders are made with
+`assets/scripts/render_block.py`**: the block in three dimensions (the
+mark's box with the cylinder cut through it), ray-cast with numpy, a
+camera (`--yaw`, `--pitch`, `--roll`, `--zoom`, `--dx`, `--dy`), a material
+(white, orange, grey, ink), a ground (white, paper, grey, dark, ink) and
+the effects of the six families (`grain`, `chroma`, `pixel`, `dither`,
+`halftone`, `lines`, `dots`, `soft`); six presets (`clean`, `orange`,
+`pixel`, `halftone`, `noise`, `macro`) give the masters' looks. `--scale
+0.25` for a look, then `--catalogue NN --name … --desc …` writes
+`renders/NN.jpg` at 1841 × 1151 and its catalogue entry (subject box,
+busy, frames), so every builder can use it by number at once. 07 and 08
+ship as examples. Renders 01 to 06 are the Figma masters and are never
+overwritten.
 
 ## Social
 

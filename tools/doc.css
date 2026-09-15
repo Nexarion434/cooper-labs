@@ -221,6 +221,37 @@ em{font-style:normal;color:inherit}
 .fact__contact .k{font:500 7.5px/1 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .fact__contact .v{margin-top:6px;font:400 10px/1.3 var(--sans);color:var(--ink)}
 
+/* ================= MEETING NOTE · one page, and QUOTE · two pages ================= */
+/* the catalogue page again: the wordmark in the running head, the facts of the meeting or the parties of the quote in the
+   margin column, the title beside them, then the blocks */
+.page--note .pagehead,.page--quote .pagehead{align-items:center}
+.page--note .pagehead__meta::before,.page--quote .pagehead__meta::before{display:none}
+.note,.quote{position:relative;z-index:1}
+.note__head,.quote__head{display:grid;grid-template-columns:200px minmax(0,1fr);align-items:start;margin-top:56px}
+.note__facts,.quote__parties{display:flex;flex-direction:column;gap:14px;padding-right:32px}
+.note__pair .k,.quote__party .k{font:500 7.5px/1.3 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.note__pair .v,.quote__party .v{margin-top:4px;font:400 9.5px/1.45 var(--sans);color:var(--ink)}
+.quote__name{font-weight:500}
+.note__title{margin-top:14px;font:500 30px/1.02 var(--display);letter-spacing:-.035em;color:var(--ink);max-width:420px}
+.note__title+.body{margin-top:18px}
+.note .content,.quote .content{margin-top:40px}
+.note__next{display:flex;gap:8px;align-items:baseline;margin-top:14px;padding-top:12px;border-top:1px solid var(--ink)}
+.note__next .k{font:500 7.5px/1.3 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.note__next .v{font:400 10.5px/1.4 var(--sans);color:var(--ink)}
+/* a numbered list · the number in PP Eiko in a narrow column, hairlines between the rows */
+.nlist{display:flex;flex-direction:column}
+.nlist__row{display:grid;grid-template-columns:40px minmax(0,1fr);align-items:start;padding:10px 0;border-top:1px solid var(--hair)}
+.nlist__row:first-child{border-top:1px solid var(--ink)}
+.nlist__n{font:500 13px/1.2 var(--display);letter-spacing:-.02em;color:var(--ink)}
+.nlist__t{font:500 11px/1.4 var(--sans);color:var(--ink)}
+.nlist__x{font:400 10px/1.5 var(--sans);color:var(--ink-soft);max-width:400px}
+.nlist__t+.nlist__x{margin-top:2px}
+/* the quote's table · the total on an ink line */
+.table--quote td.mono{color:var(--ink);font-size:10px}
+.table--quote tr.total td{border-top:1px solid var(--ink);border-bottom:0;padding-top:10px;font-weight:500}
+.table--quote tr.total td.mono{font-size:12px}
+.sign__line{margin-top:28px;padding-top:6px;border-top:1px solid var(--hair);font:500 7.5px/1.3 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
 /* ================= PAGE STYLES · internal document =================
    Sixteen compositions. Sizes beyond the scale: 20 (lede), 36 (statement), 96 (hero figure). The five marked "bends a
    rule" (dark ground, no measure, a grey cell, a picture inside) are for the opening page of a part or an appendix. */

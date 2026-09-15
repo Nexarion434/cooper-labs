@@ -13,7 +13,7 @@ Title Case and their `*italic phrase*`.
 
 The description (JSON, or a Python dict passed to `build()`):
 
-    class          proposal | case-study | spec | post-mortem | memo
+    class          proposal | case-study | spec | post-mortem | memo | guide | report
     subject        "Parallel MCP server"                      -> running head, file name
     title          "Ship the MCP server *before the CLI.*"   (*...* marks the accent phrase; in the Object system it stays in ink)
     standfirst     one sentence; kicker (optional, default "<Class> · <subject>")

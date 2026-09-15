@@ -10,6 +10,9 @@
     python3 new_doc.py social           out/posts.html          # the social canvases
     python3 new_doc.py deck-parallel-mcp   out/deck.html      # a 16:9 deck
     python3 new_doc.py fact-sheet-cooper-labs out/sheet.html    # an A4 fact sheet
+    python3 new_doc.py report           out/september.html       # the monthly report, eight sheets
+    python3 new_doc.py note-parallel-weekly out/note.html        # a one-page meeting note
+    python3 new_doc.py quote-parallel-mcp   out/quote.html       # a two-page quote
 
     python3 new_doc.py social --demo out/posts.html            # the description + the HTML built from it
     python3 new_doc.py internal-doc --demo out/review.html
@@ -17,7 +20,7 @@
 Without `--demo`: a copy of the HTML template or example, to edit by hand.
 With `--demo`: the JSON description of the same document is copied next to
 the output (`out/posts.json`) and built with build_social.py, build_doc.py,
-build_deck.py or build_fact_sheet.py, so the whole pipeline runs from one command:
+build_deck.py, build_fact_sheet.py, build_note.py or build_quote.py, so the whole pipeline runs from one command:
 
     python3 new_doc.py social --demo posts.html && python3 render_png.py posts.html out/ && python3 check_png.py posts.html out/
     python3 new_doc.py internal-doc --demo review.html && python3 build_doc.py review.json review.html --pdf
@@ -69,6 +72,14 @@ def main():
             print(f"-> {built}  ({total} slides)  PDF name: {pdf_name}")
         elif args[0].startswith("fact-sheet"):
             from build_fact_sheet import build
+            built, pdf_name = build(d, out)
+            print(f"-> {built}  PDF name: {pdf_name}")
+        elif args[0].startswith("note"):
+            from build_note import build
+            built, pdf_name = build(d, out)
+            print(f"-> {built}  PDF name: {pdf_name}")
+        elif args[0].startswith("quote"):
+            from build_quote import build
             built, pdf_name = build(d, out)
             print(f"-> {built}  PDF name: {pdf_name}")
         else:

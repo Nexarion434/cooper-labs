@@ -19,5 +19,5 @@ NOTICE = "Internal document · Not for distribution outside Cooper Labs"
 FOOTER = "Cooper Labs · Internal · Not for distribution"
 FOOTER_PUBLIC = "Cooper Labs · cooperlabs.xyz"
 COPYRIGHT = "Cooper Labs"
-CLASSES = {"proposal": "Proposal", "case-study": "Case study", "spec": "Spec", "post-mortem": "Post-mortem", "memo": "Memo", "guide": "Guide"}
+CLASSES = {"proposal": "Proposal", "case-study": "Case study", "spec": "Spec", "post-mortem": "Post-mortem", "memo": "Memo", "guide": "Guide", "report": "Report"}
 DECK_LABELS = dict(CLASSES, briefing="Briefing", update="Update", pitch="Pitch", deck="Deck")

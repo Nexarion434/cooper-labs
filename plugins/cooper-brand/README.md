@@ -1,16 +1,19 @@
 # cooper-brand
 
 Cooper Labs' brand kit for documents and social: the A4 internal-document
-template and its sixteen page styles, the deck, the fact sheet, the social
-cards of the Figma file and the sizes around them, the six brand renders.
-Five skills:
+template and its sixteen page styles, the monthly report, the deck, the
+fact sheet, the meeting note, the quote, the social cards of the Figma file
+and the sizes around them, the brand renders and the script that makes new
+ones. Seven skills:
 
 | Skill | Use it for |
 |---|---|
 | `cooper-brand-kit` | tokens, type, the logo, the renders, voice, the build route. Loaded by every other skill. |
-| `cooper-internal-document` | proposal, case study, spec, post-mortem, memo, guide, as a branded A4 PDF; sixteen page styles (divider, statement, hero figure, two columns, timeline, data page, chart, matrix, plate, prose, steps, glossary, flow, checklist, code) |
+| `cooper-internal-document` | proposal, case study, spec, post-mortem, memo, guide, monthly report, as a branded A4 PDF; sixteen page styles (divider, statement, hero figure, two columns, timeline, data page, chart, matrix, plate, prose, steps, glossary, flow, checklist, code) |
 | `cooper-deck` | the same document on a screen: 16:9, one block per slide, title, divider, statement and closing slides, PDF and PNG |
 | `cooper-fact-sheet` | one A4 page on the studio, a service or a product shipped: figures, two columns, a table, a contact strip |
+| `cooper-note` | a one-page meeting note: the facts, the decisions numbered, the actions with owner and date, the next meeting |
+| `cooper-quote` | a two-page quote: the parties, the phases with their prices, the schedule, the terms, the signatures |
 | `cooper-social` | the cards of the Figma file (post on the render or on the halftone, partner card, X cover in two variants, social preview) and the plugin's sizes (LinkedIn, square, story, newsletter, X header, paragraph, wallpaper), the forum header and Notion cover banners, thread cards, and the animated MP4 of any card |
 
 Everything is in English, whatever the language of the request. The engine
@@ -46,12 +49,17 @@ crop; `check_png.py` fails on a title on three lines, text over the logo,
 a logo off centre, a PNG at the wrong size. `--only "post-*"` renders a
 subset; `--scale 2` doubles the size.
 
-## Produce a deck or a fact sheet
+## Produce a deck, a fact sheet, a note, a quote, a render
 
 ```bash
 python3 $S/build_deck.py --example > deck.json && python3 $S/build_deck.py deck.json deck.html --pdf --png out/      # 16:9, one slide per page + PNGs
 python3 $S/build_fact_sheet.py --example > sheet.json && python3 $S/build_fact_sheet.py sheet.json sheet.html --pdf   # one A4 page
+python3 $S/build_note.py --example > note.json && python3 $S/build_note.py note.json note.html --pdf               # a one-page meeting note
+python3 $S/build_quote.py --example > quote.json && python3 $S/build_quote.py quote.json quote.html --pdf           # a two-page quote
+python3 $S/new_doc.py report --demo september.html && python3 $S/build_doc.py september.json september.html --pdf  # the monthly report
 python3 $S/render_anim.py posts.html out/ --only post-2026-roadmap                                                   # the animated card, MP4
+python3 $S/render_block.py --preset orange --yaw 30 --scale 0.25 --out look.png                                       # a new render of the block, a look
+python3 $S/render_block.py --preset orange --yaw 30 --catalogue 09 --name block-orange-right                          # ... the master and its catalogue entry
 ```
 
 The smoke test of the whole pipeline, one line each:
@@ -87,7 +95,7 @@ assets/templates/social.json        every social canvas (17): post (3), partner,
 assets/examples/*.json              case study, spec, post-mortem, memo, page-styles (19 sheets), deck (7 slides), fact sheet, and the built .html
 assets/scripts/                     build_doc.py · build_social.py · build_deck.py · build_fact_sheet.py · new_doc.py · render_pdf.py · render_png.py · render_anim.py · check_pdf.py · check_png.py · frame.py · fontcheck.py · brand.py
 assets/logo/                        the horizontal and vertical wordmarks, the mark (black, white, orange), the avatars; partners/ for the partner cards
-assets/img/renders/                 the six renders, 1841 x 1151, numbered 01-06
+assets/img/renders/                 the renders, 1841 x 1151, numbered: 01-06 the Figma masters, 07+ made with render_block.py
 assets/img/catalogue.json           every render by number: ground, busy, subject, focus, zoom, frames per size
 assets/fonts/                       Roboto Condensed and Instrument Serif (OFL); private/ for PP Eiko (not shipped)
 ```

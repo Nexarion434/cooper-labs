@@ -167,6 +167,21 @@ One A4 page, the document blocks at smaller sizes.
 | Columns | two columns gap 32; heading 18; bullets as a list on `hair` lines (term 10.5 500, text 9.5) | `.fact__cols` |
 | Contact | four pairs on a 1 px `ink` line: key label 7.5, value 10 | `.fact__contact` |
 
+## Note and quote
+
+One and two A4 pages on the catalogue page: the wordmark in the running
+head, the facts (or the parties) in the margin column, the title beside
+them, then the blocks of the document.
+
+| Item | Value | CSS |
+|---|---|---|
+| Head | a grid 200 + fill, 56 under the running head: the pairs at the left (key 7.5 `muted`, value 9.5 `ink`, gap 14), the label and the title PP Eiko 500 30 / 1.02 ls −0.035 em max 420 at the right | `.note__head`, `.quote__head`, `.note__facts`, `.quote__parties`, `.note__title` |
+| Blocks | the document's stack, 40 under the head | `.note .content`, `.quote .content` |
+| Numbered list | rows on `hair` lines (the first on `ink`), padding 10 0: the number PP Eiko 13 in a 40 column, the title 11 500, the text 10 `ink-soft` max 400 | `.nlist`, `.nlist__row`, `.nlist__n`, `.nlist__t`, `.nlist__x` |
+| Next meeting | a pair on a 1 px `ink` line, 14 under the sentence | `.note__next` |
+| Quote table | the table across the measure; figure cells 10 `ink`; the total row on a 1 px `ink` line, 500, the amount 12 | `.table--quote`, `tr.total` |
+| Signatures | the sign-off columns with `DATE, SIGNATURE` on a `hair` line 28 under the name | `.sign`, `.sign__line` |
+
 ## Page styles
 
 Sixteen compositions; the table in `cooper-internal-document/SKILL.md` says

@@ -1,0 +1,73 @@
+{
+ "subject": "Parallel MCP server",
+ "number": "Q-2026-014",
+ "date": "2026-09-14",
+ "valid_until": "2026-10-14",
+ "currency": "EUR",
+ "vat": "VAT not applicable, art. 293 B CGI",
+ "classification": "Confidential",
+ "client": {
+  "name": "Parallel Protocol",
+  "lines": [
+   "Noah Levy, Protocol lead",
+   "noah@parallel.fi"
+  ]
+ },
+ "title": "Parallel MCP server, *six weeks*",
+ "intro": [
+  "An MCP server that exposes Parallel's positions, rates, backing and governance to AI agents, read-only, on three chains, with the CLI derived from it. Six weeks from 28 September, a demo every Friday, the public beta on 6 November.",
+  "Two phases at a fixed price; the second starts on the demo of week three, not on a plan."
+ ],
+ "phases": [
+  {
+   "name": "Phase one · The server",
+   "what": "Seven read-only tools on Base, Arbitrum and Ethereum; the staleness rule; the schemas and their docs.",
+   "weeks": "3",
+   "price": "24 000"
+  },
+  {
+   "name": "Phase two · Governance, CLI, beta",
+   "what": "The governance tools, the CLI derived from the server, the README, the public beta with the Seventeenth Parallel Report.",
+   "weeks": "3",
+   "price": "18 000"
+  }
+ ],
+ "total": "42 000",
+ "schedule": [
+  [
+   "On signature",
+   "By 21 September",
+   "30%",
+   "12 600"
+  ],
+  [
+   "Demo of week three",
+   "16 October",
+   "40%",
+   "16 800"
+  ],
+  [
+   "Public beta",
+   "6 November",
+   "30%",
+   "12 600"
+  ]
+ ],
+ "terms": [
+  "Fixed price per phase; the next phase starts on a demo, not on a plan.",
+  "The server holds no keys and signs nothing; anything that signs is a new quote.",
+  "Cooper Labs keeps the right to show the work once the beta is public; the code is Parallel's from the first payment.",
+  "Payment at 30 days; a milestone unpaid at 45 days pauses the next one.",
+  "Anything outside this scope is estimated in writing before it is started."
+ ],
+ "signatories": [
+  [
+   "For Cooper Labs",
+   "Jean Brasse, Founder"
+  ],
+  [
+   "For Parallel Protocol",
+   "Noah Levy, Protocol lead"
+  ]
+ ]
+}

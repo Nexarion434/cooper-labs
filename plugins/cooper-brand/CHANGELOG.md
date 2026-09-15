@@ -1,5 +1,57 @@
 # Changelog
 
+## 0.5.0 · 15 Sep 2026
+
+Three chantiers asked for on 15 September: more formats, new renders of
+the block, a design source.
+
+### Formats
+- **Report** (`class: "report"`): the monthly or quarterly report as a
+  class of the internal document, with the `report.json` template (eight
+  sheets: summary and figures, delivered, the numbers with two charts,
+  the next period on a timeline, decisions and sign-off). `new_doc.py
+  report --demo`.
+- **Meeting note** (`build_note.py`, skill `cooper-note`): one page, the
+  facts in the margin column, the decisions as a numbered list, the
+  actions as a table with owner and date, the next meeting. Named by the
+  date.
+- **Quote** (`build_quote.py`, skill `cooper-quote`): two pages, the
+  parties and the quote's facts, the phases as a table with the total, the
+  payment schedule, the terms, the acceptance block. Named by the number.
+- `check_pdf.py` checks the sheet formats (fact sheet, note, quote) by
+  their footers; `new_doc.py` knows the three.
+
+### Renders
+- **`render_block.py`**: the block in three dimensions (the mark's box
+  with the cylinder cut through it), ray-cast in numpy, with a camera, a
+  material, a ground and the effects of the six families (grain, chroma,
+  pixel, dither, halftone, lines, dots, soft); six presets. `--catalogue
+  NN` writes the master at 1841 × 1151 and its catalogue entry (subject
+  box, busy, frames), so every builder can use the render by number at
+  once. Renders **07** (orange, turned right, dotted ground) and **08**
+  (the halftone of the mark) ship as examples.
+
+### Design source
+- **`cooper.pen`** at the repository root, written by `tools/make_pen.py`:
+  the tokens as variables, the wordmark, the running head, the footer and
+  the figure as components, one frame per page of the system (cover,
+  section page, divider, hero, back cover, deck title and content, fact
+  sheet, meeting note). `references/pencil.md` rewritten: the rules for
+  working in Pencil through the MCP.
+
+### Design decisions (0.5.0)
+22. **A format is a class or a sheet.** Long forms are classes of the
+    internal document (the report joins proposal, case study, spec,
+    post-mortem, memo, guide); short forms are sheets without a cover
+    (fact sheet, note, quote) on the same page.
+23. **New renders are rendered, not drawn or generated.** The block is a
+    solid; every picture of it comes from the same geometry, so a render
+    made in 2027 matches the six of 2026. No AI images.
+24. **Two sources, one system.** The CSS drives the builders, the `.pen`
+    is what a designer edits; `make_pen.py` regenerates the `.pen` from
+    the numbers, and a change made in Pencil is folded back into the
+    script.
+
 ## 0.4.1 · 15 Sep 2026
 
 Type never sits on a render (Nicolas, on pages 5 and 9 of the 0.4.0

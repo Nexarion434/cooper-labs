@@ -1,0 +1,53 @@
+{
+ "subject": "Parallel weekly",
+ "title": "Week 37: the server answers *on three chains*",
+ "date": "2026-09-12",
+ "where": "Google Meet",
+ "attendees": [
+  "Jean, Cooper Labs",
+  "Nicolas, Design",
+  "Noah, Parallel",
+  "Léa, Parallel"
+ ],
+ "owner": "Jean, Cooper Labs",
+ "classification": "Internal",
+ "context": "Second weekly of the build. The Friday demo showed the server answering on Base, Arbitrum and Ethereum with one schema per tool; the Parallel team had read the schemas cold the day before.",
+ "decisions": [
+  [
+   "Server first, CLI in week six",
+   "The CLI is derived from the server one week later than planned; the docs dry run takes the week. The beta date does not move."
+  ],
+  [
+   "Two renames",
+   "get_rate becomes get_rates, get_backing_ratio becomes get_backing. Done before the next demo."
+  ],
+  [
+   "Staleness rule",
+   "Past 300 seconds an answer says its age in the first line, not in a footnote."
+  ]
+ ],
+ "actions": [
+  [
+   "Rename the two tools and regenerate the docs",
+   "Jean",
+   "16 Sep"
+  ],
+  [
+   "Confirm the disclaimer wording with legal",
+   "Noah",
+   "19 Sep"
+  ],
+  [
+   "Send the three-chain demo recording to the DAO channel",
+   "Léa",
+   "13 Sep"
+  ],
+  [
+   "Draft the October plan for the report",
+   "Jean",
+   "26 Sep"
+  ]
+ ],
+ "next": "Week 38 adds the governance tools; the demo runs the same three questions on the three chains.",
+ "next_meeting": "19 September 2026, 10:00, Google Meet"
+}

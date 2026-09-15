@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cooper Labs · Report · Parallel · September 2026</title>
+<link rel="stylesheet" href="../css/cooper.css">
+</head>
+<body>
+
+<!-- ========================= COVER ========================= -->
+<section class="cover">
+  <div class="cover__img" style="background-image:url('../img/renders/03.jpg')"></div>
+  <div class="cover__fade"></div>
+
+  <div class="cover__top">
+    <img class="cover__logo" src="../logo/cooper_horizontal_b.svg" alt="Cooper Labs">
+    <div class="cover__conf">Confidential · v1.0</div>
+  </div>
+  <div class="cover__bottom">
+    <div class="cover__kicker">Report · Parallel · September 2026</div>
+    <div class="cover__title">September: The Server Answers <em>on Three Chains.</em></div>
+    <div class="cover__stand">The monthly report for the Parallel team: what shipped, the numbers of the month, what is planned for October and the two decisions we need.</div>
+    <div class="cover__rule"></div>
+    <div class="cover__meta"><div><div class="k">Date</div><div class="v">2 October 2026</div></div><div><div class="k">Classification</div><div class="v">Confidential</div></div><div><div class="k">Status</div><div class="v">Final</div></div><div><div class="k">Owner</div><div class="v">Jean, Cooper Labs</div></div></div>
+    <div class="cover__notice">Internal document · Not for distribution outside Cooper Labs</div>
+  </div>
+</section>
+<!-- ===================== PAGE · CONTENTS ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Report · Parallel · September 2026 · Confidential · v1.0</div><div class="pagehead__num">02</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Contents</div></div>
+      <div class="block__main">
+        <div class="heading">In This Document</div>
+        <table class="table table--plain">
+          <tr data-tag="Summary"><td class="mono" style="width:48px">01</td><td>Summary and the numbers</td><td class="mono" style="width:60px">03</td></tr>
+          <tr data-tag="Highlights"><td class="mono">02</td><td>Highlights</td><td class="mono">03</td></tr>
+          <tr data-tag="Recommendation"><td class="mono">03</td><td>Recommendation</td><td class="mono">03</td></tr>
+          <tr data-tag="Delivered"><td class="mono">04</td><td>Delivered</td><td class="mono">04</td></tr>
+          <tr data-tag="Not delivered"><td class="mono">05</td><td>Not delivered</td><td class="mono">04</td></tr>
+          <tr data-tag="Questions"><td class="mono">06</td><td>Questions</td><td class="mono">05</td></tr>
+          <tr data-tag="Accuracy"><td class="mono">07</td><td>Accuracy</td><td class="mono">05</td></tr>
+          <tr data-tag="Plan"><td class="mono">08</td><td>Plan</td><td class="mono">06</td></tr>
+          <tr data-tag="Risks"><td class="mono">09</td><td>Risks</td><td class="mono">06</td></tr>
+          <tr data-tag="Decisions"><td class="mono">10</td><td>Decisions</td><td class="mono">07</td></tr>
+          <tr data-tag="Sign-off"><td class="mono">11</td><td>Sign-off</td><td class="mono">07</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">How to read</div></div>
+      <div class="block__main">
+        <div class="body">The summary and the decisions are the pages to read; the rest is the evidence, kept for the record. Figures are as of 30 September.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Versions</div><div class="source">Versions are recorded here and on the cover.</div></div>
+      <div class="block__main">
+        <table class="table">
+          <tr><th style="width:80px">Version</th><th style="width:110px">Date</th><th>Change</th></tr>
+          <tr><td class="mono">v1.0</td><td class="mono">2 Oct 2026</td><td>Sent to the Parallel team</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">02 / 08</div></div>
+</section>
+<!-- ===================== PAGE · SUMMARY ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Report · Parallel · September 2026 · Confidential · v1.0</div><div class="pagehead__num">03</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="specimen" style="background-image:url('../img/renders/03.jpg')"></div><div class="specimen__cap">Fig. 1 · The block, rendered. From the Brand Identity file.</div><div class="tag">Summary</div></div>
+      <div class="block__main">
+        <div class="heading">Three Chains, <em>One Answer.</em><span class="heading__suffix">(month one)</span></div>
+        <div class="body">Week one put the server on Base, week two on Arbitrum and Ethereum. Agents now answer from the same read-only view of the protocol: positions, rates, backing, governance. The public beta stays on 6 November; the CLI moves one week, to week six, because the Parallel team asked for a dry run of the docs first.</div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"></div>
+      <div class="block__main">
+        <div class="figures">
+          <div class="figure"><div class="figure__n">3</div><div class="figure__k">Chains live</div></div>
+          <div class="figure"><div class="figure__n">7</div><div class="figure__k">Tools, read-only</div></div>
+          <div class="figure"><div class="figure__n">412</div><div class="figure__k">Questions answered, week 39</div></div>
+          <div class="figure"><div class="figure__n">0</div><div class="figure__k">Incidents</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Highlights</div></div>
+      <div class="block__main">
+        <div class="bullets">
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Server live on three chains</div><div class="bullet__text">Base on 5 September, Arbitrum and Ethereum on 12 September; one file per chain.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Answers carry their block</div><div class="bullet__text">Every answer states the block number and the age of the indexer; past 300 s it says so.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">The docs dry run</div><div class="bullet__text">The Parallel team read the tool schemas cold and asked for two renames; both done.</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Recommendation</div></div>
+      <div class="block__main">
+        <div class="reco"><div class="reco__title">Keep the beta date; move the CLI to week six.</div><div class="reco__body">One week of slack on the CLI buys the docs dry run and changes nothing for the agents.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">03 / 08</div></div>
+</section>
+<!-- ===================== PAGE · DELIVERED ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Report · Parallel · September 2026 · Confidential · v1.0</div><div class="pagehead__num">04</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Delivered</div><div class="source">From the demo notes of 5, 12, 19 and 26 September.</div></div>
+      <div class="block__main">
+        <div class="heading">Four Fridays, <em>Four Demos</em></div>
+        <table class="table">
+          <tr><th style="width:60px">Week</th><th>Demo</th><th style="width:70px">Chains</th><th style="width:90px">Status</th></tr>
+          <tr><td class="mono">36</td><td class="strong">get_positions and get_rates on Base</td><td class="mono">1</td><td>Shipped</td></tr>
+          <tr><td class="mono">37</td><td class="strong">Three chains, one schema; get_backing</td><td class="mono">3</td><td>Shipped</td></tr>
+          <tr><td class="mono">38</td><td class="strong">Governance tools: get_proposals, get_votes</td><td class="mono">3</td><td>Shipped</td></tr>
+          <tr><td class="mono">39</td><td class="strong">Staleness rule and the disclaimer in every schema</td><td class="mono">3</td><td>Shipped</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Not delivered</div></div>
+      <div class="block__main">
+        <div class="bullets">
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">simulate_borrow</div><div class="bullet__text">Moved to October: the Parallel team wants the rate model reviewed first.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">build_tx</div><div class="bullet__text">Out of scope until the read-only beta has run a month.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">04 / 08</div></div>
+</section>
+<!-- ===================== PAGE · THE NUMBERS ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Report · Parallel · September 2026 · Confidential · v1.0</div><div class="pagehead__num">05</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Questions</div><div class="source">The support channel and the server log, weeks 36 to 39.</div></div>
+      <div class="block__main">
+        <div class="heading">Questions to the Server, <em>by Week</em></div>
+        <svg class="chart" viewBox="0 0 530 220"><line class="axis" x1="30" y1="196.0" x2="520" y2="196.0"/><text x="0" y="199.0">0</text><line class="axis" x1="30" y1="149.5" x2="520" y2="149.5"/><text x="0" y="152.5">112</text><line class="axis" x1="30" y1="103.0" x2="520" y2="103.0"/><text x="0" y="106.0">225</text><line class="axis" x1="30" y1="56.5" x2="520" y2="56.5"/><text x="0" y="59.5">338</text><rect class="bar" x="36.0" y="170.8" width="55.2" height="25.2"/><rect class="bar bar--soft" x="36.0" y="179.5" width="110.5" height="16.5"/><text x="91.2" y="214" text-anchor="middle">36</text><rect class="bar" x="158.5" y="118.3" width="55.2" height="77.7"/><rect class="bar bar--soft" x="158.5" y="181.9" width="110.5" height="14.1"/><text x="213.8" y="214" text-anchor="middle">37</text><rect class="bar" x="281.0" y="73.2" width="55.2" height="122.8"/><rect class="bar bar--soft" x="281.0" y="183.2" width="110.5" height="12.8"/><text x="336.2" y="214" text-anchor="middle">38</text><rect class="bar" x="403.5" y="25.7" width="55.2" height="170.3"/><rect class="bar bar--soft" x="403.5" y="184.0" width="110.5" height="12.0"/><text x="458.8" y="214" text-anchor="middle">39</text><line class="base" x1="30" y1="196" x2="520" y2="196"/></svg>
+        <div class="legend"><span><i></i>Questions from agents</span><span><i class="soft"></i>Questions from people</span></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Accuracy</div></div>
+      <div class="block__main">
+        <div class="heading">Answers Checked Correct, <em>Share</em></div>
+        <svg class="chart" viewBox="0 0 530 150"><line class="axis" x1="30" y1="120.0" x2="520" y2="120.0"/><text x="0" y="123.0">0%</text><line class="axis" x1="30" y1="65.0" x2="520" y2="65.0"/><text x="0" y="68.0">50%</text><line class="axis" x1="30" y1="10.0" x2="520" y2="10.0"/><text x="0" y="13.0">100%</text><polyline class="line" points="30.0,18.8 193.3,15.5 356.7,13.3 520.0,12.2"/><circle class="dot" cx="520.0" cy="12.2" r="3"/><text class="val" x="516.0" y="4.2" text-anchor="end">98%</text><text x="30.0" y="144" text-anchor="middle">36</text><text x="193.3" y="144" text-anchor="middle">37</text><text x="356.7" y="144" text-anchor="middle">38</text><text x="520.0" y="144" text-anchor="middle">39</text><line class="base" x1="30" y1="120" x2="520" y2="120"/></svg>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"></div>
+      <div class="block__main">
+        <div class="figures">
+          <div class="figure"><div class="figure__n">412</div><div class="figure__k">Questions, week 39</div></div>
+          <div class="figure"><div class="figure__n">98%</div><div class="figure__k">Checked correct</div></div>
+          <div class="figure"><div class="figure__n">1.4 s</div><div class="figure__k">Median answer</div></div>
+          <div class="figure"><div class="figure__n">3</div><div class="figure__k">Renames asked</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">05 / 08</div></div>
+</section>
+<!-- ===================== PAGE · OCTOBER ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Report · Parallel · September 2026 · Confidential · v1.0</div><div class="pagehead__num">06</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Plan</div><div class="source">Dates agreed with Noah on 30 September.</div></div>
+      <div class="block__main">
+        <div class="heading">October, <em>Week by Week</em></div>
+        <div class="tl">
+          <div class="tl__row">
+            <div class="tl__step"><div class="tl__date">3 Oct</div><div class="tl__title">Rate model review</div><div class="tl__text">With the Parallel risk team; simulate_borrow follows.</div></div>
+            <div class="tl__step"><div class="tl__date">10 Oct</div><div class="tl__title">simulate_borrow</div><div class="tl__text">Read-only simulation, no transaction.</div></div>
+            <div class="tl__step"><div class="tl__date">17 Oct</div><div class="tl__title">The CLI</div><div class="tl__text">Derived from the server; one week.</div></div>
+            <div class="tl__step"><div class="tl__date">24 Oct</div><div class="tl__title">Docs and README</div><div class="tl__text">Read cold by someone outside the project.</div></div>
+            <div class="tl__step"><div class="tl__date">6 Nov</div><div class="tl__title">Public beta</div><div class="tl__text">With the Seventeenth Parallel Report.</div></div>
+          </div>
+          <div class="tl__phase"><div>Rate model</div><div>CLI</div><div>Beta</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Risks</div></div>
+      <div class="block__main">
+        <div class="bullets">
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Rate model review slips</div><div class="bullet__text">simulate_borrow moves with it; the beta does not.</div></div></div>
+          <div class="bullet"><div class="bullet__dot"></div><div><div class="bullet__term">Indexer lag on Ethereum</div><div class="bullet__text">Answers say their age; a cache with the block number as its key is ready.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">06 / 08</div></div>
+</section>
+<!-- ===================== PAGE · DECISIONS NEEDED ===================== -->
+<section class="page">
+  <div class="pagehead"><div class="pagehead__meta">Report · Parallel · September 2026 · Confidential · v1.0</div><div class="pagehead__num">07</div></div>
+  <div class="content">
+    <div class="block">
+      <div class="block__margin"><div class="tag">Decisions</div><div class="source">To confirm by 9 October.</div></div>
+      <div class="block__main">
+        <div class="heading">Two Things <em>to Confirm</em></div>
+        <div class="check"><div class="check__box"></div><div class="check__t">The CLI in week six, not week five</div><div class="check__who">Noah · 9 Oct</div></div>
+        <div class="check"><div class="check__box"></div><div class="check__t">The disclaimer wording in every schema</div><div class="check__who">Legal · 9 Oct</div></div>
+        <div class="check"><div class="check__box on"></div><div class="check__t">The three chains at the beta</div><div class="check__who">Noah · 30 Sep</div></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__margin"><div class="tag">Sign-off</div></div>
+      <div class="block__main">
+        <div class="sign"><div><div class="k">Prepared by</div><div class="v">Jean, Cooper Labs</div></div><div><div class="k">Reviewed by</div><div class="v">Nicolas, Design</div></div><div><div class="k">For Parallel</div><div class="v">&nbsp;</div></div><div><div class="k">Date</div><div class="v">2 October 2026</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><div class="pagefoot__meta">Cooper Labs · Internal · Not for distribution</div><div class="pagefoot__page">07 / 08</div></div>
+</section>
+<!-- ======================= BACK COVER ======================= -->
+<section class="cover back">
+  <div class="cover__img" style="background-image:url('../img/renders/05.jpg')"></div>
+  <div class="cover__top">
+    <img class="cover__logo" src="../logo/cooper_horizontal_b.svg" alt="Cooper Labs">
+    <div class="cover__conf">Confidential · v1.0</div>
+  </div>
+  <div class="cover__bottom">
+    <div class="back__tagline">We turn Web3 ideas <em>into products people use.</em></div>
+    <div class="cover__rule"></div>
+    <div class="cover__meta"><div><div class="k">Website</div><div class="v">cooperlabs.xyz</div></div><div><div class="k">X</div><div class="v">@cooperlabs</div></div><div><div class="k">Telegram</div><div class="v">@jeanbrasse</div></div><div><div class="k">This document</div><div class="v">Report · v1.0 · 2 Oct 2026</div></div></div>
+    <div class="cover__notice">Internal document · Not for distribution outside Cooper Labs · © 2026 Cooper Labs</div>
+  </div>
+</section>
+
+</body>
+</html>

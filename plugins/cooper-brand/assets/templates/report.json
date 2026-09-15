@@ -1,0 +1,351 @@
+{
+ "class": "report",
+ "subject": "Parallel · September 2026",
+ "title": "September: the Server Answers *on Three Chains.*",
+ "standfirst": "The monthly report for the Parallel team: what shipped, the numbers of the month, what is planned for October and the two decisions we need.",
+ "version": "v1.0",
+ "classification": "Confidential",
+ "status": "Final",
+ "date": "2026-10-02",
+ "owner": "Jean, Cooper Labs",
+ "cover": "03",
+ "kicker": "Report · Parallel · September 2026",
+ "contents": "auto",
+ "contents_intro": "The summary and the decisions are the pages to read; the rest is the evidence, kept for the record. Figures are as of 30 September.",
+ "versions": [
+  [
+   "v1.0",
+   "2026-10-02",
+   "Sent to the Parallel team"
+  ]
+ ],
+ "pages": [
+  {
+   "name": "Summary",
+   "blocks": [
+    {
+     "tag": "Summary",
+     "specimen": "03",
+     "caption": "Fig. 1 · The block, rendered. From the Brand Identity file.",
+     "heading": {
+      "text": "Three chains, *one answer.*",
+      "suffix": "(month one)"
+     },
+     "body": "Week one put the server on Base, week two on Arbitrum and Ethereum. Agents now answer from the same read-only view of the protocol: positions, rates, backing, governance. The public beta stays on 6 November; the CLI moves one week, to week six, because the Parallel team asked for a dry run of the docs first.",
+     "toc": "Summary and the numbers"
+    },
+    {
+     "tag": null,
+     "figures": [
+      [
+       "3",
+       "Chains live"
+      ],
+      [
+       "7",
+       "Tools, read-only"
+      ],
+      [
+       "412",
+       "Questions answered, week 39"
+      ],
+      [
+       "0",
+       "Incidents"
+      ]
+     ]
+    },
+    {
+     "tag": "Highlights",
+     "bullets": [
+      [
+       "Server live on three chains",
+       "Base on 5 September, Arbitrum and Ethereum on 12 September; one file per chain."
+      ],
+      [
+       "Answers carry their block",
+       "Every answer states the block number and the age of the indexer; past 300 s it says so."
+      ],
+      [
+       "The docs dry run",
+       "The Parallel team read the tool schemas cold and asked for two renames; both done."
+      ]
+     ]
+    },
+    {
+     "tag": "Recommendation",
+     "reco": [
+      "Keep the beta date; move the CLI to week six.",
+      "One week of slack on the CLI buys the docs dry run and changes nothing for the agents."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Delivered",
+   "blocks": [
+    {
+     "tag": "Delivered",
+     "source": "From the demo notes of 5, 12, 19 and 26 September.",
+     "heading": "Four Fridays, *four demos*",
+     "table": {
+      "cols": [
+       [
+        "Week",
+        60
+       ],
+       [
+        "Demo",
+        null
+       ],
+       [
+        "Chains",
+        70
+       ],
+       [
+        "Status",
+        90
+       ]
+      ],
+      "mono": [
+       0,
+       2
+      ],
+      "strong": [
+       1
+      ],
+      "rows": [
+       [
+        "36",
+        "get_positions and get_rates on Base",
+        "1",
+        "Shipped"
+       ],
+       [
+        "37",
+        "Three chains, one schema; get_backing",
+        "3",
+        "Shipped"
+       ],
+       [
+        "38",
+        "Governance tools: get_proposals, get_votes",
+        "3",
+        "Shipped"
+       ],
+       [
+        "39",
+        "Staleness rule and the disclaimer in every schema",
+        "3",
+        "Shipped"
+       ]
+      ]
+     }
+    },
+    {
+     "tag": "Not delivered",
+     "bullets": [
+      [
+       "simulate_borrow",
+       "Moved to October: the Parallel team wants the rate model reviewed first."
+      ],
+      [
+       "build_tx",
+       "Out of scope until the read-only beta has run a month."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "The numbers",
+   "blocks": [
+    {
+     "tag": "Questions",
+     "source": "The support channel and the server log, weeks 36 to 39.",
+     "heading": "Questions to the Server, *by Week*",
+     "chart": {
+      "type": "bar",
+      "labels": [
+       "36",
+       "37",
+       "38",
+       "39"
+      ],
+      "series": [
+       {
+        "name": "Questions from agents",
+        "values": [
+         61,
+         188,
+         297,
+         412
+        ]
+       },
+       {
+        "name": "Questions from people",
+        "values": [
+         40,
+         34,
+         31,
+         29
+        ],
+        "soft": true
+       }
+      ],
+      "max": 450,
+      "unit": ""
+     }
+    },
+    {
+     "tag": "Accuracy",
+     "heading": "Answers Checked Correct, *Share*",
+     "chart": {
+      "type": "line",
+      "labels": [
+       "36",
+       "37",
+       "38",
+       "39"
+      ],
+      "values": [
+       92,
+       95,
+       97,
+       98
+      ],
+      "max": 100,
+      "unit": "%",
+      "last": "98%"
+     }
+    },
+    {
+     "tag": null,
+     "figures": [
+      [
+       "412",
+       "Questions, week 39"
+      ],
+      [
+       "98%",
+       "Checked correct"
+      ],
+      [
+       "1.4 s",
+       "Median answer"
+      ],
+      [
+       "3",
+       "Renames asked"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "October",
+   "blocks": [
+    {
+     "tag": "Plan",
+     "source": "Dates agreed with Noah on 30 September.",
+     "heading": "October, *Week by Week*",
+     "timeline": {
+      "steps": [
+       {
+        "date": "3 Oct",
+        "title": "Rate model review",
+        "text": "With the Parallel risk team; simulate_borrow follows."
+       },
+       {
+        "date": "10 Oct",
+        "title": "simulate_borrow",
+        "text": "Read-only simulation, no transaction."
+       },
+       {
+        "date": "17 Oct",
+        "title": "The CLI",
+        "text": "Derived from the server; one week."
+       },
+       {
+        "date": "24 Oct",
+        "title": "Docs and README",
+        "text": "Read cold by someone outside the project."
+       },
+       {
+        "date": "6 Nov",
+        "title": "Public beta",
+        "text": "With the Seventeenth Parallel Report."
+       }
+      ],
+      "phases": [
+       "Rate model",
+       "CLI",
+       "Beta"
+      ]
+     }
+    },
+    {
+     "tag": "Risks",
+     "bullets": [
+      [
+       "Rate model review slips",
+       "simulate_borrow moves with it; the beta does not."
+      ],
+      [
+       "Indexer lag on Ethereum",
+       "Answers say their age; a cache with the block number as its key is ready."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Decisions needed",
+   "blocks": [
+    {
+     "tag": "Decisions",
+     "source": "To confirm by 9 October.",
+     "heading": "Two Things *to Confirm*",
+     "checklist": [
+      {
+       "text": "The CLI in week six, not week five",
+       "who": "Noah · 9 Oct",
+       "done": false
+      },
+      {
+       "text": "The disclaimer wording in every schema",
+       "who": "Legal · 9 Oct",
+       "done": false
+      },
+      {
+       "text": "The three chains at the beta",
+       "who": "Noah · 30 Sep",
+       "done": true
+      }
+     ]
+    },
+    {
+     "tag": "Sign-off",
+     "signoff": [
+      [
+       "Prepared by",
+       "Jean, Cooper Labs"
+      ],
+      [
+       "Reviewed by",
+       "Nicolas, Design"
+      ],
+      [
+       "For Parallel",
+       ""
+      ],
+      [
+       "Date",
+       "2 October 2026"
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

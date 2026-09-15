@@ -1,0 +1,4537 @@
+{
+ "version": "2.17",
+ "variables": {
+  "paper": {
+   "type": "color",
+   "value": "#F5F5F5"
+  },
+  "card": {
+   "type": "color",
+   "value": "#FFFFFF"
+  },
+  "ink": {
+   "type": "color",
+   "value": "#1E1E1E"
+  },
+  "ink-soft": {
+   "type": "color",
+   "value": "#383838"
+  },
+  "muted": {
+   "type": "color",
+   "value": "#848484"
+  },
+  "line": {
+   "type": "color",
+   "value": "#DDDDDD"
+  },
+  "hair": {
+   "type": "color",
+   "value": "#EBEBEB"
+  },
+  "accent": {
+   "type": "color",
+   "value": "#FF9E42"
+  },
+  "white": {
+   "type": "color",
+   "value": "#FAFAFA"
+  },
+  "display": {
+   "type": "string",
+   "value": "PP Eiko"
+  },
+  "sans": {
+   "type": "string",
+   "value": "Roboto Condensed"
+  },
+  "margin": {
+   "type": "number",
+   "value": 72
+  },
+  "measure": {
+   "type": "number",
+   "value": 650
+  },
+  "column": {
+   "type": "number",
+   "value": 200
+  },
+  "gap": {
+   "type": "number",
+   "value": 36
+  }
+ },
+ "children": [
+  {
+   "type": "frame",
+   "id": "f15",
+   "name": "Components",
+   "layout": "vertical",
+   "gap": 32,
+   "padding": 48,
+   "x": 0,
+   "y": -400,
+   "fill": "$paper",
+   "children": [
+    {
+     "type": "frame",
+     "id": "f3",
+     "name": "Wordmark",
+     "layout": "horizontal",
+     "gap": 8,
+     "alignItems": "center",
+     "children": [
+      {
+       "type": "path",
+       "id": "p1",
+       "name": "Mark",
+       "geometry": "M302.863 66.6665V233.333H66.667V66.6665H302.863ZM255.901 78.8638C216.608 78.8638 184.765 110.707 184.765 150C184.765 189.293 216.608 221.136 255.901 221.136H291.835V78.8638H255.901Z",
+       "viewBox": [
+        66.667,
+        66.6665,
+        236.196,
+        166.6665
+       ],
+       "width": 18.01,
+       "height": 12.707999999999998,
+       "fill": "$ink"
+      },
+      {
+       "type": "text",
+       "id": "t2",
+       "name": "Cooper Labs",
+       "content": "Cooper Labs",
+       "fontSize": 18,
+       "fill": "$ink",
+       "fontFamily": "$display",
+       "fontWeight": "500",
+       "lineHeight": 1,
+       "letterSpacing": -0.36
+      }
+     ],
+     "reusable": true
+    },
+    {
+     "type": "frame",
+     "id": "f8",
+     "name": "Running head",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "alignItems": "center",
+     "width": "$measure",
+     "children": [
+      {
+       "type": "frame",
+       "id": "f6",
+       "name": "Left",
+       "layout": "horizontal",
+       "gap": 10,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "path",
+         "id": "p4",
+         "name": "Mark",
+         "geometry": "M302.863 66.6665V233.333H66.667V66.6665H302.863ZM255.901 78.8638C216.608 78.8638 184.765 110.707 184.765 150C184.765 189.293 216.608 221.136 255.901 221.136H291.835V78.8638H255.901Z",
+         "viewBox": [
+          66.667,
+          66.6665,
+          236.196,
+          166.6665
+         ],
+         "width": 12.05,
+         "height": 8.5,
+         "fill": "$ink"
+        },
+        {
+         "type": "text",
+         "id": "t5",
+         "name": "Kicker",
+         "content": "PROPOSAL · PARALLEL MCP SERVER · CONFIDENTIAL · V0.1",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "id": "t7",
+       "name": "Folio",
+       "content": "03",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "reusable": true
+    },
+    {
+     "type": "frame",
+     "id": "f11",
+     "name": "Footer",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "alignItems": "center",
+     "width": "$measure",
+     "children": [
+      {
+       "type": "text",
+       "id": "t9",
+       "name": "Meta",
+       "content": "COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      },
+      {
+       "type": "text",
+       "id": "t10",
+       "name": "Page",
+       "content": "03 / 24",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "reusable": true
+    },
+    {
+     "type": "frame",
+     "id": "f14",
+     "name": "Figure",
+     "layout": "vertical",
+     "gap": 10,
+     "width": "fill_container",
+     "children": [
+      {
+       "type": "text",
+       "id": "t12",
+       "name": "Number",
+       "content": "6",
+       "fontSize": 40,
+       "fill": "$ink",
+       "fontFamily": "$display",
+       "fontWeight": "500",
+       "lineHeight": 0.9,
+       "letterSpacing": -1.6
+      },
+      {
+       "type": "text",
+       "id": "t13",
+       "name": "Key",
+       "content": "WEEKS, BRIEF TO RELEASE",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3,
+       "textGrowth": "fixed-width",
+       "width": "fill_container"
+      }
+     ],
+     "reusable": true
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f39",
+   "name": "Doc · Cover",
+   "layout": "none",
+   "x": 0,
+   "y": 0,
+   "width": 794,
+   "height": 1123,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "frame",
+     "id": "i29",
+     "name": "Plate",
+     "width": 794,
+     "height": 620,
+     "fill": {
+      "type": "image",
+      "url": "./plugins/cooper-brand/assets/img/renders/01.jpg",
+      "mode": "fill"
+     },
+     "layout": "none",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "type": "frame",
+     "id": "f32",
+     "name": "Top",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "alignItems": "center",
+     "width": "$measure",
+     "children": [
+      {
+       "type": "ref",
+       "id": "g30",
+       "ref": "f3",
+       "name": "Wordmark",
+       "x": 0,
+       "y": 0
+      },
+      {
+       "type": "text",
+       "id": "t31",
+       "name": "Conf",
+       "content": "CONFIDENTIAL · V0.1",
+       "fontSize": 7.5,
+       "fill": "$ink",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 72,
+     "y": 56
+    },
+    {
+     "type": "frame",
+     "id": "f36",
+     "name": "Title block",
+     "layout": "vertical",
+     "gap": 0,
+     "width": "$measure",
+     "children": [
+      {
+       "type": "text",
+       "id": "t33",
+       "name": "Kicker",
+       "content": "PROPOSAL · PARALLEL MCP SERVER",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      },
+      {
+       "type": "text",
+       "id": "t34",
+       "name": "Title",
+       "content": "Ship the MCP Server Before the CLI.",
+       "fontSize": 46,
+       "fill": "$ink",
+       "fontFamily": "$display",
+       "fontWeight": "500",
+       "lineHeight": 1,
+       "letterSpacing": -1.84,
+       "textGrowth": "fixed-width",
+       "width": 500
+      },
+      {
+       "type": "text",
+       "id": "t35",
+       "name": "Standfirst",
+       "content": "Proposes a six-week build of an MCP server that exposes Parallel's positions, rates and governance to AI agents, read-only, for a start on 28 September 2026.",
+       "fontSize": 11,
+       "fill": "$ink-soft",
+       "fontFamily": "$sans",
+       "fontWeight": "400",
+       "lineHeight": 1.55,
+       "textGrowth": "fixed-width",
+       "width": 360
+      }
+     ],
+     "x": 72,
+     "y": 684
+    },
+    {
+     "type": "frame",
+     "id": "f38",
+     "name": "Bottom",
+     "layout": "vertical",
+     "gap": 12,
+     "children": [
+      {
+       "type": "frame",
+       "id": "f28",
+       "name": "Meta",
+       "layout": "horizontal",
+       "gap": 24,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f18",
+         "name": "Date",
+         "layout": "horizontal",
+         "gap": 6,
+         "alignItems": "center",
+         "children": [
+          {
+           "type": "text",
+           "id": "t16",
+           "name": "Date",
+           "content": "DATE",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t17",
+           "name": "14 September 2026",
+           "content": "14 September 2026",
+           "fontSize": 8.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.3
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f21",
+         "name": "Classification",
+         "layout": "horizontal",
+         "gap": 6,
+         "alignItems": "center",
+         "children": [
+          {
+           "type": "text",
+           "id": "t19",
+           "name": "Classification",
+           "content": "CLASSIFICATION",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t20",
+           "name": "Confidential",
+           "content": "Confidential",
+           "fontSize": 8.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.3
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f24",
+         "name": "Status",
+         "layout": "horizontal",
+         "gap": 6,
+         "alignItems": "center",
+         "children": [
+          {
+           "type": "text",
+           "id": "t22",
+           "name": "Status",
+           "content": "STATUS",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t23",
+           "name": "Draft",
+           "content": "Draft",
+           "fontSize": 8.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.3
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f27",
+         "name": "Owner",
+         "layout": "horizontal",
+         "gap": 6,
+         "alignItems": "center",
+         "children": [
+          {
+           "type": "text",
+           "id": "t25",
+           "name": "Owner",
+           "content": "OWNER",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t26",
+           "name": "Jean, Cooper Labs",
+           "content": "Jean, Cooper Labs",
+           "fontSize": 8.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "id": "t37",
+       "name": "Notice",
+       "content": "INTERNAL DOCUMENT · NOT FOR DISTRIBUTION OUTSIDE COOPER LABS",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 72,
+     "y": 1010
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f114",
+   "name": "Doc · Section page",
+   "layout": "none",
+   "x": 894,
+   "y": 0,
+   "width": 794,
+   "height": 1123,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "ref",
+     "id": "g112",
+     "ref": "f8",
+     "name": "Running head",
+     "x": 72,
+     "y": 48
+    },
+    {
+     "type": "frame",
+     "id": "f111",
+     "name": "Content",
+     "layout": "vertical",
+     "gap": "$gap",
+     "width": "$measure",
+     "children": [
+      {
+       "type": "frame",
+       "id": "f47",
+       "name": "Summary",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "alignItems": "start",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f46",
+         "name": "Margin",
+         "layout": "vertical",
+         "gap": 8,
+         "width": "$column",
+         "padding": [
+          0,
+          32,
+          0,
+          0
+         ],
+         "children": [
+          {
+           "type": "frame",
+           "id": "i42",
+           "name": "Specimen",
+           "width": 140,
+           "height": 140,
+           "fill": {
+            "type": "image",
+            "url": "./plugins/cooper-brand/assets/img/renders/03.jpg",
+            "mode": "fill"
+           },
+           "layout": "none"
+          },
+          {
+           "type": "text",
+           "id": "t43",
+           "name": "Caption",
+           "content": "Fig. 1 · The block, rendered. From the Brand Identity file.",
+           "fontSize": 8,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.45,
+           "textGrowth": "fixed-width",
+           "width": 140
+          },
+          {
+           "type": "text",
+           "id": "t44",
+           "name": "Tag",
+           "content": "SUMMARY",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f45",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "text",
+           "id": "t40",
+           "name": "Heading",
+           "content": "One Server, Every Agent. (six weeks)",
+           "fontSize": 24,
+           "fill": "$ink",
+           "fontFamily": "$display",
+           "fontWeight": "500",
+           "lineHeight": 1.05,
+           "letterSpacing": -0.72,
+           "textGrowth": "fixed-width",
+           "width": 420
+          },
+          {
+           "type": "text",
+           "id": "t41",
+           "name": "Body",
+           "content": "Agents already answer questions about Parallel from stale documentation and guessed numbers. An MCP server gives every assistant the same read-only view of the protocol: positions, rates, backing and governance, straight from the chain and the indexer. It holds no keys, signs nothing, and ships in six weeks. The CLI the team asked for is a thin client of the same server, and comes after.",
+           "fontSize": 11,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.6,
+           "textGrowth": "fixed-width",
+           "width": 400
+          }
+         ],
+         "gap": 16
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f57",
+       "name": "Block",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f56",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "frame",
+           "id": "f55",
+           "name": "Figures",
+           "layout": "vertical",
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "rectangle",
+             "id": "r48",
+             "name": "Rule top",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$ink"
+            },
+            {
+             "type": "frame",
+             "id": "f53",
+             "name": "Row",
+             "layout": "horizontal",
+             "gap": 24,
+             "padding": [
+              16,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "ref",
+               "id": "g49",
+               "ref": "f14",
+               "name": "Figure 6",
+               "width": "fill_container",
+               "descendants": {
+                "t12": {
+                 "content": "6"
+                },
+                "t13": {
+                 "content": "WEEKS, BRIEF TO RELEASE"
+                }
+               }
+              },
+              {
+               "type": "ref",
+               "id": "g50",
+               "ref": "f14",
+               "name": "Figure 7",
+               "width": "fill_container",
+               "descendants": {
+                "t12": {
+                 "content": "7"
+                },
+                "t13": {
+                 "content": "TOOLS, READ-ONLY"
+                }
+               }
+              },
+              {
+               "type": "ref",
+               "id": "g51",
+               "ref": "f14",
+               "name": "Figure 3",
+               "width": "fill_container",
+               "descendants": {
+                "t12": {
+                 "content": "3"
+                },
+                "t13": {
+                 "content": "CHAINS COVERED"
+                }
+               }
+              },
+              {
+               "type": "ref",
+               "id": "g52",
+               "ref": "f14",
+               "name": "Figure 0",
+               "width": "fill_container",
+               "descendants": {
+                "t12": {
+                 "content": "0"
+                },
+                "t13": {
+                 "content": "KEYS HELD"
+                }
+               }
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r54",
+             "name": "Rule bottom",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            }
+           ]
+          }
+         ],
+         "gap": 16
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f89",
+       "name": "Assessment",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "alignItems": "start",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f88",
+         "name": "Margin",
+         "layout": "vertical",
+         "gap": 8,
+         "width": "$column",
+         "padding": [
+          0,
+          32,
+          0,
+          0
+         ],
+         "children": [
+          {
+           "type": "text",
+           "id": "t85",
+           "name": "Tag",
+           "content": "ASSESSMENT",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3,
+           "textGrowth": "fixed-width",
+           "width": 140
+          },
+          {
+           "type": "text",
+           "id": "t86",
+           "name": "Source",
+           "content": "Reviewed with the Parallel protocol team on 10 Sep 2026.",
+           "fontSize": 8,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.45,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f87",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "text",
+           "id": "t58",
+           "name": "Heading",
+           "content": "What Exists, What Is Missing",
+           "fontSize": 24,
+           "fill": "$ink",
+           "fontFamily": "$display",
+           "fontWeight": "500",
+           "lineHeight": 1.05,
+           "letterSpacing": -0.72,
+           "textGrowth": "fixed-width",
+           "width": 420
+          },
+          {
+           "type": "frame",
+           "id": "f84",
+           "name": "Table",
+           "layout": "vertical",
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "frame",
+             "id": "f62",
+             "name": "Head",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              0,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t59",
+               "name": "AREA",
+               "content": "AREA",
+               "fontSize": 7.5,
+               "fill": "$muted",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "letterSpacing": 0.75,
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t60",
+               "name": "TODAY",
+               "content": "TODAY",
+               "fontSize": 7.5,
+               "fill": "$muted",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "letterSpacing": 0.75,
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t61",
+               "name": "GAP",
+               "content": "GAP",
+               "fontSize": 7.5,
+               "fill": "$muted",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "letterSpacing": 0.75,
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 140
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r63",
+             "name": "Head rule",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$ink"
+            },
+            {
+             "type": "frame",
+             "id": "f67",
+             "name": "Row 1",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              8,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t64",
+               "name": "Protocol data",
+               "content": "Protocol data",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t65",
+               "name": "Subgraph and a REST indexer, per chain",
+               "content": "Subgraph and a REST indexer, per chain",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t66",
+               "name": "No single entry point",
+               "content": "No single entry point",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 140
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r68",
+             "name": "Rule 1",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            },
+            {
+             "type": "frame",
+             "id": "f72",
+             "name": "Row 2",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              8,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t69",
+               "name": "Documentation",
+               "content": "Documentation",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t70",
+               "name": "Public docs site, versioned",
+               "content": "Public docs site, versioned",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t71",
+               "name": "Not machine-readable",
+               "content": "Not machine-readable",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 140
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r73",
+             "name": "Rule 2",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            },
+            {
+             "type": "frame",
+             "id": "f77",
+             "name": "Row 3",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              8,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t74",
+               "name": "Governance",
+               "content": "Governance",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t75",
+               "name": "Snapshot and the forum",
+               "content": "Snapshot and the forum",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t76",
+               "name": "Tallies only via the UI",
+               "content": "Tallies only via the UI",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 140
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r78",
+             "name": "Rule 3",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            },
+            {
+             "type": "frame",
+             "id": "f82",
+             "name": "Row 4",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              8,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t79",
+               "name": "Agents",
+               "content": "Agents",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t80",
+               "name": "Ad-hoc prompts with pasted numbers",
+               "content": "Ad-hoc prompts with pasted numbers",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t81",
+               "name": "No source of truth",
+               "content": "No source of truth",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 140
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r83",
+             "name": "Rule 4",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            }
+           ]
+          }
+         ],
+         "gap": 16
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f103",
+       "name": "Risks & mitigants",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "alignItems": "start",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f102",
+         "name": "Margin",
+         "layout": "vertical",
+         "gap": 8,
+         "width": "$column",
+         "padding": [
+          0,
+          32,
+          0,
+          0
+         ],
+         "children": [
+          {
+           "type": "text",
+           "id": "t100",
+           "name": "Tag",
+           "content": "RISKS & MITIGANTS",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f101",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "frame",
+           "id": "f99",
+           "name": "Bullets",
+           "layout": "horizontal",
+           "gap": 24,
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "frame",
+             "id": "f92",
+             "name": "Stale data",
+             "layout": "vertical",
+             "gap": 6,
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t90",
+               "name": "Term",
+               "content": "Stale data",
+               "fontSize": 13,
+               "fill": "$ink",
+               "fontFamily": "$display",
+               "fontWeight": "500",
+               "lineHeight": 1.1,
+               "letterSpacing": -0.26,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t91",
+               "name": "Text",
+               "content": "Every answer carries the block number and the age of the indexer; past 300 s the tool says so.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            },
+            {
+             "type": "frame",
+             "id": "f95",
+             "name": "Misuse as advice",
+             "layout": "vertical",
+             "gap": 6,
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t93",
+               "name": "Term",
+               "content": "Misuse as advice",
+               "fontSize": 13,
+               "fill": "$ink",
+               "fontFamily": "$display",
+               "fontWeight": "500",
+               "lineHeight": 1.1,
+               "letterSpacing": -0.26,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t94",
+               "name": "Text",
+               "content": "Read-only tools, a fixed disclaimer in every schema, no rates projected forward.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            },
+            {
+             "type": "frame",
+             "id": "f98",
+             "name": "Maintenance",
+             "layout": "vertical",
+             "gap": 6,
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t96",
+               "name": "Term",
+               "content": "Maintenance",
+               "fontSize": 13,
+               "fill": "$ink",
+               "fontFamily": "$display",
+               "fontWeight": "500",
+               "lineHeight": 1.1,
+               "letterSpacing": -0.26,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t97",
+               "name": "Text",
+               "content": "The server is generated from the tool schemas; a new protocol module is one file.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "gap": 16
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f110",
+       "name": "Recommendation",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "alignItems": "start",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f109",
+         "name": "Margin",
+         "layout": "vertical",
+         "gap": 8,
+         "width": "$column",
+         "padding": [
+          0,
+          32,
+          0,
+          0
+         ],
+         "children": [
+          {
+           "type": "text",
+           "id": "t107",
+           "name": "Tag",
+           "content": "RECOMMENDATION",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f108",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "frame",
+           "id": "f106",
+           "name": "Recommendation",
+           "layout": "vertical",
+           "gap": 8,
+           "children": [
+            {
+             "type": "text",
+             "id": "t104",
+             "name": "Title",
+             "content": "Build the server first, read-only, and derive the CLI from it in week five.",
+             "fontSize": 18,
+             "fill": "$ink",
+             "fontFamily": "$display",
+             "fontWeight": "500",
+             "lineHeight": 1.1,
+             "letterSpacing": -0.45,
+             "textGrowth": "fixed-width",
+             "width": 400
+            },
+            {
+             "type": "text",
+             "id": "t105",
+             "name": "Body",
+             "content": "Start on 28 September; a public beta on 6 November, announced with the Seventeenth Parallel Report.",
+             "fontSize": 10,
+             "fill": "$ink-soft",
+             "fontFamily": "$sans",
+             "fontWeight": "400",
+             "lineHeight": 1.5,
+             "textGrowth": "fixed-width",
+             "width": 400
+            }
+           ]
+          }
+         ],
+         "gap": 16
+        }
+       ]
+      }
+     ],
+     "x": 72,
+     "y": 104
+    },
+    {
+     "type": "ref",
+     "id": "g113",
+     "ref": "f11",
+     "name": "Footer",
+     "x": 72,
+     "y": 1069
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f134",
+   "name": "Doc · Divider",
+   "layout": "none",
+   "x": 1788,
+   "y": 0,
+   "width": 794,
+   "height": 1123,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "frame",
+     "id": "i128",
+     "name": "Plate",
+     "width": 794,
+     "height": 700,
+     "fill": {
+      "type": "image",
+      "url": "./plugins/cooper-brand/assets/img/renders/04.jpg",
+      "mode": "fill"
+     },
+     "layout": "none",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "type": "frame",
+     "id": "f132",
+     "name": "Title block",
+     "layout": "vertical",
+     "gap": 16,
+     "width": 380,
+     "children": [
+      {
+       "type": "text",
+       "id": "t129",
+       "name": "Kicker",
+       "content": "PART TWO · THE BUILD",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      },
+      {
+       "type": "text",
+       "id": "t130",
+       "name": "Title",
+       "content": "Six Weeks, Six Demos.",
+       "fontSize": 40,
+       "fill": "$ink",
+       "fontFamily": "$display",
+       "fontWeight": "500",
+       "lineHeight": 1,
+       "letterSpacing": -1.6,
+       "textGrowth": "fixed-width",
+       "width": 380
+      },
+      {
+       "type": "text",
+       "id": "t131",
+       "name": "Standfirst",
+       "content": "The four options, the one recommended, the plan by week, and how the work runs from Monday to Friday.",
+       "fontSize": 11,
+       "fill": "$ink-soft",
+       "fontFamily": "$sans",
+       "fontWeight": "400",
+       "lineHeight": 1.55,
+       "textGrowth": "fixed-width",
+       "width": 320
+      }
+     ],
+     "x": 72,
+     "y": 900
+    },
+    {
+     "type": "frame",
+     "id": "f127",
+     "name": "List",
+     "layout": "vertical",
+     "gap": 6,
+     "width": 200,
+     "children": [
+      {
+       "type": "frame",
+       "id": "f117",
+       "name": "Sections",
+       "layout": "horizontal",
+       "gap": 6,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "text",
+         "id": "t115",
+         "name": "Sections",
+         "content": "SECTIONS",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t116",
+         "name": "Options · Plan · Method",
+         "content": "Options · Plan · Method",
+         "fontSize": 8.5,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f120",
+       "name": "Pages",
+       "layout": "horizontal",
+       "gap": 6,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "text",
+         "id": "t118",
+         "name": "Pages",
+         "content": "PAGES",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t119",
+         "name": "10 to 16",
+         "content": "10 to 16",
+         "fontSize": 8.5,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f123",
+       "name": "Estimate",
+       "layout": "horizontal",
+       "gap": 6,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "text",
+         "id": "t121",
+         "name": "Estimate",
+         "content": "ESTIMATE",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t122",
+         "name": "12 Sep 2026, one designer and one engineer",
+         "content": "12 Sep 2026, one designer and one engineer",
+         "fontSize": 8.5,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f126",
+       "name": "Phase gate",
+       "layout": "horizontal",
+       "gap": 6,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "text",
+         "id": "t124",
+         "name": "Phase gate",
+         "content": "PHASE GATE",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t125",
+         "name": "16 October",
+         "content": "16 October",
+         "fontSize": 8.5,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.3
+        }
+       ]
+      }
+     ],
+     "x": 522,
+     "y": 960
+    },
+    {
+     "type": "ref",
+     "id": "g133",
+     "ref": "f11",
+     "name": "Footer",
+     "x": 72,
+     "y": 1069
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f151",
+   "name": "Doc · Hero figure",
+   "layout": "none",
+   "x": 2682,
+   "y": 0,
+   "width": 794,
+   "height": 1123,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "ref",
+     "id": "g135",
+     "ref": "f8",
+     "name": "Running head",
+     "x": 72,
+     "y": 48
+    },
+    {
+     "type": "frame",
+     "id": "i136",
+     "name": "Plate",
+     "width": 650,
+     "height": 406,
+     "fill": {
+      "type": "image",
+      "url": "./plugins/cooper-brand/assets/img/renders/06.jpg",
+      "mode": "fill"
+     },
+     "layout": "none",
+     "x": 72,
+     "y": 104
+    },
+    {
+     "type": "text",
+     "id": "t137",
+     "name": "Caption",
+     "content": "Fig. 2 · The block, dithered. Six weeks from the brief to the public beta.",
+     "fontSize": 8,
+     "fill": "$muted",
+     "fontFamily": "$sans",
+     "fontWeight": "400",
+     "lineHeight": 1.45,
+     "textGrowth": "fixed-width",
+     "width": 650,
+     "x": 72,
+     "y": 520
+    },
+    {
+     "type": "frame",
+     "id": "f140",
+     "name": "Number",
+     "layout": "horizontal",
+     "gap": 8,
+     "alignItems": "end",
+     "children": [
+      {
+       "type": "text",
+       "id": "t138",
+       "name": "N",
+       "content": "6",
+       "fontSize": 96,
+       "fill": "$ink",
+       "fontFamily": "$display",
+       "fontWeight": "500",
+       "lineHeight": 0.85,
+       "letterSpacing": -4.8
+      },
+      {
+       "type": "text",
+       "id": "t139",
+       "name": "Unit",
+       "content": "weeks",
+       "fontSize": 22,
+       "fill": "$ink",
+       "fontFamily": "$sans",
+       "fontWeight": "300",
+       "lineHeight": 1
+      }
+     ],
+     "x": 68,
+     "y": 596
+    },
+    {
+     "type": "text",
+     "id": "t141",
+     "name": "Kicker",
+     "content": "FROM THE BRIEF TO THE PUBLIC BETA",
+     "fontSize": 7.5,
+     "fill": "$muted",
+     "fontFamily": "$sans",
+     "fontWeight": "500",
+     "letterSpacing": 0.75,
+     "lineHeight": 1.3,
+     "textGrowth": "fixed-width",
+     "width": 150,
+     "x": 72,
+     "y": 700
+    },
+    {
+     "type": "text",
+     "id": "t142",
+     "name": "Body",
+     "content": "Six weeks, six Friday demos. The server answers on Base at the end of week one and on three chains at the end of week two; the CLI is derived from it in week five and the public beta ships with the Seventeenth Parallel Report on 6 November.",
+     "fontSize": 11,
+     "fill": "$ink",
+     "fontFamily": "$sans",
+     "fontWeight": "400",
+     "lineHeight": 1.6,
+     "textGrowth": "fixed-width",
+     "width": 400,
+     "x": 272,
+     "y": 596
+    },
+    {
+     "type": "frame",
+     "id": "f149",
+     "name": "Figures",
+     "layout": "vertical",
+     "width": 650,
+     "children": [
+      {
+       "type": "rectangle",
+       "id": "r143",
+       "name": "Rule top",
+       "width": "fill_container",
+       "height": 1,
+       "fill": "$ink"
+      },
+      {
+       "type": "frame",
+       "id": "f147",
+       "name": "Row",
+       "layout": "horizontal",
+       "gap": 24,
+       "padding": [
+        16,
+        0
+       ],
+       "width": "fill_container",
+       "children": [
+        {
+         "type": "ref",
+         "id": "g144",
+         "ref": "f14",
+         "name": "Figure 6",
+         "width": "fill_container",
+         "descendants": {
+          "t12": {
+           "content": "6"
+          },
+          "t13": {
+           "content": "DEMOS"
+          }
+         }
+        },
+        {
+         "type": "ref",
+         "id": "g145",
+         "ref": "f14",
+         "name": "Figure 3",
+         "width": "fill_container",
+         "descendants": {
+          "t12": {
+           "content": "3"
+          },
+          "t13": {
+           "content": "CHAINS"
+          }
+         }
+        },
+        {
+         "type": "ref",
+         "id": "g146",
+         "ref": "f14",
+         "name": "Figure 2",
+         "width": "fill_container",
+         "descendants": {
+          "t12": {
+           "content": "2"
+          },
+          "t13": {
+           "content": "PHASES"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "type": "rectangle",
+       "id": "r148",
+       "name": "Rule bottom",
+       "width": "fill_container",
+       "height": 1,
+       "fill": "$hair"
+      }
+     ],
+     "x": 72,
+     "y": 760
+    },
+    {
+     "type": "ref",
+     "id": "g150",
+     "ref": "f11",
+     "name": "Footer",
+     "x": 72,
+     "y": 1069
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f172",
+   "name": "Doc · Back cover",
+   "layout": "none",
+   "x": 3576,
+   "y": 0,
+   "width": 794,
+   "height": 1123,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "frame",
+     "id": "i165",
+     "name": "Plate",
+     "width": 794,
+     "height": 620,
+     "fill": {
+      "type": "image",
+      "url": "./plugins/cooper-brand/assets/img/renders/05.jpg",
+      "mode": "fill"
+     },
+     "layout": "none",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "type": "frame",
+     "id": "f168",
+     "name": "Top",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "alignItems": "center",
+     "width": "$measure",
+     "children": [
+      {
+       "type": "ref",
+       "id": "g166",
+       "ref": "f3",
+       "name": "Wordmark",
+       "x": 0,
+       "y": 0
+      },
+      {
+       "type": "text",
+       "id": "t167",
+       "name": "Conf",
+       "content": "CONFIDENTIAL · V0.1",
+       "fontSize": 7.5,
+       "fill": "$ink",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 72,
+     "y": 56
+    },
+    {
+     "type": "frame",
+     "id": "f171",
+     "name": "Bottom",
+     "layout": "vertical",
+     "gap": 16,
+     "children": [
+      {
+       "type": "text",
+       "id": "t169",
+       "name": "Tagline",
+       "content": "We turn Web3 ideas into products people use.",
+       "fontSize": 40,
+       "fill": "$ink",
+       "fontFamily": "$display",
+       "fontWeight": "500",
+       "lineHeight": 1,
+       "letterSpacing": -1.6,
+       "textGrowth": "fixed-width",
+       "width": 380
+      },
+      {
+       "type": "frame",
+       "id": "f164",
+       "name": "Colophon",
+       "layout": "horizontal",
+       "gap": 24,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f154",
+         "name": "Website",
+         "layout": "horizontal",
+         "gap": 6,
+         "alignItems": "center",
+         "children": [
+          {
+           "type": "text",
+           "id": "t152",
+           "name": "Website",
+           "content": "WEBSITE",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t153",
+           "name": "cooperlabs.xyz",
+           "content": "cooperlabs.xyz",
+           "fontSize": 8.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.3
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f157",
+         "name": "X",
+         "layout": "horizontal",
+         "gap": 6,
+         "alignItems": "center",
+         "children": [
+          {
+           "type": "text",
+           "id": "t155",
+           "name": "X",
+           "content": "X",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t156",
+           "name": "@cooperlabs",
+           "content": "@cooperlabs",
+           "fontSize": 8.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.3
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f160",
+         "name": "Telegram",
+         "layout": "horizontal",
+         "gap": 6,
+         "alignItems": "center",
+         "children": [
+          {
+           "type": "text",
+           "id": "t158",
+           "name": "Telegram",
+           "content": "TELEGRAM",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t159",
+           "name": "@jeanbrasse",
+           "content": "@jeanbrasse",
+           "fontSize": 8.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.3
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f163",
+         "name": "This document",
+         "layout": "horizontal",
+         "gap": 6,
+         "alignItems": "center",
+         "children": [
+          {
+           "type": "text",
+           "id": "t161",
+           "name": "This document",
+           "content": "THIS DOCUMENT",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t162",
+           "name": "Proposal · v0.1 · 14 Sep 2026",
+           "content": "Proposal · v0.1 · 14 Sep 2026",
+           "fontSize": 8.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.3
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "id": "t170",
+       "name": "Notice",
+       "content": "INTERNAL DOCUMENT · NOT FOR DISTRIBUTION OUTSIDE COOPER LABS · © 2026 COOPER LABS",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 72,
+     "y": 880
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f194",
+   "name": "Deck · Title",
+   "layout": "none",
+   "x": 0,
+   "y": 1300,
+   "width": 1280,
+   "height": 720,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "frame",
+     "id": "i173",
+     "name": "Plate",
+     "width": 640,
+     "height": 720,
+     "fill": {
+      "type": "image",
+      "url": "./plugins/cooper-brand/assets/img/renders/01.jpg",
+      "mode": "fill"
+     },
+     "layout": "none",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "type": "frame",
+     "id": "f176",
+     "name": "Top",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "alignItems": "center",
+     "width": 1120,
+     "children": [
+      {
+       "type": "ref",
+       "id": "g174",
+       "ref": "f3",
+       "name": "Wordmark",
+       "x": 0,
+       "y": 0,
+       "descendants": {}
+      },
+      {
+       "type": "text",
+       "id": "t175",
+       "name": "Conf",
+       "content": "CONFIDENTIAL · V0.1",
+       "fontSize": 11,
+       "fill": "$ink",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 80,
+     "y": 56
+    },
+    {
+     "type": "frame",
+     "id": "f180",
+     "name": "Title block",
+     "layout": "vertical",
+     "gap": 22,
+     "width": 480,
+     "children": [
+      {
+       "type": "text",
+       "id": "t177",
+       "name": "Kicker",
+       "content": "PROPOSAL · PARALLEL MCP SERVER · PARALLEL TEAM, 14 SEPTEMBER 2026",
+       "fontSize": 11,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      },
+      {
+       "type": "text",
+       "id": "t178",
+       "name": "Title",
+       "content": "Ship the MCP Server Before the CLI.",
+       "fontSize": 56,
+       "fill": "$ink",
+       "fontFamily": "$display",
+       "fontWeight": "500",
+       "lineHeight": 1,
+       "letterSpacing": -2.24,
+       "textGrowth": "fixed-width",
+       "width": 480
+      },
+      {
+       "type": "text",
+       "id": "t179",
+       "name": "Standfirst",
+       "content": "Proposes a six-week, read-only MCP server for Parallel's positions, rates and governance, for a start on 28 September.",
+       "fontSize": 15,
+       "fill": "$ink-soft",
+       "fontFamily": "$sans",
+       "fontWeight": "400",
+       "lineHeight": 1.5,
+       "textGrowth": "fixed-width",
+       "width": 400
+      }
+     ],
+     "x": 720,
+     "y": 150
+    },
+    {
+     "type": "frame",
+     "id": "f193",
+     "name": "Meta",
+     "layout": "vertical",
+     "gap": 10,
+     "children": [
+      {
+       "type": "frame",
+       "id": "f183",
+       "name": "Date",
+       "layout": "horizontal",
+       "gap": 6,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "text",
+         "id": "t181",
+         "name": "Date",
+         "content": "DATE",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t182",
+         "name": "14 September 2026",
+         "content": "14 September 2026",
+         "fontSize": 8.5,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f186",
+       "name": "Classification",
+       "layout": "horizontal",
+       "gap": 6,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "text",
+         "id": "t184",
+         "name": "Classification",
+         "content": "CLASSIFICATION",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t185",
+         "name": "Confidential",
+         "content": "Confidential",
+         "fontSize": 8.5,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f189",
+       "name": "Status",
+       "layout": "horizontal",
+       "gap": 6,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "text",
+         "id": "t187",
+         "name": "Status",
+         "content": "STATUS",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t188",
+         "name": "Draft",
+         "content": "Draft",
+         "fontSize": 8.5,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f192",
+       "name": "Owner",
+       "layout": "horizontal",
+       "gap": 6,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "text",
+         "id": "t190",
+         "name": "Owner",
+         "content": "OWNER",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t191",
+         "name": "Jean, Cooper Labs",
+         "content": "Jean, Cooper Labs",
+         "fontSize": 8.5,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.3
+        }
+       ]
+      }
+     ],
+     "x": 720,
+     "y": 560
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f217",
+   "name": "Deck · Content slide",
+   "layout": "none",
+   "x": 1380,
+   "y": 1300,
+   "width": 1280,
+   "height": 720,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "frame",
+     "id": "f213",
+     "name": "Head",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "alignItems": "center",
+     "width": 1120,
+     "children": [
+      {
+       "type": "frame",
+       "id": "f211",
+       "name": "Left",
+       "layout": "horizontal",
+       "gap": 14,
+       "alignItems": "center",
+       "children": [
+        {
+         "type": "path",
+         "id": "p209",
+         "name": "Mark",
+         "geometry": "M302.863 66.6665V233.333H66.667V66.6665H302.863ZM255.901 78.8638C216.608 78.8638 184.765 110.707 184.765 150C184.765 189.293 216.608 221.136 255.901 221.136H291.835V78.8638H255.901Z",
+         "viewBox": [
+          66.667,
+          66.6665,
+          236.196,
+          166.6665
+         ],
+         "width": 18.0,
+         "height": 12.7,
+         "fill": "$ink"
+        },
+        {
+         "type": "text",
+         "id": "t210",
+         "name": "Kicker",
+         "content": "PROPOSAL · PARALLEL MCP SERVER · CONFIDENTIAL · V0.1",
+         "fontSize": 11,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 1.1,
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "id": "t212",
+       "name": "Folio",
+       "content": "02",
+       "fontSize": 11,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 80,
+     "y": 56
+    },
+    {
+     "type": "frame",
+     "id": "f208",
+     "name": "Grid",
+     "layout": "horizontal",
+     "width": 1120,
+     "alignItems": "start",
+     "children": [
+      {
+       "type": "frame",
+       "id": "f207",
+       "name": "Margin",
+       "layout": "vertical",
+       "width": 320,
+       "padding": [
+        0,
+        48,
+        0,
+        0
+       ],
+       "children": [
+        {
+         "type": "text",
+         "id": "t206",
+         "name": "Tag",
+         "content": "SUMMARY",
+         "fontSize": 11,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 1.1,
+         "lineHeight": 1.3
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f205",
+       "name": "Main",
+       "layout": "vertical",
+       "gap": 24,
+       "width": "fill_container",
+       "children": [
+        {
+         "type": "text",
+         "id": "t195",
+         "name": "Heading",
+         "content": "One Server, Every Agent. (six weeks)",
+         "fontSize": 40,
+         "fill": "$ink",
+         "fontFamily": "$display",
+         "fontWeight": "500",
+         "lineHeight": 1.05,
+         "letterSpacing": -1.2,
+         "textGrowth": "fixed-width",
+         "width": 760
+        },
+        {
+         "type": "text",
+         "id": "t196",
+         "name": "Body",
+         "content": "Agents already answer questions about Parallel from stale documentation. An MCP server gives every assistant the same read-only view of the protocol, straight from the chain and the indexer. It holds no keys, signs nothing, and the CLI the team asked for is a thin client of it.",
+         "fontSize": 17,
+         "fill": "$ink",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.6,
+         "textGrowth": "fixed-width",
+         "width": 680
+        },
+        {
+         "type": "frame",
+         "id": "f204",
+         "name": "Figures",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "rectangle",
+           "id": "r197",
+           "name": "Rule top",
+           "width": "fill_container",
+           "height": 1,
+           "fill": "$ink"
+          },
+          {
+           "type": "frame",
+           "id": "f202",
+           "name": "Row",
+           "layout": "horizontal",
+           "gap": 24,
+           "padding": [
+            16,
+            0
+           ],
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "ref",
+             "id": "g198",
+             "ref": "f14",
+             "name": "Figure 6",
+             "width": "fill_container",
+             "descendants": {
+              "t12": {
+               "content": "6"
+              },
+              "t13": {
+               "content": "WEEKS, BRIEF TO RELEASE"
+              }
+             }
+            },
+            {
+             "type": "ref",
+             "id": "g199",
+             "ref": "f14",
+             "name": "Figure 7",
+             "width": "fill_container",
+             "descendants": {
+              "t12": {
+               "content": "7"
+              },
+              "t13": {
+               "content": "TOOLS, READ-ONLY"
+              }
+             }
+            },
+            {
+             "type": "ref",
+             "id": "g200",
+             "ref": "f14",
+             "name": "Figure 3",
+             "width": "fill_container",
+             "descendants": {
+              "t12": {
+               "content": "3"
+              },
+              "t13": {
+               "content": "CHAINS COVERED"
+              }
+             }
+            },
+            {
+             "type": "ref",
+             "id": "g201",
+             "ref": "f14",
+             "name": "Figure 0",
+             "width": "fill_container",
+             "descendants": {
+              "t12": {
+               "content": "0"
+              },
+              "t13": {
+               "content": "KEYS HELD"
+              }
+             }
+            }
+           ]
+          },
+          {
+           "type": "rectangle",
+           "id": "r203",
+           "name": "Rule bottom",
+           "width": "fill_container",
+           "height": 1,
+           "fill": "$hair"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "x": 80,
+     "y": 130
+    },
+    {
+     "type": "frame",
+     "id": "f216",
+     "name": "Foot",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "width": 1120,
+     "children": [
+      {
+       "type": "text",
+       "id": "t214",
+       "name": "Meta",
+       "content": "COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION",
+       "fontSize": 11,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 1.1,
+       "lineHeight": 1.3
+      },
+      {
+       "type": "text",
+       "id": "t215",
+       "name": "Page",
+       "content": "02 / 07",
+       "fontSize": 11,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 80,
+     "y": 660
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f278",
+   "name": "Fact sheet",
+   "layout": "none",
+   "x": 0,
+   "y": 2200,
+   "width": 794,
+   "height": 1123,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "frame",
+     "id": "f260",
+     "name": "Head",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "alignItems": "center",
+     "width": 650,
+     "children": [
+      {
+       "type": "ref",
+       "id": "g258",
+       "ref": "f3",
+       "name": "Wordmark",
+       "x": 0,
+       "y": 0
+      },
+      {
+       "type": "text",
+       "id": "t259",
+       "name": "Kicker",
+       "content": "FACT SHEET · COOPER LABS · SEPTEMBER 2026",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 72,
+     "y": 48
+    },
+    {
+     "type": "frame",
+     "id": "f274",
+     "name": "Stack",
+     "layout": "vertical",
+     "gap": 22,
+     "width": 650,
+     "children": [
+      {
+       "type": "frame",
+       "id": "i261",
+       "name": "Plate",
+       "width": 650,
+       "height": 180,
+       "fill": {
+        "type": "image",
+        "url": "./plugins/cooper-brand/assets/img/renders/01.jpg",
+        "mode": "fill"
+       },
+       "layout": "none"
+      },
+      {
+       "type": "frame",
+       "id": "f265",
+       "name": "Title block",
+       "layout": "vertical",
+       "gap": 12,
+       "children": [
+        {
+         "type": "text",
+         "id": "t262",
+         "name": "Tag",
+         "content": "COOPER LABS · FACT SHEET",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t263",
+         "name": "Title",
+         "content": "We Turn Web3 Ideas into Products People Use.",
+         "fontSize": 34,
+         "fill": "$ink",
+         "fontFamily": "$display",
+         "fontWeight": "500",
+         "lineHeight": 1,
+         "letterSpacing": -1.36,
+         "textGrowth": "fixed-width",
+         "width": 480
+        },
+        {
+         "type": "text",
+         "id": "t264",
+         "name": "Standfirst",
+         "content": "Cooper Labs is a product studio for Web3 teams: design and engineering in one team, from the brief to the stores, with a demo of working software every Friday.",
+         "fontSize": 10.5,
+         "fill": "$ink-soft",
+         "fontFamily": "$sans",
+         "fontWeight": "400",
+         "lineHeight": 1.55,
+         "textGrowth": "fixed-width",
+         "width": 400
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f273",
+       "name": "Figures",
+       "layout": "vertical",
+       "width": "fill_container",
+       "children": [
+        {
+         "type": "rectangle",
+         "id": "r266",
+         "name": "Rule top",
+         "width": "fill_container",
+         "height": 1,
+         "fill": "$ink"
+        },
+        {
+         "type": "frame",
+         "id": "f271",
+         "name": "Row",
+         "layout": "horizontal",
+         "gap": 24,
+         "padding": [
+          16,
+          0
+         ],
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "ref",
+           "id": "g267",
+           "ref": "f14",
+           "name": "Figure 6",
+           "width": "fill_container",
+           "descendants": {
+            "t12": {
+             "content": "6"
+            },
+            "t13": {
+             "content": "WEEKS, BRIEF TO FIRST RELEASE"
+            }
+           }
+          },
+          {
+           "type": "ref",
+           "id": "g268",
+           "ref": "f14",
+           "name": "Figure Weekly",
+           "width": "fill_container",
+           "descendants": {
+            "t12": {
+             "content": "Weekly"
+            },
+            "t13": {
+             "content": "DEMO, EVERY FRIDAY"
+            }
+           }
+          },
+          {
+           "type": "ref",
+           "id": "g269",
+           "ref": "f14",
+           "name": "Figure 2",
+           "width": "fill_container",
+           "descendants": {
+            "t12": {
+             "content": "2"
+            },
+            "t13": {
+             "content": "DISCIPLINES, ONE TEAM"
+            }
+           }
+          },
+          {
+           "type": "ref",
+           "id": "g270",
+           "ref": "f14",
+           "name": "Figure Fixed",
+           "width": "fill_container",
+           "descendants": {
+            "t12": {
+             "content": "Fixed"
+            },
+            "t13": {
+             "content": "PRICE PER PHASE"
+            }
+           }
+          }
+         ]
+        },
+        {
+         "type": "rectangle",
+         "id": "r272",
+         "name": "Rule bottom",
+         "width": "fill_container",
+         "height": 1,
+         "fill": "$hair"
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f242",
+       "name": "Columns",
+       "layout": "horizontal",
+       "gap": 32,
+       "width": 650,
+       "children": [
+        {
+         "type": "frame",
+         "id": "f229",
+         "name": "How We Work",
+         "layout": "vertical",
+         "gap": 12,
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "text",
+           "id": "t218",
+           "name": "Heading",
+           "content": "How We Work",
+           "fontSize": 18,
+           "fill": "$ink",
+           "fontFamily": "$display",
+           "fontWeight": "500",
+           "lineHeight": 1.05,
+           "letterSpacing": -0.5
+          },
+          {
+           "type": "frame",
+           "id": "f228",
+           "name": "List",
+           "layout": "vertical",
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "frame",
+             "id": "f221",
+             "name": "One team, both crafts",
+             "layout": "vertical",
+             "gap": 2,
+             "width": "fill_container",
+             "padding": [
+              7,
+              0
+             ],
+             "children": [
+              {
+               "type": "text",
+               "id": "t219",
+               "name": "Term",
+               "content": "One team, both crafts",
+               "fontSize": 10.5,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4
+              },
+              {
+               "type": "text",
+               "id": "t220",
+               "name": "Text",
+               "content": "A designer and an engineer on every project from day one; the design system lives in Figma and in code.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            },
+            {
+             "type": "frame",
+             "id": "f224",
+             "name": "Working software on Friday",
+             "layout": "vertical",
+             "gap": 2,
+             "width": "fill_container",
+             "padding": [
+              7,
+              0
+             ],
+             "children": [
+              {
+               "type": "text",
+               "id": "t222",
+               "name": "Term",
+               "content": "Working software on Friday",
+               "fontSize": 10.5,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4
+              },
+              {
+               "type": "text",
+               "id": "t223",
+               "name": "Text",
+               "content": "Thirty minutes, the client in the room, the decisions written the same day.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            },
+            {
+             "type": "frame",
+             "id": "f227",
+             "name": "Phases with a gate",
+             "layout": "vertical",
+             "gap": 2,
+             "width": "fill_container",
+             "padding": [
+              7,
+              0
+             ],
+             "children": [
+              {
+               "type": "text",
+               "id": "t225",
+               "name": "Term",
+               "content": "Phases with a gate",
+               "fontSize": 10.5,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4
+              },
+              {
+               "type": "text",
+               "id": "t226",
+               "name": "Text",
+               "content": "Two or three fixed-price phases; the next one starts on a demo, not on a plan.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f241",
+         "name": "What We Don't Do",
+         "layout": "vertical",
+         "gap": 12,
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "text",
+           "id": "t230",
+           "name": "Heading",
+           "content": "What We Don't Do",
+           "fontSize": 18,
+           "fill": "$ink",
+           "fontFamily": "$display",
+           "fontWeight": "500",
+           "lineHeight": 1.05,
+           "letterSpacing": -0.5
+          },
+          {
+           "type": "frame",
+           "id": "f240",
+           "name": "List",
+           "layout": "vertical",
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "frame",
+             "id": "f233",
+             "name": "No custody, no keys",
+             "layout": "vertical",
+             "gap": 2,
+             "width": "fill_container",
+             "padding": [
+              7,
+              0
+             ],
+             "children": [
+              {
+               "type": "text",
+               "id": "t231",
+               "name": "Term",
+               "content": "No custody, no keys",
+               "fontSize": 10.5,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4
+              },
+              {
+               "type": "text",
+               "id": "t232",
+               "name": "Text",
+               "content": "We build the product; the user signs. Nothing we ship holds funds.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            },
+            {
+             "type": "frame",
+             "id": "f236",
+             "name": "No slides for software",
+             "layout": "vertical",
+             "gap": 2,
+             "width": "fill_container",
+             "padding": [
+              7,
+              0
+             ],
+             "children": [
+              {
+               "type": "text",
+               "id": "t234",
+               "name": "Term",
+               "content": "No slides for software",
+               "fontSize": 10.5,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4
+              },
+              {
+               "type": "text",
+               "id": "t235",
+               "name": "Text",
+               "content": "A proposal names its demos; a demo shows the thing running.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            },
+            {
+             "type": "frame",
+             "id": "f239",
+             "name": "No open-ended retainers",
+             "layout": "vertical",
+             "gap": 2,
+             "width": "fill_container",
+             "padding": [
+              7,
+              0
+             ],
+             "children": [
+              {
+               "type": "text",
+               "id": "t237",
+               "name": "Term",
+               "content": "No open-ended retainers",
+               "fontSize": 10.5,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4
+              },
+              {
+               "type": "text",
+               "id": "t238",
+               "name": "Text",
+               "content": "Scope, price and dates per phase, written before the first week.",
+               "fontSize": 9.5,
+               "fill": "$ink-soft",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.5,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f257",
+       "name": "Contact",
+       "layout": "vertical",
+       "width": 650,
+       "children": [
+        {
+         "type": "rectangle",
+         "id": "r243",
+         "name": "Rule",
+         "width": "fill_container",
+         "height": 1,
+         "fill": "$ink"
+        },
+        {
+         "type": "frame",
+         "id": "f256",
+         "name": "Row",
+         "layout": "horizontal",
+         "gap": 24,
+         "padding": [
+          12,
+          0,
+          0,
+          0
+         ],
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "frame",
+           "id": "f246",
+           "name": "Website",
+           "layout": "vertical",
+           "gap": 6,
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "text",
+             "id": "t244",
+             "name": "Website",
+             "content": "WEBSITE",
+             "fontSize": 7.5,
+             "fill": "$muted",
+             "fontFamily": "$sans",
+             "fontWeight": "500",
+             "letterSpacing": 0.75,
+             "lineHeight": 1.3
+            },
+            {
+             "type": "text",
+             "id": "t245",
+             "name": "cooperlabs.xyz",
+             "content": "cooperlabs.xyz",
+             "fontSize": 10,
+             "fill": "$ink",
+             "fontFamily": "$sans",
+             "fontWeight": "400",
+             "lineHeight": 1.3
+            }
+           ]
+          },
+          {
+           "type": "frame",
+           "id": "f249",
+           "name": "X",
+           "layout": "vertical",
+           "gap": 6,
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "text",
+             "id": "t247",
+             "name": "X",
+             "content": "X",
+             "fontSize": 7.5,
+             "fill": "$muted",
+             "fontFamily": "$sans",
+             "fontWeight": "500",
+             "letterSpacing": 0.75,
+             "lineHeight": 1.3
+            },
+            {
+             "type": "text",
+             "id": "t248",
+             "name": "@cooperlabs",
+             "content": "@cooperlabs",
+             "fontSize": 10,
+             "fill": "$ink",
+             "fontFamily": "$sans",
+             "fontWeight": "400",
+             "lineHeight": 1.3
+            }
+           ]
+          },
+          {
+           "type": "frame",
+           "id": "f252",
+           "name": "Telegram",
+           "layout": "vertical",
+           "gap": 6,
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "text",
+             "id": "t250",
+             "name": "Telegram",
+             "content": "TELEGRAM",
+             "fontSize": 7.5,
+             "fill": "$muted",
+             "fontFamily": "$sans",
+             "fontWeight": "500",
+             "letterSpacing": 0.75,
+             "lineHeight": 1.3
+            },
+            {
+             "type": "text",
+             "id": "t251",
+             "name": "@jeanbrasse",
+             "content": "@jeanbrasse",
+             "fontSize": 10,
+             "fill": "$ink",
+             "fontFamily": "$sans",
+             "fontWeight": "400",
+             "lineHeight": 1.3
+            }
+           ]
+          },
+          {
+           "type": "frame",
+           "id": "f255",
+           "name": "Email",
+           "layout": "vertical",
+           "gap": 6,
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "text",
+             "id": "t253",
+             "name": "Email",
+             "content": "EMAIL",
+             "fontSize": 7.5,
+             "fill": "$muted",
+             "fontFamily": "$sans",
+             "fontWeight": "500",
+             "letterSpacing": 0.75,
+             "lineHeight": 1.3
+            },
+            {
+             "type": "text",
+             "id": "t254",
+             "name": "contact@cooperlabs.xyz",
+             "content": "contact@cooperlabs.xyz",
+             "fontSize": 10,
+             "fill": "$ink",
+             "fontFamily": "$sans",
+             "fontWeight": "400",
+             "lineHeight": 1.3
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "x": 72,
+     "y": 96
+    },
+    {
+     "type": "frame",
+     "id": "f277",
+     "name": "Foot",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "width": 650,
+     "children": [
+      {
+       "type": "text",
+       "id": "t275",
+       "name": "Meta",
+       "content": "COOPER LABS · PUBLIC · COOPERLABS.XYZ · SEPTEMBER 2026",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      },
+      {
+       "type": "text",
+       "id": "t276",
+       "name": "Page",
+       "content": "01 / 01",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 72,
+     "y": 1069
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "id": "f372",
+   "name": "Meeting note",
+   "layout": "none",
+   "x": 894,
+   "y": 2200,
+   "width": 794,
+   "height": 1123,
+   "fill": "$card",
+   "clip": true,
+   "children": [
+    {
+     "type": "frame",
+     "id": "f364",
+     "name": "Head",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "alignItems": "center",
+     "width": 650,
+     "children": [
+      {
+       "type": "ref",
+       "id": "g362",
+       "ref": "f3",
+       "name": "Wordmark",
+       "x": 0,
+       "y": 0
+      },
+      {
+       "type": "text",
+       "id": "t363",
+       "name": "Kicker",
+       "content": "MEETING NOTE · PARALLEL WEEKLY · 12 SEPTEMBER 2026",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 72,
+     "y": 48
+    },
+    {
+     "type": "frame",
+     "id": "f368",
+     "name": "Note head",
+     "layout": "horizontal",
+     "width": 650,
+     "alignItems": "start",
+     "children": [
+      {
+       "type": "frame",
+       "id": "f291",
+       "name": "Facts",
+       "layout": "vertical",
+       "gap": 14,
+       "width": 200,
+       "padding": [
+        0,
+        32,
+        0,
+        0
+       ],
+       "children": [
+        {
+         "type": "frame",
+         "id": "f281",
+         "name": "Date",
+         "layout": "vertical",
+         "gap": 4,
+         "children": [
+          {
+           "type": "text",
+           "id": "t279",
+           "name": "Date",
+           "content": "DATE",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t280",
+           "name": "12 September 2026",
+           "content": "12 September 2026",
+           "fontSize": 9.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.45,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f284",
+         "name": "Where",
+         "layout": "vertical",
+         "gap": 4,
+         "children": [
+          {
+           "type": "text",
+           "id": "t282",
+           "name": "Where",
+           "content": "WHERE",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t283",
+           "name": "Google Meet",
+           "content": "Google Meet",
+           "fontSize": 9.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.45,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f287",
+         "name": "Attendees",
+         "layout": "vertical",
+         "gap": 4,
+         "children": [
+          {
+           "type": "text",
+           "id": "t285",
+           "name": "Attendees",
+           "content": "ATTENDEES",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t286",
+           "name": "Jean, Cooper Labs\nNicolas, Design\nNoah, Parallel\nLéa, Parallel",
+           "content": "Jean, Cooper Labs\nNicolas, Design\nNoah, Parallel\nLéa, Parallel",
+           "fontSize": 9.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.45,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f290",
+         "name": "Note by",
+         "layout": "vertical",
+         "gap": 4,
+         "children": [
+          {
+           "type": "text",
+           "id": "t288",
+           "name": "Note by",
+           "content": "NOTE BY",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3
+          },
+          {
+           "type": "text",
+           "id": "t289",
+           "name": "Jean, Cooper Labs",
+           "content": "Jean, Cooper Labs",
+           "fontSize": 9.5,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.45,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f367",
+       "name": "Title",
+       "layout": "vertical",
+       "gap": 14,
+       "width": "fill_container",
+       "children": [
+        {
+         "type": "text",
+         "id": "t365",
+         "name": "Tag",
+         "content": "MEETING NOTE · INTERNAL",
+         "fontSize": 7.5,
+         "fill": "$muted",
+         "fontFamily": "$sans",
+         "fontWeight": "500",
+         "letterSpacing": 0.75,
+         "lineHeight": 1.3
+        },
+        {
+         "type": "text",
+         "id": "t366",
+         "name": "Title",
+         "content": "Week 37: The Server Answers on Three Chains",
+         "fontSize": 30,
+         "fill": "$ink",
+         "fontFamily": "$display",
+         "fontWeight": "500",
+         "lineHeight": 1.02,
+         "letterSpacing": -1.05,
+         "textGrowth": "fixed-width",
+         "width": 420
+        }
+       ]
+      }
+     ],
+     "x": 72,
+     "y": 104
+    },
+    {
+     "type": "frame",
+     "id": "f361",
+     "name": "Content",
+     "layout": "vertical",
+     "gap": "$gap",
+     "width": 650,
+     "children": [
+      {
+       "type": "frame",
+       "id": "f316",
+       "name": "Context",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "alignItems": "start",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f315",
+         "name": "Margin",
+         "layout": "vertical",
+         "gap": 8,
+         "width": "$column",
+         "padding": [
+          0,
+          32,
+          0,
+          0
+         ],
+         "children": [
+          {
+           "type": "text",
+           "id": "t313",
+           "name": "Tag",
+           "content": "CONTEXT",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f314",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "text",
+           "id": "t312",
+           "name": "Body",
+           "content": "Second weekly of the build. The Friday demo showed the server answering on Base, Arbitrum and Ethereum with one schema per tool; the Parallel team had read the schemas cold the day before.",
+           "fontSize": 11,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.6,
+           "textGrowth": "fixed-width",
+           "width": 400
+          }
+         ],
+         "gap": 14
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f320",
+       "name": "Decisions",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "alignItems": "start",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f319",
+         "name": "Margin",
+         "layout": "vertical",
+         "gap": 8,
+         "width": "$column",
+         "padding": [
+          0,
+          32,
+          0,
+          0
+         ],
+         "children": [
+          {
+           "type": "text",
+           "id": "t317",
+           "name": "Tag",
+           "content": "DECISIONS",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f318",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "frame",
+           "id": "f311",
+           "name": "Decisions",
+           "layout": "vertical",
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "rectangle",
+             "id": "r292",
+             "name": "Rule",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$ink"
+            },
+            {
+             "type": "frame",
+             "id": "f297",
+             "name": "Server first, CLI in week six",
+             "layout": "horizontal",
+             "padding": [
+              10,
+              0
+             ],
+             "width": "fill_container",
+             "alignItems": "start",
+             "children": [
+              {
+               "type": "text",
+               "id": "t293",
+               "name": "N",
+               "content": "01",
+               "fontSize": 13,
+               "fill": "$ink",
+               "fontFamily": "$display",
+               "fontWeight": "500",
+               "lineHeight": 1.2,
+               "textGrowth": "fixed-width",
+               "width": 40
+              },
+              {
+               "type": "frame",
+               "id": "f296",
+               "name": "Text",
+               "layout": "vertical",
+               "gap": 2,
+               "width": "fill_container",
+               "children": [
+                {
+                 "type": "text",
+                 "id": "t294",
+                 "name": "Title",
+                 "content": "Server first, CLI in week six",
+                 "fontSize": 11,
+                 "fill": "$ink",
+                 "fontFamily": "$sans",
+                 "fontWeight": "500",
+                 "lineHeight": 1.4,
+                 "textGrowth": "fixed-width",
+                 "width": "fill_container"
+                },
+                {
+                 "type": "text",
+                 "id": "t295",
+                 "name": "Body",
+                 "content": "The CLI is derived from the server one week later than planned; the docs dry run takes the week. The beta date does not move.",
+                 "fontSize": 10,
+                 "fill": "$ink-soft",
+                 "fontFamily": "$sans",
+                 "fontWeight": "400",
+                 "lineHeight": 1.5,
+                 "textGrowth": "fixed-width",
+                 "width": "fill_container"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r298",
+             "name": "Rule 1",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            },
+            {
+             "type": "frame",
+             "id": "f303",
+             "name": "Two renames",
+             "layout": "horizontal",
+             "padding": [
+              10,
+              0
+             ],
+             "width": "fill_container",
+             "alignItems": "start",
+             "children": [
+              {
+               "type": "text",
+               "id": "t299",
+               "name": "N",
+               "content": "02",
+               "fontSize": 13,
+               "fill": "$ink",
+               "fontFamily": "$display",
+               "fontWeight": "500",
+               "lineHeight": 1.2,
+               "textGrowth": "fixed-width",
+               "width": 40
+              },
+              {
+               "type": "frame",
+               "id": "f302",
+               "name": "Text",
+               "layout": "vertical",
+               "gap": 2,
+               "width": "fill_container",
+               "children": [
+                {
+                 "type": "text",
+                 "id": "t300",
+                 "name": "Title",
+                 "content": "Two renames",
+                 "fontSize": 11,
+                 "fill": "$ink",
+                 "fontFamily": "$sans",
+                 "fontWeight": "500",
+                 "lineHeight": 1.4,
+                 "textGrowth": "fixed-width",
+                 "width": "fill_container"
+                },
+                {
+                 "type": "text",
+                 "id": "t301",
+                 "name": "Body",
+                 "content": "get_rate becomes get_rates, get_backing_ratio becomes get_backing. Done before the next demo.",
+                 "fontSize": 10,
+                 "fill": "$ink-soft",
+                 "fontFamily": "$sans",
+                 "fontWeight": "400",
+                 "lineHeight": 1.5,
+                 "textGrowth": "fixed-width",
+                 "width": "fill_container"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r304",
+             "name": "Rule 2",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            },
+            {
+             "type": "frame",
+             "id": "f309",
+             "name": "Staleness rule",
+             "layout": "horizontal",
+             "padding": [
+              10,
+              0
+             ],
+             "width": "fill_container",
+             "alignItems": "start",
+             "children": [
+              {
+               "type": "text",
+               "id": "t305",
+               "name": "N",
+               "content": "03",
+               "fontSize": 13,
+               "fill": "$ink",
+               "fontFamily": "$display",
+               "fontWeight": "500",
+               "lineHeight": 1.2,
+               "textGrowth": "fixed-width",
+               "width": 40
+              },
+              {
+               "type": "frame",
+               "id": "f308",
+               "name": "Text",
+               "layout": "vertical",
+               "gap": 2,
+               "width": "fill_container",
+               "children": [
+                {
+                 "type": "text",
+                 "id": "t306",
+                 "name": "Title",
+                 "content": "Staleness rule",
+                 "fontSize": 11,
+                 "fill": "$ink",
+                 "fontFamily": "$sans",
+                 "fontWeight": "500",
+                 "lineHeight": 1.4,
+                 "textGrowth": "fixed-width",
+                 "width": "fill_container"
+                },
+                {
+                 "type": "text",
+                 "id": "t307",
+                 "name": "Body",
+                 "content": "Past 300 seconds an answer says its age in the first line, not in a footnote.",
+                 "fontSize": 10,
+                 "fill": "$ink-soft",
+                 "fontFamily": "$sans",
+                 "fontWeight": "400",
+                 "lineHeight": 1.5,
+                 "textGrowth": "fixed-width",
+                 "width": "fill_container"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r310",
+             "name": "Rule 3",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            }
+           ]
+          }
+         ],
+         "gap": 14
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f350",
+       "name": "Actions",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "alignItems": "start",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f349",
+         "name": "Margin",
+         "layout": "vertical",
+         "gap": 8,
+         "width": "$column",
+         "padding": [
+          0,
+          32,
+          0,
+          0
+         ],
+         "children": [
+          {
+           "type": "text",
+           "id": "t347",
+           "name": "Tag",
+           "content": "ACTIONS",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f348",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "frame",
+           "id": "f346",
+           "name": "Table",
+           "layout": "vertical",
+           "width": "fill_container",
+           "children": [
+            {
+             "type": "frame",
+             "id": "f324",
+             "name": "Head",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              0,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t321",
+               "name": "ACTION",
+               "content": "ACTION",
+               "fontSize": 7.5,
+               "fill": "$muted",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "letterSpacing": 0.75,
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t322",
+               "name": "OWNER",
+               "content": "OWNER",
+               "fontSize": 7.5,
+               "fill": "$muted",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "letterSpacing": 0.75,
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t323",
+               "name": "DUE",
+               "content": "DUE",
+               "fontSize": 7.5,
+               "fill": "$muted",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "letterSpacing": 0.75,
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 70
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r325",
+             "name": "Head rule",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$ink"
+            },
+            {
+             "type": "frame",
+             "id": "f329",
+             "name": "Row 1",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              8,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t326",
+               "name": "Rename the two tools and regenerate the docs",
+               "content": "Rename the two tools and regenerate the docs",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t327",
+               "name": "Jean",
+               "content": "Jean",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t328",
+               "name": "16 Sep",
+               "content": "16 Sep",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 70
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r330",
+             "name": "Rule 1",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            },
+            {
+             "type": "frame",
+             "id": "f334",
+             "name": "Row 2",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              8,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t331",
+               "name": "Confirm the disclaimer wording with legal",
+               "content": "Confirm the disclaimer wording with legal",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t332",
+               "name": "Noah",
+               "content": "Noah",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t333",
+               "name": "19 Sep",
+               "content": "19 Sep",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 70
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r335",
+             "name": "Rule 2",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            },
+            {
+             "type": "frame",
+             "id": "f339",
+             "name": "Row 3",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              8,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t336",
+               "name": "Send the three-chain demo recording to the DAO channel",
+               "content": "Send the three-chain demo recording to the DAO channel",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t337",
+               "name": "Léa",
+               "content": "Léa",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t338",
+               "name": "13 Sep",
+               "content": "13 Sep",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 70
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r340",
+             "name": "Rule 3",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            },
+            {
+             "type": "frame",
+             "id": "f344",
+             "name": "Row 4",
+             "layout": "horizontal",
+             "gap": 12,
+             "padding": [
+              8,
+              12,
+              8,
+              0
+             ],
+             "width": "fill_container",
+             "children": [
+              {
+               "type": "text",
+               "id": "t341",
+               "name": "Draft the October plan for the report",
+               "content": "Draft the October plan for the report",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": "fill_container"
+              },
+              {
+               "type": "text",
+               "id": "t342",
+               "name": "Jean",
+               "content": "Jean",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 110
+              },
+              {
+               "type": "text",
+               "id": "t343",
+               "name": "26 Sep",
+               "content": "26 Sep",
+               "fontSize": 10,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4,
+               "textGrowth": "fixed-width",
+               "width": 70
+              }
+             ]
+            },
+            {
+             "type": "rectangle",
+             "id": "r345",
+             "name": "Rule 4",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$hair"
+            }
+           ]
+          }
+         ],
+         "gap": 14
+        }
+       ]
+      },
+      {
+       "type": "frame",
+       "id": "f360",
+       "name": "Next",
+       "layout": "horizontal",
+       "width": "fill_container",
+       "alignItems": "start",
+       "children": [
+        {
+         "type": "frame",
+         "id": "f359",
+         "name": "Margin",
+         "layout": "vertical",
+         "gap": 8,
+         "width": "$column",
+         "padding": [
+          0,
+          32,
+          0,
+          0
+         ],
+         "children": [
+          {
+           "type": "text",
+           "id": "t357",
+           "name": "Tag",
+           "content": "NEXT",
+           "fontSize": 7.5,
+           "fill": "$muted",
+           "fontFamily": "$sans",
+           "fontWeight": "500",
+           "letterSpacing": 0.75,
+           "lineHeight": 1.3,
+           "textGrowth": "fixed-width",
+           "width": 140
+          }
+         ]
+        },
+        {
+         "type": "frame",
+         "id": "f358",
+         "name": "Main",
+         "layout": "vertical",
+         "width": "fill_container",
+         "children": [
+          {
+           "type": "text",
+           "id": "t351",
+           "name": "Body",
+           "content": "Week 38 adds the governance tools; the demo runs the same three questions on the three chains.",
+           "fontSize": 11,
+           "fill": "$ink",
+           "fontFamily": "$sans",
+           "fontWeight": "400",
+           "lineHeight": 1.6,
+           "textGrowth": "fixed-width",
+           "width": 400
+          },
+          {
+           "type": "frame",
+           "id": "f356",
+           "name": "Next meeting",
+           "layout": "vertical",
+           "width": 400,
+           "children": [
+            {
+             "type": "rectangle",
+             "id": "r352",
+             "name": "Rule",
+             "width": "fill_container",
+             "height": 1,
+             "fill": "$ink"
+            },
+            {
+             "type": "frame",
+             "id": "f355",
+             "name": "Pair",
+             "layout": "horizontal",
+             "gap": 8,
+             "alignItems": "center",
+             "padding": [
+              12,
+              0,
+              0,
+              0
+             ],
+             "children": [
+              {
+               "type": "text",
+               "id": "t353",
+               "name": "K",
+               "content": "NEXT MEETING",
+               "fontSize": 7.5,
+               "fill": "$muted",
+               "fontFamily": "$sans",
+               "fontWeight": "500",
+               "letterSpacing": 0.75,
+               "lineHeight": 1.3
+              },
+              {
+               "type": "text",
+               "id": "t354",
+               "name": "V",
+               "content": "19 September 2026, 10:00, Google Meet",
+               "fontSize": 10.5,
+               "fill": "$ink",
+               "fontFamily": "$sans",
+               "fontWeight": "400",
+               "lineHeight": 1.4
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "gap": 14
+        }
+       ]
+      }
+     ],
+     "x": 72,
+     "y": 330
+    },
+    {
+     "type": "frame",
+     "id": "f371",
+     "name": "Foot",
+     "layout": "horizontal",
+     "justifyContent": "space_between",
+     "width": 650,
+     "children": [
+      {
+       "type": "text",
+       "id": "t369",
+       "name": "Meta",
+       "content": "COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      },
+      {
+       "type": "text",
+       "id": "t370",
+       "name": "Page",
+       "content": "01 / 01",
+       "fontSize": 7.5,
+       "fill": "$muted",
+       "fontFamily": "$sans",
+       "fontWeight": "500",
+       "letterSpacing": 0.75,
+       "lineHeight": 1.3
+      }
+     ],
+     "x": 72,
+     "y": 1069
+    }
+   ]
+  }
+ ]
+}

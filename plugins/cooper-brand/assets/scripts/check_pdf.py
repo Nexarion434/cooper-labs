@@ -144,6 +144,13 @@ def check_source(html_path, pdf_path, problems, notes):
         nums = [strip(x) for x in re.findall(r'<div class="pagehead__num">(.*?)</div>', src, re.S)]
         foots = [strip(x) for x in re.findall(r'<div class="pagefoot__page">(.*?)</div>', src, re.S)]
     total = len(sheets)
+    if not deck and not confs and not nums:          # a sheet format (fact sheet, note, quote): no cover, footers only
+        if len(set(heads)) > 1:
+            problems.append(f"running heads differ: {sorted(set(heads))}")
+        for i, f in enumerate(foots, 1):
+            if f != f"{i:02d} / {total:02d}":
+                problems.append(f"footer '{f}' should read {i:02d} / {total:02d}")
+        return total
     versions = set()
     for s in confs + heads:
         m = re.search(r"\bv\d+\.\d+\b", s)

@@ -9,8 +9,8 @@ description: >
   the internal document, one block per slide, delivered as a PDF and as PNG
   per slide.
 metadata:
-  version: "0.4.1"
-  source: "cooper-brand 0.4.1 — the parallel-brand deck with the Cooper Labs identity"
+  version: "0.5.0"
+  source: "cooper-brand 0.5.0 — the parallel-brand deck with the Cooper Labs identity"
 ---
 
 # Cooper Labs — deck

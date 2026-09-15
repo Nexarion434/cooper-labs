@@ -585,6 +585,222 @@
      "top": -5.6
     }
    }
+  },
+  {
+   "id": "07",
+   "file": "renders/07.jpg",
+   "name": "block-orange-right",
+   "ground": "light",
+   "desc": "The block in orange, small, turned to the right on a light dotted ground; made with render_block.py",
+   "busy": "centre",
+   "subject": {
+    "x": 37,
+    "y": 34,
+    "w": 27,
+    "h": 34,
+    "what": "the block"
+   },
+   "focus": [
+    50,
+    50
+   ],
+   "zoom": 1.0,
+   "used_by": [],
+   "made_with": {
+    "script": "render_block.py",
+    "material": "orange",
+    "ground": "grey",
+    "effect": "dots:14",
+    "yaw": 30.0,
+    "pitch": 18.0,
+    "roll": -4,
+    "zoom": 0.6,
+    "fov": 28,
+    "dx": 0.0,
+    "dy": 0.0
+   },
+   "frames": {
+    "1200x675": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    },
+    "1200x630": {
+     "w": 100.0,
+     "h": 119.1,
+     "left": -0.0,
+     "top": -9.5
+    },
+    "1500x500": {
+     "w": 100.0,
+     "h": 187.6,
+     "left": -0.0,
+     "top": -43.8
+    },
+    "2000x800": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2400x1200": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1200x627": {
+     "w": 100.0,
+     "h": 119.7,
+     "left": -0.0,
+     "top": -9.8
+    },
+    "1080x1080": {
+     "w": 159.9,
+     "h": 100.0,
+     "left": -30.0,
+     "top": -0.0
+    },
+    "1080x1920": {
+     "w": 284.4,
+     "h": 100.0,
+     "left": -92.2,
+     "top": -0.0
+    },
+    "1600x400": {
+     "w": 100.0,
+     "h": 250.1,
+     "left": -0.0,
+     "top": -75.0
+    },
+    "600x300": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1500x600": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2560x1440": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    }
+   }
+  },
+  {
+   "id": "08",
+   "file": "renders/08.jpg",
+   "name": "halftone-block",
+   "ground": "light",
+   "desc": "The block in halftone dots, front view, fading to white; made with render_block.py",
+   "busy": "all",
+   "subject": {
+    "x": 17,
+    "y": 13,
+    "w": 65,
+    "h": 74,
+    "what": "the block"
+   },
+   "focus": [
+    50,
+    50
+   ],
+   "zoom": 1.0,
+   "used_by": [],
+   "made_with": {
+    "script": "render_block.py",
+    "material": "ink",
+    "ground": "white",
+    "effect": "soft:34,halftone:11",
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0,
+    "zoom": 1.5,
+    "fov": 28,
+    "dx": 0.0,
+    "dy": 0.0
+   },
+   "frames": {
+    "1200x675": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    },
+    "1200x630": {
+     "w": 100.0,
+     "h": 119.1,
+     "left": -0.0,
+     "top": -9.5
+    },
+    "1500x500": {
+     "w": 100.0,
+     "h": 187.6,
+     "left": -0.0,
+     "top": -43.8
+    },
+    "2000x800": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2400x1200": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1200x627": {
+     "w": 100.0,
+     "h": 119.7,
+     "left": -0.0,
+     "top": -9.8
+    },
+    "1080x1080": {
+     "w": 159.9,
+     "h": 100.0,
+     "left": -30.0,
+     "top": -0.0
+    },
+    "1080x1920": {
+     "w": 284.4,
+     "h": 100.0,
+     "left": -92.2,
+     "top": -0.0
+    },
+    "1600x400": {
+     "w": 100.0,
+     "h": 250.1,
+     "left": -0.0,
+     "top": -75.0
+    },
+    "600x300": {
+     "w": 100.0,
+     "h": 125.0,
+     "left": -0.0,
+     "top": -12.5
+    },
+    "1500x600": {
+     "w": 100.0,
+     "h": 156.3,
+     "left": -0.0,
+     "top": -28.2
+    },
+    "2560x1440": {
+     "w": 100.0,
+     "h": 111.1,
+     "left": -0.0,
+     "top": -5.6
+    }
+   }
   }
  ]
 }
