@@ -1,5 +1,50 @@
 # Changelog
 
+## 0.3.0 · 15 Sep 2026
+
+The documents on the two directions Nicolas picked on the design canvas
+of 14 September: the **poster cover** (direction B) and the **block
+interior** (direction C). Same engine, same descriptions, same checks;
+`tools/doc.css` rewritten.
+
+### The poster (cover, back cover, statement, title and closing slides)
+- A white page; the halftone at 55% fading to white behind the title
+  (`cover: "02"`, now the default of the template and the deck), or a
+  render in the top 60%; `cover: "dark"` on ink with the orange mark.
+- Everything centred: the posts' condensed uppercase kicker at −0.06 em,
+  the title in PP Eiko 92 at −0.07 em (the posts' tracking), the
+  standfirst, the mark alone; the meta as one line at the bottom. The
+  back cover and the closing slide mirror it on ink; the colophon's
+  "This document" cell is one line (`Proposal · v0.1 · 14 Sep 2026`).
+
+### The block (every section page, the deck slides, the fact sheet)
+- Ink rules under the running head and over the footer. The section
+  label is a **box**: an ink cell with the white mark, then the label in
+  an outline. A prose block splits heading left, body right on a
+  hairline (`:has()`).
+- **Ruled cells** sharing 1 px `line` borders for everything structured:
+  bullets (numbered by a counter), tables (head on paper), the two
+  columns, the matrix, the glossary, the checklist and sign-off, the
+  contact strip, the divider's list; ruled boxes for the timeline and the
+  chart; the plate in an ink frame with an ink caption box.
+- **Tiles** for the figures, 150 high, the key at the top and the number
+  in PP Eiko 56 at the bottom, **the first tile orange**. The
+  recommendation is the **band**: an orange cell with the mark, then the
+  ink panel. The code is an ink panel. The divider number sits in an
+  orange block; the step number in an ink box.
+- Docs: `tokens.md` rewritten again; the four document skills updated.
+
+### Design decisions (0.3.0)
+13. **The cover is a post.** Same kicker, title tracking, mark and
+    halftone as the Figma posts, so a document and the feed read as one
+    thing. The site's cards (0.2.0) are gone from the documents.
+14. **The first figure is the one that matters**: it takes the orange
+    tile. Write the figures in that order.
+15. **The label box carries the mark**, not a number: sections are not
+    numbered inside a page (the Contents page numbers them).
+16. **No shadows, no radius**: the block is square and ruled; nothing is
+    rasterised in the PDF any more.
+
 ## 0.2.0 · 14 Sep 2026
 
 The documents redesigned on the language of cooperlabs.xyz, so that a

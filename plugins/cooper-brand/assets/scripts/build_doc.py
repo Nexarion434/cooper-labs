@@ -18,7 +18,7 @@ The description (JSON, or a Python dict passed to `build()`):
     title          "Ship the MCP server *before the CLI.*"   (*...* is the accent, set in orange)
     standfirst     one sentence; kicker (optional, default "<Class> · <subject>")
     version        "v0.1"; classification Confidential | Internal; status Draft | Final
-    date           "2026-09-09"; owner "Noah, Cooper Labs"; cover "01" (one of the renders in the top 72% under a fade, ink type; "02" lays the halftone at 60%) | "dark" (plain ink ground, white type, no picture)
+    date           "2026-09-09"; owner "Noah, Cooper Labs"; cover "02" (the halftone at 55% over the poster cover, the default; another number puts that render in the top 60%) | "dark" (ink, white type, the orange mark)
     contents       "auto" (default) | true | false; contents_intro (the "How to read" text, optional)
     versions       [["v0.1", "2026-09-09", "First draft"], ...]   -> the Versions table on the Contents page
     pages          [{"name": "Analysis", "blocks": [ ... ]}]
@@ -143,7 +143,7 @@ def cover(d, A):
 
 def back(d, A):
     m = "".join(f'<div><div class="k">{E(k)}</div><div class="v">{E(v)}</div></div>' for k, v in brand.LINKS)
-    m += f'<div><div class="k">This document</div><div class="v">{E(d["class_label"])}<br>{E(d["version"])} · {E(short_date(d["date"]))}</div></div>'
+    m += f'<div><div class="k">This document</div><div class="v">{E(d["class_label"])} · {E(d["version"])} · {E(short_date(d["date"]))}</div></div>'
     return f'''<!-- ======================= BACK COVER ======================= -->
 <section class="cover cover--dark back">
   <div class="back__glow"></div>

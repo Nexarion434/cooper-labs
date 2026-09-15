@@ -19,7 +19,7 @@ INTERNAL_DOC = {
     "class": "proposal", "subject": "Parallel MCP server",
     "title": "Ship the MCP server *before the CLI.*",
     "standfirst": "Proposes a six-week build of an MCP server that exposes Parallel's positions, rates and governance to AI agents, read-only, for a start on 28 September 2026.",
-    "version": "v0.1", "classification": "Confidential", "status": "Draft", "date": "2026-09-14", "owner": "Jean, Cooper Labs", "cover": "01",
+    "version": "v0.1", "classification": "Confidential", "status": "Draft", "date": "2026-09-14", "owner": "Jean, Cooper Labs", "cover": "02",
     "contents": "auto",
     "contents_intro": "Read the summary and the recommendation first; they stand alone. Context, options and the appendices are the evidence, kept for whoever needs to check a figure or a date. Every table names its source in the margin.",
     "versions": [["v0.1", "2026-09-14", "First draft for the Parallel team"], ["v0.2", "TBD", "Scope and dates confirmed with Noah"], ["v1.0", "TBD", "Signed statement of work"]],
@@ -214,7 +214,7 @@ PAGE_STYLES = {
                                   {"name": "Questions from agents", "values": [12, 15, 19, 22, 27, 31, 38, 44, 51, 57, 66, 74]}]}},
             {"tag": "Accuracy", "toc": False, "heading": "Answers checked correct, share",
              "chart": {"type": "line", "labels": [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], "values": [71, 70, 68, 66, 63, 61, 58, 55, 52, 50, 47, 44], "max": 100, "unit": "%", "last": "44%"}},
-            {"figures": [["74", "Agent questions, week 35"], ["×6", "Since week 24"], ["44%", "Answered correctly"], ["-27 pts", "Accuracy since week 24"]]}]},
+            {"figures": [["74", "Agent questions, week 35"], ["×6", "Since week 24"], ["44%", "Answered correctly"], ["−27", "Points of accuracy since week 24"]]}]},
         {"name": "I · Matrix", "blocks": [
             {"tag": "Risks", "toc": "I · Matrix", "source": "Assessed by Cooper Labs on 12 Sep 2026; revisited at each phase gate.", "heading": "Likelihood *against impact*"},
             {"matrix": {"cols": ["Low impact", "Medium impact", "High impact"],
@@ -362,7 +362,7 @@ DECK = {
     "title": "Ship the MCP server *before the CLI.*",
     "standfirst": "Proposes a six-week, read-only MCP server for Parallel's positions, rates and governance, for a start on 28 September.",
     "kicker": "Proposal · Parallel MCP server · Parallel team, 14 September 2026",
-    "version": "v0.1", "classification": "Confidential", "status": "Draft", "date": "2026-09-14", "owner": "Jean, Cooper Labs", "render": "01",
+    "version": "v0.1", "classification": "Confidential", "status": "Draft", "date": "2026-09-14", "owner": "Jean, Cooper Labs", "render": "02",
     "slides": [
         {"tag": "Summary", "heading": {"text": "One server, *every agent.*", "suffix": "(six weeks)"},
          "body": "Agents already answer questions about Parallel from stale documentation. An MCP server gives every assistant the same read-only view of the protocol, straight from the chain and the indexer. It holds no keys, signs nothing, and the CLI the team asked for is a thin client of it.",

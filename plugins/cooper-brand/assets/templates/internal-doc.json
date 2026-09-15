@@ -8,7 +8,7 @@
  "status": "Draft",
  "date": "2026-09-14",
  "owner": "Jean, Cooper Labs",
- "cover": "01",
+ "cover": "02",
  "contents": "auto",
  "contents_intro": "Read the summary and the statement first; they stand alone. Part one is the context, part two the build and its plan, part three the decision and the risks; the appendices are for the engineering team. Every table names its source in the margin, and every part opens on a divider.",
  "versions": [
@@ -334,8 +334,8 @@
        "Answered correctly"
       ],
       [
-       "-27 pts",
-       "Accuracy since week 24"
+       "−27",
+       "Points of accuracy since week 24"
       ]
      ]
     }

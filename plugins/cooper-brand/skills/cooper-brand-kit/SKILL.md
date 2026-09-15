@@ -8,7 +8,7 @@ description: >
   brand. It is the foundation loaded by cooper-internal-document,
   cooper-deck, cooper-fact-sheet and cooper-social.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   source: "Figma file Brand Identity (S5Lg16aM47EGiGOYCDxl9a), page Twitter; cooperlabs.xyz"
 ---
 
@@ -18,10 +18,11 @@ Cooper Labs is a product studio for Web3 teams: design and engineering in one
 team, from the brief to the stores. Tagline: **"We turn Web3 ideas into
 products people use."** The identity is white, grey and orange: one display
 face with a single weight, a condensed sans for everything else, a black
-square-and-crescent mark ("the block"), the orange dash, white cards on a
-light grey ground, and six renders of that block in white 3D, halftone,
-pixels and orange. Documents borrow a render for the cover and the site's
-cards for their structure.
+square-and-crescent mark ("the block"), and six renders of that block in
+white 3D, halftone, pixels and orange. Documents open like a post (the
+poster cover: the halftone, the title centred and huge, the mark alone)
+and read like a spec sheet inside (the block interior: a ruled grid,
+labels in boxes, orange tiles and bands).
 
 Source of truth: the Figma file *Brand Identity* (page *Twitter*: the posts,
 the X covers, the social preview, the logos, the palette) and cooperlabs.xyz
@@ -93,24 +94,31 @@ is `<em>` (rendered upright and orange by the CSS); in a description it is
 `references/voice.md`). Social posts keep the capitalisation of the Figma
 file, with no accent unless asked.
 
-Display type is tracked tight and set close, as on the site: line-height
-0.9 to 1.0 and −0.04 to −0.05 em on the cover title, the headings, the
-figures and the big numbers, **−0.09 em on the social titles and kickers**
-(the Figma value). Labels are UPPERCASE Roboto Condensed 500 with 0.1 em
-letter-spacing.
+Display type is tracked tight and set close: line-height 0.9 to 1.0,
+−0.07 em on the poster covers (the posts' value), −0.045 to −0.06 em on
+the headings, the figures and the big numbers, **−0.09 em on the social
+titles and kickers** (the Figma value). Labels are UPPERCASE Roboto
+Condensed 500 with 0.1 em letter-spacing.
 
 ## Geometry
 
 A4 at 96 dpi, 794 × 1123. Margins 40 top, 56 sides, 36 bottom. Measure 682.
-The page is the language of cooperlabs.xyz: a light grey ground, **white
-cards with a 12 radius and a soft shadow** for everything structured
-(figures, tables, bullets, the two columns, the timeline, the matrix cells,
-the checklist, the contact strip), the **dark card** (`ink`) for the
-recommendation and the code, and prose straight on the page. No margin
-column and no ink rules: a section is a row with the **orange dash** (19 ×
-5, radius 39) and its label, the source at the right, then the content.
-Blocks stack with a 30 gap. Radius 12 on cards, 16 on a deck card or a
-plate, 39 on the dash and the pills.
+Two languages, chosen on the design canvas of 14 September 2026:
+
+- **The poster** for the cover, the back cover, the statement page and the
+  title and closing slides: a white (or ink) page, the halftone at 55%
+  fading out, everything centred, the title in PP Eiko at −0.07 em, the
+  mark alone under the standfirst, the meta as one line at the bottom.
+- **The block** inside: a light grey page ruled like a spec sheet. The
+  running head and the footer sit on 1 px ink rules; a section opens with
+  a **boxed label** (an ink box with the white mark, then the label in an
+  outline), the source at the right; a prose block splits heading left,
+  body right on a hairline; everything structured is **ruled cells** (1 px
+  `line`, white) sharing borders: tables, bullets, the two columns, the
+  matrix, the glossary, the checklist, the contact strip. Figures are
+  **tiles**, the first one orange; the recommendation is the **band**, an
+  orange cell with the mark and an ink panel; the code is an ink panel.
+  Radius 0 everywhere. Blocks stack with a 28 gap.
 
 ## The logo
 
@@ -136,12 +144,12 @@ a render **by its number**; `assets/img/catalogue.json` describes each one
 not sit under text) and carries a default framing per social size (`frames`,
 read and recomputed for any size by `assets/scripts/frame.py`).
 
-On a document a render appears **only on the cover**, in the top 72% under
-a fade to `paper` so the masthead and its meta card sit on a plain ground;
-`cover: "02"` lays the halftone at 60% as on the posts; `cover: "dark"`
-gives the typographic cover (plain `ink`, white type, no picture). Inside a
-document an image must carry information; the plate page style is the one
-exception.
+On a document a render appears **only on the cover**: `cover: "02"` lays
+the halftone at 55% over the whole page, fading to white behind the
+title, as on the posts (the default); another number puts that render in
+the top 60% under the fade; `cover: "dark"` gives the ink cover with the
+orange mark. Inside a document an image must carry information; the plate
+page style is the one exception.
 
 Nothing outside the six goes on Cooper Labs material: no stock, no generated
 image, no photograph. New renders come from the 3D file and enter the

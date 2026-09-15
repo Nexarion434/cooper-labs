@@ -8,16 +8,16 @@ description: >
   client or a figure set has to fit on one A4 page for someone outside the
   team. One page, recto, delivered as a PDF.
 metadata:
-  version: "0.2.0"
-  source: "cooper-brand 0.2.0 — the parallel-brand fact sheet with the Cooper Labs identity"
+  version: "0.3.0"
+  source: "cooper-brand 0.3.0 — the parallel-brand fact sheet with the Cooper Labs identity"
 ---
 
 # Cooper Labs — fact sheet
 
-One A4 page, no cover: the wordmark and the running head at the top, the
-dash and a label, a title with its orange phrase, a standfirst, the figures
-card, two column cards, an optional table card, the contact card, the
-footer. The
+One A4 page, no cover, on the block grid: the wordmark and the running
+head on an ink rule, a boxed label, a title with its orange phrase, a
+standfirst, the figure tiles (the first one orange), two ruled columns, an
+optional ruled table, the contact cells, the footer. The
 blocks are those of the internal document at smaller sizes (title 44,
 headings 18, text 10), so a fact sheet and a proposal read as the same
 family. **English throughout.** Load `cooper-brand-kit` first if the tokens
@@ -58,17 +58,17 @@ the title) are computed from the subject and the date unless given.
 
 | Item | Value | CSS |
 |---|---|---|
-| Running head | wordmark in ink, 18 high, left; label 8 `FACT SHEET · SUBJECT · MONTH YYYY` right; no rule | `.page--fact .pagehead`, `.pagehead__logo` |
-| Label | the dash and the section label, 30 under the head | `.tag` |
-| Title | PP Eiko 500, 46 / .95, max 600, one orange phrase, 14 under the label | `.fact__title` |
+| Running head | wordmark in ink, 18 high, left; label 8 `FACT SHEET · SUBJECT · MONTH YYYY` right; on an ink rule | `.page--fact .pagehead`, `.pagehead__logo` |
+| Label | the boxed label, 28 under the head | `.tag` |
+| Title | PP Eiko 500, 46 / .92, max 600, one orange phrase, 14 under the label | `.fact__title` |
 | Standfirst | Roboto Condensed 12 / 1.5 `ink-soft`, max 520 | `.fact__stand` |
-| Figures | the figures card, numbers at 34 | `.fact .figure__n` |
-| Columns | two white cards, gap 12; heading 19, bullets as a list on hairlines, body at 10 | `.fact__cols` |
-| Table | the table card, with its heading | `.table` |
-| Contact | a card of four cells: key label 8, value 10.5 | `.fact__contact` |
+| Figures | the tiles at 110 high, numbers at 40, the first one orange | `.fact .figure` |
+| Columns | two ruled cells sharing a border; heading 20, bullets as a list on hairlines, body at 10 | `.fact__cols` |
+| Table | the ruled table, with its heading | `.table` |
+| Contact | four ruled cells: key label 8, value 10.5 | `.fact__contact` |
 | Footer | `COOPER LABS · PUBLIC · COOPERLABS.XYZ · MONTH YYYY` and `01 / 01` | `.pagefoot` |
 
-Stack: 22 between the groups, 30 under the running head. Everything must fit
+Stack: 22 between the groups, 28 under the running head. Everything must fit
 above the footer: a figures row, two columns of three bullets and a
 four-row table do; a longer table means a second sheet, not a smaller type.
 

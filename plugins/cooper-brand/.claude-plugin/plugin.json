@@ -1,6 +1,6 @@
 {
   "name": "cooper-brand",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Cooper Labs' brand kit for documents and social: the A4 internal-document template with sixteen page styles (proposal, case study, spec, post-mortem, memo, guide), the 16:9 deck, the A4 fact sheet, the social cards from the Figma file (post on the render or the halftone, partner card, X cover, social preview) in eleven sizes, the banners, the thread cards, the animated MP4 and the six brand renders by number. Built from a JSON description, rendered with Chromium, checked before it goes out.",
   "author": {
     "name": "Cooper Labs"

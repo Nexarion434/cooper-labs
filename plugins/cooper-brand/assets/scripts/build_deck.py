@@ -69,7 +69,7 @@ def title_slide(d, A):
 
 def closing_slide(d, A, n, total):
     m = "".join(f'<div><div class="k">{E(k)}</div><div class="v">{E(v)}</div></div>' for k, v in brand.LINKS)
-    m += f'<div><div class="k">This deck</div><div class="v">{E(d["class_label"])}<br>{E(d["version"])} · {E(short_date(d["date"]))}</div></div>'
+    m += f'<div><div class="k">This deck</div><div class="v">{E(d["class_label"])} · {E(d["version"])} · {E(short_date(d["date"]))}</div></div>'
     return f'''<!-- ========================= {n:02d} · CLOSING ========================= -->
 <section class="canvas canvas--deck deck--back cover--dark" data-name="{E(d['stem'])}-{n:02d}-closing">
   <div class="back__glow"></div>
