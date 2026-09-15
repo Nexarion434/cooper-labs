@@ -11,7 +11,7 @@
  "owner": "Nicolas, Design",
  "cover": "02",
  "contents": true,
- "contents_intro": "Every page keeps the running head, the footer, the 682 measure and the type scale. Five of the sixteen bend a rule of the kit (a dark ground inside, no margin column, a tinted cell, a render inside): keep those for the opening page of a part or a single appendix, never in the flow of an argument.",
+ "contents_intro": "Every page keeps the running head, the footer, the 650 measure and the type scale. Five of the sixteen bend a rule of the kit (a dark ground inside, no margin column, a grey cell, a render inside): keep those for the opening page of a part or a single appendix, never in the flow of an argument.",
  "versions": [
   [
    "v0.1",
@@ -25,6 +25,7 @@
    "toc": "A · Section divider, paper",
    "style": "divider",
    "n": "02",
+   "render": "04",
    "kicker": "Part two · Options",
    "title": "Four ways *to open the door.*",
    "standfirst": "Four options, one estimate each, and the two figures the Parallel team will be asked to remember.",
@@ -88,6 +89,8 @@
    "style": "hero",
    "n": "6",
    "unit": "weeks",
+   "render": "06",
+   "caption": "Fig. · The block, dithered; render 06 as a plate.",
    "kicker": "From the brief to the public beta",
    "body": "Six weeks, six Friday demos. The server answers on Base at the end of week one and on three chains at the end of week two; the CLI is derived from it in week five and the public beta ships with the Seventeenth Parallel Report on 6 November.",
    "figures": [
@@ -646,7 +649,7 @@
     {
      "tag": "Reading",
      "toc": false,
-     "body": "One cell is tinted: the risk that is both likely and high impact, and the only one still open. Its closure, the approved disclaimer, is one of the three things asked of Parallel."
+     "body": "One cell is grey: the risk that is both likely and high impact, and the only one still open. Its closure, the approved disclaimer, is one of the three things asked of Parallel."
     }
    ]
   },
@@ -654,8 +657,8 @@
    "name": "J · Plate",
    "toc": "J · Render inside",
    "style": "plate",
-   "render": "03",
-   "caption": "Render 03 · The block, as used on the launch post",
+   "render": "02",
+   "caption": "Render 02 · The halftone, as used on the launch post",
    "blocks": [
     {
      "tag": "Context",
@@ -962,7 +965,7 @@
     {
      "tag": "Reading",
      "toc": false,
-     "body": "Hairline boxes, radius zero, one orange dot at the head of every arrow. The build_tx box is drawn in the lighter hairline because it sits outside the read path."
+     "body": "Hairline boxes, radius zero, one ink square at the head of every arrow. The build_tx box is drawn in the lighter hairline because it sits outside the read path."
     }
    ]
   },

@@ -1,5 +1,58 @@
 # Changelog
 
+## 0.4.0 · 15 Sep 2026
+
+The documents rebuilt on **Object**, direction 1 of the second design
+canvas of 15 September ("Cooper Labs Document Directions, Round Two":
+Object, Broadsheet, Orange, Ink, Editorial), chosen by Nicolas. The
+poster-and-block system of 0.3 is gone. Same engine, same descriptions
+(three new optional keys), same checks; `tools/doc.css` rewritten.
+
+### The idea
+The block is an object and the document is its catalogue. The six renders
+do the work; the type is small and precise; the page is white with wide
+margins and hairlines. No box, no band, no tile, no big number in colour,
+no orange in the type: the orange lives in the renders.
+
+### The pages
+- **Cover**: the render as a plate across the top 620 px (`cover: "01"`
+  is the default), the wordmark on it; under it the kicker, the title at
+  46, the standfirst; the meta as key-value pairs at the bottom.
+- **Section page**: margins 72, measure 650; the running head and the
+  footer as 7.5 px muted labels without rules; each block a row of a grid,
+  the **margin column** (200: the label, the source, a specimen) beside
+  the reading column; a block without a label spans the measure. Headings
+  24, body 11 on 400, bullets as terms in a row, tables on hairlines with
+  one ink line under the head, the figures as one strip on an ink line,
+  the recommendation as a title and a paragraph.
+- **Back cover**: a render across the page (`back: "05"`), the tagline at
+  the bottom left, the colophon as pairs.
+- **Dividers** fill the page with a render (`render` on the page; 04 or
+  05 for a full page); the number is kept for the Contents page and no
+  longer shown. A **hero** page takes a plate above the number
+  (`render`, `caption`); a block takes a **specimen** in its margin
+  (`specimen`, `caption`). Statement, steps, timeline, matrix, glossary,
+  checklist, code and the rest follow (see `tokens.md`).
+- **Deck**: the plate on the left half of the title slide, the margin
+  column beside the block, no rules; the closing slide a render across.
+- **Fact sheet**: an optional plate at the top (`render`), the same
+  blocks at smaller sizes.
+- Docs: `tokens.md` rewritten; the four document skills and the brand kit
+  updated; `build_doc.py`, `build_deck.py`, `build_fact_sheet.py` take
+  the new keys.
+
+### Design decisions (0.4.0)
+18. **The renders carry the identity, the type stays quiet.** One render
+    at most per page; 01 and 02 read as texture, 03 to 06 show the block.
+19. **No colour in the type.** The `*phrase*` convention stays in the
+    descriptions (portable, and the social cards use it) and renders in
+    ink in the documents.
+20. **The margin column is the structure.** Labels, sources and specimens
+    live there; nothing is boxed. A block without a label spans the
+    measure, which is how the figures strip and the tables breathe.
+21. **A divider is a picture.** The part number is data for the Contents
+    page, not a display element.
+
 ## 0.3.1 · 15 Sep 2026
 
 No big number in an orange box any more (Nicolas, on the 0.3.0 pages).

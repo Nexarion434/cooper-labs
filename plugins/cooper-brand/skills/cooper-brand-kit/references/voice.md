@@ -9,8 +9,9 @@ every project, from the brief to the stores, working software shown every
 Friday. The studio's material speaks as a builder speaks: what was made, for
 whom, in how many weeks, and what the numbers said afterwards.
 
-Documents keep the render for the cover. Inside, the voice is precise, calm
-and specific; the orange phrase carries the one claim of a headline.
+Documents let the renders carry the identity (the cover plate, a part
+divider, the back cover, a specimen). Inside, the voice is precise, calm
+and specific; a headline carries one claim, in ink.
 
 ## Tone
 
@@ -41,21 +42,22 @@ and specific; the orange phrase carries the one claim of a headline.
   demo is "the Friday demo".
 - Tickets are `ATL-140`, `PAR-12`, `DES-122`, as in Linear.
 
-## The orange phrase
+## The marked phrase
 
-PP Eiko exists here in one weight and no italic, so the brand signature is
-a **phrase in orange**: on the cover title, on sub-headings, on the
-tagline, on a statement page, on a thread card:
+PP Eiko exists here in one weight and no italic. A headline still carries
+one claim, and the descriptions mark it with `*...*` (`<em>` in HTML):
 
 - one phrase per headline, two or three words, never a single noun and never
   the whole line;
 - the verb or the qualifier, the part that carries the claim: "Ship the MCP
   Server *Before the CLI.*", "One Server, *Every Agent.*", "*Fifty-Two
   Minutes* on the Wrong RPC.";
-- never on kickers, labels, meta lines, table heads or body copy;
-- in HTML, `<em>` inside `.cover__title`, `.heading`, `.back__tagline`,
-  `.statement__text`, `.thread__body`, `.banner__tag`, `.post__title`; the
-  CSS renders it upright and `accent`. In a description, `*...*`.
+- never on kickers, labels, meta lines, table heads or body copy.
+
+In the **documents** (0.4.0, the Object system) the mark renders in ink:
+the phrase is written for whoever reads the description and for a future
+system, not seen. On the **social cards** that ask for it (`.thread__body`,
+`.banner__tag`) the CSS renders it upright and `accent`.
 
 **Social posts are the exception**: the titles of the Figma file carry no
 accent ("2026 Roadmap / for Parallel published", "Seventeenth / Parallel

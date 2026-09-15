@@ -20,8 +20,9 @@ The description (JSON):
     standfirst     one sentence; kicker (optional, default "<Class> · <subject>")
     version        "v0.1"; classification Confidential | Internal | Public; status Draft | Final
     date           "2026-09-10"; owner "Noah, Protocol"
-    render         "01" (one of the six renders, full-bleed on the title slide, ink type) | "dark" (plain ink ground, white type)
-    closing        true (default): the dark closing slide with the tagline and the links
+    render         "01" (one of the six renders as the plate on the left half of the title slide, the default) | "dark" (plain ink ground, white type)
+    back           "05" (the render across the closing slide, the default) | "dark" (plain ink)
+    closing        true (default): the closing slide with the tagline and the links
     slides         [ ... ] one object per slide:
         {"tag": "Summary", "source": "...", "heading": "...", "body": "...", "bullets": [...], "table": {...}, "figures": [...], "reco": [...]}
             a content slide: one block, the keys of build_doc.py (or "main" for another order)
@@ -70,11 +71,14 @@ def title_slide(d, A):
 def closing_slide(d, A, n, total):
     m = "".join(f'<div><div class="k">{E(k)}</div><div class="v">{E(v)}</div></div>' for k, v in brand.LINKS)
     m += f'<div><div class="k">This deck</div><div class="v">{E(d["class_label"])} · {E(d["version"])} · {E(short_date(d["date"]))}</div></div>'
+    r = str(d.get("back", "05")).lower()
+    dark = r in ("dark", "none")
+    img = "" if dark else f'''  <div class="canvas__bg" style="background-image:url('{A}{brand.RENDERS}/{int(r):02d}.jpg')"></div>
+'''
     return f'''<!-- ========================= {n:02d} · CLOSING ========================= -->
-<section class="canvas canvas--deck deck--back cover--dark" data-name="{E(d['stem'])}-{n:02d}-closing">
-  <div class="back__glow"></div>
-  <div class="cover__top" style="left:72px;right:72px;top:56px">
-    <img class="cover__logo" src="{A}{brand.LOGO_W}" alt="{brand.NAME}" style="height:30px">
+<section class="canvas canvas--deck deck--back{" cover--dark" if dark else ""}" data-name="{E(d['stem'])}-{n:02d}-closing">
+{img}  <div class="cover__top" style="left:72px;right:72px;top:56px">
+    <img class="cover__logo" src="{A}{brand.LOGO_W if dark else brand.LOGO_B}" alt="{brand.NAME}" style="height:30px">
     <div class="cover__conf" style="font-size:12px">{E(d["classification"])} · {E(d["version"])}</div>
   </div>
   <div class="cover__bottom" style="left:72px;right:72px;bottom:56px">

@@ -7,17 +7,18 @@ description: >
   when turning a brief, a project or a decision into the branded A4 PDF.
   Covers the HTML to PDF build.
 metadata:
-  version: "0.3.1"
-  source: "cooper-brand 0.3.1 — the parallel-brand engine with the Cooper Labs identity"
+  version: "0.4.0"
+  source: "cooper-brand 0.4.0 — the parallel-brand engine with the Cooper Labs identity"
 ---
 
 # Cooper Labs — internal document
 
-One skeleton for every long document: a poster cover, as many section
-pages as the argument needs on the block grid, a poster back cover. A4 at
-96 dpi (794 × 1123): the cover reads like a post (the halftone, the title
-centred, the mark), the inside like a spec sheet (ruled cells, boxed
-labels, one orange figure, the orange band). **English throughout**, whatever language the request
+One skeleton for every long document: a cover with the render as a plate,
+as many section pages as the argument needs on the margin grid, a back
+cover with a render across it. A4 at 96 dpi (794 × 1123): the document is
+the **catalogue of the object** (the renders do the work, the type is
+small and precise, white page, wide margins, hairlines; no box, band or
+tile). **English throughout**, whatever language the request
 is in. Load `cooper-brand-kit` first if the tokens are not already in
 context.
 
@@ -67,9 +68,10 @@ python3 $S/render_pdf.py work.html CooperLabs-Proposal-Subject-v0.1.pdf --png re
 ```
 
 The description (`build_doc.py --example` prints one) carries `class`,
-`subject`, `title` with its `*orange phrase*`, `standfirst`, `version`,
-`classification`, `status`, `date` (ISO), `owner`, `cover` (`"01"` to
-`"06"`, or `"dark"`), `versions` (the rows of the Versions table) and
+`subject`, `title` (a `*phrase*` may mark the claim; it renders in ink),
+`standfirst`, `version`, `classification`, `status`, `date` (ISO), `owner`,
+`cover` (`"01"` to `"06"`, or `"dark"`), `back` (`"05"` default, or
+`"dark"`), `versions` (the rows of the Versions table) and
 `pages`, each a `name` and a list of blocks. A block is one row of the
 margin grid: `tag` and `source` in the margin, then `heading`, `body`,
 `bullets`, `table`, `figures`, `reco` in the reading column (or `main` as
@@ -91,41 +93,43 @@ on any inconsistency listed under *Before delivering*.
 
 ## Structure
 
-**Cover.** The poster: a white page, the halftone at 55% fading to white
-behind the title (`cover: "02"`, the default; another number puts that
-render in the top 60%; `cover: "dark"`: ink, white type, the orange mark).
-Wordmark top left, `CONFIDENTIAL · vX.X` (or `INTERNAL · vX.X`) top
-right. Centred: the kicker (the class and the subject, in the posts'
-condensed uppercase), the title in PP Eiko 92 at −0.07 em with one phrase
-in orange (the brand signature: the verb or the qualifier, two or three
-words), a standfirst that says **what the document decides and for whom**,
-the mark alone; at the bottom, the meta as one line (date · classification
-· status · owner) and the notice.
+**Cover.** The plate: the render across the top 620 px (`cover: "01"`,
+the white 3D, is the default; `"02"` the halftone; `"dark"`: plain ink,
+white type), the wordmark on it top left, `CONFIDENTIAL · vX.X` (or
+`INTERNAL · vX.X`) top right. Under the plate, at the left: the kicker (the
+class and the subject), the title in PP Eiko 46, a standfirst that says
+**what the document decides and for whom**; at the bottom, the meta as one
+row of key-value pairs (date, classification, status, owner) and the
+notice under it.
 
-**Section pages.** Running head on an ink rule: the mark and `CLASS ·
-SUBJECT · CLASSIFICATION · vX.X` left, page number right. Content is a
-stack of blocks with a 28 gap; each block is a label row, then the content:
+**Section pages.** Running head without a rule: the mark and `CLASS ·
+SUBJECT · CLASSIFICATION · vX.X` left, the page number right, both in the
+7.5 px muted label. Content is a stack of blocks with a 36 gap; each block
+is a row of the grid: the margin column (200 wide) then the reading
+column, and a block without a label spans the measure:
 
-| Block | Label row | Content | CSS |
+| Block | Margin column | Reading column | CSS |
 |---|---|---|---|
-| Section label | the boxed label: an ink box with the white mark, then the label in an outline | | `.tag` |
-| Source line | at the right of the label row, muted | | `.source` |
-| Sub-heading | | PP Eiko 30 at 0.95, one orange phrase when the heading makes a claim, optional muted suffix; with a body after it, the heading takes the left column and the body the right, on a hairline | `.heading` |
-| Body | | Roboto Condensed 10.5, max 560 | `.body` |
-| Bullets | | ruled cells sharing borders: a counter, the term in PP Eiko 16, the text | `.bullets` |
-| Table | | fully ruled: label head on paper, white cells; tabular cells for figures; one `tint` row allowed | `.table` |
-| Headline figures | | ruled cells: the key at the top, the number in PP Eiko 56 at the bottom, the first number orange | `.figures` |
-| Recommendation | | the band: an orange cell with the mark, then the ink panel with the title in white PP Eiko 22 and one or two paragraphs | `.reco` |
+| Section label | the label, 7.5 muted uppercase, at the top of the margin | | `.tag` |
+| Source line | under the label, 8 muted | | `.source` |
+| Specimen | `specimen: "03"`: a 140 × 140 crop of a render above the label, `caption` under it; on the summary block of a long document, nowhere else | | `.specimen` |
+| Sub-heading | | PP Eiko 24, optional muted suffix | `.heading` |
+| Body | | Roboto Condensed 11, max 400 | `.body` |
+| Bullets | | terms and texts in a row, nothing around them: the term in PP Eiko 13, the text 9.5 | `.bullets` |
+| Table | | head on an ink line, rows on hairlines, no vertical rules; tabular cells for figures; one grey row allowed | `.table` |
+| Headline figures | | one strip on an ink line: the number in PP Eiko 40, the key under it | `.figures` |
+| Recommendation | | a title in PP Eiko 18 and one or two paragraphs, nothing around them | `.reco` |
 
-The first figure is the one that matters: its number is orange. A
-block with figures alone has no label row. Sections are marked by the
-boxed label, not by numbered headings; inside a section the sub-heading
-marks the sub-part.
+The first figure is the one that matters: put it first. A block with
+figures alone has no label and spans the measure. Sections are marked by
+the label in the margin, not by numbered headings; inside a section the
+sub-heading marks the sub-part.
 
-**Back cover.** The poster on ink: the tagline centred with its orange
-phrase, the orange mark under it, the colophon as one line (the studio
-links, then `Class · vX.Y · D Mon YYYY`) and the notice. Keep it; it is
-what makes a printed copy read as finished.
+**Back cover.** A render across the page (`back: "05"`, the chromatic
+block, is the default; `"dark"` plain ink), the wordmark, the tagline in
+PP Eiko 40 at the bottom left, the colophon as key-value pairs (the studio
+links, then `This document`) and the notice. Keep it; it is what makes a
+printed copy read as finished.
 
 ## Page styles
 
@@ -137,22 +141,22 @@ one sentence on a statement page, its one number on a hero page.
 
 | Style | What it is for | In the description | Bends a rule |
 |---|---|---|---|
-| A · Divider | opens a part: the number bare at 180, kicker, title, standfirst, four ruled cells | page `style: divider` (`n`, `kicker`, `title`, `standfirst`, `list`) | |
-| B · Divider, dark | the same on the ink ground, for the decision part | `style: divider`, `dark: true` | dark ground inside |
-| C · Statement | the one sentence to remember, the poster: the mark, the sentence at 46 centred, one orange phrase | `style: statement` (`text`, `who`) | |
-| D · Hero figure | one number at 130, its unit in orange, a body and the tiles | `style: hero` (`n`, `unit`, `kicker`, `body`, `figures`) | |
-| E · Two columns | two ruled cells side by side, a boxed head, bullets as a list, a verdict at the bottom | block `cols` (`columns`: `head`, `bullets` or `body`, `verdict`) | |
-| F · Timeline | a ruled box: steps on an ink rule with orange squares, past steps in the light hairline, phases under | block `timeline` (`steps`, `phases`) | |
-| G · Data page | the ruled table across the whole measure, a foot line | page `style: wide` (`heading`, `table`, `foot`) | no margin column |
-| H · Chart | bar (two series, one soft) or line, inline SVG in a ruled box, a legend | block `chart` (`type`, `labels`, `series` or `values`, `max`, `unit`) | |
-| I · Matrix | likelihood against impact as a ruled grid, the hot cell in orange | block `matrix` (`cols`, `rows` with `key` and `cells`, `hot`) | a tinted cell, not a row |
-| J · Plate | one render across the measure in an ink frame, on the opening page of a part | page `style: plate` (`render`, `caption`, then `blocks`) | imagery inside |
-| K · Prose | a lede at 18, two columns of running text, a signature | page `style: prose` (`lede`, `body`, `signature`) | no margin column |
-| L · Steps | numbered steps, the number in an ink box at the left, a meta line | blocks with `step`, `heading`, `body`, `meta` | |
-| M · Glossary | terms as ruled cells in two columns, PP Eiko 15 | block `defs` | |
-| N · Flow | square white boxes on an ink stroke, an orange dot at every arrow head, a caption | block `flow` (`boxes`, `arrows`, `caption`, `height`) | |
-| O · Checklist | ruled rows, ticked boxes in orange, owner and date, four sign-off cells | blocks `checklist`, `signoff` | |
-| P · Code | the ink panel, Roboto Condensed 9, comments muted, keywords in orange | block `code` (`text`, `keywords`) | |
+| A · Divider | opens a part: a render across the page (`render`, 04 or 05), the kicker, the title at 40 and the standfirst at the bottom left, the list at the bottom right; the number is kept for the Contents page and not shown | page `style: divider` (`n`, `kicker`, `title`, `standfirst`, `list`, `render`) | imagery inside |
+| B · Divider, dark | the same on the ink ground, no render, for the decision part | `style: divider`, `dark: true` | dark ground inside |
+| C · Statement | the one sentence to remember, at 36, alone on the page | `style: statement` (`text`, `who`) | |
+| D · Hero figure | a plate (`render`, `caption`), then the number at 96 in the margin column with its unit, the body beside it, the figures strip under | `style: hero` (`n`, `unit`, `kicker`, `body`, `figures`, `render`, `caption`) | |
+| E · Two columns | two columns side by side, a small head, bullets as a list, a verdict at the bottom | block `cols` (`columns`: `head`, `bullets` or `body`, `verdict`) | |
+| F · Timeline | steps on an ink line with small ink squares, past steps in grey, phases under | block `timeline` (`steps`, `phases`) | |
+| G · Data page | the table across the whole measure, a foot line | page `style: wide` (`heading`, `table`, `foot`) | no margin column |
+| H · Chart | bar (two series, one soft) or line, inline SVG in ink and grey, a legend | block `chart` (`type`, `labels`, `series` or `values`, `max`, `unit`) | |
+| I · Matrix | likelihood against impact on hairlines, the hot cell on grey | block `matrix` (`cols`, `rows` with `key` and `cells`, `hot`) | a grey cell, not a row |
+| J · Plate | one render across the measure with a caption, on the opening page of a part | page `style: plate` (`render`, `caption`, then `blocks`) | imagery inside |
+| K · Prose | a lede at 20, two columns of running text, a signature | page `style: prose` (`lede`, `body`, `signature`) | no margin column |
+| L · Steps | numbered steps, the number in PP Eiko 22 in the margin, a meta line | blocks with `step`, `heading`, `body`, `meta` | |
+| M · Glossary | terms in two columns on hairlines, PP Eiko 14 | block `defs` | |
+| N · Flow | square white boxes on a thin ink stroke, an ink square at every arrow head, a caption | block `flow` (`boxes`, `arrows`, `caption`, `height`) | |
+| O · Checklist | rows on hairlines, ticked boxes in ink, owner and date, four sign-off columns | blocks `checklist`, `signoff` | |
+| P · Code | a grey panel, Roboto Condensed 9, comments muted, keywords bold | block `code` (`text`, `keywords`) | |
 
 The five that bend a rule (B, G, I, J, K) are for the opening page of a part
 or a single appendix, never in the flow of an argument; say in the reply
@@ -165,9 +169,9 @@ when one was used. The Contents page lists a style page by its `toc`.
   first and last words always. Standfirst, body, bullets, table cells and the
   recommendation title stay in sentence case. Rules in
   `cooper-brand-kit/references/voice.md`.
-- **One orange phrase per headline, none on labels.** `<em>` in HTML,
-  `*...*` in the description. Two or three words, the part that carries the
-  claim. No italic exists in this identity.
+- **No colour in the type.** A `*phrase*` in a title is kept in the
+  description and renders in ink; the orange is in the renders. No italic
+  exists in this identity.
 - **The bold lead-in is its own node.** A bullet carries the claim in the
   term and the explanation in the text.
 - **Tables.** Built from the same three cells: head, text, figure. Exactly

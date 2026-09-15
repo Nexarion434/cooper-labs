@@ -8,7 +8,7 @@ description: >
   brand. It is the foundation loaded by cooper-internal-document,
   cooper-deck, cooper-fact-sheet and cooper-social.
 metadata:
-  version: "0.3.1"
+  version: "0.4.0"
   source: "Figma file Brand Identity (S5Lg16aM47EGiGOYCDxl9a), page Twitter; cooperlabs.xyz"
 ---
 
@@ -19,10 +19,11 @@ team, from the brief to the stores. Tagline: **"We turn Web3 ideas into
 products people use."** The identity is white, grey and orange: one display
 face with a single weight, a condensed sans for everything else, a black
 square-and-crescent mark ("the block"), and six renders of that block in
-white 3D, halftone, pixels and orange. Documents open like a post (the
-poster cover: the halftone, the title centred and huge, the mark alone)
-and read like a spec sheet inside (the block interior: a ruled grid,
-labels in boxes, one orange figure, the orange band).
+white 3D, halftone, pixels and orange. Documents are the **catalogue of
+the object**: the renders do the work (a plate across the top of the cover,
+a render across a part divider and the back cover, a specimen in a
+margin), the type is small and precise, the page is white with wide
+margins and hairlines. No boxes, no bands, no tiles.
 
 Source of truth: the Figma file *Brand Identity* (page *Twitter*: the posts,
 the X covers, the social preview, the logos, the palette) and cooperlabs.xyz
@@ -56,12 +57,13 @@ the halftone at 60% (02); the other four carry the block itself.
 | `ink` | `#1E1E1E` | primary text; the dark ground (back cover, closing slide, dark cover) |
 | `ink-soft` | `#383838` | secondary text: bullet explanations, recommendation body, table figures |
 | `muted` | `#848484` | labels, meta lines, sources, page furniture |
-| `line` | `#DDDDDD` | every hairline on paper |
+| `line` | `#DDDDDD` | a hairline on paper (social) |
+| `hair` | `#EBEBEB` | the hairlines of a document: table rows, lists, the figures strip |
 | `line-inv` | white at 16% | every hairline on dark |
-| `accent` | `#FF9E42` | the orange: the accent phrase in a headline, marks, bullet dots, rules, the unit of a hero figure |
-| `accent-deep` | `#C77012` | orange text at small sizes on paper: section labels, kickers, verdicts |
+| `accent` | `#FF9E42` | the orange: the renders, the orange mark and avatar, the `/N` of a thread card; not the type of a document |
+| `accent-deep` | `#C77012` | orange text at small sizes on paper, when a social card needs it |
 | `accent-soft` | `#FFB261` | orange text on dark: the cover kicker, the `/N` of a thread card |
-| `tint` | orange at 14% | one highlighted table row, one matrix cell |
+| `paper` | `#F5F5F5` | the grey of one highlighted table row, the hot matrix cell, the code panel |
 
 Greys 1 to 9 (`#4B4B4B` … `#F3F3F3`) and oranges 1 to 9 (`#FFE29C` …
 `#632800`) are the scales of the site; the tokens above are the ones a
@@ -85,42 +87,42 @@ sessions without the designer's computer), and otherwise falls back to
 Instrument Serif, which ships. The render scripts say which case applied.
 Roboto Condensed ships as woff2 (OFL).
 
-Because the display face has no italic, **the brand signature is an orange
-phrase**: one phrase per headline set in `accent` ("Ship the MCP Server
-*Before the CLI.*", "We turn Web3 ideas *into products people use.*"),
-the verb or the qualifier, two or three words, never on a label. In HTML it
-is `<em>` (rendered upright and orange by the CSS); in a description it is
-`*...*`. Titles are **Title Case** (short connectors stay lowercase, see
-`references/voice.md`). Social posts keep the capitalisation of the Figma
-file, with no accent unless asked.
+The display face has no italic, and in the documents the orange lives in
+the renders, not in the type: a phrase written with `*...*` in a
+description ("Ship the MCP Server *Before the CLI.*") is kept in the source
+and **renders in ink**, so the descriptions stay portable. The orange
+phrase remains the signature of the social cards that ask for it (a thread
+card's `/N`). Titles are **Title Case** (short connectors stay lowercase,
+see `references/voice.md`). Social posts keep the capitalisation of the
+Figma file, with no accent unless asked.
 
-Display type is tracked tight and set close: line-height 0.9 to 1.0,
-−0.07 em on the poster covers (the posts' value), −0.045 to −0.06 em on
-the headings, the figures and the big numbers, **−0.09 em on the social
-titles and kickers** (the Figma value). Labels are UPPERCASE Roboto
+Display type is tracked tight and set close: line-height 0.85 to 1.05,
+−0.03 to −0.05 em on the titles, the headings, the figures and the hero
+number, **−0.09 em on the social titles and kickers** (the Figma value). Labels are UPPERCASE Roboto
 Condensed 500 with 0.1 em letter-spacing.
 
 ## Geometry
 
-A4 at 96 dpi, 794 × 1123. Margins 40 top, 56 sides, 36 bottom. Measure 682.
-Two languages, chosen on the design canvas of 14 September 2026:
+A4 at 96 dpi, 794 × 1123. Margins 48 top, 72 sides, 44 bottom. Measure
+650. One language, **Object**, chosen on the design canvas of 15 September
+2026 (round two, direction 1) after the poster-and-block system of 0.3 was
+set aside:
 
-- **The poster** for the cover, the back cover, the statement page and the
-  title and closing slides: a white (or ink) page, the halftone at 55%
-  fading out, everything centred, the title in PP Eiko at −0.07 em, the
-  mark alone under the standfirst, the meta as one line at the bottom.
-- **The block** inside: a light grey page ruled like a spec sheet. The
-  running head and the footer sit on 1 px ink rules; a section opens with
-  a **boxed label** (an ink box with the white mark, then the label in an
-  outline), the source at the right; a prose block splits heading left,
-  body right on a hairline; everything structured is **ruled cells** (1 px
-  `line`, white) sharing borders: tables, bullets, the two columns, the
-  matrix, the glossary, the checklist, the contact strip, the figures
-  (the first number orange). The recommendation is the **band**, an
-  orange cell with the mark and an ink panel; the code is an ink panel.
-  A divider's number stands bare in ink; no big number ever sits in a
-  coloured box.
-  Radius 0 everywhere. Blocks stack with a 28 gap.
+- **The plate.** The cover is a render across the top 620 px with the
+  wordmark on it, then the kicker, the title at 46, the standfirst, the
+  meta row at the bottom. A part divider is a render across the whole page
+  with the title small at the bottom left; the back cover the same with
+  the tagline. A hero figure gets a plate above the number; a block can
+  carry a square **specimen** in its margin.
+- **The catalogue page.** White. The running head and the footer are
+  7.5 px labels in `muted`, no rules. Each block is a row of a grid: the
+  **margin column** (200 wide: the label, the source, a specimen) and the
+  reading column; a block without a label spans the measure. Headings at
+  24, body at 11 on a 400 measure, bullets as terms and texts in a row,
+  tables on hairlines with one ink line under the head, the figures as
+  one strip on an ink line, the recommendation as a title and a
+  paragraph. No box, no band, no tile, no big number in colour. Radius 0
+  everywhere. Blocks stack with a 36 gap.
 
 ## The logo
 
@@ -146,12 +148,15 @@ a render **by its number**; `assets/img/catalogue.json` describes each one
 not sit under text) and carries a default framing per social size (`frames`,
 read and recomputed for any size by `assets/scripts/frame.py`).
 
-On a document a render appears **only on the cover**: `cover: "02"` lays
-the halftone at 55% over the whole page, fading to white behind the
-title, as on the posts (the default); another number puts that render in
-the top 60% under the fade; `cover: "dark"` gives the ink cover with the
-orange mark. Inside a document an image must carry information; the plate
-page style is the one exception.
+On a document the renders carry the identity: `cover: "01"` (the default)
+puts that render as the plate across the top of the cover (`"02"` the
+halftone, any number works, `"dark"` a plain ink cover); `back: "05"` lays
+one across the back cover; `render` on a divider fills the page (use 04 or
+05, whose grounds are flat, for a full page; 03 and 06 are for plates),
+on a hero page adds a plate above the number, on a plate page is the
+plate; `specimen` on a block puts a 140 × 140 crop in the margin. The
+white 3D (01) and the halftone (02) read as texture; 03 to 06 show the
+block itself. Never more than one render per page.
 
 Nothing outside the six goes on Cooper Labs material: no stock, no generated
 image, no photograph. New renders come from the 3D file and enter the
@@ -207,10 +212,12 @@ install chromium`).
 
 ## Before delivering anything
 
-1. Every colour is in the table above; small orange text is `accent-deep`.
+1. Every colour is in the table above; in a document the orange is in the
+   renders only (the social cards keep their orange where the Figma file
+   has it).
 2. Display type is PP Eiko Medium, everything else Roboto Condensed; nothing
-   is bolder than 500; no italic anywhere. Every cover title and most
-   sub-headings carry one orange phrase; kickers and labels carry none.
+   is bolder than 500; no italic anywhere; no box, band or tile around a
+   figure or a label.
 3. No em dash anywhere a reader will see it; the middle dot `·` separates
    meta items. Document titles are Title Case; standfirst, body and
    recommendation titles are sentence case; social titles as written.

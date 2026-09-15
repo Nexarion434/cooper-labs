@@ -8,18 +8,18 @@ description: >
   client or a figure set has to fit on one A4 page for someone outside the
   team. One page, recto, delivered as a PDF.
 metadata:
-  version: "0.3.1"
-  source: "cooper-brand 0.3.1 — the parallel-brand fact sheet with the Cooper Labs identity"
+  version: "0.4.0"
+  source: "cooper-brand 0.4.0 — the parallel-brand fact sheet with the Cooper Labs identity"
 ---
 
 # Cooper Labs — fact sheet
 
-One A4 page, no cover, on the block grid: the wordmark and the running
-head on an ink rule, a boxed label, a title with its orange phrase, a
-standfirst, the figure cells (the first number orange), two ruled columns, an
-optional ruled table, the contact cells, the footer. The
-blocks are those of the internal document at smaller sizes (title 44,
-headings 18, text 10), so a fact sheet and a proposal read as the same
+One A4 page, no cover, on the catalogue page: the wordmark and the
+running head, an optional plate (`render`), a small label, a title, a
+standfirst, the figures strip, two columns, an optional table on
+hairlines, the contact pairs on an ink line, the footer. The blocks are
+those of the internal document at smaller sizes (title 34, headings 18,
+text 10), so a fact sheet and a proposal read as the same
 family. **English throughout.** Load `cooper-brand-kit` first if the tokens
 are not already in context.
 
@@ -45,8 +45,9 @@ python3 $S/build_fact_sheet.py sheet.json sheet.html --pdf     # HTML, CooperLab
 python3 $S/render_pdf.py sheet.html sheet.pdf --png review/    # a PNG of the page when needed
 ```
 
-The description carries `subject`, `title` with its `*orange phrase*`,
-`standfirst`, `date`, `version` (file name only), `classification`,
+The description carries `subject`, `title` (a `*phrase*` may mark the
+claim; it renders in ink), `standfirst`, `render` (optional, `"01"` to
+`"06"`), `date`, `version` (file name only), `classification`,
 `figures` ([[number, key], ...]), `columns` (two objects with `heading` and
 `bullets` or `body`), an optional `table` (`heading`, `cols`, `rows`,
 `mono`, `strong`), `contact` ([[key, value], ...], default: the four studio
@@ -58,14 +59,15 @@ the title) are computed from the subject and the date unless given.
 
 | Item | Value | CSS |
 |---|---|---|
-| Running head | wordmark in ink, 18 high, left; label 8 `FACT SHEET · SUBJECT · MONTH YYYY` right; on an ink rule | `.page--fact .pagehead`, `.pagehead__logo` |
-| Label | the boxed label, 28 under the head | `.tag` |
-| Title | PP Eiko 500, 46 / .92, max 600, one orange phrase, 14 under the label | `.fact__title` |
-| Standfirst | Roboto Condensed 12 / 1.5 `ink-soft`, max 520 | `.fact__stand` |
-| Figures | the ruled cells at 110 high, numbers at 40, the first one orange | `.fact .figure` |
-| Columns | two ruled cells sharing a border; heading 20, bullets as a list on hairlines, body at 10 | `.fact__cols` |
-| Table | the ruled table, with its heading | `.table` |
-| Contact | four ruled cells: key label 8, value 10.5 | `.fact__contact` |
+| Running head | wordmark in ink, 16 high, left; label 7.5 muted `FACT SHEET · SUBJECT · MONTH YYYY` right; no rule | `.page--fact .pagehead`, `.pagehead__logo` |
+| Plate | `render`: the render 180 high across the measure, 32 under the head | `.fact__img` |
+| Label | 7.5 muted uppercase | `.tag` |
+| Title | PP Eiko 500, 34 / 1, max 480, 12 under the label | `.fact__title` |
+| Standfirst | Roboto Condensed 10.5 / 1.55 `ink-soft`, max 400 | `.fact__stand` |
+| Figures | the strip on an ink line, numbers at 32, keys under | `.fact .figures` |
+| Columns | two columns, gap 32; heading 18, bullets as a list on hairlines, body at 10 | `.fact__cols` |
+| Table | the table on hairlines, with its heading | `.table` |
+| Contact | four pairs on an ink line: key label 7.5, value 10 | `.fact__contact` |
 | Footer | `COOPER LABS · PUBLIC · COOPERLABS.XYZ · MONTH YYYY` and `01 / 01` | `.pagefoot` |
 
 Stack: 22 between the groups, 28 under the running head. Everything must fit
@@ -74,20 +76,21 @@ four-row table do; a longer table means a second sheet, not a smaller type.
 
 ## Rules specific to the fact sheet
 
-- **Title Case on the title and the headings, one orange phrase each**;
-  sentence case on the standfirst, bullets and cells.
+- **Title Case on the title and the headings**; sentence case on the
+  standfirst, bullets and cells. A `*phrase*` renders in ink.
 - **Figures carry a date** when they are measurements; a figure that
   describes the offer (`6` weeks, `Weekly` demos) needs none.
 - **Public means public**: no client names without their agreement, no
   ticket numbers, no "TBD"; `check_pdf.py` greps the text layer.
-- **No render** on a fact sheet: the wordmark is the only brand mark. The
-  page is paper, the type does the work.
+- **One render at most**, as the plate at the top (`render`); the white
+  3D (01) is the quiet default, a block render when the sheet is about the
+  studio.
 - Contact values are the four studio links unless told otherwise.
 
 ## Before delivering
 
 1. Figures match the source; nothing invented.
-2. Title and headings in Title Case with one orange phrase each.
+2. Title and headings in Title Case.
 3. Everything above the footer, nothing cut (look at the PNG).
 4. `check_pdf.py` passes; the classification in the footer is the one
    intended.

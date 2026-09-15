@@ -8,7 +8,7 @@
  "status": "Draft",
  "date": "2026-09-14",
  "owner": "Jean, Cooper Labs",
- "cover": "02",
+ "cover": "01",
  "contents": "auto",
  "contents_intro": "Read the summary and the statement first; they stand alone. Part one is the context, part two the build and its plan, part three the decision and the risks; the appendices are for the engineering team. Every table names its source in the margin, and every part opens on a divider.",
  "versions": [
@@ -34,6 +34,8 @@
    "blocks": [
     {
      "tag": "Summary",
+     "specimen": "03",
+     "caption": "Fig. 1 · The block, rendered. From the Brand Identity file.",
      "heading": {
       "text": "One server, *every agent.*",
       "suffix": "(six weeks)"
@@ -146,6 +148,7 @@
    "toc": "Part one · Context",
    "style": "divider",
    "n": "01",
+   "render": "04",
    "kicker": "Part one · Context",
    "title": "Why now, *and why a server.*",
    "standfirst": "Where the questions come from, what answers them today, and the two cases that made the gap visible.",
@@ -346,6 +349,7 @@
    "toc": "Part two · The build",
    "style": "divider",
    "n": "02",
+   "render": "03",
    "kicker": "Part two · The build",
    "title": "Six weeks, *six demos.*",
    "standfirst": "The four options, the one recommended, the plan by week, and how the work runs from Monday to Friday.",
@@ -646,6 +650,8 @@
    "style": "hero",
    "n": "6",
    "unit": "weeks",
+   "render": "06",
+   "caption": "Fig. 2 · The block, dithered. Six weeks from the brief to the public beta.",
    "kicker": "From the brief to the public beta",
    "body": "Six weeks, six Friday demos. The server answers on Base at the end of week one and on three chains at the end of week two; the CLI is derived from it in week five and the public beta ships with the Seventeenth Parallel Report on 6 November.",
    "figures": [
@@ -871,7 +877,7 @@
     {
      "tag": "Reading",
      "toc": false,
-     "body": "Hairline boxes, radius zero, one orange dot at the head of every arrow. The build_tx box is drawn in the lighter hairline because it sits outside the read path."
+     "body": "Hairline boxes, radius zero, one ink square at the head of every arrow. The build_tx box is drawn in the lighter hairline because it sits outside the read path."
     }
    ]
   },
@@ -1216,7 +1222,7 @@
     {
      "tag": "Reading",
      "toc": false,
-     "body": "One cell is tinted: the risk that is both likely and high impact, and the only one still open. Its closure, the approved disclaimer, is one of the three things asked of Parallel."
+     "body": "One cell is grey: the risk that is both likely and high impact, and the only one still open. Its closure, the approved disclaimer, is one of the three things asked of Parallel."
     }
    ]
   },
@@ -1285,7 +1291,7 @@
    "name": "Appendices",
    "toc": "Appendices",
    "style": "plate",
-   "render": "03",
+   "render": "02",
    "caption": "Render 03 · The block, as on the launch post",
    "blocks": [
     {

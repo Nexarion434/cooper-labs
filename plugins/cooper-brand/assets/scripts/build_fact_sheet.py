@@ -19,6 +19,7 @@ The description (JSON):
     title          "The euro savings rate, *on-chain and at par.*"
     standfirst     one or two sentences
     date           "2026-09-01"; version "v1.0" (file name only); classification Public | Internal
+    render         "01" (optional: a render as a plate across the top of the sheet)
     figures        [["4.2%", "Current rate"], ...]           (three or four)
     columns        [{"heading": "How it *works*", "bullets": [[term, text], ...] | "body": "..."}, {...}]   (two)
     table          {"heading": "Backing, *as of 31 August*", "cols": [...], "rows": [...], "mono": [...], "strong": [...]}   (optional)
@@ -56,7 +57,8 @@ def build(d, out_html, relative=False):
     d.setdefault("footer", f"{brand.NAME} · {d['classification']} · Figures as of {month(d['date'])}")
     d.setdefault("contact", brand.CONTACT)
     A = "../" if relative else ASSETS.as_posix() + "/"
-    parts = [f'''    <div>
+    parts = ([f'''    <div class="fact__img" style="background-image:url('{A}{brand.RENDERS}/{int(d["render"]):02d}.jpg')"></div>
+'''] if d.get("render") else []) + [f'''    <div>
       <div class="tag">{E(d["tag"])}</div>
       <div class="fact__title">{EM(title_case(d["title"]))}</div>
       <div class="fact__stand">{E(d["standfirst"])}</div>

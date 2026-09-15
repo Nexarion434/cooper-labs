@@ -4,10 +4,10 @@ import pathlib
 HERE = pathlib.Path(__file__).resolve().parent
 
 head = '''/* Cooper Labs · documents and social
-   The engine of parallel-brand with the Cooper Labs identity. Documents: the language of cooperlabs.xyz on A4 (light grey
-   page, white cards with a 12 radius, the orange dash, PP Eiko at line-height 0.9, Roboto Condensed). Social: the Figma
-   file Brand Identity, page Twitter, transcribed. A4 at 96 dpi: 794 x 1123. Margins 56 (sides), 40 (top), 36 (bottom).
-   Measure 682. There is no cooper.pen yet (see CHANGELOG). */
+   The engine of parallel-brand with the Cooper Labs identity. Documents: the OBJECT system (the block is an object, the
+   document is its catalogue: the renders as plates, small precise type, wide margins, a 200 px margin column, hairlines).
+   Social: the Figma file Brand Identity, page Twitter, transcribed. A4 at 96 dpi: 794 x 1123. Margins 72 (sides),
+   48 (top), 44 (bottom). Measure 650. There is no cooper.pen yet (see CHANGELOG). */
 
 /* ---------- fonts ---------- */
 /* PP Eiko Medium is the display face (Pangram Pangram, commercial): used from the machine when installed,

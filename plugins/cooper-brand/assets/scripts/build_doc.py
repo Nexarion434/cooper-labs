@@ -15,17 +15,20 @@ The description (JSON, or a Python dict passed to `build()`):
 
     class          proposal | case-study | spec | post-mortem | memo
     subject        "Parallel MCP server"                      -> running head, file name
-    title          "Ship the MCP server *before the CLI.*"   (*...* is the accent, set in orange)
+    title          "Ship the MCP server *before the CLI.*"   (*...* marks the accent phrase; in the Object system it stays in ink)
     standfirst     one sentence; kicker (optional, default "<Class> · <subject>")
     version        "v0.1"; classification Confidential | Internal; status Draft | Final
-    date           "2026-09-09"; owner "Noah, Cooper Labs"; cover "02" (the halftone at 55% over the poster cover, the default; another number puts that render in the top 60%) | "dark" (ink, white type, the orange mark)
+    date           "2026-09-09"; owner "Noah, Cooper Labs"; cover "01" (the render as a plate across the top of the cover, the default; "02" the halftone) | "dark" (plain ink, white type)
+    back           "05" (the render across the whole back cover, the default) | "dark" (plain ink)
     contents       "auto" (default) | true | false; contents_intro (the "How to read" text, optional)
     versions       [["v0.1", "2026-09-09", "First draft"], ...]   -> the Versions table on the Contents page
     pages          [{"name": "Analysis", "blocks": [ ... ]}]
 
-A block is a row of the margin grid: `tag` and `source` in the margin, the
-rest in the reading column; `toc` (false to keep the block out of the
-Contents page, or a string to name its entry). In this order when given as keys: heading
+A block is a row of the margin grid: `tag` and `source` in the margin column
+(200 wide), the rest in the reading column; a block without a tag spans the
+measure. `specimen` ("03") puts a square crop of that render in the margin,
+with `caption` under it. `toc` (false to keep the block out of the Contents
+page, or a string to name its entry). In this order when given as keys: heading
 (string, or {"text", "suffix"}), body (string or list), bullets ([[term,
 text], ...]), table ({"cols": [[label, width | null], ...], "rows": [[...]],
 "mono": [col indexes], "strong": [...], "highlight": row index | null, "head":
@@ -45,9 +48,10 @@ Page styles (0.5.0). More block items, in the reading column:
     code       {"text": "...", "keywords": ["uint256", "function"]}   (// comments are muted)
 A block with `"step": "01"` shows the number in the margin instead of a tag.
 Pages of their own, with `style` instead of `blocks` (`toc` names their line on the Contents page):
-    divider    {"n": "02", "kicker": "Part two · Assessment", "title": "...", "standfirst": "...", "list": [["Sections", "..."], ...], "dark": false}
+    divider    {"n": "02", "kicker": "Part two · Assessment", "title": "...", "standfirst": "...", "list": [["Sections", "..."], ...], "render": "04", "dark": false}
+               (`render` fills the page with that render; `n` is kept for the Contents page and not shown)
     statement  {"text": "... *turns a bank run into a queue.*", "who": "Summary · Protocol review"}
-    hero       {"n": "38", "unit": "%", "kicker": "...", "body": "...", "figures": [[n, k], ...]}
+    hero       {"n": "38", "unit": "%", "kicker": "...", "body": "...", "figures": [[n, k], ...], "render": "03", "caption": "..."}   (`render`: a plate above the number)
     prose      {"lede": "...", "body": ["...", "..."], "signature": ["Noah, Protocol", "10 September 2026"]}
     plate      {"render": "03", "caption": "...", "blocks": [...]}      (the picture, then blocks)
     wide       {"heading": "...", "suffix": "...", "table": {...}, "foot": ["Source ...", "Values ..."]}
@@ -142,13 +146,17 @@ def cover(d, A):
 
 
 def back(d, A):
+    """The back cover: a render across the whole page (`back: "05"`; `back: "dark"` for plain ink), the tagline and the links over it."""
     m = "".join(f'<div><div class="k">{E(k)}</div><div class="v">{E(v)}</div></div>' for k, v in brand.LINKS)
     m += f'<div><div class="k">This document</div><div class="v">{E(d["class_label"])} · {E(d["version"])} · {E(short_date(d["date"]))}</div></div>'
+    r = str(d.get("back", "05")).lower()
+    dark = r in ("dark", "none")
+    img = "" if dark else f'''  <div class="cover__img" style="background-image:url('{A}{brand.RENDERS}/{int(r):02d}.jpg')"></div>
+'''
     return f'''<!-- ======================= BACK COVER ======================= -->
-<section class="cover cover--dark back">
-  <div class="back__glow"></div>
-  <div class="cover__top">
-    <img class="cover__logo" src="{A}{brand.LOGO_W}" alt="{brand.NAME}">
+<section class="cover back{" cover--dark" if dark else ""}">
+{img}  <div class="cover__top">
+    <img class="cover__logo" src="{A}{brand.LOGO_W if dark else brand.LOGO_B}" alt="{brand.NAME}">
     <div class="cover__conf">{E(d["classification"])} · {E(d["version"])}</div>
   </div>
   <div class="cover__bottom">
@@ -172,8 +180,9 @@ def page(name, head, n, total, blocks, raw=None, dark=False, before=""):
 '''
 
 
-def block_html(tag, main, source=None, step=None):
-    margin = (f'<div class="step__n">{E(str(step))}</div>' if step else "") + (f'<div class="tag">{E(tag)}</div>' if tag else "") + (f'<div class="source">{E(source)}</div>' if source else "")
+def block_html(tag, main, source=None, step=None, specimen=None, caption=None, A=""):
+    spec = (f'<div class="specimen" style="background-image:url(\'{A}{brand.RENDERS}/{int(specimen):02d}.jpg\')"></div>' if specimen else "") + (f'<div class="specimen__cap">{E(caption)}</div>' if specimen and caption else "")
+    margin = (f'<div class="step__n">{E(str(step))}</div>' if step else "") + spec + (f'<div class="tag">{E(tag)}</div>' if tag else "") + (f'<div class="source">{E(source)}</div>' if source else "")
     return f'''    <div class="block">
       <div class="block__margin">{margin}</div>
       <div class="block__main">
@@ -364,6 +373,9 @@ def item_html(key, v):
 ORDER = ("heading", "body", "bullets", "table", "figures", "reco", "cols", "timeline", "chart", "matrix", "defs", "flow", "checklist", "signoff", "code", "meta")
 
 
+_A = [""]      # the asset prefix, set by build() before the blocks are written
+
+
 def block_from(b):
     if "main" in b:
         main = "".join(item_html(k, v) for item in b["main"] for k, v in item.items())
@@ -371,7 +383,7 @@ def block_from(b):
         main = "".join(item_html(k, b[k]) for k in ORDER if k in b)
     if b.get("step"):
         main = f'        <div class="step">\n{main}        </div>\n'
-    return block_html(b.get("tag"), main, b.get("source"), b.get("step"))
+    return block_html(b.get("tag"), main, b.get("source"), b.get("step"), b.get("specimen"), b.get("caption"), A=_A[0])
 
 
 def style_page(pg, head, n, total, A):
@@ -382,7 +394,9 @@ def style_page(pg, head, n, total, A):
         raw = (f'  <div class="divider">\n    <div class="divider__n">{E(str(pg["n"]))}</div>\n    <div class="divider__kicker">{E(pg["kicker"])}</div>\n'
                f'    <div class="divider__title">{EM(title_case(pg["title"]))}</div>\n' + (f'    <div class="divider__stand">{E(pg["standfirst"])}</div>\n' if pg.get("standfirst") else "") +
                ('    <div class="divider__rule"></div>\n' + lst if lst else "") + "  </div>\n")
-        return page(pg["name"], head, n, total, None, raw=raw, dark=pg.get("dark", False))
+        before = f'''  <div class="page__img" style="background-image:url('{A}{brand.RENDERS}/{int(pg["render"]):02d}.jpg')"></div>
+''' if pg.get("render") else ""
+        return page(pg["name"], head, n, total, None, raw=raw, dark=pg.get("dark", False), before=before)
     if st == "statement":
         raw = (f'  <div class="statement">\n    <div class="statement__mark"></div>\n    <div class="statement__text">{EM(pg["text"])}</div>\n'
                f'    <div class="statement__who">{E(pg.get("who", ""))}</div>\n  </div>\n')
@@ -391,7 +405,9 @@ def style_page(pg, head, n, total, A):
         row = ""
         if pg.get("body") or pg.get("figures"):
             row = '    <div class="hero__row">\n' + (f'      <div class="body">{E(pg["body"])}</div>\n' if pg.get("body") else "") + (("      " + figures(pg["figures"]).strip() + "\n") if pg.get("figures") else "") + "    </div>\n"
-        raw = (f'  <div class="hero">\n    <div class="hero__n">{E(str(pg["n"]))}<em>{E(pg.get("unit", ""))}</em></div>\n    <div class="hero__k">{E(pg["kicker"])}</div>\n'
+        plate = (f'''    <div class="hero__img" style="background-image:url('{A}{brand.RENDERS}/{int(pg["render"]):02d}.jpg')"></div>
+''' + (f'    <div class="hero__cap">{E(pg["caption"])}</div>\n' if pg.get("caption") else "")) if pg.get("render") else ""
+        raw = (f'  <div class="hero">\n' + plate + f'    <div class="hero__n">{E(str(pg["n"]))}<em>{E(pg.get("unit", ""))}</em></div>\n    <div class="hero__k">{E(pg["kicker"])}</div>\n'
                '    <div class="hero__rule"></div>\n' + row + "  </div>\n")
         return page(pg["name"], head, n, total, None, raw=raw)
     if st == "prose":
@@ -442,6 +458,7 @@ def build(d, out_html, relative=False):
     d.setdefault("kicker", f"{d['class_label']} · {d['subject']}")
     d.setdefault("notice", brand.NOTICE)
     A = "../" if relative else ASSETS.as_posix() + "/"
+    _A[0] = A
     head = f"{d['class_label']} · {d['subject']} · {d['classification']} · {d['version']}"
     pages = d["pages"]
     want_contents = d.get("contents", "auto")

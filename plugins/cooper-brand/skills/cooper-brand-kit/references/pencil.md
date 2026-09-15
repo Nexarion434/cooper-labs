@@ -12,7 +12,7 @@ so that the two routes stay identical, as they do in `parallel-brand`.
 |---|---|---|
 | Social: post (Template01, 02, 04), partner (Template03), X covers, social preview, wallpaper, logos, palette | Figma file *Brand Identity*, page *Twitter* (`S5Lg16aM47EGiGOYCDxl9a`, node `135:15`) | transcribed pixel for pixel; the rendered PNGs differ from the Figma exports by a few pixels of glyph rendering only |
 | Tokens (greys, oranges, `paper`), Roboto Condensed as the text face | cooperlabs.xyz | transcribed |
-| Internal document (cover, blocks, back cover, sixteen page styles), deck, fact sheet | the engine of `parallel-brand` with the Cooper Labs tokens: display weight 500 instead of 200, the orange phrase instead of the italic, Roboto Condensed labels instead of mono, tracking −0.03 / −0.04 em on display type, the light cover with a fade to `paper` | designed in the plugin, not in a design file |
+| Internal document (cover, blocks, back cover, sixteen page styles), deck, fact sheet | the engine of `parallel-brand` with the Cooper Labs tokens, on the **Object** system chosen on the design canvas of 15 Sep 2026 (the renders as plates, small precise type, a margin column, hairlines, no colour in the type) | designed in the plugin, not in a design file; the canvas *Cooper Labs Document Directions, Round Two* holds the five directions |
 | Extra social sizes, banners, thread, animation | the same rules as the Figma posts, at the sizes of `parallel-brand` 0.5.0 | designed in the plugin |
 
 The design decisions taken in the plugin are listed in `CHANGELOG.md`
