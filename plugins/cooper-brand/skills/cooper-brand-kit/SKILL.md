@@ -8,7 +8,7 @@ description: >
   brand. It is the foundation loaded by cooper-internal-document,
   cooper-deck, cooper-fact-sheet and cooper-social.
 metadata:
-  version: "0.5.1"
+  version: "0.5.2"
   source: "Figma file Brand Identity (S5Lg16aM47EGiGOYCDxl9a), page Twitter; cooperlabs.xyz"
 ---
 
@@ -76,18 +76,21 @@ paper (the cards use `#000` because the Figma file does; documents use `ink`).
 
 | Family | Weight | Role |
 |---|---|---|
-| **PP Eiko** | Medium (500), upright only | display: cover title, sub-headings, headline figures, recommendation title, tagline, every social title and line |
+| **PP Eiko** | Medium (500), upright: the brand weight | display: cover title, sub-headings, headline figures, recommendation title, tagline, every social title and line |
+| PP Eiko, other cuts | Thin 100, Light Italic 300, Heavy 800, Black Italic 900 | declared in the CSS for the designer's exploration; nothing shipped uses them, and a document does not use them without a design decision recorded in the CHANGELOG |
 | **Roboto Condensed** | 400, 500 | body, bullets, table text, cover values; **and** labels, kickers, meta lines, table heads, figures in tables (there is no mono in this identity) |
 
-PP Eiko is commercial (Pangram Pangram) and exists here in **one weight, no
-italic**. It is **not** in the public plugin: the HTML route picks it up
-through `local()` when installed, then from `assets/fonts/private/` when
-the licensee has put the woff2 there (private copy of the plugin, for cloud
-sessions without the designer's computer), and otherwise falls back to
-Instrument Serif, which ships. The render scripts say which case applied.
-Roboto Condensed ships as woff2 (OFL).
+PP Eiko is commercial (Pangram Pangram). The identity uses **one weight,
+Medium, upright**; the studio holds five cuts (Thin, Light Italic, Medium,
+Heavy, Black Italic), all declared. It is **not** in the public plugin:
+the HTML route picks it up through `local()` when installed, then from
+`assets/fonts/private/` when the licensee has put the woff2 files there
+(private copy of the plugin, for cloud sessions without the designer's
+computer), and otherwise falls back to Instrument Serif, which ships. The
+render scripts say which case applied. Roboto Condensed ships as woff2
+(OFL).
 
-The display face has no italic, and in the documents the orange lives in
+The documents set no italic, and the orange lives in
 the renders, not in the type: a phrase written with `*...*` in a
 description ("Ship the MCP Server *Before the CLI.*") is kept in the source
 and **renders in ink**, so the descriptions stay portable. The orange

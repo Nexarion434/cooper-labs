@@ -5,11 +5,16 @@
    48 (top), 44 (bottom). Measure 650. There is no cooper.pen yet (see CHANGELOG). */
 
 /* ---------- fonts ---------- */
-/* PP Eiko Medium is the display face (Pangram Pangram, commercial): used from the machine when installed,
-   or from assets/fonts/private/pp-eiko-500.woff2 when the licensee has dropped it there (private copies of
-   the plugin only). Otherwise "Display Fallback" (Instrument Serif, OFL) stands in. Roboto Condensed (OFL)
-   is the text face and the label face; there is no mono in this identity. */
+/* PP Eiko is the display face (Pangram Pangram, commercial): used from the machine when installed, or from
+   assets/fonts/private/ when the licensee has dropped the files there (private copies of the plugin only).
+   Medium (500) is the brand weight, the one every document and card uses; Thin, Light Italic, Heavy and Black
+   Italic are declared for the designer's use. Otherwise "Display Fallback" (Instrument Serif, OFL) stands in.
+   Roboto Condensed (OFL) is the text face and the label face; there is no mono in this identity. */
 @font-face{font-family:"PP Eiko";src:local("PP Eiko Medium"),local("PPEiko-Medium"),url("../fonts/private/pp-eiko-500.woff2") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"PP Eiko";src:local("PP Eiko Thin"),local("PPEiko-Thin"),url("../fonts/private/pp-eiko-100.woff2") format("woff2");font-weight:100;font-style:normal}
+@font-face{font-family:"PP Eiko";src:local("PP Eiko Heavy"),local("PPEiko-Heavy"),url("../fonts/private/pp-eiko-800.woff2") format("woff2");font-weight:800;font-style:normal}
+@font-face{font-family:"PP Eiko";src:local("PP Eiko Light Italic"),local("PPEiko-LightItalic"),url("../fonts/private/pp-eiko-300-italic.woff2") format("woff2");font-weight:300;font-style:italic}
+@font-face{font-family:"PP Eiko";src:local("PP Eiko Black Italic"),local("PPEiko-BlackItalic"),url("../fonts/private/pp-eiko-900-italic.woff2") format("woff2");font-weight:900;font-style:italic}
 @font-face{font-family:"Display Fallback";src:url("../fonts/instrument-serif-latin-400-normal.woff2") format("woff2");font-weight:400 500;font-style:normal}
 @font-face{font-family:"Roboto Condensed";src:url("../fonts/roboto-condensed-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-style:normal}
 @font-face{font-family:"Roboto Condensed";src:url("../fonts/roboto-condensed-latin-wght-italic.woff2") format("woff2");font-weight:100 900;font-style:italic}

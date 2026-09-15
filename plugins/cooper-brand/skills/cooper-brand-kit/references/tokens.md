@@ -210,6 +210,7 @@ what each is for. Sizes beyond the scale: 20 (lede), 36 (statement), 96
 
 | Family | File | Licence |
 |---|---|---|
-| PP Eiko Medium | not shipped; `local("PP Eiko Medium")` when installed, else `assets/fonts/private/pp-eiko-500.woff2` in a private copy | Pangram Pangram, commercial |
+| PP Eiko Medium (500) | not shipped; `local("PP Eiko Medium")` when installed, else `assets/fonts/private/pp-eiko-500.woff2` in a private copy | Pangram Pangram, commercial |
+| PP Eiko Thin (100), Light Italic (300), Heavy (800), Black Italic (900) | declared the same way (`pp-eiko-100`, `-300-italic`, `-800`, `-900-italic`); optional, unused by the builders | Pangram Pangram, commercial |
 | Instrument Serif | `assets/fonts/instrument-serif-latin-400-*.woff2` | SIL OFL 1.1 (display fallback) |
 | Roboto Condensed | `assets/fonts/roboto-condensed-latin-wght-{normal,italic}.woff2` | SIL OFL 1.1 |

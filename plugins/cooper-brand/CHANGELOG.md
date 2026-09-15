@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.2 · 15 Sep 2026
+
+The five PP Eiko cuts the studio holds (Thin 100, Light Italic 300,
+Medium 500, Heavy 800, Black Italic 900) are declared in the CSS and
+carried as woff2 in the private copy (`assets/fonts/private/`, converted
+from the OTFs with fontTools). Medium stays the brand weight and the only
+one anything shipped uses; the others are there for the designer to try.
+No design change.
+
 ## 0.5.1 · 15 Sep 2026
 
 Renders 07 and 08 removed from the catalogue and the assets (Nicolas: not

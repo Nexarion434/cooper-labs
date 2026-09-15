@@ -2,7 +2,7 @@
 report the render scripts print. Imported by render_pdf.py, render_png.py and
 render_anim.py.
 
-PP Eiko comes in one weight here, Medium (500), upright only: the documents and
+PP Eiko's brand weight is Medium (500), upright; the documents and
 the cards use it as it is. The report says whether it was served or what
 stood in.
 """
