@@ -14,7 +14,7 @@ the marketplace and add it again.
 **In Claude Code**:
 
 ```
-/plugin marketplace add <org>/<repo>
+/plugin marketplace add Nexarion434/cooper-labs
 /plugin install cooper-brand@cooper-labs
 ```
 
