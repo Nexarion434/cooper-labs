@@ -95,7 +95,7 @@ assets/templates/social.json        every social canvas (17): post (3), partner,
 assets/examples/*.json              case study, spec, post-mortem, memo, page-styles (19 sheets), deck (7 slides), fact sheet, and the built .html
 assets/scripts/                     build_doc.py · build_social.py · build_deck.py · build_fact_sheet.py · new_doc.py · render_pdf.py · render_png.py · render_anim.py · check_pdf.py · check_png.py · frame.py · fontcheck.py · brand.py
 assets/logo/                        the horizontal and vertical wordmarks, the mark (black, white, orange), the avatars; partners/ for the partner cards
-assets/img/renders/                 the renders, 1841 x 1151, numbered: 01-06 the Figma masters, 07+ made with render_block.py
+assets/img/renders/                 the six Figma masters, 1841 x 1151, numbered 01-06; new ones from render_block.py from 07
 assets/img/catalogue.json           every render by number: ground, busy, subject, focus, zoom, frames per size
 assets/fonts/                       Roboto Condensed and Instrument Serif (OFL); private/ for PP Eiko (not shipped)
 ```

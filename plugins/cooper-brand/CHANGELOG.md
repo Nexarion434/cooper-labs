@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.1 · 15 Sep 2026
+
+Renders 07 and 08 removed from the catalogue and the assets (Nicolas: not
+good enough). `render_block.py` stays; a render made with it goes into
+the catalogue only once the designer has looked at it and kept it.
+
 ## 0.5.0 · 15 Sep 2026
 
 Three chantiers asked for on 15 September: more formats, new renders of
@@ -28,8 +34,7 @@ the block, a design source.
   pixel, dither, halftone, lines, dots, soft); six presets. `--catalogue
   NN` writes the master at 1841 × 1151 and its catalogue entry (subject
   box, busy, frames), so every builder can use the render by number at
-  once. Renders **07** (orange, turned right, dotted ground) and **08**
-  (the halftone of the mark) ship as examples.
+  once.
 
 ### Design source
 - **`cooper.pen`** at the repository root, written by `tools/make_pen.py`:

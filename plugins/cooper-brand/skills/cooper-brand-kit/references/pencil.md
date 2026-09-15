@@ -62,7 +62,7 @@ wrong file). Then the rules of `parallel-brand` apply:
 | Tokens (greys, oranges, `paper`), Roboto Condensed as the text face | cooperlabs.xyz | transcribed |
 | Internal document, report, deck, fact sheet, note, quote | the engine of `parallel-brand` with the Cooper Labs tokens, on the **Object** system chosen on the design canvas of 15 Sep 2026 (*Cooper Labs Document Directions, Round Two*) | designed in the plugin; `cooper.pen` mirrors it |
 | Extra social sizes, banners, thread, animation | the same rules as the Figma posts, at the sizes of `parallel-brand` 0.5.0 | designed in the plugin; not in `cooper.pen` yet |
-| Renders 07 and up | `assets/scripts/render_block.py` | made in the plugin, catalogued by number |
+| Renders from 07 | `assets/scripts/render_block.py` | made in the plugin when the designer keeps one, catalogued by number; none shipped |
 
 The design decisions taken in the plugin are listed in `CHANGELOG.md`
 under *Design decisions*, so that a designer can accept or overrule them in

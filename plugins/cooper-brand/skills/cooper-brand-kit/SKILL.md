@@ -8,7 +8,7 @@ description: >
   brand. It is the foundation loaded by cooper-internal-document,
   cooper-deck, cooper-fact-sheet and cooper-social.
 metadata:
-  version: "0.5.0"
+  version: "0.5.1"
   source: "Figma file Brand Identity (S5Lg16aM47EGiGOYCDxl9a), page Twitter; cooperlabs.xyz"
 ---
 
@@ -169,9 +169,10 @@ the effects of the six families (`grain`, `chroma`, `pixel`, `dither`,
 `pixel`, `halftone`, `noise`, `macro`) give the masters' looks. `--scale
 0.25` for a look, then `--catalogue NN --name … --desc …` writes
 `renders/NN.jpg` at 1841 × 1151 and its catalogue entry (subject box,
-busy, frames), so every builder can use it by number at once. 07 and 08
-ship as examples. Renders 01 to 06 are the Figma masters and are never
-overwritten.
+busy, frames), so every builder can use it by number at once. A render
+made this way goes into the catalogue only once the designer has looked
+at it and kept it; none ships beyond the six. Renders 01 to 06 are the
+Figma masters and are never overwritten.
 
 ## Social
 
