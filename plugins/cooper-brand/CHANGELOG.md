@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.3 · 15 Sep 2026
+
+The plugin is also a **Codex / ChatGPT plugin**: `.codex-plugin/plugin.json`
+beside `.claude-plugin/plugin.json`, and the marketplace repository
+carries `.agents/plugins/marketplace.json` beside
+`.claude-plugin/marketplace.json`. Same skills, same scripts; in Codex the
+build commands' `${CLAUDE_PLUGIN_ROOT}` has to be set by hand.
+
 ## 0.5.2 · 15 Sep 2026
 
 The five PP Eiko cuts the studio holds (Thin 100, Light Italic 300,

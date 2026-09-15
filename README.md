@@ -18,6 +18,14 @@ the marketplace and add it again.
 /plugin install cooper-brand@cooper-labs
 ```
 
+**In ChatGPT / Codex**: the same repository is also a Codex marketplace
+(`.agents/plugins/marketplace.json`, and `.codex-plugin/plugin.json` in the
+plugin). In Codex CLI: `codex plugin marketplace add cooper-labs-tech/cooper-plugin`,
+then enable **cooper-brand** in the Plugins tab (ChatGPT desktop or web,
+Codex app; not the IDE extension). The skills are the same files; their
+build commands use `${CLAUDE_PLUGIN_ROOT}`, which Codex does not set, so
+set `S` to the plugin's `assets/scripts` folder by hand there.
+
 ## Plugins
 
 | Plugin | What it does |

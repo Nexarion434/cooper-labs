@@ -1,0 +1,36 @@
+{
+  "name": "cooper-brand",
+  "version": "0.5.3",
+  "description": "Cooper Labs' brand kit for documents and social: the A4 internal-document template with sixteen page styles (proposal, case study, spec, post-mortem, memo, guide, report), the 16:9 deck, the A4 fact sheet, the meeting note, the quote, the social cards from the Figma file (post on the render or the halftone, partner card, X cover, social preview) in eleven sizes, the banners, the thread cards, the animated MP4, the brand renders by number and the script that renders new ones. Built from a JSON description, rendered with Chromium, checked before it goes out.",
+  "author": {
+    "name": "Cooper Labs"
+  },
+  "repository": "https://github.com/cooper-labs-tech/cooper-plugin",
+  "keywords": [
+    "cooper labs",
+    "brand",
+    "internal document",
+    "proposal",
+    "statement of work",
+    "case study",
+    "post-mortem",
+    "spec",
+    "memo",
+    "deck",
+    "slides",
+    "pitch"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Cooper Brand",
+    "shortDescription": "Cooper Labs' brand kit: documents, deck, fact sheet, note, quote, social cards.",
+    "longDescription": "Cooper Labs' brand kit for documents and social: the A4 internal-document template with sixteen page styles (proposal, case study, spec, post-mortem, memo, guide, report), the 16:9 deck, the A4 fact sheet, the meeting note, the quote, the social cards from the Figma file (post on the render or the halftone, partner card, X cover, social preview) in eleven sizes, the banners, the thread cards, the animated MP4, the brand renders by number and the script that renders new ones. Built from a JSON description, rendered with Chromium, checked before it goes out.",
+    "developerName": "Cooper Labs",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Write a proposal for Parallel as a Cooper Labs document.",
+      "Make the LinkedIn card for the Atlas launch.",
+      "A meeting note for today's weekly with Parallel."
+    ]
+  }
+}
