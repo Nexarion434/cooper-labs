@@ -9,8 +9,8 @@ description: >
   the internal document, one block per slide, delivered as a PDF and as PNG
   per slide.
 metadata:
-  version: "0.3.0"
-  source: "cooper-brand 0.3.0 — the parallel-brand deck with the Cooper Labs identity"
+  version: "0.3.1"
+  source: "cooper-brand 0.3.1 — the parallel-brand deck with the Cooper Labs identity"
 ---
 
 # Cooper Labs — deck
@@ -73,7 +73,7 @@ accepts the `canvas--deck` size.
 |---|---|---|
 | Title | first | the poster: the halftone (or the render) at 55% under the fade, wordmark and `CLASSIFICATION · vX.X` at the top, centred kicker, title (96 at −0.07 em, one orange phrase), standfirst, the mark, the meta line |
 | Content | the argument | label row: boxed label 12, source 12; then heading 48 (split from the body at 380), body 17, ruled cells (24 / 15), ruled table 15, tiles 88, the band 34 |
-| Divider | a new part | number 220 in an orange block, kicker, title 76; footer only |
+| Divider | a new part | the number bare at 220, kicker, title 76; footer only |
 | Statement | the one sentence to remember | the poster: the mark, text 64 centred with its orange phrase, source line |
 | Closing | last | the poster on ink: the tagline, the orange mark, one line with the studio links and `Class · vX.Y · date` |
 
@@ -93,7 +93,7 @@ two slides rather than shrinking the type: the footer numbers follow.
   footer `COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION` and `NN / NN`;
   `Public` decks get `COOPER LABS · COOPERLABS.XYZ`.
 - The render appears **only on the title slide**; a content slide has no
-  picture and no colour beyond the orange tile, block or band. Dividers
+  picture and no colour beyond the orange figure, phrase or band. Dividers
   and statements sit on the paper ground.
 - Deliver the PDF; the PNGs are for a message or a preview, never for
   printing.

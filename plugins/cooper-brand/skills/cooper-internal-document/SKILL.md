@@ -7,8 +7,8 @@ description: >
   when turning a brief, a project or a decision into the branded A4 PDF.
   Covers the HTML to PDF build.
 metadata:
-  version: "0.3.0"
-  source: "cooper-brand 0.3.0 — the parallel-brand engine with the Cooper Labs identity"
+  version: "0.3.1"
+  source: "cooper-brand 0.3.1 — the parallel-brand engine with the Cooper Labs identity"
 ---
 
 # Cooper Labs — internal document
@@ -17,7 +17,7 @@ One skeleton for every long document: a poster cover, as many section
 pages as the argument needs on the block grid, a poster back cover. A4 at
 96 dpi (794 × 1123): the cover reads like a post (the halftone, the title
 centred, the mark), the inside like a spec sheet (ruled cells, boxed
-labels, orange tiles and bands). **English throughout**, whatever language the request
+labels, one orange figure, the orange band). **English throughout**, whatever language the request
 is in. Load `cooper-brand-kit` first if the tokens are not already in
 context.
 
@@ -114,10 +114,10 @@ stack of blocks with a 28 gap; each block is a label row, then the content:
 | Body | | Roboto Condensed 10.5, max 560 | `.body` |
 | Bullets | | ruled cells sharing borders: a counter, the term in PP Eiko 16, the text | `.bullets` |
 | Table | | fully ruled: label head on paper, white cells; tabular cells for figures; one `tint` row allowed | `.table` |
-| Headline figures | | tiles: the key at the top, the number in PP Eiko 56 at the bottom, the first tile orange | `.figures` |
+| Headline figures | | ruled cells: the key at the top, the number in PP Eiko 56 at the bottom, the first number orange | `.figures` |
 | Recommendation | | the band: an orange cell with the mark, then the ink panel with the title in white PP Eiko 22 and one or two paragraphs | `.reco` |
 
-The first figure is the one that matters: it takes the orange tile. A
+The first figure is the one that matters: its number is orange. A
 block with figures alone has no label row. Sections are marked by the
 boxed label, not by numbered headings; inside a section the sub-heading
 marks the sub-part.
@@ -137,7 +137,7 @@ one sentence on a statement page, its one number on a hero page.
 
 | Style | What it is for | In the description | Bends a rule |
 |---|---|---|---|
-| A · Divider | opens a part: number 180 in an orange block, kicker, title, standfirst, four ruled cells | page `style: divider` (`n`, `kicker`, `title`, `standfirst`, `list`) | |
+| A · Divider | opens a part: the number bare at 180, kicker, title, standfirst, four ruled cells | page `style: divider` (`n`, `kicker`, `title`, `standfirst`, `list`) | |
 | B · Divider, dark | the same on the ink ground, for the decision part | `style: divider`, `dark: true` | dark ground inside |
 | C · Statement | the one sentence to remember, the poster: the mark, the sentence at 46 centred, one orange phrase | `style: statement` (`text`, `who`) | |
 | D · Hero figure | one number at 130, its unit in orange, a body and the tiles | `style: hero` (`n`, `unit`, `kicker`, `body`, `figures`) | |

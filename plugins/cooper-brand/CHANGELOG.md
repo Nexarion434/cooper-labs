@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.3.1 · 15 Sep 2026
+
+No big number in an orange box any more (Nicolas, on the 0.3.0 pages).
+- **Dividers** (the document's page style A / B and the deck slide): the
+  part number stands bare in ink at 180 (220 on a slide), white on the
+  dark page, 32 over the kicker.
+- **Headline figures**: ruled cells sharing borders like every other
+  structured block (no gap, no orange ground); the first number is set in
+  `accent`, the others in `ink`; an `<em>` in a number is `accent` too.
+  The deck and the fact sheet follow.
+- Docs: `tokens.md`, the four document skills and decision 14 updated.
+
+### Design decisions (0.3.1)
+14. **The first figure is the one that matters**: its number is orange,
+    the cell stays white. Write the figures in that order. (Replaces the
+    orange tile of 0.3.0.)
+17. **The orange is type, the mark and the band.** It never fills a box
+    around a big number: the divider number and the figures are bare.
+
 ## 0.3.0 · 15 Sep 2026
 
 The documents on the two directions Nicolas picked on the design canvas
@@ -39,7 +58,8 @@ interior** (direction C). Same engine, same descriptions, same checks;
     halftone as the Figma posts, so a document and the feed read as one
     thing. The site's cards (0.2.0) are gone from the documents.
 14. **The first figure is the one that matters**: it takes the orange
-    tile. Write the figures in that order.
+    tile. Write the figures in that order. *(0.3.1: the number is orange,
+    not the tile.)*
 15. **The label box carries the mark**, not a number: sections are not
     numbered inside a page (the Contents page numbers them).
 16. **No shadows, no radius**: the block is square and ruled; nothing is

@@ -11,8 +11,8 @@ holds in the Parallel kit; there is no mono here).
 
 Chosen on the design canvas of 14 September 2026: the **poster cover** (the
 posts' typography on white) and the **block interior** (the block as a
-device: the ruled grid of a spec sheet, labels in boxes, figure tiles with
-the first one orange, fully ruled tables, the recommendation as an orange
+device: the ruled grid of a spec sheet, labels in boxes, figure cells with
+the first number orange, fully ruled tables, the recommendation as an orange
 and ink band). PP Eiko at line-height 0.9 to 1.0, tracked −0.045 to
 −0.07 em.
 
@@ -63,7 +63,7 @@ Telegram, then `Class · vX.Y · D Mon YYYY`) and the notice. `.back`,
 | 03 | Body | Roboto Condensed 10.5 / 1.55, ls −0.005 em, `ink`, max 560; 12 under a heading, 8 between paragraphs; in a prose block, at the right on the hairline | `.body` |
 | 04 | Bullets | ruled cells (1 px `line`, white, padding 14, `auto-fit` from 150 wide, sharing borders): a counter `01` label 8 `muted`, the term PP Eiko 16 / 1.05 ls −0.03 em, the text 10 / 1.5 `ink-soft` | `.bullets`, `.bullet`, `.bullet__term`, `.bullet__text` |
 | 05 | Table | fully ruled, 1 px `line` on every cell; head label 8 `muted` on `paper`, padding 10 12; cells white, padding 10 12; text 10.5 / 1.4 `ink`; figure cells tabular 10 `ink-soft` (`td.mono`); strong 500; one `tint` row | `.table`, `td.mono`, `td.strong`, `tr.highlight`, `.table--plain` |
-| 06 | Headline figures | tiles 150 high, gap 10, 1 px `line`, white, padding 14: the key label 8 at the top, the number PP Eiko 500 56 / .85 ls −0.05 em at the bottom; **the first tile is orange** (`accent` ground, `ink` type). Numbers only in the number cell | `.figures`, `.figure`, `.figure__n`, `.figure__k` |
+| 06 | Headline figures | ruled cells 150 high sharing borders (1 px `line`, white, padding 14): the key label 8 at the top, the number PP Eiko 500 56 / .85 ls −0.05 em at the bottom; **the first number is `accent`** (and any `<em>`), the others `ink`. Numbers only in the number cell | `.figures`, `.figure`, `.figure__n`, `.figure__k` |
 | 07 | Recommendation | the band: an `accent` cell 120 wide with the ink mark 40 wide at its bottom left, then `ink`: title PP Eiko 500 22 / 1.05 ls −0.03 em `white` (padding 18 22 0), body 10.5 / 1.5 white at 72% (10 22 18) | `.reco`, `.reco::before`, `.reco__title`, `.reco__body` |
 | — | Logo | the horizontal wordmark, 22 high on the cover, 18 in a fact-sheet running head, 30 on a deck title slide; the mark 16 wide in a running head, 14 in a label box, 40 in the recommendation band, 53 on the cover; `_b` on paper, `_w` in a box, `_o` on ink. Never redrawn | `.cover__logo`, `.pagehead__logo`, `.tag::before`, `.cover__rule` |
 
@@ -145,9 +145,9 @@ closing slides are the poster.
 | Running head | the mark 22 wide + label 11 left, the number label 14 right, on a 1 px `ink` rule | `.deck__head` |
 | Footer | 1 px `ink` rule, 14, label 11: `COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION` and `NN / NN`; 44 from the bottom | `.deck__foot` |
 | Stack | the label row, then the block, 40 under the head, gap 22 | `.deck__grid`, `.deck__margin`, `.deck__main` |
-| Blocks | boxed label 12 (box 38, mark 20), source 12, heading 48 / .92 max 980 (prose split at 380), body 17 / 1.5 max 860, cells from 260 wide (term 24, text 15), ruled table 15 (head 11, figures 14), tiles 220 high (88, key 11), the band with a 180 cell (title 34, body 16) | `.deck .tag` … |
+| Blocks | boxed label 12 (box 38, mark 20), source 12, heading 48 / .92 max 980 (prose split at 380), body 17 / 1.5 max 860, cells from 260 wide (term 24, text 15), ruled table 15 (head 11, figures 14), figure cells 220 high (88, key 11), the band with a 180 cell (title 34, body 16) | `.deck .tag` … |
 | Title slide | the poster on white: the render (or the halftone) at 55% under a fade to white 20% → 60% → 80%, wordmark 30 high; kicker 16; title 96 / .9 ls −0.07 em max 980; standfirst 17 max 600; the mark 64 wide; the meta line 11 | `.deck--title` |
-| Divider | number 220 / .85 `ink` in an `accent` block (padding 24 28 16), kicker label 12, title 76 / .92 max 960; bottom-aligned, padding 56 / 72 / 120 | `.deck--divider` |
+| Divider | number 220 / .85 ls −0.06 em `ink`, bare (no block), 36 over the kicker label 12; title 76 / .92 max 960; bottom-aligned, padding 56 / 72 / 120 | `.deck--divider` |
 | Statement | centred, padding 0 140; the mark 64 wide; text 64 / .98 ls −0.05 em; source label 12 | `.deck--statement` |
 | Closing | the poster on `ink`: tagline 72 max 900, the orange mark 64, the colophon line | `.deck--back` |
 
@@ -161,7 +161,7 @@ One A4 page, the document blocks at smaller sizes, ruled.
 | Stack | column, gap 22, 28 under the head | `.fact` |
 | Title | PP Eiko 500 46 / .92 ls −0.05 em max 600, 14 under the boxed label; one `accent` phrase | `.fact__title` |
 | Standfirst | Roboto Condensed 12 / 1.5 ls −0.01 em `ink-soft` max 520, 14 under the title | `.fact__stand` |
-| Figures | the tiles at 110 high, numbers 40, the first one orange | `.fact .figure` |
+| Figures | the ruled cells at 110 high, numbers 40, the first number orange | `.fact .figure` |
 | Columns | two ruled cells sharing a border, padding 16 18 18; heading 20; bullets as a list on `line` rules (term 10 500, text 9.5) | `.fact__cols` |
 | Contact | four ruled cells: key label 8, value 10.5 | `.fact__contact` |
 
@@ -173,7 +173,7 @@ scale: 22 (lede), 46 (statement), 130 (hero figure), 180 (divider number).
 
 | Style | Values | CSS |
 |---|---|---|
-| A / B · Divider | fills the page, bottom-aligned; the number PP Eiko 500 180 / .85 ls −0.06 em `ink` in an `accent` block (padding 22 24 12); kicker label 9 `ink` 28 under; title 60 / .92 ls −0.05 em max 560, 16 under; standfirst 13 / 1.5 `ink-soft` max 440; the list as four ruled cells, 28 under. Dark: `ink` page, white type, the cells on `line-inv` | `.divider`, `.page--dark` |
+| A / B · Divider | fills the page, bottom-aligned; the number PP Eiko 500 180 / .85 ls −0.06 em `ink`, bare (white on the dark page); kicker label 9 `ink` 32 under; title 60 / .92 ls −0.05 em max 560, 16 under; standfirst 13 / 1.5 `ink-soft` max 440; the list as four ruled cells, 28 under. Dark: `ink` page, white type, the cells on `line-inv` | `.divider`, `.page--dark` |
 | C · Statement | the poster, centred, padding 0 40: the mark 53 wide; text 46 / .98 ls −0.05 em, one `accent` phrase, 32 under; source label 9 `muted` 32 under | `.statement` |
 | D · Hero figure | centred; number 130 / .85 ls −0.06 em, unit in `accent`; kicker label 9 `ink` 22 under; 1 px `ink` rule 34 under; row of body + tiles 24 under | `.hero` |
 | E · Two columns | two ruled cells sharing a border, padding 16 18 18; head as an outlined label box; heading 22; bullets as a list on `line` rules; verdict PP Eiko 16 `accent-deep` on a 1 px `ink` rule, pushed to the bottom | `.cols`, `.cols__head`, `.verdict` |

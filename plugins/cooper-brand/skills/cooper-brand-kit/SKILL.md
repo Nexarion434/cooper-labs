@@ -8,7 +8,7 @@ description: >
   brand. It is the foundation loaded by cooper-internal-document,
   cooper-deck, cooper-fact-sheet and cooper-social.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
   source: "Figma file Brand Identity (S5Lg16aM47EGiGOYCDxl9a), page Twitter; cooperlabs.xyz"
 ---
 
@@ -22,7 +22,7 @@ square-and-crescent mark ("the block"), and six renders of that block in
 white 3D, halftone, pixels and orange. Documents open like a post (the
 poster cover: the halftone, the title centred and huge, the mark alone)
 and read like a spec sheet inside (the block interior: a ruled grid,
-labels in boxes, orange tiles and bands).
+labels in boxes, one orange figure, the orange band).
 
 Source of truth: the Figma file *Brand Identity* (page *Twitter*: the posts,
 the X covers, the social preview, the logos, the palette) and cooperlabs.xyz
@@ -115,9 +115,11 @@ Two languages, chosen on the design canvas of 14 September 2026:
   outline), the source at the right; a prose block splits heading left,
   body right on a hairline; everything structured is **ruled cells** (1 px
   `line`, white) sharing borders: tables, bullets, the two columns, the
-  matrix, the glossary, the checklist, the contact strip. Figures are
-  **tiles**, the first one orange; the recommendation is the **band**, an
+  matrix, the glossary, the checklist, the contact strip, the figures
+  (the first number orange). The recommendation is the **band**, an
   orange cell with the mark and an ink panel; the code is an ink panel.
+  A divider's number stands bare in ink; no big number ever sits in a
+  coloured box.
   Radius 0 everywhere. Blocks stack with a 28 gap.
 
 ## The logo

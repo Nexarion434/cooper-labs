@@ -235,12 +235,12 @@ body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased
 .table tr.highlight td{background:var(--tint)}
 .table--plain td{padding:5.5px 12px}
 
-/* 06 headline figures · tiles, the first one orange */
-.figures{display:flex;gap:10px}
-.figure{flex:1;display:flex;flex-direction:column;justify-content:space-between;height:150px;background:var(--card);border:1px solid var(--line);padding:14px;min-width:0;box-sizing:border-box}
-.figure:first-child{background:var(--accent);border-color:var(--accent)}
+/* 06 headline figures · ruled cells, the first number orange */
+.figures{display:flex;gap:0}
+.figure{flex:1;display:flex;flex-direction:column;justify-content:space-between;height:150px;background:var(--card);border:1px solid var(--line);margin-left:-1px;padding:14px;min-width:0;box-sizing:border-box}
+.figure:first-child{margin-left:0}
 .figure__n{font:500 56px/.85 var(--display);letter-spacing:-.05em;color:var(--ink)}
-.figure__n em{font-style:normal;color:var(--white)}
+.figure:first-child .figure__n,.figure__n em{font-style:normal;color:var(--accent)}
 .figure__k{order:-1;font:500 8px/1.3 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .figure:first-child .figure__k{color:var(--ink)}
 
@@ -291,7 +291,6 @@ body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased
 .deck .bullet>div::before{font-size:11px;margin-bottom:18px}
 .deck .bullet__term{font-size:24px}
 .deck .bullet__text{font-size:15px;margin-top:12px}
-.deck .figures{gap:16px}
 .deck .figure{height:220px;padding:22px}
 .deck .figure__n{font-size:88px}
 .deck .figure__k{font-size:11px}
@@ -322,7 +321,7 @@ body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased
 .deck--title .cover__notice{font-size:11px}
 /* divider and statement slides */
 .deck--divider{position:absolute;inset:0;padding:56px 72px 120px;display:flex;flex-direction:column;justify-content:flex-end}
-.deck--divider .divider__n{font:500 220px/.85 var(--display);color:var(--ink);letter-spacing:-.06em;background:var(--accent);align-self:flex-start;padding:24px 28px 16px;margin-bottom:28px}
+.deck--divider .divider__n{font:500 220px/.85 var(--display);color:var(--ink);letter-spacing:-.06em;margin:0 0 36px -10px}
 .deck--divider .divider__kicker{font:500 12px/1 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
 .deck--divider .divider__title{margin-top:18px;font:500 76px/.92 var(--display);color:var(--ink);max-width:960px;letter-spacing:-.045em}
 .deck--divider .divider__title em{font-style:normal;color:var(--accent)}
@@ -371,10 +370,10 @@ body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased
    Sixteen compositions on the block grid. Sizes beyond the scale: 22 (lede), 46 (statement), 130 (hero figure), 180 (divider
    number). The five marked "bends a rule" (dark ground, no measure, a tinted cell, a picture inside) are for the opening page of
    a part or a single appendix. */
-/* A · section divider · the number in an orange block */
+/* A · section divider · the number bare, in ink, no block */
 .divider{display:flex;flex-direction:column;justify-content:flex-end;height:939px;margin-top:28px}
-.divider__n{font:500 180px/.85 var(--display);letter-spacing:-.06em;color:var(--ink);background:var(--accent);align-self:flex-start;padding:22px 24px 12px}
-.divider__kicker{margin-top:28px;font:500 9px/1 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.divider__n{font:500 180px/.85 var(--display);letter-spacing:-.06em;color:var(--ink);margin-left:-8px}
+.divider__kicker{margin-top:32px;font:500 9px/1 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
 .divider__title{margin-top:16px;font:500 60px/.92 var(--display);letter-spacing:-.05em;color:var(--ink);max-width:560px}
 .divider__title em{font-style:normal;color:var(--accent)}
 .divider__stand{margin-top:18px;font:400 13px/1.5 var(--sans);letter-spacing:-.01em;color:var(--ink-soft);max-width:440px}
@@ -390,6 +389,7 @@ body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased
 .page--dark .pagehead,.page--dark .pagefoot{border-color:var(--white)}
 .page--dark .pagehead__meta::before{background-image:url("../logo/cooper_icon_w.svg")}
 .page--dark .pagehead__meta,.page--dark .pagehead__num,.page--dark .pagefoot__meta,.page--dark .pagefoot__page{color:var(--white)}
+.page--dark .divider__n{color:var(--white)}
 .page--dark .divider__kicker{color:var(--grey-6)}
 .page--dark .divider__title{color:var(--white)}
 .page--dark .divider__stand{color:var(--paper-72)}
