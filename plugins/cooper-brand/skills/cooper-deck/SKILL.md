@@ -9,8 +9,8 @@ description: >
   the internal document, one block per slide, delivered as a PDF and as PNG
   per slide.
 metadata:
-  version: "0.4.0"
-  source: "cooper-brand 0.4.0 — the parallel-brand deck with the Cooper Labs identity"
+  version: "0.4.1"
+  source: "cooper-brand 0.4.1 — the parallel-brand deck with the Cooper Labs identity"
 ---
 
 # Cooper Labs — deck
@@ -20,8 +20,8 @@ the margin column (the label, the source) beside one block (heading,
 body, bullets, a table on hairlines, the figures strip or the
 recommendation), the running head above, the footer below, no rules. A
 title slide opens it with the render as a plate on the left half, a
-closing slide ends it with a render across the slide, the tagline and the
-links. **English
+closing slide ends it the same way, with the tagline and the links at the
+right. **English
 throughout.** Load `cooper-brand-kit` first if the tokens are not already in
 context.
 
@@ -78,7 +78,7 @@ accepts the `canvas--deck` size.
 | Content | the argument | the margin column (label 11, source 12) beside the block: heading 40, body 17, bullets (22 / 15), table 15 on hairlines, the figures strip at 72, the recommendation 30 |
 | Divider | a new part | kicker and title 64 at the bottom left; no number; footer only |
 | Statement | the one sentence to remember | text 48 at the left, vertically centred, the source line under it |
-| Closing | last | a render across the slide (`back`), the wordmark, the tagline 56 at the bottom left, the studio links and `This deck · Class · vX.Y · date` as pairs |
+| Closing | last | the render on the left half (`back`), the wordmark; at the right, bottom-aligned: the tagline 48, the studio links and `This deck · Class · vX.Y · date` as pairs |
 
 One block per content slide. When a block does not fit (a table longer than
 five rows, more than four bullets, a body over four lines), split it over

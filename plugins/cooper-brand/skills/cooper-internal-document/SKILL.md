@@ -7,15 +7,15 @@ description: >
   when turning a brief, a project or a decision into the branded A4 PDF.
   Covers the HTML to PDF build.
 metadata:
-  version: "0.4.0"
-  source: "cooper-brand 0.4.0 — the parallel-brand engine with the Cooper Labs identity"
+  version: "0.4.1"
+  source: "cooper-brand 0.4.1 — the parallel-brand engine with the Cooper Labs identity"
 ---
 
 # Cooper Labs — internal document
 
 One skeleton for every long document: a cover with the render as a plate,
 as many section pages as the argument needs on the margin grid, a back
-cover with a render across it. A4 at 96 dpi (794 × 1123): the document is
+cover with the plate again. A4 at 96 dpi (794 × 1123): the document is
 the **catalogue of the object** (the renders do the work, the type is
 small and precise, white page, wide margins, hairlines; no box, band or
 tile). **English throughout**, whatever language the request
@@ -125,11 +125,11 @@ figures alone has no label and spans the measure. Sections are marked by
 the label in the margin, not by numbered headings; inside a section the
 sub-heading marks the sub-part.
 
-**Back cover.** A render across the page (`back: "05"`, the chromatic
-block, is the default; `"dark"` plain ink), the wordmark, the tagline in
-PP Eiko 40 at the bottom left, the colophon as key-value pairs (the studio
-links, then `This document`) and the notice. Keep it; it is what makes a
-printed copy read as finished.
+**Back cover.** The plate again (`back: "05"`, the chromatic block, is
+the default; `"dark"` plain ink), the wordmark on it, and under it the
+tagline in PP Eiko 40 at the bottom left, the colophon as key-value pairs
+(the studio links, then `This document`) and the notice. Keep it; it is
+what makes a printed copy read as finished.
 
 ## Page styles
 
@@ -141,7 +141,7 @@ one sentence on a statement page, its one number on a hero page.
 
 | Style | What it is for | In the description | Bends a rule |
 |---|---|---|---|
-| A · Divider | opens a part: a render across the page (`render`, 04 or 05), the kicker, the title at 40 and the standfirst at the bottom left, the list at the bottom right; the number is kept for the Contents page and not shown | page `style: divider` (`n`, `kicker`, `title`, `standfirst`, `list`, `render`) | imagery inside |
+| A · Divider | opens a part: the render as a plate across the top 700 (`render`), then on white the kicker, the title at 40 and the standfirst at the bottom left, the list at the bottom right; the number is kept for the Contents page and not shown | page `style: divider` (`n`, `kicker`, `title`, `standfirst`, `list`, `render`) | imagery inside |
 | B · Divider, dark | the same on the ink ground, no render, for the decision part | `style: divider`, `dark: true` | dark ground inside |
 | C · Statement | the one sentence to remember, at 36, alone on the page | `style: statement` (`text`, `who`) | |
 | D · Hero figure | a plate (`render`, `caption`), then the number at 96 in the margin column with its unit, the body beside it, the figures strip under | `style: hero` (`n`, `unit`, `kicker`, `body`, `figures`, `render`, `caption`) | |

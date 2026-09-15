@@ -21,7 +21,7 @@ The description (JSON):
     version        "v0.1"; classification Confidential | Internal | Public; status Draft | Final
     date           "2026-09-10"; owner "Noah, Protocol"
     render         "01" (one of the six renders as the plate on the left half of the title slide, the default) | "dark" (plain ink ground, white type)
-    back           "05" (the render across the closing slide, the default) | "dark" (plain ink)
+    back           "05" (the render on the left half of the closing slide, the default) | "dark" (plain ink)
     closing        true (default): the closing slide with the tagline and the links
     slides         [ ... ] one object per slide:
         {"tag": "Summary", "source": "...", "heading": "...", "body": "...", "bullets": [...], "table": {...}, "figures": [...], "reco": [...]}

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.1 · 15 Sep 2026
+
+Type never sits on a render (Nicolas, on pages 5 and 9 of the 0.4.0
+proposal). A divider's render and the back cover's are now **plates**, 700
+and 620 high from the top, and the words sit on white under them, exactly
+as on the cover; the deck's closing slide takes the render on its left
+half, like the title slide. Decision 18 amended: a render is a picture,
+the page carries the words.
+
 ## 0.4.0 · 15 Sep 2026
 
 The documents rebuilt on **Object**, direction 1 of the second design

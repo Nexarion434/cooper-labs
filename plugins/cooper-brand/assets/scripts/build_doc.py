@@ -19,7 +19,7 @@ The description (JSON, or a Python dict passed to `build()`):
     standfirst     one sentence; kicker (optional, default "<Class> · <subject>")
     version        "v0.1"; classification Confidential | Internal; status Draft | Final
     date           "2026-09-09"; owner "Noah, Cooper Labs"; cover "01" (the render as a plate across the top of the cover, the default; "02" the halftone) | "dark" (plain ink, white type)
-    back           "05" (the render across the whole back cover, the default) | "dark" (plain ink)
+    back           "05" (the render as the plate of the back cover, the default) | "dark" (plain ink)
     contents       "auto" (default) | true | false; contents_intro (the "How to read" text, optional)
     versions       [["v0.1", "2026-09-09", "First draft"], ...]   -> the Versions table on the Contents page
     pages          [{"name": "Analysis", "blocks": [ ... ]}]
@@ -49,7 +49,7 @@ Page styles (0.5.0). More block items, in the reading column:
 A block with `"step": "01"` shows the number in the margin instead of a tag.
 Pages of their own, with `style` instead of `blocks` (`toc` names their line on the Contents page):
     divider    {"n": "02", "kicker": "Part two · Assessment", "title": "...", "standfirst": "...", "list": [["Sections", "..."], ...], "render": "04", "dark": false}
-               (`render` fills the page with that render; `n` is kept for the Contents page and not shown)
+               (`render` lays that render as a plate across the top 700 px; `n` is kept for the Contents page and not shown)
     statement  {"text": "... *turns a bank run into a queue.*", "who": "Summary · Protocol review"}
     hero       {"n": "38", "unit": "%", "kicker": "...", "body": "...", "figures": [[n, k], ...], "render": "03", "caption": "..."}   (`render`: a plate above the number)
     prose      {"lede": "...", "body": ["...", "..."], "signature": ["Noah, Protocol", "10 September 2026"]}
@@ -146,7 +146,7 @@ def cover(d, A):
 
 
 def back(d, A):
-    """The back cover: a render across the whole page (`back: "05"`; `back: "dark"` for plain ink), the tagline and the links over it."""
+    """The back cover: the render as a plate (`back: "05"`; `back: "dark"` for plain ink), the tagline and the links under it."""
     m = "".join(f'<div><div class="k">{E(k)}</div><div class="v">{E(v)}</div></div>' for k, v in brand.LINKS)
     m += f'<div><div class="k">This document</div><div class="v">{E(d["class_label"])} · {E(d["version"])} · {E(short_date(d["date"]))}</div></div>'
     r = str(d.get("back", "05")).lower()

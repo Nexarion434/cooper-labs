@@ -8,7 +8,7 @@ description: >
   brand. It is the foundation loaded by cooper-internal-document,
   cooper-deck, cooper-fact-sheet and cooper-social.
 metadata:
-  version: "0.4.0"
+  version: "0.4.1"
   source: "Figma file Brand Identity (S5Lg16aM47EGiGOYCDxl9a), page Twitter; cooperlabs.xyz"
 ---
 
@@ -20,9 +20,9 @@ products people use."** The identity is white, grey and orange: one display
 face with a single weight, a condensed sans for everything else, a black
 square-and-crescent mark ("the block"), and six renders of that block in
 white 3D, halftone, pixels and orange. Documents are the **catalogue of
-the object**: the renders do the work (a plate across the top of the cover,
-a render across a part divider and the back cover, a specimen in a
-margin), the type is small and precise, the page is white with wide
+the object**: the renders do the work (a plate across the top of the
+cover, of a part divider and of the back cover, a specimen in a margin),
+the type is small and precise, the page is white with wide
 margins and hairlines. No boxes, no bands, no tiles.
 
 Source of truth: the Figma file *Brand Identity* (page *Twitter*: the posts,
@@ -110,10 +110,11 @@ set aside:
 
 - **The plate.** The cover is a render across the top 620 px with the
   wordmark on it, then the kicker, the title at 46, the standfirst, the
-  meta row at the bottom. A part divider is a render across the whole page
-  with the title small at the bottom left; the back cover the same with
-  the tagline. A hero figure gets a plate above the number; a block can
-  carry a square **specimen** in its margin.
+  meta row at the bottom. A part divider is the same plate (700 high) with
+  the title small under it at the bottom left; the back cover the same
+  with the tagline. A hero figure gets a plate above the number; a block
+  can carry a square **specimen** in its margin. Type never sits on a
+  render: the plate is a picture, the page carries the words.
 - **The catalogue page.** White. The running head and the footer are
   7.5 px labels in `muted`, no rules. Each block is a row of a grid: the
   **margin column** (200 wide: the label, the source, a specimen) and the
@@ -150,10 +151,9 @@ read and recomputed for any size by `assets/scripts/frame.py`).
 
 On a document the renders carry the identity: `cover: "01"` (the default)
 puts that render as the plate across the top of the cover (`"02"` the
-halftone, any number works, `"dark"` a plain ink cover); `back: "05"` lays
-one across the back cover; `render` on a divider fills the page (use 04 or
-05, whose grounds are flat, for a full page; 03 and 06 are for plates),
-on a hero page adds a plate above the number, on a plate page is the
+halftone, any number works, `"dark"` a plain ink cover); `back: "05"` is
+the plate of the back cover; `render` on a divider is its plate (the top
+700 px), on a hero page a plate above the number, on a plate page the
 plate; `specimen` on a block puts a 140 × 140 crop in the margin. The
 white 3D (01) and the halftone (02) read as texture; 03 to 06 show the
 block itself. Never more than one render per page.

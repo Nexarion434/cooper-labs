@@ -11,9 +11,9 @@ holds in the Parallel kit; there is no mono here).
 
 Chosen on the design canvas of 15 September 2026 (round two, direction 1,
 **Object**): the block is an object and the document is its catalogue. The
-six renders do the work (a plate across the top of the cover, a render
-across a part divider and the back cover, a plate above a hero figure, a
-square specimen in the margin of a block); the type is small and precise;
+six renders do the work (a plate across the top of the cover, of a part
+divider and of the back cover, a plate above a hero figure, a square
+specimen in the margin of a block); the type is small and precise;
 the page is white with wide margins, a 200 margin column and hairlines. No
 boxes, no bands, no tiles; the orange lives in the renders, not in the type
 (an accent phrase written with `*…*` renders in ink).
@@ -26,7 +26,7 @@ boxes, no bands, no tiles; the orange lives in the renders, not in the type
 | Footer | label 7.5 `muted`, 44 from the bottom; left `COOPER LABS · INTERNAL · NOT FOR DISTRIBUTION`, right `NN / NN`; no rule | `.pagefoot` |
 | Content | vertical stack, gap 36, starts 56 under the head | `.content` |
 | Block | a grid row: the margin column 200 wide (the label, the source, a specimen), the reading column beside it; a block without a label spans the measure | `.block`, `.block__margin`, `.block__main` |
-| Full-page render | `render` on a divider: the render across the whole page under the head, the type and the footer | `.page__img` |
+| Divider plate | `render` on a divider: the render across the top 700 px; the running head is dropped on that page (the folio stays in the footer) | `.page__img` |
 
 ## Cover
 
@@ -47,11 +47,11 @@ bottom, the notice under it. `cover: "dark"`: plain `ink`, white type.
 | Meta row | at the bottom: four `key value` pairs, key label 7.5 `muted`, value 8.5 `ink`, gap 24 | `.cover__meta`, `.k`, `.v` |
 | Notice | label 7.5 `muted`, 12 under the meta | `.cover__notice` |
 
-Back cover: the render across the whole page (`back: "05"`, the default;
-`"dark"` for plain ink), the wordmark, the tagline PP Eiko 500 40 / 1 ls
-−0.04 em `ink` max 380 at the bottom left, the colophon as key-value pairs
-under it (website, X, Telegram, `This document`), the notice. `.back`,
-`.back__tagline`.
+Back cover: the plate again (`back: "05"`, the default; `"dark"` for
+plain ink), the wordmark on it, and under it at the bottom left the
+tagline PP Eiko 500 40 / 1 ls −0.04 em `ink` max 380, the colophon as
+key-value pairs (website, X, Telegram, `This document`), the notice.
+`.back`, `.back__tagline`.
 
 ## Blocks
 
@@ -150,7 +150,7 @@ the left half, the closing slide a render across the slide.
 | Title slide | the render at cover fit on the left 640; at the right (x 720 to 1200, from y 150): kicker 11, title 56 / 1 ls −0.04 em max 480, standfirst 15 max 400, the meta pairs at the bottom (key 10, value 12), the notice 10 | `.deck--title` |
 | Divider | bottom-aligned, padding 56 / 80 / 120: kicker label 11 `muted`, title 64 / 1 ls −0.04 em max 720; no number | `.deck--divider` |
 | Statement | left-aligned, padding 0 200, vertically centred: text 48 / 1.05 ls −0.04 em max 820, source label 11 `muted` 32 under; no mark | `.deck--statement` |
-| Closing | the render across the slide (`back: "05"`), the wordmark, the tagline 56 / 1 max 560 at the bottom left, the colophon pairs, the notice | `.deck--back` |
+| Closing | the render on the left 640 (`back: "05"`), the wordmark; at the right, bottom-aligned: the tagline 48 / 1 max 480, the colophon pairs, the notice | `.deck--back` |
 
 ## Fact sheet
 
@@ -175,7 +175,7 @@ what each is for. Sizes beyond the scale: 20 (lede), 36 (statement), 96
 
 | Style | Values | CSS |
 |---|---|---|
-| A / B · Divider | `render` across the whole page (04 or 05, a flat ground, for a full page); the title block at the bottom left (bottom 80, width 380): kicker label 7.5 `muted`, title PP Eiko 500 40 / 1 ls −0.04 em `ink` 16 under, standfirst 11 / 1.55 `ink-soft` max 320; the list at the bottom right (x 522, width 200) as key-value pairs (key 7.5, value 8.5); the number is not shown. Dark: `ink` page, white type, no render | `.divider`, `.divider__list`, `.page--dark` |
+| A / B · Divider | `render` as a plate across the top 700; on white under it, the title block at the bottom left (bottom 80, width 380): kicker label 7.5 `muted`, title PP Eiko 500 40 / 1 ls −0.04 em `ink` 16 under, standfirst 11 / 1.55 `ink-soft` max 320; the list at the bottom right (x 522, width 200) as key-value pairs (key 7.5, value 8.5); the number is not shown. Dark: `ink` page, white type, no render | `.divider`, `.divider__list`, `.page--dark` |
 | C · Statement | left-aligned, vertically centred: text PP Eiko 500 36 / 1.05 ls −0.04 em max 480; source label 7.5 `muted` 28 under; no mark | `.statement` |
 | D · Hero figure | `render`: a plate 406 high across the measure with its `caption` 8 `muted` 10 under; then the number PP Eiko 500 96 / .85 ls −0.05 em in the margin column with the unit (`<em>`) in Roboto Condensed 300 22, the kicker label 7.5 `muted` under; the body beside it in the reading column; the figures strip across the measure 40 under | `.hero`, `.hero__img`, `.hero__cap`, `.hero__n` |
 | E · Two columns | two columns gap 32, nothing around them; head label 7.5 `muted`; heading 18; bullets as a list on `hair` lines; verdict PP Eiko 14 `ink` on a 1 px `ink` line, pushed to the bottom | `.cols`, `.cols__head`, `.verdict` |

@@ -8,8 +8,8 @@ description: >
   client or a figure set has to fit on one A4 page for someone outside the
   team. One page, recto, delivered as a PDF.
 metadata:
-  version: "0.4.0"
-  source: "cooper-brand 0.4.0 — the parallel-brand fact sheet with the Cooper Labs identity"
+  version: "0.4.1"
+  source: "cooper-brand 0.4.1 — the parallel-brand fact sheet with the Cooper Labs identity"
 ---
 
 # Cooper Labs — fact sheet
