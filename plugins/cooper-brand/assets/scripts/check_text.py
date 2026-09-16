@@ -91,9 +91,11 @@ def scan(obj):
             m = re.search(pat, s)
             if m:
                 faults.append((path, what, excerpt(s, m), instead))
+        seen = []
         for pat, instead in TELLS:
             m = re.search(pat, s, re.I | re.M)
-            if m:
+            if m and not any(a < m.end() and m.start() < b for a, b in seen):   # one tell per phrase, not one per pattern
+                seen.append((m.start(), m.end()))
                 tells.append((path, m.group(0).strip(), excerpt(s, m), instead))
     return faults, tells
 
