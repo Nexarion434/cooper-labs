@@ -30,6 +30,8 @@ The description (JSON):
         {"kind": "statement", "text": "A fee that is zero on a normal day ... *turns a bank run into a queue.*", "who": "Summary · Protocol review"}
 """
 import sys, os, re, json, html, pathlib, subprocess
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import check_text
 
 HERE = pathlib.Path(__file__).resolve().parent
 ASSETS = HERE.parent
@@ -200,13 +202,14 @@ EXAMPLE = _example()
 
 
 def main():
-    args = sys.argv[1:]
+    args = [a for a in sys.argv[1:] if a != "--no-lint"]
     if "--example" in args:
         print(json.dumps(EXAMPLE, indent=2, ensure_ascii=False)); return
     if len(args) < 2:
         print(__doc__); sys.exit(1)
     with open(args[0], encoding="utf-8") as fh:
         d = json.load(fh)
+    check_text.gate(d, args[0], "--no-lint" in sys.argv)
     out, pdf_name, total = build(d, args[1], relative="--relative" in args)
     print(f"-> {out}  ({total} slides)  PDF name: {pdf_name}")
     code = 0

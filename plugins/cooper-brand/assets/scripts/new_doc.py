@@ -62,6 +62,8 @@ def main():
         sys.path.insert(0, str(HERE))
         with open(json_out, encoding="utf-8") as fh:
             d = json.load(fh)
+        import check_text
+        check_text.gate(d, json_out.name, "--no-lint" in sys.argv)
         if args[0] == "social":
             from build_social import build
             built, n = build(d, out, src=json_out.name)

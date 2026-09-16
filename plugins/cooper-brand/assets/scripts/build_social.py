@@ -32,6 +32,8 @@ banners and thread cards on the same rules. One canvas is one object of
 Titles keep their capitalisation as written; the kicker is set in uppercase by the CSS.
 """
 import sys, os, re, json, html, pathlib, subprocess
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import check_text
 
 HERE = pathlib.Path(__file__).resolve().parent
 ASSETS = HERE.parent
@@ -204,13 +206,14 @@ EXAMPLE = {"canvases": [
 
 
 def main():
-    args = sys.argv[1:]
+    args = [a for a in sys.argv[1:] if a != "--no-lint"]
     if "--example" in args:
         print(json.dumps(EXAMPLE, indent=1, ensure_ascii=False)); return
     if len(args) < 2:
         print(__doc__); sys.exit(1)
     with open(args[0], encoding="utf-8") as fh:
         d = json.load(fh)
+    check_text.gate(d, args[0], "--no-lint" in sys.argv)
     out, n = build(d, args[1], relative="--relative" in args, src=os.path.basename(args[0]), base=os.path.dirname(os.path.abspath(args[0])))
     print(f"-> {out}  ({n} canvas{'es' if n != 1 else ''})")
     if "--png" in args:

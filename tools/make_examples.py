@@ -257,7 +257,7 @@ PAGE_STYLES = {
                       "boxes": [{"x": 0, "y": 0, "w": 150, "h": 52, "title": "Question", "sub": "User, any assistant"}, {"x": 0, "y": 90, "w": 150, "h": 52, "title": "Tool call", "sub": "MCP client"},
                                 {"x": 200, "y": 90, "w": 150, "h": 52, "title": "Cache fresh?", "sub": "Keyed by block"}, {"x": 400, "y": 90, "w": 130, "h": 52, "title": "Answer", "sub": "With block number"},
                                 {"x": 200, "y": 180, "w": 150, "h": 52, "title": "Read the indexer", "sub": "Three chains"}, {"x": 200, "y": 270, "w": 150, "h": 52, "title": "Stale past 300 s?", "sub": "Flag in the result"},
-                                {"x": 400, "y": 270, "w": 130, "h": 52, "title": "Answer, flagged", "sub": "\"Figures as of...\""}, {"x": 0, "y": 270, "w": 150, "h": 52, "title": "build_tx", "sub": "Unsigned, user signs", "soft": True}],
+                                {"x": 400, "y": 270, "w": 130, "h": 52, "title": "Answer, flagged", "sub": "\"Figures as of block 8 812 044\""}, {"x": 0, "y": 270, "w": 150, "h": 52, "title": "build_tx", "sub": "Unsigned, user signs", "soft": True}],
                       "arrows": [{"from": [75, 52], "to": [75, 90]}, {"from": [150, 116], "to": [200, 116]}, {"from": [275, 142], "to": [275, 180], "label": "no"}, {"from": [350, 116], "to": [400, 116], "label": "yes"},
                                  {"from": [275, 232], "to": [275, 270]}, {"from": [350, 296], "to": [400, 296]}, {"from": [465, 142], "to": [465, 270]}, {"from": [150, 296], "to": [200, 296], "label": "write"}],
                       "caption": "One server, *four states.*"}},

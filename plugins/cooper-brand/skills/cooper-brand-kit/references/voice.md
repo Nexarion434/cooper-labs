@@ -64,6 +64,38 @@ accent ("2026 Roadmap / for Parallel published", "Seventeenth / Parallel
 Report", "Flash Loans / Explained"). Add one only when asked, and keep the
 capitalisation as the author wrote it.
 
+## Nothing that reads like a model wrote it
+
+A client can tell. The em dash is the first tell, and it is never the only
+one: where there is one, there is usually an adjective doing the work of a
+figure. `check_text.py` holds the list and every builder runs it on the
+description before it writes a line, so the copy is caught while it can still
+be rewritten (`python3 check_text.py doc.json`, or `--text "one sentence"`).
+
+Faults, which stop the build:
+
+| Written | Write instead |
+|---|---|
+| `—` | a period when what follows is a sentence, a comma for an aside, a colon when it explains, `·` in a meta line |
+| `–` between words | "to" in a range (2023 to 2026), a comma elsewhere |
+| `...` for a trailing thought | the end of the sentence |
+| an emoji | words |
+
+Tells, which are printed and left to the writer: *seamless, robust,
+cutting-edge, best-in-class, game-changing, transformative, holistic, synergy,
+landscape, realm, myriad, plethora, vibrant, a testament to, underscores,
+pivotal, crucial, unlock, empower, streamline, harness, foster, delve,
+leverage, utilise, deep dive, embark, our journey, in today's, ever-evolving,
+fast-paced, it's worth noting, when it comes to, more than just, at the end of
+the day, boasts, comprehensive, ensures that, truly, really, significantly*,
+"Moreover" or "Overall" opening a sentence, and the shape *"not just X, it's
+Y."*
+
+The rewrite is the same move every time: **put the figure where the adjective
+was**, and cut the rest. "A robust, seamless integration that empowers the
+team" is "Two endpoints, one schema; the team shipped in six weeks." If there
+is no figure, say the fact plainly, or say there is no figure yet.
+
 ## Mechanics
 
 - **No em dash** anywhere a reader will see it: copy, headings, table cells,

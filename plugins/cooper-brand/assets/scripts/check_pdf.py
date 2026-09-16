@@ -10,9 +10,10 @@ Exit code 1 on any failure. On the PDF itself:
      matches its data, so covers do not turn magenta in strict readers.
   2. Page size: every page is A4 (595.3 x 841.9 pt, 794 x 1123 px), or the
      `--size` given in px (a deck is 1280 x 720).
-  3. Copy hygiene in the text layer (pdftotext or pypdf when available):
-     no em dash, no "lorem", no unfilled "vX.X" / "DD MONTH"; "TBD" is reported
-     as a note.
+  3. Copy hygiene in the text layer (pdftotext or pypdf when available), on
+     the list of check_text.py: no em dash or en dash, no emoji, no "lorem",
+     no unfilled "vX.X" / "DD MONTH". Trailing dots, the words that mark
+     machine prose ("seamless", "delve", "underscores") and "TBD" are notes.
 With the source HTML (`--html`, or `<name>.html` found next to the PDF):
   4. The version string is the same on the cover, in every running head, on
      the back cover, and in the PDF file name (`...-vX.Y.pdf`).
@@ -24,7 +25,9 @@ With the source HTML (`--html`, or `<name>.html` found next to the PDF):
      section tag (rows written by build_doc.py carry `data-tag`; hand-written
      rows are matched on their label).
 """
-import sys, re, struct, pathlib, zlib, html, shutil, subprocess
+import sys, os, re, struct, pathlib, zlib, html, shutil, subprocess
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import check_text
 
 
 # ---------------------------------------------------------------- PDF bytes
@@ -225,9 +228,13 @@ def check(path, html_path=None, size=None):
     if any(abs(w - ew) > 1.5 or abs(h - eh) > 1.5 for w, h in sizes):
         problems.append(f"page sizes {sorted(sizes)} are not {'A4' if not size else f'{size[0]} x {size[1]} px'} ({ew:.1f} x {eh:.1f} pt)")
     text, how = text_layer(path, data)
-    for pat, what in ((r"—", "em dash"), (r"\blorem\b", "lorem text"), (r"\bv[Xx]\.[Xx]\b", "unfilled version"), (r"DD MONTH", "unfilled date")):
-        if re.search(pat, text, re.I):
-            problems.append(f"{what} found in the text layer ({how})")
+    faults, tells = check_text.scan(text)             # the same list the builders lint the description with
+    for _, what, ex, instead in faults:
+        line = f"{what} in the text layer ({how}): {ex} -> write {instead}"
+        # the text layer has no structure: an elision inside a code listing reads like trailing dots
+        (notes if what == "trailing dots" else problems).append(line)
+    for _, word, ex, instead in tells:
+        notes.append(f"machine prose: '{word}' ({ex}) -> write {instead}")
     if re.search(r"\bTBD\b", text):
         notes.append("TBD found in the text layer: fine in a versions table, not in a final document")
     if html_path is None:

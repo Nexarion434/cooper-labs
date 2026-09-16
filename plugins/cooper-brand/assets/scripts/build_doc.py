@@ -23,6 +23,16 @@ The description (JSON, or a Python dict passed to `build()`):
     contents       "auto" (default) | true | false; contents_intro (the "How to read" text, optional)
     versions       [["v0.1", "2026-09-09", "First draft"], ...]   -> the Versions table on the Contents page
     pages          [{"name": "Analysis", "blocks": [ ... ]}]
+    flow           true (default) | false
+
+The blocks flow (0.6.0): a page in the description is a group of blocks, not a
+sheet. Every block is measured in Chromium and the sheets are filled to the
+footer, so a part that ends a third of the way down is followed by the next one
+on the same sheet instead of leaving the rest white; a block that does not fit
+is cut at an item boundary and its label repeated with `· cont.`. Pages of
+their own (divider, statement, hero, prose, plate, wide) keep a sheet to
+themselves, `"break": true` on a page starts a new sheet, and `"flow": false`
+restores one sheet per described page. Without Playwright the flow is skipped.
 
 A block is a row of the margin grid: `tag` and `source` in the margin column
 (200 wide), the rest in the reading column; a block without a tag spans the
@@ -58,7 +68,7 @@ Pages of their own, with `style` instead of `blocks` (`toc` names their line on 
 """
 import sys, os, re, json, html, pathlib, datetime, subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import brand
+import brand, paginate, check_text
 
 HERE = pathlib.Path(__file__).resolve().parent
 ASSETS = HERE.parent
@@ -169,14 +179,20 @@ def back(d, A):
 '''
 
 
+def head_html(head, n):
+    return f'  <div class="pagehead"><div class="pagehead__meta">{E(head)}</div><div class="pagehead__num">{n:02d}</div></div>\n'
+
+
+def foot_html(n, total):
+    return f'  <div class="pagefoot"><div class="pagefoot__meta">{brand.FOOTER}</div><div class="pagefoot__page">{n:02d} / {total:02d}</div></div>\n'
+
+
 def page(name, head, n, total, blocks, raw=None, dark=False, before=""):
     """A sheet: the running head, either a stack of blocks or a raw composition, the footer."""
     inner = f'  <div class="content">\n{"".join(blocks)}  </div>\n' if raw is None else raw
     return f'''<!-- ===================== PAGE · {E(name.upper())} ===================== -->
 <section class="page{" page--dark" if dark else ""}">
-{'  <div class="back__glow"></div>' + chr(10) if dark else ""}  <div class="pagehead"><div class="pagehead__meta">{E(head)}</div><div class="pagehead__num">{n:02d}</div></div>
-{before}{inner}  <div class="pagefoot"><div class="pagefoot__meta">{brand.FOOTER}</div><div class="pagefoot__page">{n:02d} / {total:02d}</div></div>
-</section>
+{'  <div class="back__glow"></div>' + chr(10) if dark else ""}{head_html(head, n)}{before}{inner}{foot_html(n, total)}</section>
 '''
 
 
@@ -374,15 +390,21 @@ ORDER = ("heading", "body", "bullets", "table", "figures", "reco", "cols", "time
 
 
 _A = [""]      # the asset prefix, set by build() before the blocks are written
+LAST = {}      # what the last build did: flowed, described pages, sheets
 
 
-def block_from(b):
-    if "main" in b:
-        main = "".join(item_html(k, v) for item in b["main"] for k, v in item.items())
-    else:
-        main = "".join(item_html(k, b[k]) for k in ORDER if k in b)
-    if b.get("step"):
-        main = f'        <div class="step">\n{main}        </div>\n'
+def block_from(b, main=None, cont=False):
+    """The HTML of one block. `main` re-uses measured items; `cont` is a piece carried over to the next sheet."""
+    if main is None:
+        if "main" in b:
+            main = "".join(item_html(k, v) for item in b["main"] for k, v in item.items())
+        else:
+            main = "".join(item_html(k, b[k]) for k in ORDER if k in b)
+        if b.get("step"):
+            main = f'        <div class="step">\n{main}        </div>\n'
+    if cont:
+        tag = b.get("tag")
+        return block_html(f"{tag} · cont." if tag else None, main, A=_A[0])
     return block_html(b.get("tag"), main, b.get("source"), b.get("step"), b.get("specimen"), b.get("caption"), A=_A[0])
 
 
@@ -428,17 +450,64 @@ def style_page(pg, head, n, total, A):
     sys.exit(f"page {n}: unknown style {st!r}")
 
 
+# ---------------------------------------------------------------- the sheets
+def lay_out(d, head):
+    """The sheets, in order. The compositions keep one each; the blocks are poured into the rest."""
+    seq, runs = [], []
+    for pg in d["pages"]:
+        if pg.get("style"):
+            seq.append({"kind": "style", "pg": pg}); continue
+        if not seq or seq[-1]["kind"] != "run":
+            runs.append([]); seq.append({"kind": "run", "i": len(runs) - 1})
+        for j, b in enumerate(pg["blocks"]):
+            runs[seq[-1]["i"]].append((pg, b, j == 0 and bool(pg.get("break"))))
+    flat = [x for run in runs for x in run]
+    htmls = [block_from(b) for _, b, _ in flat]
+    m = paginate.measure(htmls, ASSETS / brand.CSS, head_html(head, 2), foot_html(2, 9)) if d.get("flow", True) and flat else None
+    packed = []
+    if m:
+        units = [paginate.Unit(h, mm["h"], mm["kids"], mm["margin_h"], meta={"b": b, "name": pg["name"], "break": brk},
+                               make=lambda meta, main, cont: block_from(meta["b"], main, cont))
+                 for (pg, b, brk), h, mm in zip(flat, htmls, m["blocks"])]
+        i = 0
+        for run in runs:
+            packed.append(paginate.pack(units[i:i + len(run)], m["avail"], m["gap"])); i += len(run)
+    out = []
+    for s in seq:
+        if s["kind"] == "style":
+            out.append(s); continue
+        run = runs[s["i"]]
+        if m:
+            for sheet in packed[s["i"]]:
+                out.append({"kind": "blocks", "name": sheet[0].meta["name"], "html": [u.html for u in sheet],
+                            "blocks": [u.meta["b"] for u in sheet if not u.cont]})
+        else:                                             # no Playwright, or "flow": false: one sheet per described page
+            groups = []
+            for pg, b, _ in run:
+                if not groups or groups[-1]["pg"] is not pg:
+                    groups.append({"pg": pg, "bs": []})
+                groups[-1]["bs"].append(b)
+            for g in groups:
+                out.append({"kind": "blocks", "name": g["pg"]["name"], "html": [block_from(b) for b in g["bs"]], "blocks": g["bs"]})
+    return out, bool(m)
+
+
+def sheet_name(sh):
+    return sh["name"] if sh["kind"] == "blocks" else sh["pg"].get("toc") or sh["pg"].get("name", "")
+
+
 # ---------------------------------------------------------------- the document
-def contents_rows(pages, first_page_number):
-    rows, n, letter = [], 0, 0
-    for i, pg in enumerate(pages):
+def contents_rows(sheets, first_page_number):
+    rows, n = [], 0
+    for i, sh in enumerate(sheets):
         num = first_page_number + i
-        if "blocks" not in pg or pg.get("style"):
+        if sh["kind"] == "style":
+            pg = sh["pg"]
             if pg.get("toc"):
                 n += 1
                 rows.append([f"{n:02d}", pg["toc"], f"{num:02d}", pg.get("kicker", pg["toc"])])
             continue
-        for b in pg["blocks"]:
+        for b in sh["blocks"]:
             tag, toc = b.get("tag"), b.get("toc", True)
             if not tag or toc is False:
                 continue
@@ -460,16 +529,17 @@ def build(d, out_html, relative=False):
     A = "../" if relative else ASSETS.as_posix() + "/"
     _A[0] = A
     head = f"{d['class_label']} · {d['subject']} · {d['classification']} · {d['version']}"
-    pages = d["pages"]
+    sheets, flowed = lay_out(d, head)
+    LAST.update(flowed=flowed, described=len(d["pages"]), sheets=len(sheets))
     want_contents = d.get("contents", "auto")
-    want_contents = len(pages) >= 5 if want_contents == "auto" else bool(want_contents)
-    total = 1 + (1 if want_contents else 0) + len(pages) + 1      # every sheet counts: cover, contents, pages, back
+    want_contents = len(sheets) >= 5 if want_contents == "auto" else bool(want_contents)
+    total = 1 + (1 if want_contents else 0) + len(sheets) + 1     # every sheet counts: cover, contents, pages, back
     sections = [cover(d, A)]
     n = 2
     if want_contents:
-        rows = contents_rows(pages, n + 1)
+        rows = contents_rows(sheets, n + 1)
         if len(rows) > 12:
-            rows = [[f"{i + 1:02d}", pg["name"], f"{n + 1 + i:02d}", ""] for i, pg in enumerate(pages)]
+            rows = [[f"{i + 1:02d}", sheet_name(sh), f"{n + 1 + i:02d}", ""] for i, sh in enumerate(sheets)]
         toc = table([("§", 48), ("Section", None), ("Page", 60)], [r[:3] for r in rows], mono=(0, 2), head=False)
         for r in rows:                                   # data-tag lets check_pdf verify each entry
             toc = re.sub(r'<tr>(<td[^>]*>' + re.escape(E(r[0])) + r'</td><td[^>]*>' + re.escape(E(r[1])) + r'</td>)', f'<tr data-tag="{E(r[3])}">\\1', toc, count=1)
@@ -481,11 +551,8 @@ def build(d, out_html, relative=False):
             blocks.append(block_html("Versions", table([("Version", 80), ("Date", 110), ("Change", None)], vrows, mono=(0, 1)), "Versions are recorded here and on the cover."))
         sections.append(page("Contents", head, n, total, blocks))
         n += 1
-    for pg in pages:
-        if pg.get("style"):
-            sections.append(style_page(pg, head, n, total, A))
-        else:
-            sections.append(page(pg["name"], head, n, total, [block_from(b) for b in pg["blocks"]]))
+    for sh in sheets:
+        sections.append(style_page(sh["pg"], head, n, total, A) if sh["kind"] == "style" else page(sh["name"], head, n, total, sh["html"]))
         n += 1
     sections.append(back(d, A))
     doc = f'''<!doctype html>
@@ -518,15 +585,17 @@ EXAMPLE = _example()
 
 
 def main():
-    args = sys.argv[1:]
+    args = [a for a in sys.argv[1:] if a != "--no-lint"]
     if "--example" in args:
         print(json.dumps(EXAMPLE, indent=2, ensure_ascii=False)); return
     if len(args) < 2:
         print(__doc__); sys.exit(1)
     with open(args[0], encoding="utf-8") as fh:
         d = json.load(fh)
+    check_text.gate(d, args[0], "--no-lint" in sys.argv)
     out, pdf_name, total = build(d, args[1], relative="--relative" in args)
-    print(f"-> {out}  ({total} sheets)  PDF name: {pdf_name}")
+    how = f", {LAST['described']} described pages flowed into {LAST['sheets']}" if LAST.get("flowed") else ", not flowed (no Playwright, or \"flow\": false)"
+    print(f"-> {out}  ({total} sheets{how})  PDF name: {pdf_name}")
     if "--pdf" in args:
         pdf = out.with_name(pdf_name)
         subprocess.run([sys.executable, str(HERE / "render_pdf.py"), str(out), str(pdf)], check=True)

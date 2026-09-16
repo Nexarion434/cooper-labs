@@ -1,5 +1,53 @@
 # Changelog
 
+## 0.6.0 · 16 Sep 2026
+
+Feedback on both plugins, in two parts: a section that ended a third of the
+way down sent the next one overleaf, which left big whites; and the copy
+read like a model wrote it, starting with the em dashes.
+
+### The blocks flow
+- `paginate.py` (new). Every block is measured in Chromium with the real
+  CSS and the real fonts, then the sheets are filled to the footer. **A
+  page in a description is a group of blocks, not a sheet.**
+- A block too tall for what is left is cut at an item boundary, its label
+  repeated as `Risks · cont.`; a sub-heading never stays alone at the foot
+  of a sheet; a block that a cut would not help moves whole.
+- The compositions keep a sheet each (divider, statement, hero, prose,
+  plate, wide). `"break": true` on a page starts a new sheet, `"flow":
+  false` restores one sheet per described page, and so does a machine
+  without Playwright.
+- The Contents page, the running-head numbers and `NN / NN` are computed
+  after the flow, so an entry always points at the sheet its section
+  landed on. The proposal template goes from 24 sheets to 22 and the
+  report from 7 to 5, with nothing changed in the descriptions.
+
+### The copy is linted before it is built
+- `check_text.py` (new). Every builder runs it on the description. Faults
+  stop the build: the em dash, an en dash between words, three trailing
+  dots, an emoji, "lorem", an unfilled version or date. Tells are printed
+  and left to the writer: seamless, robust, leverage, underscores,
+  testament, landscape, unlock, empower, "not just X, it is Y", and some
+  thirty more.
+- `check_pdf.py` runs the same list on the text layer of the PDF, so a
+  hand-written document is held to it too.
+- `voice.md` gains *Nothing that reads like a model wrote it*: the two
+  lists, and the rewrite (put the figure where the adjective was).
+- `rebuild_html.py` (new): every shipped HTML rebuilt from its JSON
+  with relative paths, so the files next to the descriptions never lag
+  behind the engine.
+
+### Design decisions (0.6.0)
+25. **A sheet is filled, a page is described.** The author names sections;
+    the engine decides where they break. White at the foot of a sheet is a
+    decision (a composition, the end of a part), never an accident.
+26. **A cut keeps its label.** A section carried over repeats its label
+    with `· cont.` in the margin column, so the catalogue still reads down
+    the page; the reading column never announces the break.
+27. **Copy is checked like layout.** An em dash is a failure, not a matter
+    of taste, and every machine tell is reported with what to write
+    instead.
+
 ## 0.5.3 · 15 Sep 2026
 
 The plugin is also a **Codex / ChatGPT plugin**: `.codex-plugin/plugin.json`

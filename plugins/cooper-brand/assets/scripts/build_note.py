@@ -27,6 +27,8 @@ The description (JSON):
     next_meeting   "19 Sep 2026, 10:00, Google Meet" (optional)
 """
 import sys, os, json, pathlib, subprocess
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import check_text
 
 HERE = pathlib.Path(__file__).resolve().parent
 ASSETS = HERE.parent
@@ -106,13 +108,14 @@ def _example():
 
 
 def main():
-    args = sys.argv[1:]
+    args = [a for a in sys.argv[1:] if a != "--no-lint"]
     if "--example" in args:
         print(json.dumps(_example(), indent=2, ensure_ascii=False)); return
     if len(args) < 2:
         print(__doc__); sys.exit(1)
     with open(args[0], encoding="utf-8") as fh:
         d = json.load(fh)
+    check_text.gate(d, args[0], "--no-lint" in sys.argv)
     out, pdf_name = build(d, args[1], relative="--relative" in args)
     print(f"-> {out}  PDF name: {pdf_name}")
     if "--pdf" in args:

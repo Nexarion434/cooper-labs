@@ -93,6 +93,35 @@ with the font line: `PP Eiko Medium, as in the Figma file`, or `Instrument
 Serif stood in` (line breaks may then move by a word). `check_pdf.py` fails
 on any inconsistency listed under *Before delivering*.
 
+### The pages flow (0.6.0)
+
+A `page` in the description is **a group of blocks, not a sheet**. Every
+block is measured in Chromium and the sheets are filled down to the footer:
+a section that ends a third of the way down is followed by the next one on
+the same sheet, and a block too tall for what is left is cut at an item
+boundary with its label repeated as `Risks · cont.` A sub-heading never
+stays alone at the foot of a sheet. Only the compositions (divider,
+statement, hero, prose, plate, wide) keep a sheet of their own.
+
+So describe the document in sections and let the sheet count fall where it
+falls; the build line says what happened (`21 described pages flowed into
+19`). Two controls when a break is deliberate: `"break": true` on a page
+starts a new sheet, and `"flow": false` on the document restores one sheet
+per described page (which is also what happens when Playwright is missing).
+The Contents page, the running-head numbers and `NN / NN` are computed
+after the flow, so they always point at the sheet a section landed on.
+
+### The copy is linted before it is built
+
+`check_text.py` runs on the description inside the builder. An em dash, an
+en dash between words, three trailing dots, an emoji or a "lorem" is a
+fault: the build stops and the sentence is rewritten, not built with
+`--no-lint`. The words that mark machine prose (seamless, robust, leverage,
+underscores, "not just X, it is Y", and the rest of the list) are printed as
+tells and left to the writer. Run it alone on a draft with `python3
+check_text.py work.json`, or on one sentence with `--text`. The list and the
+rewrites are in `references/voice.md`.
+
 ## Structure
 
 **Cover.** The plate: the render across the top 620 px (`cover: "01"`,
@@ -229,9 +258,13 @@ whose content reaches the footer.
    the Contents page, if kept, points to pages that carry the tag.
 3. Every table has a source line with a date.
 4. Owner, classification and status reflect reality; nothing invented.
-5. `check_pdf.py <pdf> --html <html>` passes (colour flags, A4, em dash /
-   lorem / vX.X / DD MONTH, version in four places, numbering, Contents) and
-   the cover was eyeballed in a real viewer, not only in the review PNGs.
+5. No sheet ends on a gap that the flow could have filled: read the build
+   line, and look at the review PNGs rather than trusting the count.
+6. The copy passes `check_text.py` with no tell left standing, not only no
+   fault: an adjective where a figure belongs is the tell that matters.
+7. `check_pdf.py <pdf> --html <html>` passes (colour flags, A4, the copy
+   list, version in four places, numbering, Contents) and the cover was
+   eyeballed in a real viewer, not only in the review PNGs.
 
 ## References
 
@@ -240,4 +273,5 @@ whose content reaches the footer.
 - `../../assets/templates/internal-doc.json` and `.html` — the full 24-sheet skeleton (a proposal that uses every page style), description and build
 - `../../assets/templates/report.json` and `.html` — the monthly report, eight sheets
 - `../../assets/examples/` — case-study, spec, post-mortem, memo, page-styles (`.json` + `.html`)
-- `../../assets/scripts/build_doc.py` — the builder; `check_pdf.py` — the checks
+- `../../assets/scripts/build_doc.py` — the builder; `paginate.py` — the flow;
+  `check_text.py` — the copy lint; `check_pdf.py` — the checks

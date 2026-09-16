@@ -210,9 +210,19 @@ python3 $S/build_doc.py --example > work.json && python3 $S/build_doc.py work.js
 python3 $S/build_social.py --example > posts.json && python3 $S/build_social.py posts.json posts.html --png out/   # social
 python3 $S/build_deck.py --example > deck.json && python3 $S/build_deck.py deck.json deck.html --pdf --png out/    # deck
 python3 $S/build_fact_sheet.py --example > sheet.json && python3 $S/build_fact_sheet.py sheet.json sheet.html --pdf   # fact sheet
+python3 $S/check_text.py work.json                    # the copy lint alone (the builders run it anyway)
 python3 $S/new_doc.py internal-doc work.html          # raw HTML instead, to edit by hand (or case-study, spec, post-mortem, memo, social)
 python3 $S/new_doc.py social --demo posts.html        # description + HTML in one go: the smoke test of the pipeline
 ```
+
+Two passes run on their own, without being asked. **The flow**
+(`paginate.py`): a described page is a group of blocks, the blocks are
+measured in Chromium and poured into sheets, so no part starts overleaf
+while half a sheet stands empty (`"flow": false`, or `"break": true` on a
+page, when a break is wanted). **The copy lint** (`check_text.py`): an em
+dash, an en dash between words, trailing dots, an emoji or a "lorem" in the
+description stops the build; the words that mark machine prose are printed
+as tells. Rewrite rather than pass `--no-lint`.
 
 `render_pdf.py` and `render_png.py` end with the same font line (`PP Eiko
 Medium, as in the Figma file`, or what stood in); `check_pdf.py` and
@@ -233,7 +243,7 @@ install chromium`).
 2. Display type is PP Eiko Medium, everything else Roboto Condensed; nothing
    is bolder than 500; no italic anywhere; no box, band or tile around a
    figure or a label.
-3. No em dash anywhere a reader will see it; the middle dot `·` separates
+3. No em dash and nothing else on the `check_text.py` list; the middle dot `·` separates
    meta items. Document titles are Title Case; standfirst, body and
    recommendation titles are sentence case; social titles as written.
 4. Every image is one of the six renders, named by number; the logo is one
