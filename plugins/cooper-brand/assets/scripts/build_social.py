@@ -24,7 +24,7 @@ banners and thread cards on the same rules. One canvas is one object of
              logo "mark" | "word" (default: mark on a render, word on the texture);
              size 1200x675 (default) | 1200x627 (li) | 1080x1080 (sq) | 1080x1920 (story) | 600x300 (mail) | 2000x800 (x) | 2400x1200 (para) | 2560x1440 (wallpaper)
     partner  icon "path/to/partner-icon.svg" (their symbol, 80 x 80, black on the light render)
-    xcover   line "We turn Web3 ideas / into products people use."; variant "centre" (default) | "right" (the block at the right, as We Are Cooper)
+    xcover   line "We turn ideas / into products people use."; variant "centre" (default) | "right" (the block at the right, as We Are Cooper)
     preview  (nothing else: the wordmark centred on the render)
     banner   size 1600x400 (forum) | 1500x600 (notion); tag "..." (PP Eiko line); kicker "..." (condensed uppercase); logo true|false
     thread   n 1; total 3; body "One sentence with *the accent.*"; kicker "Why we ship in weeks · thread"
@@ -187,7 +187,7 @@ EXAMPLE = {"canvases": [
     {"name": "post-seventeenth-parallel-report", "kind": "post", "texture": True, "kicker": "January 2026", "title": "Seventeenth / Parallel Report"},
     {"name": "post-flash-loans-explained", "kind": "post", "texture": True, "kicker": "Parallel", "title": "Flash Loans / Explained"},
     {"name": "partner-parallel", "kind": "partner", "render": "01", "frame": "cover", "icon": "../logo/partners/parallel_icon_b.svg"},
-    {"name": "x-cover-tagline-1500x500", "kind": "xcover", "render": "01", "frame": "cover", "line": "We turn Web3 ideas / into products people use."},
+    {"name": "x-cover-tagline-1500x500", "kind": "xcover", "render": "01", "frame": "cover", "line": "We turn ideas / into products people use."},
     {"name": "x-cover-we-are-cooper-1500x500", "kind": "xcover", "render": "04", "frame": "cover", "variant": "right", "line": "We Are Cooper"},
     {"name": "social-preview-1200x630", "kind": "preview", "render": "01", "frame": "cover"},
     {"name": "post-2026-roadmap-li-1200x627", "kind": "post", "render": "01", "frame": "cover", "size": "1200x627", "kicker": "New post", "title": "2026 Roadmap / for Parallel published"},

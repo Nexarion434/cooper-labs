@@ -1,7 +1,7 @@
 {
  "subject": "Cooper Labs",
- "title": "We turn Web3 ideas *into products people use.*",
- "standfirst": "Cooper Labs is a product studio for Web3 teams: design and engineering in one team, from the brief to the stores, with a demo of working software every Friday.",
+ "title": "We turn ideas *into products people use.*",
+ "standfirst": "Cooper Labs is a product studio: design and engineering in one team, from the first spec to production, with a demo of working software every Friday.",
  "date": "2026-09-01",
  "version": "v1.0",
  "classification": "Public",
@@ -47,8 +47,8 @@
    "heading": "What we *don't do*",
    "bullets": [
     [
-     "No custody, no keys",
-     "We build the product; the user signs. Nothing we ship holds funds."
+     "No fluff",
+     "We ship production-ready products. A demo shows the thing running, never a plan for it."
     ],
     [
      "No slides for software",

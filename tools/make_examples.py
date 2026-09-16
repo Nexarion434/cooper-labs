@@ -378,15 +378,15 @@ DECK = {
          "reco": ["Confirm by 21 September; the build starts on the 28th.", "Two phases at a fixed price; the second on the demo of week three, the beta on 6 November."]}]}
 
 FACT_SHEET = {
-    "subject": "Cooper Labs", "title": "We turn Web3 ideas *into products people use.*",
-    "standfirst": "Cooper Labs is a product studio for Web3 teams: design and engineering in one team, from the brief to the stores, with a demo of working software every Friday.",
+    "subject": "Cooper Labs", "title": "We turn ideas *into products people use.*",
+    "standfirst": "Cooper Labs is a product studio: design and engineering in one team, from the first spec to production, with a demo of working software every Friday.",
     "date": "2026-09-01", "version": "v1.0", "classification": "Public", "kicker": "Fact sheet · Cooper Labs · September 2026", "render": "01",
     "figures": [["6", "Weeks, brief to first release"], ["Weekly", "Demo, every Friday"], ["2", "Disciplines, one team"], ["Fixed", "Price per phase"]],
     "columns": [
         {"heading": "How we *work*", "bullets": [["One team, both crafts", "A designer and an engineer on every project from day one; the design system lives in Figma and in code."],
                                                 ["Working software on Friday", "Thirty minutes, the client in the room, the decisions written the same day."],
                                                 ["Phases with a gate", "Two or three fixed-price phases; the next one starts on a demo, not on a plan."]]},
-        {"heading": "What we *don't do*", "bullets": [["No custody, no keys", "We build the product; the user signs. Nothing we ship holds funds."],
+        {"heading": "What we *don't do*", "bullets": [["No fluff", "We ship production-ready products. A demo shows the thing running, never a plan for it."],
                                                      ["No slides for software", "A proposal names its demos; a demo shows the thing running."],
                                                      ["No open-ended retainers", "Scope, price and dates per phase, written before the first week."]]}],
     "table": {"heading": "Engagements, *by phase*", "cols": [["Phase", 150], ["Weeks", 70], ["Team", 120], ["Delivered", None]], "mono": [1], "strong": [0],

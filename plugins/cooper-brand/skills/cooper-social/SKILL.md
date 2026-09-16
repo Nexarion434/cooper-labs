@@ -161,8 +161,8 @@ redrawing a partner's mark.
 ## X cover and social preview
 
 The cover: one line in PP Eiko 66 / 0.9 centred at the middle of 1500 × 500,
-the wordmark 24.68 high at y 380.3; the tagline by default ("We turn Web3
-ideas / into products people use."), a campaign line on request. `variant:
+the wordmark 24.68 high at y 380.3; the leitmotiv by default ("We turn ideas
+/ into products people use."), a campaign line on request. `variant:
 right` is the *We Are Cooper* composition: the render 04 or 06 with the
 orange block at the left, the line and the wordmark in a 411-wide block at
 x 977, left-aligned. The preview: the wordmark alone, 69.42 high at y

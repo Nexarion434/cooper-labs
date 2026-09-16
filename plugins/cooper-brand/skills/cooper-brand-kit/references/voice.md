@@ -2,12 +2,25 @@
 
 ## Positioning
 
-> **We turn Web3 ideas into products people use.**
+> **We turn ideas into products people use.**
 
-Cooper Labs is a product studio for Web3 teams: a designer and an engineer on
-every project, from the brief to the stores, working software shown every
+This line is the leitmotiv: it is written the same way every time, on the
+back cover, on the closing slide, on the X cover and at the head of the fact
+sheet, and it is never paraphrased. The site carries a second recurring
+line, used where the first one has already been said: **We ship
+production-ready products. No fluff.**
+
+Cooper Labs is a product studio: a designer and an engineer on every
+project, from the first spec to production, working software shown every
 Friday. The studio's material speaks as a builder speaks: what was made, for
 whom, in how many weeks, and what the numbers said afterwards.
+
+**The studio is not described by a sector.** Since the wording of
+cooperlabs.xyz was revised in September 2026, "Web3", "crypto", "on-chain"
+and "DeFi" are not used to say what Cooper Labs is: the studio helps teams go
+from the first spec to production, whatever the field. Those words belong to
+a client's own subject (a protocol, a wallet, a governance memo) and are
+written there, in the client's vocabulary, never in the studio's.
 
 Documents let the renders carry the identity (the cover plate, a part
 divider, the back cover, a specimen). Inside, the voice is precise, calm
@@ -132,11 +145,14 @@ is no figure, say the fact plainly, or say there is no figure yet.
   sheet or deck: `COOPER LABS · COOPERLABS.XYZ`
 - Back cover notice: `INTERNAL DOCUMENT · NOT FOR DISTRIBUTION OUTSIDE COOPER
   LABS · © 2026 COOPER LABS`
-- Back cover colophon: `cooperlabs.xyz`, `@cooperlabs`, `@jeanbrasse`, then
-  the document's class, version and date. The contact strip of a fact sheet
-  adds `contact@cooperlabs.xyz`.
-- Tagline, on the back cover and the closing slide: `We turn Web3 ideas
-  *into products people use.*`
+- Back cover colophon: `cooperlabs.xyz`, `contact@cooperlabs.xyz`,
+  `@cooperlabs`, `@jeanbrasse`, then the document's class, version and date.
+  A document that leaves the studio always carries the email, so a reader has
+  an address to answer to; the contact strip of a fact sheet carries the same
+  four.
+- Tagline, on the back cover and the closing slide: `We turn ideas *into
+  products people use.*`; the second line, where it is wanted: `We ship
+  production-ready products. No fluff.`
 
 Do not invent clients, figures, ratings, dates or team members. The examples
 shipped with the plugin (Atlas Wallet, the Parallel MCP server proposal, the

@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.6.1 · 16 Sep 2026
+
+The wording of cooperlabs.xyz was revised: the studio is no longer described
+by a sector. The plugin follows.
+
+- **The leitmotiv** is `We turn ideas *into products people use.*` The word
+  "Web3" is gone from it, and from the way the studio describes itself in
+  `voice.md`, in the brand kit, on the fact sheet, on the X cover and in
+  `cooper.pen`. "Web3", "crypto" and "on-chain" now say what a client does,
+  never what Cooper Labs is.
+- **A second recurring line**, from the site: `We ship production-ready
+  products. No fluff.` (`brand.PROOF_LINE`), used where the leitmotiv has
+  already been said. The fact sheet's "what we don't do" opens on it.
+- **The email is on every document.** `contact@cooperlabs.xyz` joins the
+  links, so the back cover, the closing slide and the fact sheet all give an
+  address to answer to, in the same order everywhere: website, email, X,
+  Telegram.
+- Positioning, everywhere it is written: a product studio, design and
+  engineering in one team, from the first spec to production, a demo of
+  working software every Friday.
+
+### Design decisions (0.6.1)
+28. **The leitmotiv is copied, not rewritten.** One line, written the same
+    way in every format; a campaign line may sit beside it but never in its
+    place.
+29. **The sector belongs to the client.** The studio's own copy names what it
+    does and how long it takes, never the market it works in.
+
 ## 0.6.0 · 16 Sep 2026
 
 Feedback on both plugins, in two parts: a section that ended a third of the

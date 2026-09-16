@@ -227,7 +227,7 @@ def back(x, y):
     return page("Doc · Back cover", [
         at(image("Plate", f"{A}/img/renders/05.jpg", 794, 620), 0, 0),
         at(frame("Top", [ref("Wordmark", 0, 0), label("Conf", "Confidential · v0.1", fill="$ink")], layout="horizontal", justifyContent="space_between", alignItems="center", width="$measure"), 72, 56),
-        at(frame("Bottom", [text("Tagline", "We turn Web3 ideas into products people use.", 40, EI, lineHeight=1, letterSpacing=-1.6, width=380), links, label("Notice", "Internal document · Not for distribution outside Cooper Labs · © 2026 Cooper Labs")], layout="vertical", gap=16), 72, 880)], x, y)
+        at(frame("Bottom", [text("Tagline", "We turn ideas into products people use.", 40, EI, lineHeight=1, letterSpacing=-1.6, width=380), links, label("Notice", "Internal document · Not for distribution outside Cooper Labs · © 2026 Cooper Labs")], layout="vertical", gap=16), 72, 880)], x, y)
 
 
 def deck_title(x, y):
@@ -259,8 +259,8 @@ def fact_sheet(x, y):
     return page("Fact sheet", [
         at(frame("Head", [ref("Wordmark", 0, 0), label("Kicker", "Fact sheet · Cooper Labs · September 2026")], layout="horizontal", justifyContent="space_between", alignItems="center", width=650), 72, 48),
         at(frame("Stack", [image("Plate", f"{A}/img/renders/01.jpg", 650, 180),
-                           frame("Title block", [label("Tag", "Cooper Labs · Fact sheet"), text("Title", "We Turn Web3 Ideas into Products People Use.", 34, EI, lineHeight=1, letterSpacing=-1.36, width=480),
-                                                 text("Standfirst", "Cooper Labs is a product studio for Web3 teams: design and engineering in one team, from the brief to the stores, with a demo of working software every Friday.", 10.5, RC, fill="$ink-soft", lineHeight=1.55, width=400)], layout="vertical", gap=12),
+                           frame("Title block", [label("Tag", "Cooper Labs · Fact sheet"), text("Title", "We Turn Ideas into Products People Use.", 34, EI, lineHeight=1, letterSpacing=-1.36, width=480),
+                                                 text("Standfirst", "Cooper Labs is a product studio: design and engineering in one team, from the first spec to production, with a demo of working software every Friday.", 10.5, RC, fill="$ink-soft", lineHeight=1.55, width=400)], layout="vertical", gap=12),
                            figures_strip([("6", "Weeks, brief to first release"), ("Weekly", "Demo, every Friday"), ("2", "Disciplines, one team"), ("Fixed", "Price per phase")]), cols, contact], layout="vertical", gap=22, width=650), 72, 96),
         at(frame("Foot", [label("Meta", "Cooper Labs · Public · cooperlabs.xyz · September 2026"), label("Page", "01 / 01")], layout="horizontal", justifyContent="space_between", width=650), 72, 1123 - 44 - 10)], x, y)
 

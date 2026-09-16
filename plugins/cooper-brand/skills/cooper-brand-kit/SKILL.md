@@ -14,9 +14,11 @@ metadata:
 
 # Cooper Labs — brand kit
 
-Cooper Labs is a product studio for Web3 teams: design and engineering in one
-team, from the brief to the stores. Tagline: **"We turn Web3 ideas into
-products people use."** The identity is white, grey and orange: one display
+Cooper Labs is a product studio: design and engineering in one team, from the
+first spec to production. The leitmotiv, written the same way everywhere:
+**"We turn ideas into products people use."** The studio is not described by
+a sector, so "Web3" and "crypto" say what a client does, never what Cooper
+Labs is (`references/voice.md`). The identity is white, grey and orange: one display
 face with a single weight, a condensed sans for everything else, a black
 square-and-crescent mark ("the block"), and six renders of that block in
 white 3D, halftone, pixels and orange. Documents are the **catalogue of
